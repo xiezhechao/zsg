@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+<sample className="game.city.builddata.MainCityData" sid="1" name="主城" officialSid="1" style="shapanzhucheng" bgimg="zhucheng" x="650.5"  y="249" titleOffx="96" titleOffy="-77" />
+ <sample className="game.city.builddata.PartCityData" sid="2" name="封邑1"  needLevel="20" officialLevel="1" style="fengyi1shapan" bgimg="fengyi1bg" x="308.45"  y="381" />
+ <sample className="game.city.builddata.PartCityData" sid="3" name="封邑2"  needLevel="30" officialLevel="1" style="shapanfengyi2" bgimg="fengyi2bg" x="681.95"  y="457" />
+ <sample className="game.city.builddata.PartCityData" sid="4" name="封邑3"  needLevel="40" officialLevel="1" style="fengyi3shapan" bgimg="fengyi3bg" x="985.45"  y="469.5" />
+ <sample className="game.city.builddata.PartCityData" sid="5" name="封邑4"  needLevel="50" officialLevel="1" style="fengyi4shapan" bgimg="fengyi4bg" x="324.95"  y="545.45" titleOffy="-100" />
+ <sample className="game.city.builddata.PartCityData" sid="6" name="封邑5"  needLevel="60" officialLevel="1" style="fengyi5shapan" bgimg="fengyi5bg" x="1054"  y="232" />
+ <sample className="game.city.builddata.PartCityData" sid="7" name="封邑6"  needLevel="70" officialLevel="1" style="shapanfengyi6" bgimg="fengyi6bg" x="998.45"  y="342.5" />
+ </objects>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- openTimeHour开始小时24 openTimeMinute开始分钟 activityTimeLong活动持续时间
+joinAward参与奖励 winAward 胜利奖励
+
+
+need="条件" desc="描述" openDay="[0,0,1,0,0,0,0]" awardDesc="奖励介绍"
+-->
+<objects>
+	<sample sid="1" className="game.window.yellow.data.YellowData" openTimeHour="13" openTimeMinute="0" name="黄巾余党"  activityTimeLong="1800" rankAwardArr="[6600,6601,6602,6603,6604,6605,6606,6607,6608]" need="全体玩家" desc="活动每天开启三次，玩家可以通过活动面板进入活动地图，击杀尽可能的多的黄巾军来获取奖励。" openDay="[1,1,1,1,1,1,1]" awardDesc="海量功勋，声望积分，经验卷轴"/>
+
+	<sample sid="3" className="game.window.activity.data.TributeActivityData" openTimeHour="13" openTimeMinute="30" name="朝贡之路" delay="0" activityTimeLong="1800" winAward="9009" rankAwardArr="[9000,9001,9002,9003,9004,9005,9006,9007,9008]" need="全体玩家" desc="城市数量最多的势力会默认成为防守方，防守“朝贡”的队伍30分钟，另外2个国家会作为攻击方进入战斗。" openDay="[1,1,1,1,1,1,1]" awardDesc="海量功勋，声望积分，强化材料"/>
+
+	<sample sid="2" className="game.window.yellow.data.YellowData" openTimeHour="18" openTimeMinute="0" name="黄巾余党" activityTimeLong="1800" rankAwardArr="[6600,6601,6602,6603,6604,6605,6606,6607,6608]" need="全体玩家" desc="活动每天开启三次，玩家可以通过活动面板进入活动地图，击杀尽可能的多的黄巾军来获取奖励。" openDay="[1,1,1,1,1,1,1]" awardDesc="海量功勋，声望积分，经验卷轴"/>
+	
+	<sample sid="10" className="game.window.activity.data.TributeActivityData" openTimeHour="18" openTimeMinute="30" name="朝贡之路" delay="0" activityTimeLong="1800" winAward="9009" rankAwardArr="[9000,9001,9002,9003,9004,9005,9006,9007,9008]" need="全体玩家" desc="城市数量最多的势力会默认成为防守方，防守“朝贡”的队伍30分钟，另外2个国家会作为攻击方进入战斗。" openDay="[1,1,1,1,1,1,1]" awardDesc="海量功勋，声望积分，强化材料"/>
+
+	<sample sid="8" className="game.window.yellow.data.YellowData" openTimeHour="19" openTimeMinute="0" name="黄巾余党"  activityTimeLong="1800" rankAwardArr="[6600,6601,6602,6603,6604,6605,6606,6607,6608]" need="全体玩家" desc="活动每天开启三次，玩家可以通过活动面板进入活动地图，击杀尽可能的多的黄巾军来获取奖励。" openDay="[1,1,1,1,1,1,1]" awardDesc="海量功勋，声望积分，经验卷轴"/>
+
+	<sample sid="6" className="game.window.activity.data.ActivityData" openTimeHour="20" openTimeMinute="0" name="国家全民任务" activityTimeLong="3600" need="全体玩家" desc="占领或防守住指定城市后获取海量奖励" openDay="[1,1,1,1,1,1,1]" awardDesc="海量功勋"/>
+
+	<sample sid="7" className="game.window.skyson.SkySonData" openTimeHour="21" openTimeMinute="0" name="迎奉天子" activityTimeLong="1800" winAward="9042" rankAwardArr="[9033,9034,9035,9036,9037,9038,9039,9040,9041]" need="全体玩家" desc="地图中会开放对应3个势力的入口关卡与一个中心城池，活动结束时，攻占中心城池者为胜利方。" openDay="[0,0,0,0,0,1,0]" awardDesc="海量声望积分，经验卷轴，各类宝石"/>
+</objects>

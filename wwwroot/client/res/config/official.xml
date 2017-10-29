@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <!--
+   name:职称
+   force:武力
+   lead:统帅
+   wisdom:智力
+   leadSol:带兵数
+   derc:描述
+   style:图片
+ bannerSid:需求官职
+  -->
+<sample className="game.window.country.official.OfficialData" sid="0" name="平民" style="pingmin" derc="平民" color="0" bannerSid="0" />
+ <sample className="game.window.country.official.OfficialData" sid="1" name="护军" style="hujun" derc="武力+7统帅+7带兵数+5" color="1" bannerSid="1" force="7" lead="7" leadSol="5" />
+ <sample className="game.window.country.official.OfficialData" sid="2" name="主薄" style="zhubu" derc="统帅+7智力+7带兵数+5" color="1" bannerSid="5" force="" lead="7" wisdom="7" leadSol="5" />
+ <sample className="game.window.country.official.OfficialData" sid="3" name="偏将军" style="pianjiangjun" derc="武力+15统帅+15带兵数+10" color="1" bannerSid="10" force="15" lead="15" wisdom="" leadSol="10" />
+ <sample className="game.window.country.official.OfficialData" sid="4" name="别驾" style="biejia" derc="统帅+15智力+15带兵数+10" color="1" bannerSid="15" force="" lead="15" wisdom="15" leadSol="10" />
+ <sample className="game.window.country.official.OfficialData" sid="5" name="威东将军" style="weidong" derc="武+30统+30带兵+15" color="2" bannerSid="20" force="30" lead="30" wisdom="" leadSol="15" />
+ <sample className="game.window.country.official.OfficialData" sid="6" name="威南将军" style="weinan" derc="统+30智+30带兵+15" color="2" bannerSid="25" force="" lead="30" wisdom="30" leadSol="15" />
+ <sample className="game.window.country.official.OfficialData" sid="7" name="威北将军" style="weibei" derc="武+45智+45带兵+25" color="2" bannerSid="30" force="45" lead="" wisdom="45" leadSol="25" />
+ <sample className="game.window.country.official.OfficialData" sid="8" name="威西将军" style="weixi" derc="统+45智+45带兵+25" color="2" bannerSid="35" force="" lead="45" wisdom="45" leadSol="25" />
+ <sample className="game.window.country.official.OfficialData" sid="9" name="御史中丞" style="yushi" derc="武+60智+60带兵+35" color="2" bannerSid="40" force="60" lead="" wisdom="60" leadSol="35" />
+ <sample className="game.window.country.official.OfficialData" sid="10" name="太学博士" style="taixue" derc="统+60智+60带兵+35" color="2" bannerSid="45" force="" lead="60" wisdom="60" leadSol="35" />
+ <sample className="game.window.country.official.OfficialData" sid="11" name="行军祭酒" style="xingjun" derc="武+75智+75带兵+45" color="2" bannerSid="50" force="75" lead="" wisdom="75" leadSol="45" />
+ <sample className="game.window.country.official.OfficialData" sid="12" name="黄门侍郎" style="huangmen" derc="统+75智+75带兵+45" color="2" bannerSid="55" force="" lead="75" wisdom="75" leadSol="45" />
+ <sample className="game.window.country.official.OfficialData" sid="13" name="前将军" style="qianjiangjun" derc="武+75统+75带兵+45" color="3" bannerSid="60" force="75" lead="75" wisdom="" leadSol="45" />
+ <sample className="game.window.country.official.OfficialData" sid="14" name="后将军" style="houjiangjun" derc="武+90统+90带兵+60" color="3" bannerSid="65" force="90" lead="90" wisdom="" leadSol="60" />
+ <sample className="game.window.country.official.OfficialData" sid="15" name="左将军" style="zuojiangjun" derc="武+90智+90带兵+60" color="3" bannerSid="70" force="90" lead="" wisdom="90" leadSol="60" />
+ <sample className="game.window.country.official.OfficialData" sid="16" name="右将军" style="youjiangjun" derc="智+105武+105带兵+75" color="3" bannerSid="75" force="105" lead="" wisdom="105" leadSol="75" />
+ <sample className="game.window.country.official.OfficialData" sid="17" name="秘书监" style="mishujian" derc="智+105统+105带兵+75" color="3" bannerSid="80" force="" lead="105" wisdom="105" leadSol="75" />
+ <sample className="game.window.country.official.OfficialData" sid="18" name="侍中" style="shizhong" derc="统+120智+120带兵+90" color="3" bannerSid="85" force="" lead="120" wisdom="120" leadSol="90" />
+ <sample className="game.window.country.official.OfficialData" sid="19" name="中常侍" style="zhongchangshi" derc="统+120武+120带兵+90" color="3" bannerSid="90" force="" lead="120" wisdom="120" leadSol="90" />
+ <sample className="game.window.country.official.OfficialData" sid="20" name="太子太傅" style="taizi" derc="武+135智+135带兵+110" color="3" bannerSid="95" force="135" lead="" wisdom="135" leadSol="110" />
+ <sample className="game.window.country.official.OfficialData" sid="21" name="镇南将军" style="zhennan" derc="武+135统+135带兵+110" color="4" bannerSid="100" force="135" lead="135" wisdom="" leadSol="110" />
+ <sample className="game.window.country.official.OfficialData" sid="22" name="镇北将军" style="zhenbei" derc="智+150统+150带兵+130" color="4" bannerSid="105" force="" lead="150" wisdom="150" leadSol="130" />
+ <sample className="game.window.country.official.OfficialData" sid="23" name="镇东将军" style="zhendong" derc="智+150武+150带兵+130" color="4" bannerSid="110" force="150" lead="" wisdom="150" leadSol="130" />
+ <sample className="game.window.country.official.OfficialData" sid="24" name="镇西将军" style="zhenxi" derc="统+165武+165带兵+150" color="4" bannerSid="115" force="" lead="165" wisdom="165" leadSol="150" />
+ <sample className="game.window.country.official.OfficialData" sid="25" name="太府" style="taifu" derc="统+165智+165带兵+150" color="4" bannerSid="120" force="165" lead="165" wisdom="" leadSol="150" />
+ <sample className="game.window.country.official.OfficialData" sid="101" name="公士" style="gongshi" derc="武+5统+5智+5带兵+5" color="0" force="5" lead="5" wisdom="5" leadSol="5" />
+ <sample className="game.window.country.official.OfficialData" sid="102" name="大夫" style="dafu" derc="武+10统+10智+10带兵+10" color="0" force="10" lead="10" wisdom="10" leadSol="10" />
+ <sample className="game.window.country.official.OfficialData" sid="103" name="上造" style="shangzao" derc="武+20统+20智+20带兵+15" color="0" force="20" lead="20" wisdom="20" leadSol="15" />
+ <sample className="game.window.country.official.OfficialData" sid="104" name="官大夫" style="guandafu" derc="武+30统+30智+30带兵+25" color="0" force="30" lead="30" wisdom="30" leadSol="25" />
+ <sample className="game.window.country.official.OfficialData" sid="105" name="公大夫" style="gongdafu" derc="武+40统+40智+40带兵+35" color="0" force="40" lead="40" wisdom="40" leadSol="35" />
+ <sample className="game.window.country.official.OfficialData" sid="106" name="左庶长" style="zuoshuzhang" derc="武+50统+50智+50带兵+45" color="0" force="50" lead="50" wisdom="50" leadSol="45" />
+ <sample className="game.window.country.official.OfficialData" sid="107" name="右庶长" style="youshuzhang" derc="武+60统+60智+60带兵+60" color="0" force="60" lead="60" wisdom="60" leadSol="60" />
+ <sample className="game.window.country.official.OfficialData" sid="108" name="五大夫" style="wudafu" derc="武+70统+70智+70带兵+75" color="0" force="70" lead="70" wisdom="70" leadSol="75" />
+ <sample className="game.window.country.official.OfficialData" sid="109" name="少上造" style="shaoshangzao" derc="武+80统+80智+80带兵+90" color="0" force="80" lead="80" wisdom="80" leadSol="90" />
+ <sample className="game.window.country.official.OfficialData" sid="110" name="大上造" style="dashangzao" derc="武+90统+90智+90带兵+110" color="0" force="90" lead="90" wisdom="90" leadSol="110" />
+ <sample className="game.window.country.official.OfficialData" sid="111" name="大庶长" style="dashuzhang" derc="武+100统+100智+100带兵+130" color="0" force="100" lead="100" wisdom="100" leadSol="130" />
+ <sample className="game.window.country.official.OfficialData" sid="112" name="关内侯" style="guanneihou" derc="武+110统+110智+110带兵+150" color="0" force="110" lead="110" wisdom="110" leadSol="150" />
+ <sample className="game.window.country.official.OfficialData" sid="113" name="列侯" style="liehou" derc="武+450统+450智+450带兵+40000" color="0" force="450" lead="450" wisdom="450" leadSol="40000" />
+ <sample className="game.window.country.official.OfficialData" sid="114" name="王" style="wang" derc="武+550统+550智+550带兵+50000" color="0" force="550" lead="550" wisdom="550" leadSol="50000" />
+ <sample className="game.window.country.official.OfficialData" sid="115" name="一字并肩王" style="bingjianwang" derc="武+700统+700智+700带兵+100000" color="0" force="700" lead="700" wisdom="700" leadSol="100000" />
+ </objects>

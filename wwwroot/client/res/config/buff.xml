@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+ <!--createObj 动画效果
+ createToWho效果加给谁 0是在队伍上显示 1为每个人 2挂在队伍头像下一排
+--> 
+<sample className="game.buff.Buff" sid="1" name="测试效果" desc="绝对防御" createObj="buffjian" createToWho="0" />
+ <sample className="game.buff.Buff" sid="9" name="攻击提升" desc="无当伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="15" name="防御提升" desc="接阵伤害减少" createObj="fangyutisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="17" name="攻击提升" desc="死战攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="19" name="攻击提升" desc="彪悍攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="45" name="攻击提升" desc="捕猎伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="72" name="攻击降低" desc="闭月攻击减少" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="74" name="攻击提升" desc="洛水神姬攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="82" name="防御降低" desc="羞花伤害加深" createObj="fangyujiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="84" name="攻击提升" desc="风华绝代攻击力增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="86" name="防御降低" desc="风华绝代伤害加深" createObj="fangyujiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="90" name="攻击提升" desc="胡音琴韵攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="98" name="攻击降低" desc="铁骑突击攻击减少" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="106" name="攻击降低" desc="万箭齐发伤害减少" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="112" name="防御提升" desc="仁义无双伤害减免" createObj="fangyutisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="114" name="攻击提升" desc="乱世枭雄攻击力增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="116" name="属性提升" desc="知人善用武力增加" createObj="shuxingtisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="120" name="攻击提升" desc="江东猛虎攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="130" name="攻击提升" desc="人中吕布攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="134" name="攻击提升" desc="刚烈伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="140" name="攻击提升" desc="麒麟儿攻击增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="142" name="防御提升" desc="麒麟儿伤害减免" createObj="fangyutisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="148" name="攻击提升" desc="虎痴伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="152" name="攻击降低" desc="汉末神仙致命率降低" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="158" name="测试效果" desc="孤胆英豪攻击增加" createObj="buffjian" createToWho="0" />
+ <sample className="game.buff.Buff" sid="172" name="护盾" desc="秀内慧中护盾" createObj="fanghu" createToWho="0" />
+ <sample className="game.buff.Buff" sid="174" name="速度提升" desc="秀内慧中速度增加" createObj="sudutisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="192" name="攻击降低" desc="谣言攻击力减少" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="196" name="防御降低" desc="谩骂伤害增加" createObj="fangyujiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="200" name="攻击提升" desc="激励攻击力增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="202" name="护盾" desc="防护护盾" createObj="fanghu" createToWho="0" />
+ <sample className="game.buff.Buff" sid="206" name="测试效果" desc="单骑突伤害增加" createObj="buffjian" createToWho="0" />
+ <sample className="game.buff.Buff" sid="212" name="护盾" desc="铁壁护盾" createObj="fanghu" createToWho="0" />
+ <sample className="game.buff.Buff" sid="214" name="测试效果" desc="突击攻击力增加" createObj="buffjian" createToWho="0" />
+ <sample className="game.buff.Buff" sid="218" name="攻击降低" desc="千军易辟伤害减少" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="236" name="攻击提升" desc="当阳断喝伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="240" name="攻击降低" desc="当阳断喝攻击力减少" createObj="gongjijiangdi" createToWho="2" />
+ <sample className="game.buff.Buff" sid="242" name="攻击提升" desc="老当益壮伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="244" name="速度提升" desc="风驰电掣速度增加" createObj="sudutisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="246" name="攻击提升" desc="老当益壮伤害增加" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="254" name="攻击提升" desc="虎痴伤害加深" createObj="gongjitisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="256" name="防御提升" desc="百里连环分散伤害" createObj="fangyutisheng" createToWho="2" />
+ <sample className="game.buff.Buff" sid="257" name="速度降低" desc="女中豪杰清行动力" createObj="sudujiangdi" createToWho="2" />
+
+ </objects>

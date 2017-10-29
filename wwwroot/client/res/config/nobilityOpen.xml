@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="官运" desc="开启爵位系统，主将可享受爵位带来的属性加成，并且可以为副将佩戴官印增加大量属性" icon="guanyun" openLv="2"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精锐士兵" desc="开启兵营，可招募1阶士兵" icon="jingruishibing" openLv="3"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="副本开启" desc="开启副本，通关可获得大量奖励" icon="fuben" openLv="3"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="招贤纳士" desc="开启名将录，可从中招募强力武将" icon="mingjianglu" openLv="7"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店1" desc="开启功勋商店，每日可消耗功勋限量换购精品道具" icon="gongxunshangdian" openLv="8"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="群英荟萃" desc="开启将星录，招募提升指定武将可大幅提升武将和士兵的属性" icon="mingjianglu" openLv="9"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店2" desc="商品中增加初级经验卷轴" icon="gongxunshangdian" openLv="11"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精锐士兵2" desc="开启2阶士兵招募（随爵位等级提升开启更多）" icon="jingruishibing" openLv="12"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装1" desc="开启打造功能，可打造强力套装" icon="qianglitaozhuang" openLv="13"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="货卖堆山1" desc="提升部分商品限购个数" icon="huomaiduishan" openLv="14"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店3" desc="商品中增加中级经验卷轴，叫阵卡" icon="gongxunshangdian" openLv="16"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="货卖堆山2" desc="提升部分商品限购个数" icon="huomaiduishan" openLv="17"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="帝国崛起1" desc="开启世界地图，可和其他玩家共同争夺天下" icon="diguo" openLv="17"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="帝国崛起2" desc="开启国家任务，完成后获得大量功勋" icon="diguo" openLv="17"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="封邑1" desc="开启封邑1，进行建设后获得更多资源产出" icon="fengyi" openLv="20"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="挑战" desc="开启每日功勋榜，每获得一定功勋可以领取功勋宝箱奖励" icon="tiaozhan" openLv="20"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装2" desc="解锁都尉套装打造限制" icon="qianglitaozhuang" openLv="20"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="官威" desc="活动和国家任务中资源型奖励会随爵位提升而提升" icon="guanyun" openLv="21"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店4" desc="商品中增加中级材料包，夜光杯" icon="gongxunshangdian" openLv="21"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="货卖堆山3" desc="提升部分商品限购个数" icon="huomaiduishan" openLv="22"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="帝国崛起3" desc="开启国家功能，可领取占领城池时获得的资源点奖励，另外可以查看国家当前科技情况" icon="diguo" openLv="23"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="五谷丰登1" desc="提升奖励资源点40%钱币奖励" icon="wugufengdeng" openLv="24"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="宝箱强化1" desc="增加每档功勋宝箱各1个" icon="baoxiangqianghua" openLv="24"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精忠报国1" desc="开启每日杀敌榜，根据每日杀敌数结算排名奖励" icon="jingzhongbaoguo" openLv="26"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店5" desc="商品中增加高级经验卷轴，征募令" icon="gongxunshangdian" openLv="26"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="货卖堆山4" desc="提升部分商品限购个数" icon="huomaiduishan" openLv="27"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精忠报国2" desc="提升每日杀敌榜排名奖励" icon="jingzhongbaoguo" openLv="28"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="五谷丰登2" desc="提升奖励资源点40%粮食奖励" icon="wugufengdeng" openLv="29"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="封邑2" desc="开启封邑2，进行建设后获得更多资源产出" icon="fengyi" openLv="30"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装3" desc="解锁先锋套装打造限制" icon="qianglitaozhuang" openLv="30"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精锐士兵3" desc="开启3阶士兵招募（随爵位等级提升开启更多）" icon="jingruishibing" openLv="30"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="宝箱强化2" desc="增加每档功勋宝箱各1个" icon="baoxiangqianghua" openLv="31"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精忠报国3" desc="提升每日杀敌榜排名奖励" icon="jingzhongbaoguo" openLv="31"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店6" desc="商品中增加高级材料包" icon="gongxunshangdian" openLv="32"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="货卖堆山5" desc="提升部分商品限购个数" icon="huomaiduishan" openLv="33"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精忠报国4" desc="提升每日杀敌榜排名奖励" icon="jingzhongbaoguo" openLv="34"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="五谷丰登3" desc="提升奖励资源点10%木材奖励" icon="wugufengdeng" openLv="35"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="功勋商店7" desc="商品中增加1级宝石箱" icon="gongxunshangdian" openLv="37"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="宝箱强化3" desc="提升所有资源奖励额度100%，升级道具奖励至最高级" icon="baoxiangqianghua" openLv="39"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="封邑3" desc="开启封邑3，进行建设后获得更多资源产出" icon="fengyi" openLv="40"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装4" desc="解锁先锋套装打造限制" icon="qianglitaozhuang" openLv="40"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精忠报国5" desc="提升每日杀敌榜排名奖励" icon="jingzhongbaoguo" openLv="40"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="五谷丰登4" desc="提升奖励资源点10%铁锭奖励" icon="wugufengdeng" openLv="41"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="货卖堆山6" desc="提升部分商品限购个数" icon="huomaiduishan" openLv="42"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="精锐士兵4" desc="开启4阶士兵招募（随爵位等级提升开启更多）" icon="jingruishibing" openLv="50"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="封邑4" desc="开启封邑4，进行建设后获得更多资源产出" icon="fengyi" openLv="50"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装5" desc="解锁五官中郎将套装打造限制" icon="qianglitaozhuang" openLv="50"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="封邑5" desc="开启封邑5，进行建设后获得更多资源产出" icon="fengyi" openLv="60"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装6" desc="解锁御史中丞套装打造限制" icon="qianglitaozhuang" openLv="60"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="封邑6" desc="开启封邑6，进行建设后获得更多资源产出" icon="fengyi" openLv="70"/>
+<sample className="game.window.NobilityLevelUpdate.NobilityOpenData" name="强力套装7" desc="解锁执金吾套装打造限制" icon="qianglitaozhuang" openLv="70"/>
+
+
+</objects>

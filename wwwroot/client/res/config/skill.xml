@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!--
+NormalSkill 普通攻击，用于近战攻击表现
+FlySkill  远程攻击,表现是飞向目标的箭或火球
+AttFlySkill 带击飞效果的近战攻击
+	hitanima  击中目标小兵后，在小兵位置创建的动画
+OnceSkill  声控技能，表现为目标头顶的文字飘动
+	
+
+TargetSkill 武将技能 目标上播放,表现的是在目标头顶的动画
+	beforAnima 技能开始阶段，在施法者位置创建的动画
+	createObj 施法动作完毕后在目标上创建一次的动画
+	hitanima  技能持续的时间内在目标上不断创建的动画
+	sceneAnima 技能结束时在目标上播放的动画
+
+SceneSkill	场景中间创建的全屏动画，根据施法者的方向而选择朝向
+	createObj 地上特效
+	floorAnima 地面特效
+							
+	-->
+	<sample sid="1" className="game.skill.forceSkill.NormalSkill" name="砍杀" actionStyle="action" forceAnima="wuqi"/>
+	<sample sid="2" className="game.skill.forceSkill.FlySkill" name="射箭" actionStyle="action" createObj="jian_effect"/>
+	<!-- sample sid="3" className="game.skill.forceSkill.FlySkill" name="投石" actionStyle="action" createObj="huoqiu" sceneAnima="tz_effect_inside"/ -->
+	<sample sid="9" className="game.skill.forceSkill.AttFlySkill" name="击飞" actionStyle="action" forceAnima="wuqi"/>
+
+	<!--sample sid="4" className="game.skill.heroSkill.SceneSkill" name="主角技能" createObj="zhujiao"/-->
+	<sample sid="4" className="game.skill.heroSkill.SceneSkill" name="千军易劈" createObj="qianjunyipi"/>
+	<sample sid="5" className="game.skill.heroSkill.RotateSkill" name="狂风" createObj="xuanfeng"/>
+	<sample sid="6" className="game.skill.heroSkill.LineSkill" name="全军突击" createObj="chongfeng"/>
+
+
+	<sample sid="10" className="game.skill.forceSkill.OnceSkill" name="冲锋" beforAnima="chongfeng_use"/>
+	<!--武将技能-->
+	<sample sid="20" className="game.skill.heroSkill.TargetSkill" name="闭月" beforAnima="biyue1" createObj="biyue2"/>
+	<sample sid="21" className="game.skill.heroSkill.TargetSkill" name="羞花" createObj="xiuhua"/>
+	<sample sid="22" className="game.skill.heroSkill.SceneSkill" name="风华绝代" createObj="diaochan"/>
+	<sample sid="23" className="game.skill.heroSkill.TargetSkill" name="洛水神姬" beforAnima="zhenji"/>
+	<sample sid="24" className="game.skill.heroSkill.SceneSkill" name="胡音琴韵" createObj="caiwenji"/>
+	<sample sid="25" className="game.skill.heroSkill.SceneSkill" name="女中豪杰" createObj="guanyinping"/>
+	<sample sid="26" className="game.skill.heroSkill.SceneSkill" name="火神降世" createObj="zhurong"/>
+	<sample sid="27" className="game.skill.heroSkill.SceneSkill" name="当阳断喝" createObj="zhangfei"/>
+	<sample sid="28" className="game.skill.heroSkill.TargetSkill" name="人中吕布" beforAnima="renzhonglvbu2" createObj="renzhonglvbu" hitanima="renzhonglvbu"/>
+	<sample sid="29" className="game.skill.heroSkill.SceneSkill" name="百步穿杨" createObj="xiahouyuan"/>
+	<sample sid="30" className="game.skill.heroSkill.SceneSkill" name="奇门遁甲" createObj="zhugeliang" floorAnima="zhugeliangdimian"/>
+	<sample sid="31" className="game.skill.heroSkill.SceneSkill" name="恶来" createObj="elai"/>
+	<sample sid="32" className="game.skill.heroSkill.TargetSkill" name="火攻" createObj="huogong"/>
+	<sample sid="33" className="game.skill.heroSkill.TargetSkill" name="落雷" createObj="luolei" hitanima="luolei"/>
+	<sample sid="34" className="game.skill.heroSkill.TargetSkill" name="滚石" createObj="huoshenjiangshi" hitanima="huoshenjiangshi"/>
+	<sample sid="35" className="game.skill.heroSkill.TargetSkill" name="医疗" createObj="yiliao"/>
+	<sample sid="36" className="game.skill.forceSkill.OnceSkill" name="奔射" createObj="benben" skillNameAnima="benshe"/>
+	<sample sid="37" className="game.skill.forceSkill.OnceSkill" name="冲阵" createObj="chongzhen" skillNameAnima="chongzhen2"/>
+	<sample sid="38" className="game.skill.forceSkill.OnceSkill" name="连矢" createObj="yinushishi" skillNameAnima="lianshi"/>
+	<sample sid="39" className="game.skill.heroSkill.TargetSkill" name="铁壁" createObj="baohu"/>
+	<sample sid="40" className="game.skill.heroSkill.TargetSkill" name="冰锥术" createObj="bingzhuishu" floorAnima="bingzhuishudimian"/>
+	<sample sid="41" className="game.skill.heroSkill.TargetSkill" name="秀内惠中" createObj="fanghushifang"/>
+
+	<sample sid="42" className="game.skill.forceSkill.OnceSkill" name="戟林" createObj="jilin"/>
+	<sample sid="43" className="game.skill.heroSkill.TargetSkill" name="灵魂链接" createObj="linghunlianjie"/>
+	<sample sid="44" className="game.skill.heroSkill.TargetSkill" name="铁骑突击" createObj="tieqituji"/>
+	<sample sid="45" className="game.skill.forceSkill.OnceSkill" name="反弹" createObj="fantan"/>
+	<sample sid="46" className="game.skill.heroSkill.SceneSkill" name="汉末神仙" createObj="shenxian"/>
+	<sample sid="47" className="game.skill.forceSkill.OnceSkill" name="践踏" createObj="jianta"/>
+	<sample sid="48" className="game.skill.heroSkill.TargetSkill" name="冲锋" beforAnima="chongfeng" hitanima="aida"/>
+	<sample sid="49" className="game.skill.heroSkill.SceneSkill" name="单骑扣关" createObj="guanyu" floorAnima="guanyudimian"/>
+	
+	<sample sid="50" className="game.skill.heroSkill.SceneSkill" name="东吴枭姬" createObj="sunshangxiang" floorAnima="sunshangxiangdimian"/>
+	<sample sid="51" className="game.skill.heroSkill.SceneSkill" name="鬼谋" createObj="guojia" floorAnima="guojiadimian"/>
+	<sample sid="52" className="game.skill.heroSkill.SceneSkill" name="江东猛虎" createObj="sunjian" floorAnima="sunjiandimian"/>
+	<sample sid="53" className="game.skill.heroSkill.TargetSkill" name="南蛮入侵" createObj="nanmanruqin"/>
+	<sample sid="54" className="game.skill.heroSkill.TargetSkill" name="防护" createObj="fanghushifang"/>
+	<sample sid="55" className="game.skill.forceSkill.OnceSkill" name="手戟" beforAnima="shoujishifang" createObj="shoujimingzhong"/>
+	<sample sid="56" className="game.skill.heroSkill.TargetSkill" name="无敌" createObj="wudi"/>
+	<sample sid="57" className="game.skill.heroSkill.SceneSkill" name="万箭齐发" createObj="wanjianqifa"/>
+	<sample sid="58" className="game.skill.heroSkill.SceneSkill" name="小霸王" createObj="sunce"/>
+	<sample sid="59" className="game.skill.forceSkill.OnceSkill" name="勇悍" skillNameAnima="yonghan"/>
+	<sample sid="60" className="game.skill.forceSkill.OnceSkill" name="武勇" skillNameAnima="wuyong"/>
+	<sample sid="61" className="game.skill.forceSkill.OnceSkill" name="突击" skillNameAnima="tujin"/>
+	<sample sid="62" className="game.skill.forceSkill.OnceSkill" name="老练" skillNameAnima="laolian"/>
+	<sample sid="63" className="game.skill.forceSkill.OnceSkill" name="断后" skillNameAnima="duanhou"/>
+	<sample sid="64" className="game.skill.forceSkill.OnceSkill" name="藤牌" skillNameAnima="tengpai"/>
+	<sample sid="65" className="game.skill.forceSkill.OnceSkill" name="先登" skillNameAnima="xiandeng"/>
+	<sample sid="66" className="game.skill.forceSkill.OnceSkill" name="无当" skillNameAnima="wudang"/>
+	<sample sid="67" className="game.skill.forceSkill.OnceSkill" name="横扫" skillNameAnima="hengsao"/>
+	<sample sid="68" className="game.skill.forceSkill.OnceSkill" name="接阵" skillNameAnima="jiezhen"/>
+	<sample sid="69" className="game.skill.forceSkill.OnceSkill" name="死战" skillNameAnima="sizhan"/>
+	<sample sid="70" className="game.skill.forceSkill.OnceSkill" name="彪悍" skillNameAnima="biaohan"/>
+	<sample sid="71" className="game.skill.forceSkill.OnceSkill" name="锦帆" skillNameAnima="jinfan"/>
+	<sample sid="72" className="game.skill.forceSkill.OnceSkill" name="捕猎" skillNameAnima="bulie"/>
+	<sample sid="73" className="game.skill.forceSkill.OnceSkill" name="无忧" skillNameAnima="wuyou"/>
+	<sample sid="74" className="game.skill.heroSkill.SceneSkill" name="鬼狐" createObj="jiaxu"/>
+	<sample sid="75" className="game.skill.forceSkill.OnceSkill" name="连矢" skillNameAnima="lianshi"/>
+	<sample sid="76" className="game.skill.forceSkill.OnceSkill" name="奔射" skillNameAnima="benshe"/>
+    <sample sid="77" className="game.skill.forceSkill.NormalSkill" name="追袭" skillNameAnima="zhuixi" actionStyle="action" forceAnima="wuqi"/>
+    <sample sid="78" className="game.skill.forceSkill.OnceSkill" name="义气" skillNameAnima="yiqi"/>
+    <sample sid="79" className="game.skill.forceSkill.OnceSkill" name="威慑" skillNameAnima="weishe"/>
+    <sample sid="80" className="game.skill.forceSkill.OnceSkill" name="戟林" skillNameAnima="jilin2" createObj="jilin"/>
+    <sample sid="81" className="game.skill.forceSkill.OnceSkill" name="践踏" skillNameAnima="jianta2" createObj="jianta"/>
+    <sample sid="82" className="game.skill.forceSkill.OnceSkill" name="冲阵" skillNameAnima="chongzhen2"/>
+    <sample sid="83" className="game.skill.forceSkill.OnceSkill" name="陷阵" skillNameAnima="xianzhen"/>
+    <sample sid="84" className="game.skill.forceSkill.OnceSkill" name="虎贲" skillNameAnima="huben"/>
+    <sample sid="85" className="game.skill.forceSkill.OnceSkill" name="金吾" skillNameAnima="jinwu"/>
+    <sample sid="86" className="game.skill.forceSkill.OnceSkill" name="手戟" skillNameAnima="shouji"/>
+    <sample sid="87" className="game.skill.forceSkill.OnceSkill" name="破敌" skillNameAnima="podi"/>
+    <sample sid="88" className="game.skill.forceSkill.OnceSkill" name="解烦" skillNameAnima="jiefan"/>
+    <sample sid="89" className="game.skill.forceSkill.OnceSkill" name="攒射" skillNameAnima="cuanshe"/>
+	<sample sid="90" className="game.skill.forceSkill.OnceSkill" name="玄甲" skillNameAnima="xuanjia"/>
+
+	<sample sid="91" className="game.skill.heroSkill.SceneSkill" name="鏖战"></sample>
+	<sample sid="92" className="game.skill.heroSkill.SceneSkill" name="风驰电掣"></sample>
+	<sample sid="93" className="game.skill.heroSkill.SceneSkill" name="刚烈"></sample>
+	<sample sid="94" className="game.skill.heroSkill.SceneSkill" name="虎痴"></sample>
+	<sample sid="95" className="game.skill.heroSkill.SceneSkill" name="仁义无双"></sample>
+	<sample sid="96" className="game.skill.heroSkill.SceneSkill" name="乱世枭雄"></sample>
+	<sample sid="97" className="game.skill.heroSkill.SceneSkill" name="知人善用"></sample>
+	<sample sid="98" className="game.skill.heroSkill.SceneSkill" name="麒麟儿"></sample>
+	<sample sid="99" className="game.skill.heroSkill.SceneSkill" name="孤单英豪"></sample>
+	<sample sid="100" className="game.skill.heroSkill.TargetSkill" name="易伤"></sample>
+	<sample sid="101" className="game.skill.heroSkill.TargetSkill" name="牵制" createObj="xiahouyuan"/>
+	<sample sid="102" className="game.skill.heroSkill.TargetSkill" name="奇袭" createObj="tieqituji"/>
+	<sample sid="103" className="game.skill.heroSkill.TargetSkill" name="诡炎术" createObj="xushu"/>
+	<sample sid="104" className="game.skill.heroSkill.TargetSkill" name="小霸王" createObj="sunce"/>
+	<sample sid="105" className="game.skill.heroSkill.TargetSkill" name="地狱火" createObj="weiyan"/>
+	<sample sid="106" className="game.skill.heroSkill.SceneSkill" name="百战护主"></sample>
+	<sample sid="107" className="game.skill.heroSkill.SceneSkill" name="强化刚烈"></sample>
+
+
+	<!--兵种技能-->
+	<sample sid="200" className="game.skill.forceSkill.OnceSkill" name="爆破" actionStyle="action" createObj="baopo"/>
+	<sample sid="201" className="game.skill.forceSkill.FlySkill" name="箭矢" actionStyle="action" createObj="jianshi" hitanima="aida"/>
+	
+	<!--没使用的效果 danqikouguanshifang,danqikouguanmingzhong，gunshishifang(落石)，gunshimingzhong(爆炸) ,
+	guicai,dongwuxiaoji,hanmoshenxian(万佛朝宗),dangyangduanhe(),xiaobawang(一柱擎天),qimendunjia（奇门遁甲），luoshuishenji（喷水）
+	gongjizhengjia(攻击增加，范围黄光)
+	-->
+</objects>

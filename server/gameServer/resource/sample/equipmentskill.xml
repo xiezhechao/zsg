@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+     <objects>
+     <field class="game.equipment.EquipmentSkill" name="factory" id="equipmentskillSampleFactory" />
+     <method ref="equipmentskillSampleFactory" name="init">
+     <ref id="context" />
+     </method>
+   <!--
+   type:装备附加效果类型 
+    
+    13攻击等级
+   14体力等级 15带兵数等级 16武力等级 17统帅等级 18智力等级 19暴伤等级 20韧性等级 21单兵攻击等级 22单兵生命等级 23暴击几率等级 24格挡几率等级 25速度等级
+   typeOddsList：装备附加效果对应的几率
+   level:等级值
+   levelOddsList：等级对应的几率
+  upLvOdds:洗练等级升级慨率配置  0下标 为不升级慨率数组 1 为升级慨率数组,  慨率数组中不占位
+ -->
+	<sample class="game.equipment.EquipmentSkill" sid="1" >
+ 		<field name="type" declared="1">
+			<ints>13,14,15,16,17,18,19,21,22,23,25,26</ints>
+		</field>
+ 		<field name="typeOddsList" declared="1">
+			<ints>10,10,10,10,10,10,10,10,10,10,10,10</ints>
+		</field>
+ 		<field name="level" declared="1">
+			<ints>1,2</ints>
+		</field>
+ <field name="levelOddsList" declared="1">
+			<ints>90,10</ints>
+		</field>
+ <field name="upLvOdds" declared="1">
+		<objs class="[I">
+			<ints>80,100</ints>
+ 			<ints>20,0</ints>
+		</objs>
+	</field> 	</sample>
+ 	<sample class="game.equipment.EquipmentSkill" sid="2" >
+ 		<field name="type" declared="1">
+			<ints>13,14,15,16,17,18,19,21,22,23,25,26</ints>
+		</field>
+ 		<field name="typeOddsList" declared="1">
+			<ints>10,10,10,10,10,10,10,10,10,10,10,10</ints>
+		</field>
+ 		<field name="level" declared="1">
+			<ints>1,2,3</ints>
+		</field>
+ <field name="levelOddsList" declared="1">
+			<ints>90,5,5</ints>
+		</field>
+ <field name="upLvOdds" declared="1">
+		<objs class="[I">
+			<ints>80,90,100</ints>
+ 			<ints>20,10,0</ints>
+		</objs>
+	</field> 	</sample>
+ 	<sample class="game.equipment.EquipmentSkill" sid="3" >
+ 		<field name="type" declared="1">
+			<ints>13,14,15,16,17,18,19,21,22,23,25,26</ints>
+		</field>
+ 		<field name="typeOddsList" declared="1">
+			<ints>10,10,10,10,10,10,10,10,10,10,10,10</ints>
+		</field>
+ 		<field name="level" declared="1">
+			<ints>1,2,3,4</ints>
+		</field>
+ <field name="levelOddsList" declared="1">
+			<ints>90,5,4,1</ints>
+		</field>
+ <field name="upLvOdds" declared="1">
+		<objs class="[I">
+			<ints>80,90,95,100</ints>
+ 			<ints>20,10,5,0</ints>
+		</objs>
+	</field> 	</sample>
+ 	<sample class="game.equipment.EquipmentSkill" sid="4" >
+ 		<field name="type" declared="1">
+			<ints>13,14,15,16,17,18,19,21,22,23,25,26</ints>
+		</field>
+ 		<field name="typeOddsList" declared="1">
+			<ints>10,10,10,10,10,10,10,10,10,10,10,10</ints>
+		</field>
+ 		<field name="level" declared="1">
+			<ints>1,2,3,4,5,6</ints>
+		</field>
+ <field name="levelOddsList" declared="1">
+			<ints>70,21,6,1,1,1</ints>
+		</field>
+ <field name="upLvOdds" declared="1">
+		<objs class="[I">
+			<ints>80,90,95,98,99,100</ints>
+ 			<ints>20,10,5,2,1,0</ints>
+		</objs>
+	</field> 	</sample>
+ </objects>

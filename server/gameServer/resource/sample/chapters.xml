@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+  <field class="game.duplicate.Chapters" name="factory" id="chaptersFactory"/>
+  <method ref="chaptersFactory" name="init"><ref id="context"/></method>
+<sample sid="1"  class="game.duplicate.Chapters" name="黄巾之乱" dailyAwardSid="1002" >
+ <field name="duplicates" declared="1">
+ <ints>1,2,3,4,5,6,7,8,9,10</ints>
+ </field>
+ </sample>
+ <sample sid="2"  class="game.duplicate.Chapters" name="董卓乱政" preChapterSid="1" dailyAwardSid="1004" >
+ <field name="duplicates" declared="1">
+ <ints>11,12,13,14,15,16,17,18,19,20</ints>
+ </field>
+ </sample>
+ <sample sid="3"  class="game.duplicate.Chapters" name="火烧易京楼" preChapterSid="2" dailyAwardSid="1005" >
+ <field name="duplicates" declared="1">
+ <ints>21,22,23,24,25,26,27,28,29,30</ints>
+ </field>
+ </sample>
+ <sample sid="4"  class="game.duplicate.Chapters" name="刘玄德千里援徐州" preChapterSid="3" dailyAwardSid="1006" >
+ <field name="duplicates" declared="1">
+ <ints>31,32,33,34,35,36,37,38,39,40</ints>
+ </field>
+ </sample>
+ <sample sid="5"  class="game.duplicate.Chapters" name="孙伯符平定江东" preChapterSid="4" dailyAwardSid="1007" >
+ <field name="duplicates" declared="1">
+ <ints>41,42,43,44,45,46,47,48,49,50</ints>
+ </field>
+ </sample>
+ <sample sid="6"  class="game.duplicate.Chapters" name="讨伐袁术" preChapterSid="5" dailyAwardSid="1008" >
+ <field name="duplicates" declared="1">
+ <ints>51,52,53,54,55,56,57,58,59,60</ints>
+ </field>
+ </sample>
+ <sample sid="7"  class="game.duplicate.Chapters" name="吕布白门楼陨命" preChapterSid="6" dailyAwardSid="1009" >
+ <field name="duplicates" declared="1">
+ <ints>61,62,63,64,65,66,67,68,69,70</ints>
+ </field>
+ </sample>
+ <sample sid="8"  class="game.duplicate.Chapters" name="官渡之战" preChapterSid="7" dailyAwardSid="1010" >
+ <field name="duplicates" declared="1">
+ <ints>71,72,73,74,75,76,77,78,79,80</ints>
+ </field>
+ </sample>
+ <sample sid="9"  class="game.duplicate.Chapters" name="千里走单骑" preChapterSid="8" dailyAwardSid="1011" >
+ <field name="duplicates" declared="1">
+ <ints>81,82,83,84,85,86,87,88,89,90</ints>
+ </field>
+ </sample>
+ <sample sid="10"  class="game.duplicate.Chapters" name="赤壁之战" preChapterSid="9" dailyAwardSid="1012" >
+ <field name="duplicates" declared="1">
+ <ints>91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106</ints>
+ </field>
+ </sample>
+ </objects>

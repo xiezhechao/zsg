@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+   <objects>
+   <field class="game.country.city.BuildArea" name="factory" id="buildAreaSampleFactory"/>
+   <method ref="buildAreaSampleFactory" name="init">
+   <ref id="context"/>
+   </method>
+   <!-- 城市的建筑区域 -->
+   <!-- 
+   needLevel:开启等级(需要的官府等级)
+   buildArr:建筑区域中的实际建筑sid数组
+    -->
+<sample class="game.country.city.BuildArea" sid="1" name="市场" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="2" name="锻造司" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="3" name="医疗营" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="4" name="御医所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>401</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="5" name="锻铁场" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>501</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="6" name="城门" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>601</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="7" name="箭楼" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>701</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="8" name="民居" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>801</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="9" name="农田" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>901</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="10" name="林地" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>1001</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="11" name="冶铁所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>1101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="21" name="良田" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>2101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="22" name="磨坊" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>2201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="23" name="作坊" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>2301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="24" name="劳役所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>2401</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="31" name="村落" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>3101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="32" name="钱庄" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>3201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="33" name="铸币所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>3301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="34" name="书院" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>3401</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="41" name="林场" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>4101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="42" name="伐木场" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>4201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="43" name="木料坊" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>4301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="44" name="兵营" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>4401</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="51" name="矿山" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>5101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="52" name="采矿所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>5201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="53" name="探矿所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>5301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="54" name="铁匠铺" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>5401</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="61" name="军疗驿" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>6101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="62" name="城墙" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>6201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="63" name="校场" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>6301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="64" name="木监所" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>6401</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="71" name="医疗营" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>7101</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="72" name="哨塔" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>7201</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="73" name="军械坊" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>7301</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.BuildArea" sid="74" name="采矿营" needLevel="2" >
+ <field name="buildArr" declared="1">
+ <ints>7401</ints>
+ </field>
+</sample>
+ </objects>

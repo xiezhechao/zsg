@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 副本章节信息 -->
+<!-- style 章节图片 duplicarr 章节包含副本 -->
+<objects>
+<sample sid="1"  className="game.window.duplicate.data.Chapter" name="黄巾之乱" style="2" desc="东汉末年，外戚专政，宦官专权，国家动荡不安，民不聊生，贫苦人民在张角的号令下，纷纷揭竿起义，高喊：“苍天已死，黄天当立，岁在甲子，天下大吉”的口号，开始对朝廷发起猛烈的攻击。" dailyAwardSid="1002" x="199" y="352" duplicarr="[1,2,3,4,5,6,7,8,9,10]" />
+ <sample sid="2"  className="game.window.duplicate.data.Chapter" name="董卓乱政" preChapterSid="1" style="4" desc="公元189年，汉灵帝死，汉少帝继位，董卓率西凉军入京，废少帝立陈留王，独揽军政大权，祸乱朝政，内外官僚朝不保夕。" dailyAwardSid="1004" x="223" y="267" duplicarr="[11,12,13,14,15,16,17,18,19,20]" />
+ <sample sid="3"  className="game.window.duplicate.data.Chapter" name="火烧易京楼" preChapterSid="2" style="5" desc="公元198年，袁绍为统一河北，率军攻易京，公孙瓒屯粮期长期固守再相机出击，袁绍致书劝和，公孙瓒置之不理。建安三年，袁绍遂设下伏兵倾力进攻，公孙瓒中伏，心知必败，逃回城中自杀。" dailyAwardSid="1005" x="281" y="181" duplicarr="[21,22,23,24,25,26,27,28,29,30]" />
+ <sample sid="4"  className="game.window.duplicate.data.Chapter" name="刘玄德千里援徐州" preChapterSid="3" style="6" desc="公元193年，曹操大军兵临徐州城下，徐州牧陶谦自知难以抵敌，请北海相孔融前来相救，孔融请刘备同去，刘备欣然带兵奔赴徐州。" dailyAwardSid="1006" x="77" y="105" duplicarr="[31,32,33,34,35,36,37,38,39,40]" />
+ <sample sid="5"  className="game.window.duplicate.data.Chapter" name="孙伯符平定江东" preChapterSid="4" style="7" desc="公元195年，孙策以助袁术攻刘繇为借口，出兵曲阿，最后把江东的割据势力消灭，一统江东，为东吴建立打下基础。" dailyAwardSid="1007" x="226" y="110" duplicarr="[41,42,43,44,45,46,47,48,49,50]" />
+ <sample sid="6"  className="game.window.duplicate.data.Chapter" name="讨伐袁术" preChapterSid="5" style="8" desc="公元197年，袁术在寿春称帝，被视为叛汉，公元199年，袁术讨伐战开始，此战以袁术战败，仲氏政权崩溃而告终。" dailyAwardSid="1008" x="308" y="81" duplicarr="[51,52,53,54,55,56,57,58,59,60]" />
+ <sample sid="7"  className="game.window.duplicate.data.Chapter" name="吕布白门楼陨命" preChapterSid="6" style="9" desc="吕布虎视眈眈占领徐州，曹操恐其与袁绍联合夹击，公元198年，曹操起兵攻打吕布。吕布势力覆亡，曹操取得徐州，避免了自己和袁绍的决斗时被吕布偷袭的危险。" dailyAwardSid="1009" x="424" y="84" duplicarr="[61,62,63,64,65,66,67,68,69,70]" />
+ <sample sid="8"  className="game.window.duplicate.data.Chapter" name="官渡之战" preChapterSid="7" style="10" desc="官渡，位于许都之北，黄河之南，公元199年，袁绍已占据幽州、冀州、青州、并州，尽有河北之地，意欲南下征天下。公元200年，袁绍与曹操相持于官渡，在此展开战略决战，曹操奇袭袁军乌巢粮仓，继而击溃袁军主力。此战奠定了曹操统一中国北方的基础。" dailyAwardSid="1010" x="499" y="124" duplicarr="[71,72,73,74,75,76,77,78,79,80]" />
+ <sample sid="9"  className="game.window.duplicate.data.Chapter" name="千里走单骑" preChapterSid="8" style="11" desc="公元200年，曹操攻刘备，关羽、刘备下邳失散，关羽陷身曹营。刘备去投袁绍，关羽得知刘备下落，单人匹马保护二家皇嫂千里寻兄。途中被逼无奈，过五关斩六将，终于在古城兄弟君臣夫妻相会。" dailyAwardSid="1011" x="434" y="180" duplicarr="[81,82,83,84,85,86,87,88,89,90]" />
+ <sample sid="10"  className="game.window.duplicate.data.Chapter" name="赤壁之战" preChapterSid="9" style="12" desc="公元208年，曹操大军南下，因不习水性，故而庞统献连环计，将船只连在一起，后孙刘联军以大火攻之，大破曹军，最终以少胜多，曹操北回，孙刘双方亦各自争夺荆州的一部分，此战奠定了三国鼎立的基础。" dailyAwardSid="1012" x="407" y="250" duplicarr="[91,92,93,94,95,96,97,98,99,100]" />
+ </objects>

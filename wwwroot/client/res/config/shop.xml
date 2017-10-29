@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!--
+		商店配置
+		propSid 物品 sid
+		buytype 
+		
+				1粮食
+	 			2木材
+				3钱币
+				4铁锭
+				5经验
+				6劳役
+				7文化
+				8军械
+				9训练
+				10元宝
+				11礼券
+				12积分
+
+
+		price 价格
+	-->
+	<sample sid="1" className="game.window.shop.normalShop.ShopProp" propSid="1"  price="10" buytype="1"/>
+	<sample sid="2" className="game.window.shop.normalShop.ShopProp" propSid="2"  price="10" buytype="2"/>
+	<sample sid="3" className="game.window.shop.normalShop.ShopProp" propSid="3"  price="10" buytype="3"/>
+	<sample sid="4" className="game.window.shop.normalShop.ShopProp" propSid="4"  price="10" buytype="1"/>
+	<sample sid="5" className="game.window.shop.normalShop.ShopProp" propSid="5"  price="10" buytype="2"/>
+	<sample sid="6" className="game.window.shop.normalShop.ShopProp" propSid="6"  price="10" buytype="3"/>
+	<sample sid="7" className="game.window.shop.normalShop.ShopProp" propSid="1000"  price="10" buytype="1"/>
+	<sample sid="8" className="game.window.shop.normalShop.ShopProp" propSid="1001"  price="10" buytype="2"/>
+	<sample sid="9" className="game.window.shop.normalShop.ShopProp" propSid="1002"  price="10" buytype="3"/>
+	<sample sid="10" className="game.window.shop.normalShop.ShopProp" propSid="1003"  price="10" buytype="1"/>
+	<sample sid="11" className="game.window.shop.normalShop.ShopProp" propSid="1004"  price="10" buytype="2"/>
+	<sample sid="12" className="game.window.shop.normalShop.ShopProp" propSid="1005"  price="10" buytype="3"/>
+	<sample sid="13" className="game.window.shop.normalShop.ShopProp" propSid="1006"  price="10" buytype="1"/>
+	<sample sid="14" className="game.window.shop.normalShop.ShopProp" propSid="1007"  price="10" buytype="2"/>
+	<sample sid="15" className="game.window.shop.normalShop.ShopProp" propSid="1008"  price="10" buytype="3"/>
+	<sample sid="16" className="game.window.shop.normalShop.ShopProp" propSid="1009"  price="10" buytype="1"/>
+	<sample sid="17" className="game.window.shop.mall.PrestigeMallProp" propSid="1006"  price="10" buytype="1"/>
+	<sample sid="18" className="game.window.shop.mall.PrestigeMallProp" propSid="1007"  price="10" buytype="2"/>
+	<sample sid="19" className="game.window.shop.mall.PrestigeMallProp" propSid="1008"  price="10" buytype="3"/>
+	<sample sid="20" className="game.window.shop.mall.PrestigeMallProp" propSid="1009"  price="10" buytype="1"/>
+	
+</objects>
+

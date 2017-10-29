@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<field class="game.role.Player" name="factory" id="playerSampleFactory"/>
+	<method ref="playerSampleFactory" name="init">
+		<ref id="context"/>
+	</method>
+
+	<sample class="game.role.Player" sid="1" defaultMilitarySid="1" gold="100000" money="9999999" food="9999999" wood="9999999" iron="9999999" ginger="10"></sample>
+	<sample class="game.role.Player" sid="2" defaultMilitarySid="2" gold="100000" money="9999999" food="9999999" wood="9999999" iron="9999999" ginger="10"></sample>
+	<sample class="game.role.Player" sid="3" defaultMilitarySid="3" gold="100000" money="9999999" food="9999999" wood="9999999" iron="9999999" ginger="10"></sample>
+	<sample class="game.role.Player" sid="4" defaultMilitarySid="4" gold="100000" money="9999999" food="9999999" wood="9999999" iron="9999999" ginger="10"></sample>
+</objects>

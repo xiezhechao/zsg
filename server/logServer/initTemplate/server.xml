@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+
+	<!--数据库用户名-->
+	<String id="dbName">${db.log.user}</String>
+	<!--数据库密码-->
+	<String id="dbPassword">${db.log.password}</String>
+	<!--数据库编码-->
+	<String id="dbEncode">utf-8</String>
+	<!--游戏日志数据库地址-->
+	<String id="logDBIP">jdbc:mysql://${db.log.ip}/${db.log.database}</String>
+
+	<!--sever地址-->
+	<String id="serverIP">tcp://${server.domain}:${server.port}</String>
+	<!--日志地址-->
+	<String id="logIP">tcp://${logServer.ip}:${logServer.port}</String>
+</objects>

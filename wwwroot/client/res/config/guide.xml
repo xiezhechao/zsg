@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<sample sid ="1" miaoshu="小秘书的一血" className="game.guide.SpeakGuide" desc='["欢迎来到三国时代，主公","这里就是您的封地！您的子民都在等待您的亲临！"]'/>
+	<sample sid ="2" id="1" miaoshu="点击主城" className="game.guide.ClickGuide"  desc="点我" isDoubleClick="0" isAccurate="true"/>
+	<sample sid ="3" id="2" miaoshu="点击官府" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/>
+	<sample sid ="500" id="500" miaoshu="升级官府-点击官府升级按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" type="1" isJump="true"/>	
+	<sample sid ="4" miaoshu="升级官府级时小秘书弹出的对话" className="game.guide.SpeakGuide" desc='["主公，升级官府出现了新的建筑，让我们看看他有什么用"]'/>
+	<sample sid ="5" id="3" miaoshu="点击民居" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" offx="100" isAccurate="true"/>
+	<sample sid ="7" miaoshu="指引完民居后弹出" className="game.guide.SpeakGuide" desc='["又出现了新的建筑，快看看他有什么用"]'/>
+	<sample sid ="8" id="5" miaoshu="点击林地" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true" inCity="true"/>
+	<sample sid ="10" miaoshu="升级林地" className="game.guide.SpeakGuide" desc='["升级完新建筑也别忘记升级老建筑哦主公~"]'/>
+	<sample sid ="11" id="7" miaoshu="点击农田" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/>
+	<sample sid ="13" miaoshu="农田指引" className="game.guide.SpeakGuide" desc='["农田产出粮食，以后治疗伤兵不用发愁了"]'/>
+	<sample sid ="14" id="9" miaoshu="点击冶炼所" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/>
+	<sample sid ="16" miaoshu="指引完冶铁所弹出" className="game.guide.SpeakGuide" desc='["医疗营和御医所可以加快伤兵恢复速度"]'/>
+	<sample sid ="17" id="11" miaoshu="打开武将属性面板" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="18" id="12" miaoshu="打开包裹" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" type="1"/>
+	<!--sample sid ="19" id="13" miaoshu="穿戴头盔" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>	
+	<sample sid ="20" id="14" miaoshu="穿戴腰带" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="21" id="15" miaoshu="穿戴衣服" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="22" id="16" miaoshu="穿戴披风" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="23" id="17" miaoshu="穿戴武器" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="24" id="18" miaoshu="穿戴皮囊" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="25" id="19" miaoshu="穿戴裤子" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="26" id="20" miaoshu="穿戴鞋子" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+	<sample sid ="28" miaoshu="穿戴装备" className="game.guide.SpeakGuide" desc='["在疆场上驰骋怎能少了杀敌装备，无论是衣甲或是兵刃都缺一不可，希望主公多多杀敌，开辟疆土保卫河山"]'/-->
+	<sample sid ="29" id="22" miaoshu="点击募兵" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="30" id="23" miaoshu="点击募兵界面中的最大按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="31" id="24" miaoshu="点击募兵界面中的招募按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="33" miaoshu="募兵" className="game.guide.SpeakGuide" desc='["恭喜主公募得士兵！"]'/>
+    <sample sid ="34" id="26" miaoshu="点击编组" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="35" id="27" miaoshu="点击编组中第一个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="36" id="28" miaoshu="点击阵位中第一排第二个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="3" recth="-80" recty="50" rectw="-30" offy="50"  offx="-12"/>
+	<sample sid ="37" id="29" miaoshu="点击编组中士兵栏" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="38" id="30" miaoshu="点击编组中士兵下拉栏的第一个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="3" recth="-80"/>
+	<sample sid ="39" id="31" miaoshu="点击编组中的保存按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" type="1"/>
+	<sample sid ="40" id="32" miaoshu="打开副本" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="41" id="33" miaoshu="选择第一个副本" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="42" id="34" miaoshu="点击副本界面的进入关卡" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+
+	<sample sid ="501" id="501" miaoshu="点击结算面板中的关闭按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isInFightShow="true"/>  
+	<sample sid ="44" id="36" miaoshu="点击副本界面的开始战斗" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+    <sample sid ="45" miaoshu="征战副本" className="game.guide.SpeakGuide" desc='["开战"]' isInFightShow="true"/>
+	<sample sid ="46" id="37" miaoshu="选择武将属性面板的第一个武将" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="47" id="38" miaoshu="点击武将属性面板的升级按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="48" id="39" miaoshu="点击批量使用经验卷轴中的最大按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="49" id="40" miaoshu="点击批量使用经验卷中的批量使用按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+    <sample sid ="50" miaoshu="使用经验卷轴" className="game.guide.SpeakGuide" desc='["温馨提示：质量越高的经验卷轴获得经验越多，武将升级越快"]'/>
+	<sample sid ="52" id="42" miaoshu="打开名将录" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="53" id="43" miaoshu="点击名将录中的赠送按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+    <sample sid ="54" miaoshu="招募将领" className="game.guide.SpeakGuide" desc='["功勋或者元宝可增加武将的好感度，当达到指定值时就可以招募该武将至主公麾下了"]'/>
+	<sample sid ="55" id="44" miaoshu="点击名将录中的一键赠送按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    
+	<sample sid ="56" id="45" miaoshu="点击名将录中的退出按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" type="1"/>    
+	<sample sid ="60" id="49" miaoshu="点击阵位中第二排第二个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="3" recth="-80" recty="50" rectw="-30" offy="50" offx="-12"/>     
+	<sample sid ="66" id="56" miaoshu="选择第二个副本" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>    `	
+
+	<sample sid ="72" id="61" miaoshu="升级官府2" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/> 
+    <sample sid ="73" miaoshu="市场喊话" className="game.guide.SpeakGuide" desc='["又获得了一个新建筑，城市看上去越来越繁荣了"]'/>
+    <sample sid ="81" miaoshu="升级官府2" className="game.guide.SpeakGuide" desc='["恭喜主公获得第一块封邑，封邑从属主城，有了封邑主公实力又将更进一步"]'/>
+	<!-- sample sid ="82" id="69" miaoshu="点击进入沙盘" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/ --> 
+	<sample sid ="83" id="70" miaoshu="点击进入一个封邑" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="84" miaoshu="进入封邑1小秘书弹出" className="game.guide.SpeakGuide" desc='["快来瞧瞧主公的封邑吧！封邑中有产出对应资源的建筑，大大增强主公实力"]'/>
+	<sample sid ="87" id="73" miaoshu="点击锻造司" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/> 
+
+    <sample sid ="89" miaoshu="升级锻造司" className="game.guide.SpeakGuide" desc='["锻造司是产出军械的重要场所，军械值是生产士兵的重要资源"]'/>
+	<sample sid ="90" id="75" miaoshu="点击兵营" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/> 
+
+    <sample sid ="92" miaoshu="升级兵营" className="game.guide.SpeakGuide" desc='["兵营产出训练值，亦是生产士兵的重要资源"]'/>
+	<sample sid ="93" id="77" miaoshu="点击建造坊" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/> 
+
+    <sample sid ="95" miaoshu="建造坊指引" className="game.guide.SpeakGuide" desc='["这里就是市场，很多商人在这里做买卖，为您的城市提供钱币，用于招募士兵"]'/>
+	<sample sid ="96" id="79" miaoshu="点击御医所" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" isAccurate="true"/> 
+
+    <sample sid ="98" miaoshu="升级御医所" className="game.guide.SpeakGuide" desc='["御医所可加快回复伤兵，增加可持续作战能力，大大加强主公实力"]'/>
+    <sample sid ="101" miaoshu="升级科技" className="game.guide.SpeakGuide" desc='["提升科技可增强自身实力，主公须得提升以下科技方可完成任务"]'/>
+	<sample sid ="111" id="90" miaoshu="选择武将属性面板的第二个武将" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" rectw="-30"/> 
+
+	<sample sid ="123" id="102" miaoshu="选择第三个副本" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="128" id="107" miaoshu="打开打造" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="129" id="108" miaoshu="点击打造中的强化按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="130" miaoshu="强化" className="game.guide.SpeakGuide" desc='["强化可以大大提升体力和武将带兵数，下面给主公一个小考验，把所有部位都强化到3级，完成任务会有惊喜哦"]'/>
+	<sample sid ="165" id="143" miaoshu="点击武将属性面板中的镶嵌宝石" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="166" id="144" miaoshu="点击镶嵌宝石中的第一个宝石位" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="167" className="game.guide.SpeakGuide" desc='["武将镶嵌了宝石，会使能力提高哦"]'/> 
+
+	<sample sid ="172" id="69" miaoshu="进入主城沙盘" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"  /> 
+    <sample sid ="173" miaoshu="征战天下" className="game.guide.SpeakGuide" desc='["征战天下可以获得功勋，杀敌越多功勋越高","若主公攻下某城，则每个小时都可获取相应奖励点，奖励点也可以兑换资源"]'/>
+	<sample sid ="174" id="151" miaoshu="打开商城" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="175" id="152" miaoshu="点击商城的功勋页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+
+	<sample sid ="176" id="153" miaoshu="点击编组中第一排第二个位置的补兵按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="177" id="154" miaoshu="点击编组中第二排第二个位置的补兵按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+
+
+    <sample sid ="178" miaoshu="第一次编组点击时弹出的小秘书" className="game.guide.SpeakGuide" desc='["有了士兵就可以进行编组出征了，编组比较复杂，主公务必要保持耐心"]'/>
+	<sample sid ="179" id="155" miaoshu="打开白色装备箱操作" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>	
+	<sample sid ="180" id="156" miaoshu="点击包裹中装备页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="181" id="157" miaoshu="穿戴白色装备操作" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1" isJump="true"/>	
+    <sample sid ="182" id="158" miaoshu="打开绿色装备箱操作" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>
+    <sample sid ="183" id="159" miaoshu="穿戴绿色装备操作" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>	
+    <sample sid ="184" id="160" miaoshu="选择第四个副本" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="185" id="161" miaoshu="点击副本中获取每日奖励按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="186" id="162" miaoshu="点击打造-打造页签中打造按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="187" id="163" miaoshu="穿戴紫色装备操作" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>	
+    <sample sid ="188" miaoshu="穿戴紫色装备后弹出的小秘书" className="game.guide.SpeakGuide" desc='["穿上强力装备，就请主公即刻前往战场，一展身手吧！"]'/>
+    <sample sid ="189" miaoshu="功勋商店介绍" className="game.guide.SpeakGuide" desc='["功勋可在功勋商城换取所需资源哦"]'/>
+    <sample sid ="190" id="164" miaoshu="点击商城-功勋页签中第一个位置的购字按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="191" id="165" miaoshu="点击商城-功勋页签中弹出购买窗的购买按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="192" id="166" miaoshu="打开功勋活跃度图标" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" type="1"/>
+    <sample sid ="193" id="167" miaoshu="点击功勋活跃度宝箱" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="194" id="168" miaoshu="点击募兵面板中的骑兵页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="195" id="169" miaoshu="选择募兵面板中的骑兵页签第二个士兵" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="196" id="170" miaoshu="点击排行榜" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="197" miaoshu="小秘书的遗言" className="game.guide.SpeakGuide" desc='["最后我在教主公如何参与国战，接下来就是主公大展宏图的时刻！"]'/>
+    <sample sid ="198" id="171" miaoshu="点击副本退出按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" type="1"/>
+    <sample sid ="199" id="172" miaoshu="点击排行榜关闭按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="200" id="200" miaoshu="点击批量" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="201" id="50" miaoshu="点击编组中第二排第二个武将的士兵栏" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="202" id="30" miaoshu="点击编组中士兵下拉栏的第二个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="3" recth="-80" recty="22"/>
+	<sample sid ="203" id="150" miaoshu="点击征战天下到世界面板" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+
+	<sample sid ="204" id="204" miaoshu="点击打造中的强化页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="205" id="112" miaoshu="点击打造中的强化页签里的武器部位" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="206" miaoshu="强化引导小秘书弹出" className="game.guide.SpeakGuide" desc='["兵无常势水无常形，强化可提升部队战斗力，请让我辅助主公强化"]'/>
+	<sample sid ="207" id="207" miaoshu="打开国家界面" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="208" id="208" miaoshu="点击国家界面奖励页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="209" id="209" miaoshu="点击国家界面奖励页签的领取奖励" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="210" miaoshu="封邑引导小秘书弹出" className="game.guide.SpeakGuide" desc='["恭喜主公爵位达到2级！封邑1开启"]'/>
+	<sample sid ="211" id="211" miaoshu="点击封邑1中的磨坊" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="212" id="500" miaoshu="点击封邑1中磨坊的升级按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="213" miaoshu="宝石镶嵌小秘书弹出" className="game.guide.SpeakGuide" desc='["恭喜主公开启宝石镶嵌功能！"]'/>
+    <sample sid ="214" miaoshu="爵位指引小秘书弹出" className="game.guide.SpeakGuide" desc='["恭喜主公开启爵位功能！"]'/>
+	<sample sid ="215" id="215" miaoshu="点击国家界面爵位页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="216" id="216" miaoshu="点击国家界面的关闭按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="217" id="217" miaoshu="点击第二名武将的官职" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="218" id="218" miaoshu="点击主簿官印" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="219" miaoshu="佩戴主簿官印后小秘书弹出" className="game.guide.SpeakGuide" desc='["其他武将册封就交给主公自行决定了"]'/>
+    <sample sid ="220" miaoshu="洗练指引小秘书弹出" className="game.guide.SpeakGuide" desc='["官渡之战都过了！那我只能教你洗练了"]'/>
+	<sample sid ="221" id="221" miaoshu="点击打造-洗练页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+	<sample sid ="222" id="222" miaoshu="关闭宝石" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="223" id="223" miaoshu="关闭强化界面" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+
+
+    <sample sid ="224" id="224" miaoshu="穿戴蓝色装备操作" className="game.guide.ClickGuide" desc="双击我" isDoubleClick="1"/>	
+    <sample sid ="225" id="225" miaoshu="点击募兵界面伤兵页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>	
+    <sample sid ="226" id="226" miaoshu="点击募兵界面伤兵页签中的粮食治疗" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>	
+    <sample sid ="227" id="1051" miaoshu="点击募兵界面弓兵页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>		
+	<sample sid ="228" id="30" miaoshu="点击编组中士兵下拉栏的第三个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="3" recth="-80" recty="41"/>
+	<sample sid ="229" id="30" miaoshu="点击编组中士兵下拉栏的第四个位置" className="game.guide.ClickGuide" desc="点我" isDoubleClick="3" recth="-80" recty="66"/>
+    <sample sid ="230" id="1049" miaoshu="点击步兵页签" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>	
+    <sample sid ="231" id="231" miaoshu="点击爵位" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0" inCity="true"/>
+	<sample sid ="232" id="232" miaoshu="点击将星录" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="233" id="233" miaoshu="点击国家任务" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="234" id="234" miaoshu="点击国家任务中的目标城市" className="game.guide.ClickGuide" desc="点我" isDoubleClick="2"/>
+	<sample sid ="235" id="235" miaoshu="点击武将下方带兵空白" className="game.guide.ClickGuide" desc="点我带兵" isDoubleClick="0"/>
+	<sample sid ="236" id="236" miaoshu="点击步兵页签第一个士兵" className="game.guide.ClickGuide" desc="点我带兵" isDoubleClick="0"/>
+	<sample sid ="237" id="237" miaoshu="勾选自动补兵" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+	<sample sid ="238" id="238" miaoshu="点击编组中第一排第一个位置的补兵按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+
+	
+
+
+    <sample sid ="300" id="300" miaoshu="点击地图上可以攻占的城市" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="301" id="301" miaoshu="点击出征到此" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="302" id="302" miaoshu="点击选择部队中的出征" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/>
+    <sample sid ="303" id="303" miaoshu="点击部队快捷栏中的加速按钮" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="304" id="304" miaoshu="点击城市战况" className="game.guide.ClickGuide" desc="点我" isDoubleClick="0"/> 
+    <sample sid ="305" miaoshu="小秘书真正的遗言" className="game.guide.SpeakGuide" desc='["这里可以查看和敌对势力的对阵情况，点击俩边的队列信息可查看俩边的玩家军团"]'/>
+
+    <sample sid ="700" miaoshu="进入主城小秘书弹出的对话" className="game.guide.SpeakGuide" desc='["这里就是主公的封地主城，让我来给主公介绍一下吧，首先是您的府邸——官府","官府是主公您的城市发布命令核心，象征您至高无上的权利，所以，城市里所有的建筑等级都不能超过官府的等级哦"]' inCity="true"/>
+    <sample sid ="701" miaoshu="林地指引" className="game.guide.SpeakGuide" desc='["提升官府可开启更多的建筑，可见官府是非常重要的，主公一定要记得多多提升官府等级"]'/>
+    <sample sid ="502" miaoshu="爵位指引2" className="game.guide.SpeakGuide" desc='["目前爵位等级已经为主公开放许多成就，主公去看看吧"]' inCity="true"/>
+    <sample sid ="503" miaoshu="爵位指引3" className="game.guide.SpeakGuide" desc='["你不说我差点儿都忘记这是干什么的了"]' iconStyle="#"/>
+    <sample sid ="504" miaoshu="编组前小秘书喊话" className="game.guide.SpeakGuide" desc='["不好了，主公，城外黄巾军大举进犯，先锋马元义已经在城外扎营！"]'/>
+    <sample sid ="505" miaoshu="编组前主角喊话" className="game.guide.SpeakGuide" desc='["先下手为强，趁城外敌军立足未稳，先主动出击搓下他们的锐气！"]' iconStyle="#"/>
+    <sample sid ="506" miaoshu="编组前小秘书回话" className="game.guide.SpeakGuide" desc='["主公您真是英雄盖世，那么，让我带您去点齐城内兵马，出城迎战吧！"]'/>
+    <sample sid ="507" miaoshu="点击编组小秘书弹出" className="game.guide.SpeakGuide" desc='["这里可以将主公麾下的将领与城内的士兵编组成出征的部队！","既然主公您要御驾亲征，那就先上阵点兵吧！"]' />
+    <sample sid ="508" miaoshu="点击人物上阵后弹出小秘书" className="game.guide.SpeakGuide" desc='["城里子民听到主公您要出城破贼，纷纷来投，小女子挑选了500勇壮之士，请主公将他们编入队中，出城迎战吧！"]'/>
+    <sample sid ="509" miaoshu="第一次副本前小秘书喊话" className="game.guide.SpeakGuide" desc='["刚才探马来报，城外一批毛贼叫嚣，请主公前往教他们做人"]'/>
+    <sample sid ="510" miaoshu="升级指引喊话" className="game.guide.SpeakGuide" desc='["张梁败给主公后心悦诚服，送上经验卷轴助主公提升实力"]' inCity="true"/>
+    <sample sid ="511" miaoshu="主公升级指引喊话" className="game.guide.SpeakGuide" desc='["我怎么看见了初级二字，打发叫化子么，我先凑合用好了"]' iconStyle="#"/>
+	<sample sid ="512" miaoshu="第三次张梁指引" className="game.guide.SpeakGuide" desc='["古有孔明七擒孟获，今有主公三败张梁，主公请再击败张梁一次成就美名"]'/>
+	<sample sid ="513" miaoshu="主公回话" className="game.guide.SpeakGuide" desc='["我都赢了他俩次怎么还打啊，受不鸟"]' iconStyle="#"/>
+    <sample sid ="514" miaoshu="秘书回话" className="game.guide.SpeakGuide" desc='["我不会告诉你打了以后会有惊喜的"]'/>
+    <sample sid ="515" miaoshu="第二次副本前主角喊话" className="game.guide.SpeakGuide" desc='["我亲自领军，出城迎战！"]' iconStyle="#"/>
+    <sample sid ="516" miaoshu="第二次副本前秘书回话" className="game.guide.SpeakGuide" desc='["主公威武，追袭敌军，骑兵为上，刚才城内富商捐献一批财物马匹，我领主公去组建一只骑兵部队，定能事半功倍"]'/>
+    <sample sid ="517" miaoshu="募兵前小秘书喊话" className="game.guide.SpeakGuide" desc='["主公实在是天生丽质聪慧可人，那下面就由我给主公介绍下募兵吧"]'/>
+    <sample sid ="518" miaoshu="募兵前小秘书喊话2" className="game.guide.SpeakGuide" desc='["目前看来只有轻步兵可以招募，不过相信随着爵位提升可以招募更强力的兵种"]'/>
+    <sample sid ="519" miaoshu="打造指引" className="game.guide.SpeakGuide" desc='["青州精卒面前轻步兵就是渣啊，我太强力了，求虐球教育"]' iconStyle="#"/>
+    <sample sid ="520" miaoshu="打造指引2" className="game.guide.SpeakGuide" desc='["主公不可骄纵，光有青州精卒还远远不够"]'/>
+    <sample sid ="521" miaoshu="补兵指引喊话" className="game.guide.SpeakGuide" desc='["主公果然身手不凡，待我们补给好再杀一轮"]'/>
+    <sample sid ="522" miaoshu="募兵骑兵后小秘书喊话" className="game.guide.SpeakGuide" desc='["获得了新兵种轻骑兵，请主公前往招募"]'/>
+    <sample sid ="523" miaoshu="打造指引5" className="game.guide.SpeakGuide" desc='["跟朕谈条件，放肆！"]' iconStyle="#"/>
+    <sample sid ="524" miaoshu="编组换成骑兵后秘书喊话" className="game.guide.SpeakGuide" desc='["骑兵部队已经准备好，主公请随我出城迎战敌军！"]'/>
+    <sample sid ="525" miaoshu="战胜邓茂后秘书喊话" className="game.guide.SpeakGuide" desc='["主公，刚才城外士兵打扫战场时，发现敌将邓茂留下一件装备，已经放入仓库"]'/>
+    <sample sid ="526" miaoshu="战胜邓茂后秘书喊话" className="game.guide.SpeakGuide" desc='["正好，人靠衣装马靠鞍，我去披挂整齐，上阵杀敌也是一大助力"]'/>
+    <sample sid ="527" miaoshu="穿装备秘书喊话" className="game.guide.SpeakGuide" desc='["那让我伺候主公着甲"]'/>
+    <sample sid ="528" miaoshu="打造指引3" className="game.guide.SpeakGuide" desc='["那你说说我还差什么"]' iconStyle="#"/>
+    <sample sid ="529" miaoshu="打造指引4" className="game.guide.SpeakGuide" desc='["你去打败何苗我就告诉你"]'/>
+    <sample sid ="530" miaoshu="穿装备秘书喊话" className="game.guide.SpeakGuide" desc='["和主公的尺寸一致，请主公立即穿戴"]'/>
+    <sample sid ="531" miaoshu="穿装备后秘书喊话" className="game.guide.SpeakGuide" desc='["主公，已经帮您穿戴完毕了"]'/>
+    <sample sid ="532" miaoshu="招募秘书喊话" className="game.guide.SpeakGuide" desc='["主公英明神武，张梁已经拜倒在主公的石榴裙下"]'/>
+    <sample sid ="533" miaoshu="名将录喊话" className="game.guide.SpeakGuide" desc='["将来主公的爵位越高，名气越大，可以结交的名将也会越多"]'/>
+    <sample sid ="534" miaoshu="张梁回话" className="game.guide.SpeakGuide" desc='["别打我了，我愿意做你的裙下之臣，快来名将录中招募我吧"]' iconStyle="zhangliang"/>
+    <sample sid ="535" miaoshu="张宝前说话" className="game.guide.SpeakGuide" desc='["前方就是你兄弟张宝了"]' iconStyle="#"/>
+    <sample sid ="536" miaoshu="主角招募路人甲后喊话" className="game.guide.SpeakGuide" desc='["得英雄相助，何愁贼人不破！"]' iconStyle="#"/>
+    <sample sid ="537" miaoshu="秘书招募路人甲后喊话" className="game.guide.SpeakGuide" desc='["主公，张梁已经加入我军，请主公尽快上阵张梁"]'/>
+    <sample sid ="538" miaoshu="张梁回话2" className="game.guide.SpeakGuide" desc='["我既然已经是主公的人了，定当替主公说服张宝加入我军"]' iconStyle="zhangliang"/>
+    <sample sid ="539" miaoshu="第二次编组秘书喊话" className="game.guide.SpeakGuide" desc='["主公，现在可以去为张梁将军配上士兵，出征迎战贼兵了"]'/>
+    <sample sid ="540" miaoshu="第二次编组秘书喊话2" className="game.guide.SpeakGuide" desc='["主公，每个军团可以编组最多三名武将，分别率领不同的士兵来进行配合","主公，军团站位为前，中，后三排，率领骑兵与步兵的将领只有在前排时才能正常攻击，率领弓兵的将领可以在中，后排做支援攻击"]'/>
+    <sample sid ="541" miaoshu="路人甲带弓兵" className="game.guide.SpeakGuide" desc='["主公，请给张梁将军配备上弓箭兵，在后方支援主公吧"]'/>
+    <sample sid ="542" miaoshu="第三次副本秘书喊话" className="game.guide.SpeakGuide" desc='["我军现在已经准备停当，刚才探马来报，此次是张角亲自领军前来报仇，主公要多加小心"]'/>
+    <sample sid ="543" miaoshu="第三次副本主角喊话" className="game.guide.SpeakGuide" desc='["生逢乱世，当披荆斩棘，且看我出城破此乱国之贼！"]' iconStyle="#"/>
+    <sample sid ="544" miaoshu="第三次副本后秘书喊话" className="game.guide.SpeakGuide" desc='["恭喜主公大破张角军，得胜归来！","因为主公连破敌军，威名远播，很多百姓慕名来投，其中有批匠人，可以打造各种武器铠甲，特来通报主公！"]'/>
+    <sample sid ="545" miaoshu="打造前喊话" className="game.guide.SpeakGuide" desc='["我已经完成任务了，快告诉我印度神油，额不对，强力方法"]' iconStyle="#"/>
+    <sample sid ="546" miaoshu="秘书回话" className="game.guide.SpeakGuide" desc='["马上为主公开启打造，从此走上超神路"]'/>
+    <sample sid ="547" miaoshu="打造后秘书喊话" className="game.guide.SpeakGuide" desc='["主公，之前获得的装备都粗制滥造，用材料打造的装备属性较之前会大幅度提升"]'/>
+    <sample sid ="548" miaoshu="伤兵治疗" className="game.guide.SpeakGuide" desc='["酣战固然爽，但是伤兵也得治，这样才能可持续发展"]' isJump="true"/>
+    <sample sid ="549" miaoshu="伤兵治疗2" className="game.guide.SpeakGuide" desc='["战斗结束后伤兵自动进入伤兵营缓慢恢复为健康士兵，也可通过粮食治疗变为健康士兵"]'/>
+    <sample sid ="550" miaoshu="伤兵治疗后" className="game.guide.SpeakGuide" desc='["朝廷得知主公武勇过人，大破黄巾，派来特使嘉奖主公，并授予主公爵位！","主公，爵位需要积累战功进行提升，提升爵位后，我们军就可以打造更好的装备，训练更精锐的士兵，招募更多的名将！","主公，经过热心的百姓努力，城里的各种建筑都被修正一新，我引主公去参观一下吧！","城市里的每一个建筑群都会有自己的作用，我来给介绍一下！"]' inCity="true"/>
+    <sample sid ="551" miaoshu="张宝指引" className="game.guide.SpeakGuide" desc='["真是不打不成器啊，张宝已决定投奔主公"]'/>
+    <sample sid ="552" miaoshu="第四次副本主角喊话" className="game.guide.SpeakGuide" desc='["既然朝廷有令，那我就亲自领军出征吧！"]' iconStyle="#"/>
+    <sample sid ="553" miaoshu="第四次副本秘书回话" className="game.guide.SpeakGuide" desc='["主公，这次主动出击，敌军以逸待劳，恐难以取胜。既然朝廷赐下军械马匹甚多，不如我领主公去招募些精锐士兵，壮我军势！"]'/>	
+    <sample sid ="554" miaoshu="获得爵位" className="game.guide.SpeakGuide" desc='["主公有了爵位，现在我们可以招募二阶士兵了！"]'/>	
+    <sample sid ="555" miaoshu="介绍青州精卒" className="game.guide.SpeakGuide" desc='["主公，青州军是二阶步兵，他们训练有素，战斗中可以发动技能勇悍，使其原本应该死亡的士兵只会受伤，降低我方消耗"]'/>	
+    <sample sid ="556" miaoshu="介绍无当飞军" className="game.guide.SpeakGuide" desc='["主公，无当飞军是二阶弓兵，他们专注于远程攻击支持，只要在战斗中没有其他部队攻击到他们，就可以不断发动技能无当，使自身伤害不断提升"]'/>	
+    <sample sid ="557" miaoshu="介绍丹阳虎贲" className="game.guide.SpeakGuide" desc='["主公，丹阳虎贲是二阶骑兵，他们作战勇猛，战斗中可以发动技能武勇，使自己本次攻击伤害提升","主公，请招募些丹阳虎贲吧！"]'/>	
+    <sample sid ="558" miaoshu="替换士兵" className="game.guide.SpeakGuide" desc='["主公，请在编组里将您麾下的轻骑兵换成丹阳虎贲吧！"]'/>	
+    <sample sid ="559" miaoshu="补充士兵" className="game.guide.SpeakGuide" desc='["也请主公为张梁将军补充兵力！"]'/>	
+    <sample sid ="560" miaoshu="张角后喊话" className="game.guide.SpeakGuide" desc='["我打败了张角，他为何还不投降"]' iconStyle="#"/>	
+    <sample sid ="561" miaoshu="张宝回话" className="game.guide.SpeakGuide" desc='["主公莫急，我大哥说你如果通关黄巾之乱后自会在名将录中看到他，到时候就可招募了"]' iconStyle="zhangbao"/>	
+    <sample sid ="562" miaoshu="秘书回话" className="game.guide.SpeakGuide" desc='["虽然还不能招募张角，但是在清扫战场时发现了一些好东西（打开包裹查看）"]'/>	
+    <sample sid ="563" miaoshu="领取副本每日奖励2" className="game.guide.SpeakGuide" desc='["主公，目前已经有4名武将在我军帐下，是时候分封他们官印了"]'/>	
+    <sample sid ="564" miaoshu="佩戴官印后的喊话" className="game.guide.SpeakGuide" desc='["随着主公的爵位提升，主公可册封的官职种类也会提升，当爵位提升时，主公要记得为麾下将领册封新的官职哦！"]'/>
+	
+
+    <sample sid ="565" miaoshu="城战引导小秘书喊话" className="game.guide.SpeakGuide" desc='["主公，朝廷百里加急密令，现在都城被吕布军围困，危在旦夕，请各路城主火速出兵！"]'/>	
+
+    <sample sid ="566" miaoshu="城战引导主角书喊话" className="game.guide.SpeakGuide" desc='["那我立刻领军出击！剿灭叛军！"]' iconStyle="#"/>
+
+    <sample sid ="567" miaoshu="城战引导小秘书喊话2" className="game.guide.SpeakGuide" desc='["各路勤王之师都已到达，主公还没经历过攻城战，我来给主公介绍一下！","点击任意一个与我方国家接壤的不属于自己的城市，可以决定是否出征！"]'/>	
+
+    <sample sid ="568" miaoshu="君主喊话1" className="game.guide.SpeakGuide" desc='["乱军安敢犯我城池！三军将士擂鼓，全军出击，与我剿灭叛贼！"]' iconStyle="*"/>
+
+    <sample sid ="569" miaoshu="小秘书回话" className="game.guide.SpeakGuide" desc='["主公，我们随诸位英雄出击吧！"]'/>
+
+    <sample sid ="570" miaoshu="第一次场城战结束" className="game.guide.SpeakGuide" desc='["主公，乱军已被清剿！"]' />
+
+    <sample sid ="571" miaoshu="封邑引导完结秘书喊话" className="game.guide.SpeakGuide" desc='["主公，乱军已被清剿！"]' />
+
+    <sample sid ="572" miaoshu="商城买东西秘书喊话" className="game.guide.SpeakGuide" desc='["主公，还在为资源不够发愁么，我来帮你想办法"]' />
+
+    <sample sid ="573" miaoshu="页签指引后秘书喊话" className="game.guide.SpeakGuide" desc='["随着爵位提升可以兑换的道具越多哦！"]' />
+
+    <sample sid ="574" miaoshu="商城兑换完成后秘书喊话" className="game.guide.SpeakGuide" desc='["主公，只要战功足够，就可以在这里随时进行兑换，主公要经常来查看哦！","现在都城外的贼军已经肃清，但是，三国混乱，百姓动荡不安，主公，您要发展内政，整顿军备，早日统一全国，结束乱世！"]' />
+
+    <sample sid ="575" miaoshu="第一次副本失败秘书弹出对话" className="game.guide.SpeakGuide" desc='["主公，除了更换更加强力的装备外，我们还可以通过强化来提升装备的能力！","我来领主公去查看下强化功能吧"]' />
+
+    <sample sid ="576" miaoshu="强化页签秘书对话" className="game.guide.SpeakGuide" desc='["强化可以提升装备的属性，会消耗各种材料，随着装备强化等级的提升，消耗的材料品质也会随之提升","另外，主公，强化等级只针对装备的部分，也就是说，只要强化等级增强了，无论主公使用什么装备，都会获得强化的效果"]' />
+
+    <sample sid ="577" miaoshu="封邑指导秘书喊话" className="game.guide.SpeakGuide" desc='["主公，因为您的赫赫战功，朝廷赐予了一座封邑，我领主公去看下吧！"]' />
+
+    <sample sid ="578" miaoshu="封邑指导秘书喊话2" className="game.guide.SpeakGuide" desc='["封邑会提供额外的建筑，这些建筑会按照等级提供额外的资源产出！","主公您的爵位越高，拥有的封邑就会越多，提供的额外资源也会越多！"]' />
+
+    <sample sid ="579" miaoshu="将星录指引喊话" className="game.guide.SpeakGuide" desc='["主公，将星录开启了！下面让我带领主公前往查看"]' />
+
+    <sample sid ="580" miaoshu="将星录指引喊话2" className="game.guide.SpeakGuide" desc='["有了这个，主公再也不用担心走弯路了!"]' />
+
+	<sample sid ="581" miaoshu="国家任务指引喊话" className="game.guide.SpeakGuide" desc='["主公，世界地图已经开启，初入世界比较复杂，我们从国家任务说起吧"]' />
+
+	<sample sid ="582" miaoshu="国家任务指引喊话2" className="game.guide.SpeakGuide" desc='["完成国家任务是每天的必修课，完成后可获得大量功勋","下面主公请点击目标城市查看当前您需要攻占的城市所在位置吧，记得刚才教你的怎么出征哦"]' />
+
+	<sample sid ="583" miaoshu="每日功勋指引喊话" className="game.guide.SpeakGuide" desc='["主公，每日功勋开启！下面让我带领主公前往查看"]' />
+
+	<sample sid ="584" miaoshu="任务第二步引导" className="game.guide.SpeakGuide" desc='["主公，这里就是您的主城了，目前只有一座官府，让我们升级他看看有什么效果"]' />
+
+	<sample sid ="585" miaoshu="爵位指引2" className="game.guide.SpeakGuide" desc='["爵位是游戏中最为重要的等级象征，提升爵位才能升级官府到更高等级","获得足够的功勋就可以自动升级爵位，目前主公只用跟着任务走就可以了"]' />
+
+	<sample sid ="586" miaoshu="第三个副本指引" className="game.guide.SpeakGuide" desc='["下拨山贼30秒后达到战场，招募更多士兵碾碎他们"]' />
+
+    <sample sid ="587" miaoshu="张梁" className="game.guide.SpeakGuide" desc='["哥哥说他要考虑下再决定是否加入，不过他愿意赠送主公新兵种"]' iconStyle="zhangliang"/>
+
+    <sample sid ="588" miaoshu="回话" className="game.guide.SpeakGuide" desc='["你们一家人怎么都那么赖皮"]' iconStyle="#"/>
+
+    <sample sid ="589" miaoshu="碾压开启" className="game.guide.SpeakGuide" desc='["主公重复打副本甚是辛苦，小女子送主公碾压秘籍助主公轻松通关"]' />
+
+    <sample sid ="590" miaoshu="将星指引" className="game.guide.SpeakGuide" desc='["我已经上阵三名武将了，你来了岂不是逼我抛弃你弟弟"]' iconStyle="#"/>
+
+    <sample sid ="591" miaoshu="张角回话" className="game.guide.SpeakGuide" desc='["将军莫慌，本公为你带来了将星录秘笈","只要你升级哥仨的等级，即便张梁那蠢货不上阵也可以为大家提供属性"]' iconStyle="zhangjiao"/>
+
+    <sample sid ="592" miaoshu="张角" className="game.guide.SpeakGuide" desc='["50+50+50+$%^......我来算算给主公加了多少属性"]' iconStyle="zhangjiao"/>
+
+    <sample sid ="593" miaoshu="主公" className="game.guide.SpeakGuide" desc='["行了我知道好处了，以后我多用经验卷轴给你们升级就是"]' iconStyle="#"/>
+
+    <sample sid ="594" miaoshu="张角" className="game.guide.SpeakGuide" desc='["主公英明"]' iconStyle="zhangjiao"/>
+
+	<sample sid ="595" miaoshu="新资源" className="game.guide.SpeakGuide" desc='["这俩个建筑干什么用的，以前没看到过啊"]' iconStyle="#"/>
+
+	<sample sid ="596" miaoshu="新资源2" className="game.guide.SpeakGuide" desc='["回禀主公，这俩个建筑生产铁锭，用于招募2阶以上士兵"]' />
+
+	<sample sid ="597" miaoshu="新资源3" className="game.guide.SpeakGuide" desc='["2阶士兵？"]' iconStyle="#"/>
+
+    <sample sid ="598" miaoshu="新资源4" className="game.guide.SpeakGuide" desc='["别着急，主公马上就可以看到了"]' />
+
+    <sample sid ="599" miaoshu="打造" className="game.guide.SpeakGuide" desc='["副本和功勋商城中可以获得材料哦"]' />
+
+    <sample sid ="600" miaoshu="董卓" className="game.guide.SpeakGuide" desc='["好汉饶命，我要投奔你"]' iconStyle="dongzhuo"/>
+
+    <sample sid ="601" miaoshu="回话" className="game.guide.SpeakGuide" desc='["我还没打你怎么就投降了，什么情况"]' iconStyle="#"/>
+
+    <sample sid ="602" miaoshu="董卓" className="game.guide.SpeakGuide" desc='["我自知不是好汉的对手先来投降以示诚意"]' iconStyle="dongzhuo"/>
+
+    <sample sid ="603" miaoshu="回话" className="game.guide.SpeakGuide" desc='["果然是只老狐狸"]' iconStyle="#"/>
+
+	<sample sid ="604" miaoshu="世界" className="game.guide.SpeakGuide" desc='["前方就是吕布了，击败吕布后就可以进入世界地图进行巅峰角逐了"]' />
+
+	<sample sid ="605" miaoshu="爵位" className="game.guide.SpeakGuide" desc='["主公记得常来查看哦"]' />
+
+	<sample sid ="1000" id="3" miaoshu="点击民居指引框" className="game.guide.DescGuide" desc="民居产出铜币，是招募士兵的重要资源" type="1"/> 
+	<sample sid ="1001" id="5" miaoshu="点击林地指引框" className="game.guide.DescGuide" desc="林地产出木材，是升级建筑的重要资源"/>
+	<sample sid ="1002" id="7" miaoshu="点击农田指引框" className="game.guide.DescGuide" desc="农田产出粮食，是治疗伤兵的重要资源"/>
+	<sample sid ="1003" id="9" miaoshu="点击冶炼所指引框" className="game.guide.DescGuide" desc="这里是冶铁所，冶铁所可以提供铁矿打造武器。提供冶铁所的等级可以提供铁矿的单位时间产品"/>
+    <sample sid ="1004" id="1004" miaoshu="点击武将属性面板武将列表栏指引框" className="game.guide.DescGuide" desc="武将列表乃武将集合之地，越强力的武将排序则越靠前" type="1"/>
+    <sample sid ="1005" id="1005" miaoshu="点击武将属性面板装备栏指引框" className="game.guide.DescGuide" desc="主公！请在此处穿戴装备" type="1"/>
+	<sample sid ="1006" id="1006" miaoshu="点击武将属性三围属性栏指引框" className="game.guide.DescGuide" desc="这是武将的主要属性"/>
+	<sample sid ="1007" id="1007" miaoshu="点击武将属性面板主动技栏指引框" className="game.guide.DescGuide" desc="此乃武将技能"/>
+    <sample sid ="1008" id="1008" miaoshu="点击武将属性面板右侧属性栏指引框" className="game.guide.DescGuide" desc="这里是武将的具体属性，提高相应属性可增强主公实力哦" type="1"/>
+    <sample sid ="1009" id="38" miaoshu="点击武将属性面板使用经验卷轴按钮指引框" className="game.guide.DescGuide" desc="点此可使用经验卷轴，提升武将等级，接下来就让我们来试一试效果吧" type="1"/>
+    <sample sid ="1010" id="1010" miaoshu="点击募兵面板士兵列表栏指引框" className="game.guide.DescGuide" desc="无士兵怎能征天下，所有士兵都聚集此处，等待主公招募" type="1"/>
+    <sample sid ="1011" id="1011" miaoshu="点击募兵面板招募消耗栏指引框" className="game.guide.DescGuide" desc="招募士兵需要消耗钱币"/>
+    <sample sid ="1012" id="1012" miaoshu="点击编组时前军位置指引框" className="game.guide.DescGuide" desc="这里是前军区域，可以把近战单位配置在这里"/>
+    <sample sid ="1013" id="1013" miaoshu="点击编组时后军位置指引框" className="game.guide.DescGuide" desc="这里是中后军区域，可以把远程单位配置在这里"/>
+    <sample sid ="1014" id="1014" miaoshu="点击副本界面进入消耗信息栏指引框" className="game.guide.DescGuide" desc="进入副本会消耗英雄令，次日系统会自动补满" type="1"/>
+    <sample sid ="1015" id="1015" miaoshu="点击副本界面副本奖励信息栏指引框" className="game.guide.DescGuide" desc="通关副本后，会掉落丰厚的奖品，且通关一个完整的章节后每天都可领取一次奖励" type="1"/>
+    <sample sid ="1016" id="1016" miaoshu="点击名将录面板武将列表栏指引框" className="game.guide.DescGuide" desc="三国名将悉数在此，随时等待主公召唤"/>
+	<sample sid ="1017" id="1017" miaoshu="点击名将录面板好感度条指引框" className="game.guide.DescGuide" desc="此处代表武将对主公的好感度，好感度达到招募点即可将其招致主公麾下"/>
+    <sample sid ="1018" id="1018" miaoshu="点击名将录面板喜好品栏指引框" className="game.guide.DescGuide" desc="这里可以选择赠送武将功勋或者元宝来提升好感度"/>
+    <sample sid ="1019" id="1019" miaoshu="点击名将录面板武将信息栏指引框" className="game.guide.DescGuide" desc="这里是你可以招募的武将列表，灰色的表示现在你无法招募"/>
+    <sample sid ="1020" id="1020" miaoshu="点击副本界面副本奖励信息栏指引框" className="game.guide.DescGuide" desc="请主公领取章节的每日奖励，越后面的章节奖励越丰厚哦"/>
+    <sample sid ="1021" id="1021" miaoshu="点击名将录面板武将列表栏指引框" className="game.guide.DescGuide" desc="名将亦有有品质区分，红色武将品质最高" type="0"/>
+    <sample sid ="1022" id="1022" miaoshu="点击名将录面板翻页处指引框" className="game.guide.DescGuide" desc="下一页更惊喜"/>
+    <sample sid ="1023" id="1023" miaoshu="点击打造-打造页签中装备列表栏指引框" className="game.guide.DescGuide" desc="神兵在手，天下我有，此处可查看主公现阶段可以打造的装备"/>
+    <sample sid ="1024" id="1024" miaoshu="点击打造-打造页签中材料消耗栏指引框" className="game.guide.DescGuide" desc="这里会显示需要消耗哪些材料，消耗多少" type="1"/>
+	<sample sid ="1025" id="1025" miaoshu="点击功勋活跃度中功勋档位指引框" className="game.guide.DescGuide" desc="每天通过国家任务和世界战斗获取功勋，功勋每到达一定额度，便可领取奖励，爵位越高开启的奖励档位则越多"/>
+	<sample sid ="1026" id="1026" miaoshu="点击功勋活跃度中功勋宝箱指引框" className="game.guide.DescGuide" desc="功勋宝箱随着爵位提高可以开出的奖励也越好，请主公尽快提升爵位，越早提升优势越大"/>
+	<sample sid ="1027" id="1027" miaoshu="点击功勋活跃度中重置时间指引框" className="game.guide.DescGuide" desc="每日功勋都会重置，希望主公每日都奋战杀敌，则奖励多多！"/>
+    <sample sid ="1028" id="1028" miaoshu="点击募兵面板士兵列表栏指引框" className="game.guide.DescGuide" desc="士兵分为4个等级，等级越高，兵种越强悍！请主公招募二阶兵中试试威力吧"/>
+	<sample sid ="1029" id="1029" miaoshu="点击排行榜排名列表指引框" className="game.guide.DescGuide" desc="每日功勋都有排名，排名有奖励"/>
+	<sample sid ="1030" id="1030" miaoshu="点击排行榜奖励信息指引框" className="game.guide.DescGuide" desc="只要进入前100名的玩家，都可以领取奖励，排名越高奖励越丰厚"/>
+	<sample sid ="1031" id="1031" miaoshu="点击排行榜排重置时间指引框" className="game.guide.DescGuide" desc="每天00:00后可领取昨日奖励"/>
+
+
+
+	<sample sid ="1032" id="1032" miaoshu="点击打造-强化页签部位栏指引框" className="game.guide.DescGuide" desc="强化部位与装备属性对应，并永久性提升装备属性" type="1"/>
+    <sample sid ="1033" id="1033" miaoshu="点击打造-强化页签强化属性指引框" className="game.guide.DescGuide" desc="查看强化加成属性值" type="1"/>
+    <sample sid ="1034" id="1034" miaoshu="点击打造-强化页签强化材料指引框" className="game.guide.DescGuide" desc="强化需要消耗相应材料，材料可在功勋商店兑换" type="1"/>
+    <sample sid ="1035" id="1035" miaoshu="点击国家-奖励页签资源类型指引框" className="game.guide.DescGuide" desc="占领特定城市后可获取资源点，随着爵位提升获取时奖励也越高" type="1"/>
+    <sample sid ="1036" id="1036" miaoshu="点击国家-奖励页签奖励点指引框" className="game.guide.DescGuide" desc="已有城市每2小时结算一次奖励点，若是攻占敌国城市，则立即结算当前奖励点" type="0"/>
+    <sample sid ="1037" id="70" miaoshu="点击封邑2指引框" className="game.guide.DescGuide" desc="封邑一主要产出粮食" type="0"/>
+    <sample sid ="1038" id="1038" miaoshu="点击封邑3指引框" className="game.guide.DescGuide" desc="封邑三主要产出木材和训练" type="0"/>
+    <sample sid ="1039" id="1039" miaoshu="点击封邑4指引框" className="game.guide.DescGuide" desc="封邑四主要产出铁锭和军械" type="0"/>
+    <sample sid ="1040" id="1040" miaoshu="点击封邑5指引框" className="game.guide.DescGuide" desc="封邑五可加速伤兵回复以及产出劳役" type="0"/>
+    <sample sid ="1041" id="1041" miaoshu="点击封邑6指引框" className="game.guide.DescGuide" desc="封邑六可进一步加速伤兵回复" type="0"/>
+    <sample sid ="1042" id="1042" miaoshu="点击宝石镶嵌宝石孔指引框" className="game.guide.DescGuide" desc="宝石孔分4个类型，分别对应4类宝石的镶嵌，分别是虎威石，破阵石，天机石和乾坤石，宝石孔随武将等级提升逐次开放" type="1"/>
+    <sample sid ="1043" id="1043" miaoshu="点击宝石镶嵌宝石指引框" className="game.guide.DescGuide" desc="每种宝石都带有自身属性，品质越好的宝石所增加的属性越高" type="1"/>
+    <sample sid ="1044" id="1044" miaoshu="点击国家爵位指引框" className="game.guide.DescGuide" desc="去征战天下杀敌后可获得功勋，功勋达到一定值后主公将会自动进爵" type="0"/>
+    <sample sid ="1045" id="1045" miaoshu="点击主将爵位指引框" className="game.guide.DescGuide" desc="爵位越高获得属性增加越多，另外爵位越高可以给武将佩戴的官印也越好" type="1"/>
+    <sample sid ="1046" id="1046" miaoshu="点击洗练属性指引框" className="game.guide.DescGuide" desc="洗练后可随机获得技能，技能增强武将各方面的属性" type="0"/>
+    <sample sid ="1047" id="1047" miaoshu="点击洗练消耗材料指引框" className="game.guide.DescGuide" desc="洗练和强化一样消耗材料，并且随着技能等级提升消耗材料的品质也会提升" type="1"/>
+
+	<sample sid ="1048" id="77" miaoshu="点击市场指引框" className="game.guide.DescGuide" desc="市场产出铜币，是招募士兵的重要资源" type="1"/> 
+
+	<sample sid ="1049" id="1049" miaoshu="步兵指引" className="game.guide.DescGuide" desc="这里可以招募所有的步兵" type="1"/> 
+
+	<sample sid ="1050" id="168" miaoshu="骑兵指引" className="game.guide.DescGuide" desc="这里可以招募所有的骑兵" type="1"/> 
+
+	<sample sid ="1051" id="1051" miaoshu="弓兵指引" className="game.guide.DescGuide" desc="这里可以招募所有的弓兵" type="1"/> 
+
+	<sample sid ="1052" id="1052" miaoshu="士兵属性栏介绍" className="game.guide.DescGuide" desc="这里可以查看选中士兵的具体属性" type="1"/>
+
+	<sample sid ="1053" id="1053" miaoshu="招募骑兵数量时指引" className="game.guide.DescGuide" desc="拖拉滑动条可以决定招募士兵的具体数量" type="0"/>
+
+	<sample sid ="1054" id="23" miaoshu="招募骑兵数量时指引2" className="game.guide.DescGuide" desc="点击最大数量按钮可以直接以全部资源招募此种士兵" type="0"/>
+
+	<sample sid ="1055" id="1055" miaoshu="编组骑兵" className="game.guide.DescGuide" desc="这里显示已编成的所有军团" type="0"/>
+
+	<sample sid ="1056" id="1056" miaoshu="背包页签指引" className="game.guide.DescGuide" desc="这里会显示背包里的全部物品" type="0"/>
+
+	<sample sid ="1057" id="156" miaoshu="背包页签指引2" className="game.guide.DescGuide" desc="点击这里查看获得的装备" type="0"/>
+
+	<sample sid ="1058" id="1058" miaoshu="武将技能指引" className="game.guide.DescGuide" desc="这里表示武将拥有的可以在战斗中释放的技能" type="0"/>
+
+	<sample sid ="1059" id="1059" miaoshu="武将技能指引2" className="game.guide.DescGuide" desc="这里表示武将拥有的天赋技能，这些技能会被动生效" type="0"/>
+
+	<sample sid ="1060" id="1019" miaoshu="武将属性指引" className="game.guide.DescGuide" desc="这里显示武将的初始属性与成长值，成长值表示武将每升一级，可以提升多少点对应属性" type="0"/>
+
+	<sample sid ="1061" id="77" miaoshu="点击建造坊指引框2" className="game.guide.DescGuide" desc="市场的等级越高，单位时间内产生的钱币越多" type="1"/> 
+
+	<sample sid ="1062" id="1062" miaoshu="点击锻铁场指引框" className="game.guide.DescGuide" desc="锻铁场会提供铁矿，铁矿是招募精锐士兵的重要条件，锻铁场的等级越高，单位时间产生的铁矿越高" type="1"/> 
+
+	<sample sid ="1063" id="73" miaoshu="点击锻造司指引框" className="game.guide.DescGuide" desc="锻造司可以加工出铁矿，锻造司的等级越高，单位时间产生的铁矿就越多" type="1"/> 
+
+	<sample sid ="1064" id="79" miaoshu="点击御医所指引框" className="game.guide.DescGuide" desc="御医所可提升伤兵回复，御医所等级越高，单位时间回复的伤兵就越多" type="1"/> 
+
+	<sample sid ="1065" id="1065" miaoshu="点击城墙箭楼指引框" className="game.guide.DescGuide" desc="城墙和箭塔是辅助伤兵回复的建筑，箭塔和城墙的等级越高，我方士兵回复速度越快" type="1"/> 
+
+	<sample sid ="1066" id="152" miaoshu="商城功勋页签指引" className="game.guide.DescGuide" desc="主公注意，获得的功勋可以在此处换购大量实用道具，是主公实力成长的重要途径" type="1"/> 
+
+	<sample sid ="1067" id="1067" miaoshu="商城vip页签指引" className="game.guide.DescGuide" desc="这里出售各种极品道具，助主公快速增长实力，并且此处商品默认打8折哦" type="1"/> 
+
+	<sample sid ="1068" id="1068" miaoshu="商城宝石页签指引" className="game.guide.DescGuide" desc="这里是各种宝石的列表，宝石可以镶嵌在武将身上来增加武将的各种属性！" type="1"/> 
+
+	<sample sid ="1069" id="1069" miaoshu="商城道具页签指引" className="game.guide.DescGuide" desc="这里出售行军令和叫阵卡，方便主公行军出征！" type="1"/> 
+
+	<sample sid ="1070" id="1070" miaoshu="商城资源页签指引" className="game.guide.DescGuide" desc="这里出售各种资源，兵马未动粮草先行！" type="1"/> 
+
+	<sample sid ="1071" id="1071" miaoshu="商城热销页签指引" className="game.guide.DescGuide" desc="这里是道具的列表，这里的商品都是打折商品！" type="1"/> 
+
+	<sample sid ="1072" id="1072" miaoshu="将星录英雄指引" className="game.guide.DescGuide" desc="培养以下武将就能加属性" type="1"/> 
+
+	<sample sid ="1073" id="1073" miaoshu="激活属性指引" className="game.guide.DescGuide" desc="这里查看加属性需要的武将等级" type="1"/> 
+
+	<sample sid ="1074" id="22" miaoshu="募兵" className="game.guide.DescGuide" desc="开启新兵种-轻弓兵"/>
+
+	<sample sid ="1075" id="22" miaoshu="募兵" className="game.guide.DescGuide" desc="先治疗伤病吧"/>
+
+	<sample sid ="1076" id="12" miaoshu="包裹" className="game.guide.DescGuide" desc="获得武卒装备一套" />
+
+	<sample sid ="1077" id="231" miaoshu="爵位" className="game.guide.DescGuide" desc="功勋商店中开启经验卷轴兑换" />
+
+	<sample sid ="1078" id="231" miaoshu="爵位" className="game.guide.DescGuide" desc="募兵中开启新兵种-青州精卒" />
+
+	<!--重复地2-->
+ </objects>

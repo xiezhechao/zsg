@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<sample sid="1" className="game.talk.Talk" info='[["yindaoyuan","1","主公勿惊，敌军势大，我方也有诸多英雄助战，城站非一人之力可以定，且静心看我方英雄剿灭敌军！"]]'/>
+	<sample sid="2" className="game.talk.Talk" info='[["guanyu","2","小英雄勿慌，关某来也！"]]'/>
+</objects>

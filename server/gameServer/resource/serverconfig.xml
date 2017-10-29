@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 初始化语言翻译工具 -->
+	<method class="game.language.Language" name="init" />
+	<!-- 初始化关服钩子 -->
+	<method class="xlib.shutdown.ShutdownHook" name="registerShutdownHook" />
+	<!-- 初始化同步通讯接口超时时间 -->
+	<method class="zmyth.net.DataAccessHandler" name="getInstance"
+		id="dataAccessHandler" />
+	<method ref="dataAccessHandler" name="setTimeout">
+		<value type="int">30000</value>
+	</method>
+	<!-- 配置数据库连接管理器 -->
+	<obj class="zmyth.orm.ConnectionManager" id="connectionManager">
+		<!-- 取出连接属性 -->
+		<method name="getProperties" id="__properties" />
+		<!-- 设置连接的账号和密码 -->
+		<method ref="__properties" name="put">
+			<string>user</string>
+			<ref id="dbName" />
+		</method>
+		<method ref="__properties" name="put">
+			<string>password</string>
+			<ref id="dbPassword" />
+		</method>
+		<!-- JDBC驱动 -->
+		<method name="setDriver">com.mysql.jdbc.Driver</method>
+		<!-- 数据库地址 -->
+		<method name="setURL">
+			<ref id="gameDB" />
+		</method>
+		<!-- 字符编码方式（可以不设置，默认为java的字符编码方式） -->
+		<method name="setCharacterEncoding">
+			<ref id="dbEncode" />
+		</method>
+		<!-- 初始连接数（可以不设置，默认为2） -->
+		<method name="setInitSize">2</method>
+		<!-- 最大连接数（可以不设置，默认为20） -->
+		<method name="setMaxSize">6000</method>
+		<!-- 连接的超时时间（可以不设置，默认为180000毫秒－3分钟） -->
+		<method name="setTimeout">180000</method>
+		<!-- 连接的最大使用次数（可以不设置，默认为0－表示无限使用） -->
+		<method name="setMaxUsedCount">20000</method>
+		<!-- 取出连接时是否先判断连接可用（可以不设置，默认为true） -->
+		<method name="setCheck">true</method>
+		<!-- 连接是否自动提交事务（可以不设置，默认为true） -->
+		<method name="setAutoCommit">false</method>
+		<!-- 初始化数据库连接管理器 -->
+		<method name="init" />
+	</obj>
+	<!-- 配置礼包管理数据库连接管理器 -->
+	<obj class="zmyth.orm.ConnectionManager" id="connectionManager2">
+		<!-- 取出连接属性 -->
+		<method name="getProperties" id="__properties2" />
+		<!-- 设置连接的账号和密码 -->
+		<method ref="__properties2" name="put">
+			<string>user</string>
+			<ref id="dbName" />
+		</method>
+		<method ref="__properties2" name="put">
+			<string>password</string>
+			<ref id="dbPassword" />
+		</method>
+		<!-- JDBC驱动 -->
+		<method name="setDriver">com.mysql.jdbc.Driver</method>
+		<!-- 数据库地址 -->
+		<method name="setURL">
+			<ref id="gameDB" />
+		</method>
+		<!-- 字符编码方式（可以不设置，默认为java的字符编码方式） -->
+		<method name="setCharacterEncoding">
+			<ref id="dbEncode" />
+		</method>
+		<!-- 初始连接数（可以不设置，默认为2） -->
+		<method name="setInitSize">2</method>
+		<!-- 最大连接数（可以不设置，默认为20） -->
+		<method name="setMaxSize">100</method>
+		<!-- 连接的超时时间（可以不设置，默认为180000毫秒－3分钟） -->
+		<method name="setTimeout">180000</method>
+		<!-- 连接的最大使用次数（可以不设置，默认为0－表示无限使用） -->
+		<method name="setMaxUsedCount">20000</method>
+		<!-- 取出连接时是否先判断连接可用（可以不设置，默认为true） -->
+		<method name="setCheck">true</method>
+		<!-- 连接是否自动提交事务（可以不设置，默认为true） -->
+		<method name="setAutoCommit">false</method>
+		<!-- 初始化数据库连接管理器 -->
+		<method name="init" />
+	</obj>
+	<!-- 创建角色唯一id生成器 -->
+	<obj class="xlib.util.UidKit">
+		<method name="setPlayerUid">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">1</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setMailUidDBAccess">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">2</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setFightTeamUidDBAccess">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">3</method>
+				<method name="setMinNumber">0xffff</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setFightLogUid">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">4</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<!-- 活动奖励唯一id生成器 -->
+		<method name="setActivityAwardDBAccess">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">5</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager"/>
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<!-- 国家任务期数唯一id生成器 -->
+		<method name="setCountryTaskDBAccess">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">6</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager"/>
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<!-- 未领取奖励唯一id生成器 -->
+		<method name="setWillAwardUid">
+			<obj class="xlib.util.db.UidDBAccess">
+				<method name="setType">7</method>
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager"/>
+						</method>
+						<method name="setTable">
+							<string>uid</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<!-- 创建认证管理器 -->
+	<obj class="game.session.certify.CertifyManager" id="certifyManager">
+		<method name="setCertifyDBAccess">
+			<obj class="game.session.certify.db.NormalCertifyDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>user</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setTimeout">600000</method>
+		<method name="timerStart" />
+	</obj>
+	
+	<!-- 玩家数据库操作管理器 -->
+	<obj class="game.role.PlayerDBAccess" id="playerDBAccess">
+		<method name="setSqlPersistence">
+			<obj class="zmyth.orm.SqlPersistence" id="playerPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>player</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+			
+	<!-- 创建session管理器 -->
+	<obj class="game.session.SessionManager" id="manager">
+		<method name="setDBAccess">
+			<ref id="playerDBAccess" />
+		</method>
+		<method name="setCertifyAccess">
+			<ref id="certifyManager" />
+		</method>
+		<method name="setDBReader">
+			<obj class="game.session.PlayerDBRW" id="_player" />
+		</method>
+		<method name="setDBWriter">
+			<ref id="_player" />
+		</method>
+		<method name="setUserBytesWriter">
+			<obj class="game.session.PlayerW" />
+		</method>
+		<method name="addListener">
+			<obj class="game.session.PlayerLoginHandle" id="playerLoginHandle" />
+		</method>
+		<method name="addListener">
+			<obj class="game.session.PlayerLogoutHandle" id="playerLogoutHandle" />
+		</method>
+		<method name="setTimeout">600000</method>
+		<method name="timerStart" />
+	</obj>
+	<obj class="game.name.NameManager" id="nameManager">
+		<method name="setNameDBAccess">
+			<obj class="game.name.NameDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>player</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="init" />
+	</obj>
+	<!-- 开服时间数据库管理器 -->
+	<obj class="game.openServerTime.OpenServerTimeDBAccess" id="openServerTimeDB">
+		<method name="setSqlPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>open_server_time</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<method name="setOpenServerTimeDB" declared="1">
+			<ref id="openServerTimeDB" />
+		</method>
+	<!-- 开服时间管理器 -->
+	<obj class="game.openServerTime.OpenServerTimeManager" id="openServerTimeManager">
+		<method name="setOpenServerTimeDB" declared="1">
+			<ref id="openServerTimeDB" />
+		</method>
+		<method name="setOpenServerTime" declared="1" />
+	</obj>
+	<method name="setOpenServerManager" ref="openServerTimeManager">
+		<ref id="openServerTimeManager"/>
+	</method>
+	
+
+	<!-- 日志信息地址 -->
+	<constructor id="logURL" class="zlib.net.URL">
+		<ref id="logServerIP" />
+	</constructor>
+	<!-- 日志信息地址(bi) -->
+	<constructor id="biURL" class="zlib.net.URL">
+		<ref id="biServerIP" />
+	</constructor>
+	<!-- 创建无阻塞的连接提供器(日志) -->
+	<obj class="zmyth.back.TimeNBConnectRegisterProducer" id="log.nbcp">
+		<method name="setURL">
+			<ref id="logURL" />
+		</method>
+		<!-- 连接注册服务的编号（一般总是当前的服务端口） -->
+		<method name="setRegisterAddress">
+			<ref id="serverIP" />
+		</method>
+	</obj>
+	<!-- 创建无阻塞的连接提供器(BI) -->
+	<obj class="zmyth.back.TimeNBConnectRegisterProducer" id="bi.nbcp">
+		<method name="setURL">
+			<ref id="biURL" />
+		</method>
+		<!-- 连接注册服务的编号（一般总是当前的服务端口） -->
+		<method name="setRegisterAddress">
+			<ref id="serverIP" />
+		</method>
+	</obj>
+	<obj class="game.log.SwitchLog">
+		<method name="setLogTimeNBConnectRegisterProducer">
+			<ref id="log.nbcp" />
+		</method>
+		<method name="setLogSwitch">
+			<ref id="logSwitch" />
+		</method>
+
+		<method name="setBiTimeNBConnectRegisterProducer">
+			<ref id="bi.nbcp" />
+		</method>
+		<method name="setBiSwitch">
+			<ref id="biSwitch" />
+		</method>
+	</obj>
+
+	<!--活动时间管理 -->
+	<obj class="game.activity.ActivityDateManager" id="activityDateManager">
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+	</obj>
+	<!-- 游戏日志相关 -->
+	<obj class="game.log.LogManager" id="logManager">
+		<method name="setConnectProducer">
+			<ref id="log.nbcp" />
+		</method>
+		<field name="logPort">
+			<value>1000</value>
+		</field>
+		<field name="tableNames">
+			<Strings>,gold_output_log,paper_output_log,source_output_log,gold_consume_log,paper_consume_log,source_consume_log,prop_output_log,prop_consume_log,player_info,military_expoutput_lot,build_uplevel_log,ginger_output_log,ginger_consume_log,recruit_output_log,recruit_consume_log,fightsocre_output_log,fightsocre_consume_log,strength_log,cimelia_expoutput_log</Strings>
+		</field>
+	</obj>
+	<method name="setLogManager" ref="logManager">
+		<ref id="logManager" />
+	</method>
+	<!-- BI相关 -->
+	<obj class="game.bi.BiMsgDBAccess" id="biMsgDBAccess" >
+		<method name="setSqlPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>bi_msg</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	
+	<obj class="game.bi.DsBiManager" id="dsBiManager" >
+		<field name="biPort">
+			<value>1001</value>
+		</field>
+		<method name="setBiMsgDBAccess">
+			<ref id="biMsgDBAccess" />
+		</method>
+		<method name="setConnectProducer">
+			<ref id="bi.nbcp" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="init" />
+	</obj>
+	<method name="setDsBiManager" ref="dsBiManager">
+		<ref id="dsBiManager" />
+	</method>
+	
+	<!-- 战报管理器 -->
+	<obj class="game.fight.FightLogManager" id="fightLogManager">
+		<method name="setFightLogDBAccess">
+			<obj class="game.fight.FightLogDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>fightlog</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="init" />
+	</obj>
+	<!-- 任务中心 -->
+	<obj class="game.task.TaskCentre" id="taskCentre" />
+	<!-- 邮件相关 -->
+	<obj class="game.mail.MailDBAccess" id="mailDBAccess">
+		<method name="setConnectionManager">
+			<ref id="connectionManager" />
+		</method>
+		<method name="setSqlPersistenceMail">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>mail</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+	</obj>
+	<obj class="game.mail.MailManager" id="mailManager">
+		<method name="init" />
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="setMailDBAccess">
+			<ref id="mailDBAccess" />
+		</method>
+	</obj>
+
+	<method class="game.kit.RefreshDataKit" name="setSessionManager">
+		<ref id="manager" />
+	</method>
+	<!-- 领地管理器 -->
+	<obj class="game.country.city.CityCacheManager" id="cityCacheManager">
+		<method name="setCityDBAccess">
+			<obj class="game.country.city.db.CityDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">city</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<method name="setCityCacheManager" ref="playerLogoutHandle">
+		<ref id="cityCacheManager" />
+	</method>
+	<method name="setCityCacheManager" ref="playerLoginHandle">
+		<ref id="cityCacheManager" />
+	</method>
+	<method name="setMailManager" ref="playerLoginHandle">
+		<ref id="mailManager" />
+	</method>
+	<!--背包操作类 -->
+	<obj class="game.prop.BundlePropOperation" id="bundleOperation" />
+	<!--商店数据库操作类 -->
+	<obj class="game.shop.PersonalShopDbAccess" id="psDBAccess">
+		<method name="setConnectionManager">
+			<ref id="connectionManager" />
+		</method>
+		<method name="setSqlPersistenceMail">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>personalshop</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setSqlPersistencePlayer">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>player</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<!--商店缓存类 -->
+	<obj class="game.shop.PersonalShopCacheManager" id="personalShopCache">
+		<method name="setpsDBAccess" declared="1">
+			<ref id="psDBAccess" />
+		</method>
+	</obj>
+	<!--商店操作类 -->
+	<obj class="game.shop.PersonalShopManager" id="personalShopManager">
+		<method name="setPersonalShopCache" declared="1">
+			<ref id="personalShopCache" />
+		</method>
+	</obj>
+	<!-- 副本管理器 -->
+	<obj class="game.duplicate.DuplicateManager" id="duplicateManager">
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="init" />
+	</obj>
+	<!--装备操作类 -->
+	<obj class="game.equipment.EquipmentManager" id="equipmentManager">
+	</obj>
+	<!-- 任务管理器 -->
+	<obj class="game.task.TaskManager" id="taskManager">
+		<method name="setCacheManager"><ref id="worldMapManager" /></method>
+	</obj>
+	<method name="setMailManager" class="game.task.TaskManager"
+		declared="1">
+		<ref id="mailManager" />
+	</method>
+	<method name="addChangeListener" class="game.role.Role">
+		<ref id="taskCentre" />
+	</method>
+
+
+	<!--消息操作类 -->
+	<obj class="game.kit.MessageKit" id="messageKit">
+		<method name="setSessionManager" declared="1">
+			<ref id="manager" />
+		</method>
+		<method name="setNameManager" declared="1">
+			<ref id="nameManager" />
+		</method>
+	</obj>
+	<!--滚动公告 -->
+	<obj class="game.kit.NoticeKit" id="noticeKit">
+		<method name="setSessionManager" declared="1">
+			<ref id="manager" />
+		</method>
+		<method name="setNameManager" declared="1">
+			<ref id="nameManager" />
+		</method>
+	</obj>
+	<!-- 好友管理器 -->
+	<obj class="game.friends.FriendsDBAccess" id="friendsDBAccess">
+		<method name="setConnectionManager">
+			<ref id="connectionManager" />
+		</method>
+		<method name="setSqlPersistenceFriends">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>friends</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<obj class="game.friends.FriendsCacheManager" id="friendsCacheManager">
+		<method name="setFriendsDBAccess" declared="1">
+			<ref id="friendsDBAccess" />
+		</method>
+	</obj>
+	<obj class="game.friends.FriendsManager" id="friendsManager">
+		<method name="setFriendsCacheManager" declared="1">
+			<ref id="friendsCacheManager" />
+		</method>
+		<method name="setNameManager" declared="1">
+			<ref id="nameManager" />
+		</method>
+		<method name="setSeesionManager" declared="1">
+			<ref id="manager" />
+		</method>
+	</obj>
+	<method name="setFriendsManager" ref="playerLogoutHandle">
+		<ref id="friendsManager" />
+	</method>
+	<method name="setFriendsManager" ref="playerLoginHandle">
+		<ref id="friendsManager" />
+	</method>
+	<!-- 商城管理器 -->
+	<obj class="game.mall.MallManager" id="mallManager">
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+	</obj>
+	<!-- 士兵管理器 -->
+	<obj class="game.team.SoldierManager" id="soldierManager">
+	</obj>
+
+	<!-- 探访管理器 -->
+	<obj class="game.visit.VisitManager" id="visitManager">
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+	</obj>
+
+	<!-- 科技管理器 -->
+	<obj class="game.science.ScienceManager" id="scienceManager">
+	</obj>
+	<!-- 世界科技管理器 -->
+	<obj class="game.science.ScienceCountryManager" id="scienceCountryManager">
+	</obj>
+
+	<!-- 排行榜集合管理器 -->
+	<obj class="game.ranklist.RankList" id="rankList">
+		<method name="init" />
+	</obj>
+	
+	<!-- 排行榜数据库管理器 -->
+	<obj class="game.ranklist.RankListDBAccess" id="rankDBAccess">
+		<method name="setConnectionManager">
+			<ref id="connectionManager" />
+		</method>
+		<method name="setSqlPersistenceRank">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>ranks</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setSqlPersistenceRankShow">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>ranks_show</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setSqlPersistenceRankTemp">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>ranktemp</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setSqlPersistenceRankOldTime">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>saveoldtime</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+	</obj>
+	<!-- 排行榜缓存管理器 -->
+	<obj class="game.ranklist.RankCacheManager" id="rankCacheManager">
+		<method name="setRankDBAccess">
+			<ref id="rankDBAccess" />
+		</method>
+		<method name="init" />
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+	</obj>
+	<!-- 排行榜管理器 -->
+	<obj class="game.ranklist.RankManager" id="rankManager">
+		<method name="setRankCacheManager">
+			<ref id="rankCacheManager" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+		<method name="init" />
+	</obj>
+
+	<!-- 城市战管理器 -->
+	<obj class="game.country.WorldMapCityFightManager" id="worldMapCityFightManager">
+		<method name="setCityFightDBAccess">
+			<obj class="game.country.WorldMapCityFightDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>cityfight</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+		<method name="setFightLogManager">
+			<ref id="fightLogManager" />
+		</method>
+	</obj>
+	<!-- 国家数据库管理器 -->
+	<obj class="game.country.CountryDBAccess" id="countryDBAccess">
+		<method name="setSqlPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>country</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setUnionPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>countryunion</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+	</obj>
+	
+	<!-- 玩家下线击杀数管理器 -->
+	<obj class="game.ranklist.OfflinePlayerDataManager" id="offlinePlayerDataManager">
+		<method name="setOfflinePlayerDataDBAccess">
+			<obj class="game.ranklist.OfflinePlayerDataDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>offline_player_data</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="init" />
+	</obj>
+	
+	<method name="setOfflinePlayerDataManager" ref="rankManager">
+		<ref id="offlinePlayerDataManager" />
+	</method>
+	
+	<!-- 世界管理器 -->
+	<obj class="game.country.WorldMapManager" id="worldMapManager">
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+		<method name="setOpenServerTimeManager">
+			<ref id="openServerTimeManager" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="setRankManager">
+			<ref id="rankManager" />
+		</method>
+		<method name="setMapCityFightManager">
+			<ref id="worldMapCityFightManager" />
+		</method>
+		<method name="setSqlPersistence">
+			<ref id="playerPersistence" />
+		</method>
+		<method name="setCountryDBAccess">
+			<ref id="countryDBAccess" />
+		</method>
+		<method name="setMapCityDBAccess">
+			<obj class="game.country.WorldMapCityDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>worldcity</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setWildTeamDBAccess">
+			<obj class="game.country.WildTeamDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>wildteam</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setOfflinePlayerDataManager">
+			<ref id="offlinePlayerDataManager" />
+		</method>
+		<method name="setScienceManager">
+			<ref id="scienceCountryManager" />
+		</method>
+	</obj>
+	<!-- 世界需要通知的相关管理器配置 -->
+	<method name="setWorldMapManager" ref="playerLogoutHandle">
+		<ref id="worldMapManager" />
+	</method>
+	<method name="setWorldMapManager" ref="playerLoginHandle">
+		<ref id="worldMapManager" />
+	</method>
+	<method name="setWorldMapManager" ref="soldierManager">
+		<ref id="worldMapManager" />
+	</method>
+	<method name="setWorldManager" ref="equipmentManager">
+		<ref id="worldMapManager" />
+	</method>
+	<method name="setWorldManager" ref="scienceCountryManager">
+		<ref id="worldMapManager" />
+	</method>
+	<method name="setWorldMapManager" ref="cityCacheManager">
+		<ref id="worldMapManager" />
+	</method>
+	<method name="setWorldMapManager" ref="newKing">
+		<ref id="worldMapManager" />
+	</method>
+	<!-- 加载世界相关数据 -->
+	<method ref="worldMapManager" name="init" />
+	<!-- 加载城战相关数据 -->
+	<method ref="worldMapCityFightManager" name="init" />
+
+	<method name="setRankManager" ref="playerLoginHandle">
+		<ref id="rankManager" />
+	</method>
+	<method name="addChangeListener" class="game.role.Role">
+		<ref id="rankManager" />
+	</method>
+	<method name="addChangeListener" class="game.ranklist.OfflinePlayerData">
+		<ref id="rankManager" />
+	</method>
+	<method name="setOfflinePlayerDataManager" ref="playerLoginHandle">
+		<ref id="offlinePlayerDataManager" />
+	</method>
+	<method name="setOfflinePlayerDataManager" ref="playerLogoutHandle">
+		<ref id="offlinePlayerDataManager" />
+	</method>
+	<!--官职管理器 -->
+	<obj class="game.official.OfficialManager" id="officialManager">
+		<method name="setWorldManager">
+			<ref id="worldMapManager" />
+		</method>
+	</obj>
+
+	<!-- 礼包模板管理器 -->
+	<obj class="game.gift.GiftManager" id="giftManager">
+		<method name="setGiftDBAccess">
+			<obj class="game.gift.GiftDBAccess">
+				<method name="setConnectionManager">
+					<ref id="connectionManager"/>
+				</method>
+				<method name="setPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager"/>
+						</method>
+						<method name="setTable">
+							<string>gift</string>
+						</method>
+					</obj>
+				</method>
+				<method name="setTable">
+					<string>gift</string>
+				</method>
+			</obj>
+		</method>
+		<method name="init" />
+	</obj>
+	<!--运营活动数据库管理器 -->
+	<obj class="game.activity.operator.OperatorActivityDBAccess" id="operatorActivityDBAccess">
+		<method name="setGamePersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager"/>
+				</method>
+				<method name="setTable">
+					<string>activity</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setAwardPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager"/>
+				</method>
+				<method name="setTable">
+					<string>activityaward</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<!-- 充值管理器 -->
+	<obj class="game.charge.ChargeManager" id="chargeManager">
+	    <method name="setGetPlayerPidDBAccess">
+		    <obj class="game.charge.db.GetPlayerPidDBAccess">
+				<method name="setConnectionManager">
+					<ref id="connectionManager"/>
+				</method>
+			</obj>
+	    </method>
+		<method name="setChargeDBAccess">
+			<obj class="game.charge.db.ChargeDBAccess">
+				<method name="setConnectionManager">
+					<ref id="connectionManager"/>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<method name="setChargeManager" ref="playerLoginHandle">
+		<ref id="chargeManager"/>
+	</method>
+	<!-- 礼包发放奖励管理器 -->
+	<obj class="game.gift.GiftAwardManager" id="giftAwardManager">
+		<method name="setConnectionManager">
+			<ref id="connectionManager"/>
+		</method>
+		<method name="setGiftManager">
+			<ref id="giftManager" />
+		</method>
+		<method name="setTable">
+			<string>giftaward</string>
+		</method>
+	</obj>
+	<method name="setGiftAwardManager" ref="playerLoginHandle">
+		<ref id="giftAwardManager"/>
+	</method>
+	<!-- 活动管理器 -->
+	<obj class="game.activity.operator.OperatorActivityManager" id="operatorActivityManager">
+		<method name="setDbAccess">
+			<obj class="game.activity.operator.OperatorActivityDBAccess">
+				<method name="setGamePersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager"/>
+						</method>
+						<method name="setTable">
+							<string>activity</string>
+						</method>
+					</obj>
+				</method>
+				<method name="setAwardPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager"/>
+						</method>
+						<method name="setTable">
+							<string>activityaward</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setGiftAwardManager">
+			<ref id="giftAwardManager" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<method name="setChargeManager">
+			<ref id="chargeManager" />
+		</method>
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+		<method name="init"/>
+	</obj>
+	<method name="setActivityManager" ref="operatorActivityManager">
+		<ref id="operatorActivityManager"/>
+	</method>
+	<!-- 活动战斗定时推动管理器 -->
+	<obj class="game.country.activity.ActivityTimerManager" id="activityTimerManager">
+		<method name="setWorldMapManager">
+			<ref id="worldMapManager" />
+		</method>
+		<method name="addListener" declared="1">
+			<ref id="rankManager"/>
+		</method>
+	</obj>
+	<method name="setActivityTimerManager" ref="playerLogoutHandle">
+		<ref id="activityTimerManager" />
+	</method>
+	<method name="setActivityDateManager" ref="worldMapManager">
+		<ref id="activityDateManager" />
+	</method>
+	<!-- 国家结盟管理器 -->
+	<obj class="game.country.CountryUnionManager" id="countryUnionManager">
+		<method name="init" />
+	</obj>
+	<method name="setCountryUnionManager" ref="worldMapManager">
+		<ref id="countryUnionManager" />
+	</method>
+	<!-- VIP管理器 -->
+	<obj class="game.vip.VipManager" id="vipManager">
+	</obj>
+	<!-- 每日功勋管理器 -->
+	<obj class="game.dayFightScore.DayFightScoreManager" id="dayFightScoreManager">
+	    <method name="setMailManager">
+		    <ref id="mailManager" />
+	    </method>
+	</obj>
+	<method class="game.kit.RefreshDataKit" name="setFightScoreManager">
+		<ref id="dayFightScoreManager" />
+	</method>
+	<!-- 指引战斗管理器 -->
+	<obj class="game.guide.FightGuideManager" id="fightGuideManager">
+	</obj>
+	<!-- 在线礼包管理器 -->
+	<obj class="game.onlinegift.OnlineGiftManager" id="onlineGiftManager">
+	</obj>
+	<!-- 国家任务管理器 -->
+	<obj class="game.country.task.CountryTaskManager" id="countryTaskManager">
+		<method name="setWorldMapManager"><ref id="worldMapManager"/></method>
+		<method name="setWorldMapCityFightManager"><ref id="worldMapCityFightManager"/></method>
+		<method name="setSessionManager"><ref id="manager"/></method>
+		<method name="setActivityDateManager"><ref id="activityDateManager"/></method>
+		<method name="setCountryTaskDBAccess">
+			<obj class="game.country.task.CountryTaskDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setConnectionManager">
+							<ref id="connectionManager" />
+						</method>
+						<method name="setTable">
+							<string>countrytask</string>
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="load"/>
+	</obj>
+	<obj class="game.famousGeneral.FamousGeneralManager" id="famousGeneralManager">
+	</obj>
+	
+	<method name="setCountryTaskManager" ref="playerLoginHandle">
+		<ref id="countryTaskManager"/>
+	</method>
+	<method name="addChangeListener" class="game.role.Role">
+		<ref id="countryTaskManager" />
+	</method>
+	<method name="addListener" ref="worldMapCityFightManager">
+		<ref id="countryTaskManager"/>
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="countryTaskManager"/>
+	</method>
+	<method name="setWorldMapManager" ref="duplicateManager">
+			<ref id="worldMapManager" />
+		</method>
+	<method name="setFamousGeneralManager" ref="famousGeneralManager">
+		<ref id="famousGeneralManager"/>
+	</method>
+	<!-- 宝物管理器-->
+	<obj class="game.cimelia.CimeliaManager" id="cimeliaManager">
+		<method name="setWroldMapManager">
+			<ref id="worldMapManager"/>
+		</method>
+	</obj>
+	
+	<!-- 未领取奖励相关 -->
+	<obj class="game.award.WillGetAwardDBAccess" id="willGetAwardDBAccess">
+		<method name="setSqlPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>will_award</string>
+				</method>
+			</obj>
+		</method>
+	</obj>
+	<obj class="game.award.WillGetAwardManager" id="willGetAwardManager">
+		<method name="setWillGetDBAccess">
+			<ref id="willGetAwardDBAccess" />
+		</method>
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+	</obj>
+	<method name="setWillAwardManager" ref="rankManager">
+		<ref id="willGetAwardManager"/>
+	</method>
+	<method name="setWillGetManager" ref="playerLoginHandle">
+		<ref id="willGetAwardManager"/>
+	</method>
+	<method name="initExps" ref="_cimelia"/>
+	
+	<obj class="game.country.activity.OpenServerActivityOfAtt" id="openActivityOfAtt">
+	</obj>
+	<obj class="game.country.activity.OpenServerActivityOfMiliLv" id="openActivityOfMiliLv">
+	</obj>
+	<obj class="game.country.activity.OpenServerActivityOfNobiLv" id="opActivityOfNobiLv">
+	</obj>
+	<obj class="game.country.activity.OpenServerActivityOfVIP" id="openActivityOfVIP">
+	</obj>
+	
+	<!-- 开服活动管理类 -->
+	<obj class="game.country.activity.OpenServerActivityManager" id="openManager">
+		<method name="setSqlPersistence">
+			<obj class="zmyth.orm.SqlPersistence">
+				<method name="setConnectionManager">
+					<ref id="connectionManager" />
+				</method>
+				<method name="setTable">
+					<string>open_server_act</string>
+				</method>
+			</obj>
+		</method>
+		<method name="setRankManager">
+			<ref id="rankManager" />
+		</method>
+		<method name="setWillAwardManager">
+			<ref id="willGetAwardManager" />
+		</method>
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+		<method name="setActivityDateManager">
+			<ref id="activityDateManager" />
+		</method>
+		<method name="setOpenActivityOfAtt">
+			<ref id="openActivityOfAtt" />
+		</method>
+		<method name="setOpenActivityOfMiliLv">
+			<ref id="openActivityOfMiliLv" />
+		</method>
+		<method name="setOpActivityOfNobiLv">
+			<ref id="opActivityOfNobiLv" />
+		</method>
+		<method name="setOpenActivityOfVIP">
+			<ref id="openActivityOfVIP" />
+		</method>
+	</obj>
+	<method name="setOpenActivityManager" ref="openActivityOfAtt">
+		<ref id="openManager"/>
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="openActivityOfAtt" />
+	</method>
+	<method name="setOpenActivityManager" ref="openActivityOfMiliLv">
+		<ref id="openManager"/>
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="openActivityOfMiliLv" />
+	</method>
+	<method name="setOpenActivityManager" ref="opActivityOfNobiLv">
+		<ref id="openManager"/>
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="opActivityOfNobiLv" />
+	</method>
+	<method name="setOpenActivityManager" ref="openActivityOfVIP">
+		<ref id="openManager"/>
+	</method>
+	<method name="init" ref="openActivityOfAtt"/>
+	<method name="init" ref="openActivityOfMiliLv"/>
+	<method name="init" ref="opActivityOfNobiLv"/>
+	<method name="init" ref="openActivityOfVIP"/>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="openActivityOfVIP" />
+	</method>
+	<obj class="game.card.CardManager" id="cardManager">
+		<method name="setCardDBAccess">
+			<obj class="game.card.CardDBAccess" id="cardDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setTable">
+							<string>cardkey</string>
+						</method>
+						<method name="setConnectionManager">
+							<ref id="connectionManager2" />
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="setKeyDBAccess">
+			<obj class="game.card.KeyDBAccess" id="keyDBAccess">
+				<method name="setSqlPersistence">
+					<obj class="zmyth.orm.SqlPersistence">
+						<method name="setTable">
+							<string>cardnum</string>
+						</method>
+						<method name="setConnectionManager">
+							<ref id="connectionManager2" />
+						</method>
+					</obj>
+				</method>
+			</obj>
+		</method>
+		<method name="init"/>
+		<method name="setGiftManager">
+			<ref id="giftManager" />
+		</method>
+	</obj>
+	<method name="setActivityManager" ref="mallManager">
+		<ref id="activityDateManager" />
+	</method>
+	<obj class="game.activity.TotalLoginActivityManager" id="totalLoginManager"/>
+	<obj class="game.gamble.GambleManager" id="gambleManager"/>
+	<method name="setGambleManager" ref="playerLogoutHandle">
+		<ref id="gambleManager" />
+	</method>
+</objects>

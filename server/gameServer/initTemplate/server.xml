@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!--服务器信息-->
+	<obj class="xlib.server.Server" id="server">
+		<!--平台id-->
+		<field name="PLANTID" declared="1">${server.plantID}</field>
+		<!--服务器id-->
+		<field name="SERVERNAME" declared="1">${server.name}</field>
+		<!--服务器id-->
+		<field name="SERVERID" declared="1">${server.serverID}</field>
+		<!-- 服务器域名 -->
+		<field name="SERVERDOMAIN" declared="1">${server.domain}</field>
+		<!-- 服务器版本号 -->
+		<field name="SERVERVERSION" declared="1">${server.version}</field>
+		<!--游戏人数上限-->
+		<field name="SESSIONMAX">${server.sessionMax}</field>
+		<!--服务器状态-->
+		<field name="STATE">${server.state}</field>
+		<!-- 服务器允许gm工具的http请求的的ip -->
+		<field name="ALLOWIP" declared="1">
+			<strings separator=",">${server.allowIp}</strings>
+		</field>
+		<!-- 服务器认证id -->
+		<field name="KEY">
+			<string>${server.key}</string>
+		</field>
+		<field name="DEBUG">
+			<value type="boolean">${server.debug}</value>
+		</field>
+		<field name="ANTIADDICTION">
+			<value type="boolean">${server.antiaddiction}</value>
+		</field>
+		<!-- 初始化平台服务器id数组，合服后需要添加新的 -->
+		<method name="init">
+			<!-- 平台id数组 -->
+			<ints>${server.plantIDs}</ints>
+			<!-- 服务器id数组 -->
+			<ints>${server.serverIDs}</ints>
+		</method>
+	</obj>
+	<!--数据库用户名-->
+	<String id="dbName">${db.game.user}</String>
+	<!--数据库密码-->
+	<String id="dbPassword">${db.game.password}</String>
+	<!--数据库编码-->
+	<String id="dbEncode">utf-8</String>
+	<!--游戏数据库地址-->
+	<String id="gameDB">jdbc:mysql://${db.game.ip}/${db.game.database}</String>
+	<!--sever地址-->
+	<String id="serverIP">tcp://${server.domain}:${server.port}</String>
+	<!--日志地址-->
+	<String id="logServerIP">tcp://${logServer.ip}:${logServer.port}</String>
+	<!--bi地址-->
+	<String id="biServerIP">tcp://${biServer.ip}:${biServer.port}</String>
+	<!-- 日志服务器开关 -->
+	<String id="logSwitch">${logServer.isOpen}</String>
+	<!-- BI服务器开关 -->
+	<String id="biSwitch">${biServer.isOpen}</String>
+</objects>

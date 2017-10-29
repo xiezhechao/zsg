@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+ <field class="game.shop.ShopProp" name="factory" id="shopPropSampleFactory"/>
+ <method ref="shopPropSampleFactory" name="init">
+  <ref id="context"/>
+ </method>
+ 
+ 	<!--
+ 		propId:引用物品ID
+		name：引用物品名字
+		coinType：价格类型
+				1粮食
+	 			2木材
+				3钱币
+				4铁锭
+				5经验
+				6劳役
+				7文化
+				8军械
+				9训练
+				10元宝
+				11礼券
+				12积分
+		price：价格		
+		saleMax:商店最大卖出数量(-1:无上限)
+		buyLevel:购买等级限制
+	-->
+	<sample class="game.shop.ShopProp" sid="1" propId="1" name="一" coinType="1" price="10" saleMax="-1" buyLevel="1"/>
+	<sample class="game.shop.ShopProp" sid="2" propId="2" name="二" coinType="2" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="3" propId="3" name="三" coinType="3" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="4" propId="4" name="四" coinType="1" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="5" propId="5" name="五" coinType="2" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="6" propId="6" name="六" coinType="3" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="7" propId="1000" name="七" coinType="1" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="8" propId="1001" name="八" coinType="2" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="9" propId="1002" name="九" coinType="3" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="10" propId="1003" name="十" coinType="1" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="11" propId="1004" name="十一" coinType="2" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="12" propId="1005" name="十二" coinType="3" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="13" propId="1006" name="十三" coinType="1" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="14" propId="1007" name="十四" coinType="2" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="15" propId="1008" name="十五" coinType="3" price="10" saleMax="-1" buyLevel="1" />
+	<sample class="game.shop.ShopProp" sid="16" propId="1009" name="十六" coinType="1" price="10" saleMax="-1" buyLevel="1" />
+
+</objects>

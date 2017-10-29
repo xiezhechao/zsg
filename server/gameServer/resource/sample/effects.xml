@@ -1,0 +1,1329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects>
+<field class="game.fight.effect.Effect" name="factory" id="effectSampleFactory"/>
+<method ref="effectSampleFactory" name="init">
+<ref id="context"/>
+</method>
+<!-- 
+class:game.fight.effect.AttackEffect攻击效果 game.fight.effect.AddEffectEffect挂载效果效果 game.fight.effect.ControlEffect控制效果
+   game.fight.effect.ChangeAttributeEffect改变属性效果 game.fight.effect.MultipleAttackEffect多伤害修正攻击效果
+   game.fight.effect.UseEffectEffect使用效果效果  game.fight.effect.HurtEffect伤害效果 game.fight.effect.DodgeEffect闪避特效
+name:名字
+lethality:致死率
+hurtRate:伤害修正系数
+effectSid:效果sid
+probabilitys:触发概率数组
+controlType:控制类型
+removeTrigger:移除时机
+removeFighterType:移除战斗者类型
+effectStyleSid:特效样式sid
+attributeType:属性类型
+addType:加成类型
+effectValues:效果作用的数据等级数组
+maxAddNums:最大叠加次数
+ -->
+<sample class="game.fight.effect.AttackEffect"  sid="1" name="普通伤害" lethality="0.2f" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="2" name="挂载普通攻击控制效果" effectSid="3" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="3" name="普通攻击控制效果" controlType="1" soldierType="0" hurtType="0" removeTrigger="2" removeFighterType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="4" name="挂载勇悍致命率降低" effectSid="5" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="5" name="勇悍致命率降低" removeTrigger="32" removeFighterType="2" effectStyleSid="0" attributeType="1" addType="2" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="6" name="挂载武勇伤害增加" effectSid="7" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="7" name="武勇伤害增加" removeTrigger="16" removeFighterType="1" effectStyleSid="0" attributeType="2" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="8" name="挂载无当伤害增加" effectSid="9" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="9" name="无当伤害增加" removeTrigger="32" removeFighterType="2" effectStyleSid="9" attributeType="2" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="10" name="挂载玄甲反击伤害减少" effectSid="11" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="11" name="玄甲反击伤害减少" removeTrigger="32" removeFighterType="2" effectStyleSid="0" attributeType="3" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="12" name="挂载攒射伤害增加" effectSid="13" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="13" name="攒射伤害增加" removeTrigger="16" removeFighterType="1" effectStyleSid="0" attributeType="2" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>1f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="14" name="挂载接阵伤害减少" effectSid="15" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="15" name="接阵伤害减少" effectStyleSid="15" attributeType="3" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.05f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="16" name="挂载死战攻击增加" effectSid="17" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="17" name="死战攻击增加" effectStyleSid="17" attributeType="4" addType="1" maxAddNums="5" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.05f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="18" name="挂载彪悍攻击增加" effectSid="19" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="19" name="彪悍攻击增加" removeTrigger="2" removeFighterType="1" effectStyleSid="19" attributeType="4" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="20" name="挂载铁骑伤害增加" effectSid="21" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="21" name="铁骑伤害增加" removeTrigger="16" removeFighterType="1" effectStyleSid="0" attributeType="2" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.3f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="22" name="挂载藤甲伤害减少" effectSid="23" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="23" name="藤甲伤害减少" removeTrigger="32" removeFighterType="2" effectStyleSid="0" attributeType="3" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.3f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="24" name="挂载老练伤害增加" effectSid="25" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="25" name="老练伤害增加" removeTrigger="16" removeFighterType="1" effectStyleSid="0" attributeType="2" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.25f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="26" name="挂载老练闪避" effectSid="27" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.DodgeEffect"  sid="27" name="老练闪避" removeTrigger="8" removeFighterType="2" effectStyleSid="0" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="28" name="挂载威慑伤害减免" effectSid="29" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="29" name="威慑伤害减免" controlType="4" soldierType="0" hurtType="1" removeTrigger="32" removeFighterType="2" effectStyleSid="0" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="30" name="挂载陷阵行动技能无效" effectSid="31" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="31" name="陷阵行动技能无效" controlType="2" soldierType="0" hurtType="1" effectStyleSid="0" round="10" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="32" name="挂载破敌伤害增加" effectSid="33" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="33" name="破敌伤害增加" removeTrigger="16" removeFighterType="1" effectStyleSid="0" attributeType="2" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="34" name="挂载老练闪避" effectSid="35" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.DodgeEffect"  sid="35" name="老练闪避" removeTrigger="8" removeFighterType="2" effectStyleSid="0" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="36" name="挂载飞熊伤害减少" effectSid="37" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="37" name="飞熊伤害减少" effectStyleSid="0" attributeType="3" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.3f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="38" name="挂载飞熊速度减少" effectSid="39" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="39" name="飞熊速度减少" effectStyleSid="0" attributeType="5" addType="2" >
+ 	<field name="effectValues" declared="1">
+		<floats>-50f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="40" name="挂载异族伤害增加" effectSid="41" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="41" name="异族伤害增加" effectStyleSid="0" attributeType="4" addType="2" >
+ 	<field name="effectValues" declared="1">
+		<floats>4f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="42" name="挂载异族速度增加" effectSid="43" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="43" name="异族速度增加" effectStyleSid="0" attributeType="5" addType="2" >
+ 	<field name="effectValues" declared="1">
+		<floats>10f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="44" name="挂载捕猎伤害增加" effectSid="45" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="45" name="捕猎伤害增加" removeTrigger="32" removeFighterType="2" effectStyleSid="45" attributeType="2" addType="1" maxAddNums="3" >
+ 	<field name="effectValues" declared="1">
+		<floats>1f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="46" name="挂载藤牌伤害减免" effectSid="47" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="47" name="藤牌伤害减免" controlType="4" soldierType="0" hurtType="1" removeTrigger="32" removeFighterType="2" effectStyleSid="0" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="48" name="挂载刚烈触发特效" effectSid="49" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="49" name="刚烈触发特效" effectStyleSid="0" trigger="32" fighterType="2" spreadCamp="1" >
+ 	<field name="effectSids" declared="1">
+		<ints>133</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AttackEffect"  sid="50" name="义气伤害" lethality="0.2f" hurtRate="0.25" />
+ <sample class="game.fight.effect.AttackEffect"  sid="51" name="追袭伤害" lethality="0.2f" hurtRate="0.25" />
+ <sample class="game.fight.effect.AttackEffect"  sid="52" name="解烦伤害" lethality="1f" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="53" name="使用无忧行动力清除" effectSid="54" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="54" name="无忧行动力清除" effectStyleSid="0" attributeType="6" />
+ <sample class="game.fight.effect.UpdateAttackEffect"  sid="55" name="奔射伤害" lethality="0.2f" updateType="1" updateHurtRate="0.4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="56" name="挂载孤胆奔射成功率增加" effectSid="57" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="57" name="孤胆奔射成功率增加" effectStyleSid="0" attributeType="7" addType="2" useSkillSid="37" >
+ 	<field name="effectValues" declared="1">
+		<floats>90000f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="58" name="挂载孤胆伤害减少" effectSid="59" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="59" name="孤胆伤害减少" effectStyleSid="0" attributeType="3" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="60" name="挂载狼群追袭成功率增加" effectSid="61" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="61" name="狼群追袭成功率增加" removeTrigger="512" removeFighterType="1" effectStyleSid="0" attributeType="7" addType="2" useSkillSid="34" >
+ 	<field name="effectValues" declared="1">
+		<floats>90000f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MultipleAttackEffect"  sid="62" name="金吾伤害" lethality="0.2f" >
+ 	<field name="hurtRates" declared="1">
+		<floats>1f,0.25f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="63" name="使用断后伤害" effectSid="64" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.HurtEffect"  sid="64" name="断后伤害" lethality="0.2f" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="65" name="使用断后伤害减免" effectSid="66" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="66" name="断后伤害减免" controlType="4" soldierType="0" hurtType="1" removeTrigger="32" removeFighterType="2" effectStyleSid="0" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="67" name="使用戟林伤害" effectSid="68" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.HurtEffect"  sid="68" name="戟林伤害" lethality="0f" hurtRate="0.6f" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="69" name="使用闭月伤害" effectSid="70" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="70" name="闭月伤害" lethality="0.2f" baseValue="0" bwhRate="500f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="71" name="挂载闭月攻击减少" effectSid="72" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="72" name="闭月攻击减少" effectStyleSid="72" attributeType="4" addType="1" round="30" baseValue="0" bwhRate="0.03f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="73" name="挂载洛水神姬攻击增加" effectSid="74" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="74" name="洛水神姬攻击增加" effectStyleSid="74" attributeType="2" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="75" name="使用洛水神姬回复伤兵" effectSid="76" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryReliveEffect"  sid="76" name="洛水神姬回复伤兵" baseValue="5000" bwhRate="8f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="77" name="挂载老当益壮触发效果" effectSid="78" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="78" name="老当益壮触发效果" effectStyleSid="0" trigger="256" fighterType="1" spreadCamp="1" roundInterval="1" >
+ 	<field name="effectSids" declared="1">
+		<ints>241</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="79" name="使用羞花伤害" effectSid="80" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="80" name="羞花伤害" lethality="0.2f" baseValue="100000" bwhRate="400f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="81" name="挂载羞花伤害加深" effectSid="82" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="82" name="羞花伤害加深" effectStyleSid="82" attributeType="3" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.15f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="83" name="挂载风华绝代攻击力增加" effectSid="84" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="84" name="风华绝代攻击力增加" effectStyleSid="84" attributeType="4" addType="1" round="20" baseValue="0" bwhRate="0.0005f" bwhType="4" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="85" name="挂载风华绝代伤害加深" effectSid="86" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="86" name="风华绝代伤害加深" effectStyleSid="86" attributeType="3" addType="1" round="20" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.25f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="87" name="使用胡音琴韵伤害" effectSid="88" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="88" name="胡音琴韵伤害" lethality="0.2f" baseValue="0" bwhRate="500f" bwhType="4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="89" name="挂载胡音琴韵攻击增加" effectSid="90" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="90" name="胡音琴韵攻击增加" effectStyleSid="90" attributeType="4" addType="1" round="30" baseValue="0" bwhRate="0.001f" bwhType="2" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="91" name="使用东吴枭姬伤害" effectSid="92" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="92" name="东吴枭姬伤害" lethality="0.2f" baseValue="30000" bwhRate="180f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="93" name="使用东吴枭姬伤害" effectSid="94" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="94" name="东吴枭姬伤害" lethality="0.2f" baseValue="30000" bwhRate="120f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="95" name="使用铁骑突击伤害" effectSid="96" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="96" name="铁骑突击伤害" lethality="0.3f" baseValue="30000" bwhRate="160f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="97" name="挂载铁骑突击攻击减少" effectSid="98" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="98" name="铁骑突击攻击减少" effectStyleSid="98" attributeType="4" addType="1" round="10" baseValue="0" bwhRate="-0.005f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="99" name="使用女中豪杰伤害" effectSid="100" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="100" name="女中豪杰伤害" lethality="0.2f" baseValue="0" bwhRate="1375f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="101" name="挂载女中豪杰行动力控制" effectSid="102" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="102" name="女中豪杰行动力控制" controlType="8" round="15" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="103" name="使用万箭齐发伤害" effectSid="104" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="104" name="万箭齐发伤害" lethality="0.2f" baseValue="0" bwhRate="600f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="105" name="挂载万箭齐发伤害减少" effectSid="106" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="106" name="万箭齐发伤害减少" effectStyleSid="106" attributeType="2" addType="1" round="15" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="107" name="使用火神降世伤害" effectSid="108" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="108" name="火神降世伤害" lethality="0.2f" baseValue="0" bwhRate="625f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="109" name="使用仁义无双回复伤兵" effectSid="110" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryReliveEffect"  sid="110" name="仁义无双回复伤兵" baseValue="10000" bwhRate="2f" bwhType="4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="111" name="挂载仁义无双伤害减免" effectSid="112" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="112" name="仁义无双伤害减免" effectStyleSid="112" attributeType="3" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="113" name="挂载乱世枭雄攻击力增加" effectSid="114" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="114" name="乱世枭雄攻击力增加" effectStyleSid="114" attributeType="4" addType="1" baseValue="0" bwhRate="0.002f" bwhType="4" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="115" name="挂载知人善用武力增加" effectSid="116" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="116" name="知人善用武力增加" effectStyleSid="116" attributeType="8" addType="2" baseValue="0" bwhRate="0.2f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="117" name="使用江东猛虎伤害" effectSid="118" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="118" name="江东猛虎伤害" lethality="0.2f" baseValue="100000" bwhRate="450f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="119" name="挂载江东猛虎攻击增加" effectSid="120" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="120" name="江东猛虎攻击增加" effectStyleSid="120" attributeType="4" addType="1" round="10" baseValue="0" bwhRate="0.01f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="121" name="使用小霸王伤害" effectSid="122" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="122" name="小霸王伤害" lethality="0.2f" baseValue="0" bwhRate="2250f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="123" name="使用小霸王伤害" effectSid="124" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="124" name="小霸王伤害" lethality="0.2f" baseValue="0" bwhRate="750f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="125" name="挂载风驰电掣触发效果" effectSid="126" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="126" name="风驰电掣触发效果" effectStyleSid="0" trigger="256" fighterType="1" spreadCamp="1" roundInterval="5" >
+ 	<field name="effectSids" declared="1">
+		<ints>243</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="127" name="使用人中吕布伤害" effectSid="128" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="128" name="人中吕布伤害" lethality="0.2f" baseValue="30000" bwhRate="180f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="129" name="挂载人中吕布攻击增加" effectSid="130" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="130" name="人中吕布攻击增加" effectStyleSid="130" attributeType="4" addType="2" maxAddNums="5" >
+ 	<field name="effectValues" declared="1">
+		<floats>6f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="131" name="使用悬壶济世复伤兵" effectSid="132" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryReliveEffect"  sid="132" name="悬壶济世回复伤兵" baseValue="10000" bwhRate="2f" bwhType="4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="133" name="挂载刚烈伤害增加" effectSid="134" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="134" name="刚烈伤害增加" effectStyleSid="134" attributeType="2" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.06f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="135" name="使用奇门遁甲伤害" effectSid="136" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="136" name="奇门遁甲伤害" lethality="0.2f" baseValue="0" bwhRate="1000f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="137" name="使用奇门遁甲行动力控制" effectSid="138" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="138" name="奇门遁甲行动力控制" controlType="8" effectStyleSid="0" round="5" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="139" name="挂载麒麟儿攻击增加" effectSid="140" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="140" name="麒麟儿攻击增加" effectStyleSid="140" attributeType="4" addType="1" baseValue="0" bwhRate="0.005f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="141" name="挂载麒麟儿伤害减免" effectSid="142" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="142" name="麒麟儿伤害减免" effectStyleSid="142" attributeType="3" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="143" name="使用南蛮入侵伤害" effectSid="144" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="144" name="南蛮入侵伤害" lethality="0.8f" baseValue="28000" bwhRate="150f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="145" name="挂载虎痴触发效果" effectSid="146" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="146" name="虎痴触发效果" effectStyleSid="0" trigger="256" fighterType="1" spreadCamp="1" roundInterval="5" >
+ 	<field name="effectSids" declared="1">
+		<ints>147,253</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="147" name="挂载虎痴伤害增加" effectSid="148" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="148" name="虎痴伤害增加" effectStyleSid="148" attributeType="2" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.15f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="149" name="使用汉末神仙伤害" effectSid="150" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="150" name="汉末神仙伤害" lethality="0.2f" baseValue="0" bwhRate="50f" bwhType="4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="151" name="挂载汉末神仙致命率降低" effectSid="152" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="152" name="汉末神仙致命率降低" effectStyleSid="152" attributeType="14" addType="2" round="20" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="153" name="使用百步穿杨伤害" effectSid="154" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="154" name="百步穿杨伤害" lethality="0.2f" baseValue="0" bwhRate="390f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="155" name="使用进入回合cd" effectSid="156" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitarySkillRoundEffect"  sid="156" name="进入回合cd" modifyType="2" camp="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="157" name="挂载孤胆英豪远程攻击伤害减少" effectSid="158" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="158" name="孤胆英豪远程攻击伤害减少" effectStyleSid="0" attributeType="3" addType="1" removeTrigger="32" removeFighterType="2">
+ 	<field name="effectValues" declared="1">
+		<floats>0.5f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="159" name="挂载孤胆英豪武将技能伤害免疫" effectSid="160" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="160" name="孤胆英豪武将技能伤害免疫" controlType="4" soldierType="0" hurtType="2" round="0" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="161" name="挂载孤胆英豪远程攻击伤害减少触发" effectSid="162" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect" sid="162" name="孤胆英豪远程攻击伤害减少触发" effectStyleSid="112" trigger="128" fighterType="2" triggerHurtType="1" triggerAttackFighterType="1" triggerAttackType="16" spreadCamp="1">
+	<field name="effectSids" declared="1">
+		<ints>157</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="163" name="挂载鬼狐触发效果" effectSid="164" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="164" name="鬼狐触发效果" effectStyleSid="0" trigger="32" fighterType="2" triggerHurtType="2" spreadCamp="2" isSuccessNoContinue="true" >
+ 	<field name="effectSids" declared="1">
+		<ints>165,247</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="165" name="使用鬼狐伤害" effectSid="166" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.HurtEffect"  sid="166" name="鬼狐伤害" lethality="0.2f" hurtRate="-0.4f" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="167" name="使用鬼才伤害" effectSid="168" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="168" name="鬼才伤害" lethality="0.5f" baseValue="50000" bwhRate="200f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="169" name="使用恶来伤害" effectSid="170" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="170" name="恶来伤害" lethality="0.2f" baseValue="0" bwhRate="130f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="171" name="挂载秀内慧中护盾" effectSid="172" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AbsorbHurtEffect"  sid="172" name="秀内慧中护盾" hurtType="15" effectStyleSid="172" baseValue="0" bwhRate="375f" bwhType="4" isUseByAdd="true" >
+ 	<field name="removeEffectSids" declared="1">
+		<ints>174</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="173" name="挂载秀内慧中速度增加" effectSid="174" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="174" name="秀内慧中速度增加" effectStyleSid="174" attributeType="5" addType="2" >
+ 	<field name="effectValues" declared="1">
+		<floats>20f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="175" name="使用烈火伤害" effectSid="176" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="176" name="烈火伤害" lethality="0.2f" baseValue="3000" bwhRate="100f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="177" name="使用惊雷伤害" effectSid="178" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="178" name="惊雷伤害" lethality="0.2f" baseValue="3000" bwhRate="100f" bwhType="3" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="179" name="使用冰锥伤害" effectSid="180" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="180" name="冰锥伤害" lethality="0.2f" baseValue="3000" bwhRate="100f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="181" name="使用滚石伤害" effectSid="182" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="182" name="滚石伤害" lethality="0.2f" baseValue="0" bwhRate="200f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="183" name="使用神火伤害" effectSid="184" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="184" name="神火伤害" lethality="0.2f" baseValue="0" bwhRate="100f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="185" name="使用神雷伤害" effectSid="186" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="186" name="神雷伤害" lethality="0.2f" baseValue="0" bwhRate="100f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="187" name="使用巨浪伤害" effectSid="188" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="188" name="巨浪伤害" lethality="0.2f" baseValue="0" bwhRate="100f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="189" name="使用山崩伤害" effectSid="190" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="190" name="山崩伤害" lethality="0.2f" baseValue="0" bwhRate="100f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="191" name="挂载谣言攻击力减少" effectSid="192" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="192" name="谣言攻击力减少" effectStyleSid="192" attributeType="4" addType="1" round="20" baseValue="0" bwhRate="-0.001f" bwhType="2" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="193" name="使用单骑叩关伤害" effectSid="194" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="194" name="单骑叩关伤害" lethality="0.2f" baseValue="20000" bwhRate="100f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="195" name="挂载谩骂伤害增加" effectSid="196" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="196" name="谩骂伤害增加" effectStyleSid="196" attributeType="3" addType="1" round="20" baseValue="0" bwhRate="-0.0005f" bwhType="2" isUseByAdd="true" maxValue="1f" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="197" name="使用清除己方cd" effectSid="198" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitarySkillRoundEffect"  sid="198" name="清除己方cd" modifyType="1" camp="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="199" name="挂载激励攻击力增加" effectSid="200" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="200" name="激励攻击力增加" effectStyleSid="200" attributeType="4" addType="1" round="20" baseValue="0" bwhRate="0.001f" bwhType="2" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="201" name="挂载防护护盾" effectSid="202" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AbsorbHurtEffect"  sid="202" name="防护护盾" hurtType="15" effectStyleSid="202" baseValue="0" bwhRate="300f" bwhType="2" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="203" name="使用医疗回复伤兵" effectSid="204" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryReliveEffect"  sid="204" name="医疗回复伤兵" baseValue="0" bwhRate="10f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="205" name="挂载单骑突伤害增加" effectSid="206" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="206" name="单骑突伤害增加" removeTrigger="32" removeFighterType="2" effectStyleSid="206" attributeType="2" addType="1" >
+ 	<field name="effectValues" declared="1">
+		<floats>2f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="207" name="使用单骑突伤害" effectSid="208" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="208" name="单骑突伤害" lethality="0.2f" baseValue="20" bwhRate="1f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="209" name="使用破阵突伤害" effectSid="210" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="210" name="破阵突伤害" lethality="0.2f" baseValue="20" bwhRate="1f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="211" name="挂载铁壁护盾" effectSid="212" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AbsorbHurtEffect"  sid="212" name="铁壁护盾" hurtType="15" effectStyleSid="212" baseValue="0" bwhRate="0.0005f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="213" name="挂载突击攻击力增加" effectSid="214" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="214" name="突击攻击力增加" effectStyleSid="214" attributeType="4" addType="1" round="10" baseValue="0" bwhRate="0.0005f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="215" name="使用千军易辟伤害" effectSid="216" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="216" name="千军易辟伤害" lethality="0.5f" baseValue="0" bwhRate="60f" bwhType="4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="217" name="挂载千军易辟伤害减少" effectSid="218" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="218" name="千军易辟伤害减少" effectStyleSid="218" attributeType="2" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.1f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="219" name="使用烈火伤害" effectSid="220" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="220" name="烈火伤害" lethality="0.2f" baseValue="3000" bwhRate="150f" bwhType="1" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="221" name="使用惊雷伤害" effectSid="222" bwhType="3" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="222" name="惊雷伤害" lethality="0.2f" baseValue="3000" bwhRate="150f" bwhType="3" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="223" name="使用冰锥伤害" effectSid="224" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="224" name="冰锥伤害" lethality="0.2f" baseValue="3000" bwhRate="150f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="225" name="使用落石伤害" effectSid="226" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="226" name="落石伤害" lethality="0.2f" baseValue="0" bwhRate="350f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="227" name="使用神火伤害" effectSid="228" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="228" name="神火伤害" lethality="0.2f" baseValue="0" bwhRate="200f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="229" name="使用神雷伤害" effectSid="230" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="230" name="神雷伤害" lethality="0.2f" baseValue="0" bwhRate="200f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="231" name="使用巨浪伤害" effectSid="232" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="232" name="巨浪伤害" lethality="0.2f" baseValue="0" bwhRate="200f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="233" name="使用山崩伤害" effectSid="234" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="234" name="山崩伤害" lethality="0.2f" baseValue="0" bwhRate="200f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="235" name="挂载当阳断喝伤害增加" effectSid="236" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="236" name="当阳断喝伤害增加" removeTrigger="16" removeFighterType="1" effectStyleSid="236" attributeType="2" addType="1" maxAddNums="5" >
+ 	<field name="effectValues" declared="1">
+		<floats>10f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="237" name="使用当阳断喝伤害" effectSid="238" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="238" name="当阳断喝伤害" lethality="0.2f" baseValue="35000" bwhRate="160f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="239" name="挂载当阳断喝攻击力减少" effectSid="240" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="240" name="当阳断喝攻击力减少" effectStyleSid="240" attributeType="4" addType="1" round="10" baseValue="0" bwhRate="-0.005f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="241" name="挂载老当益壮伤害增加" effectSid="242" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="242" name="老当益壮伤害增加" effectStyleSid="242" attributeType="2" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.05f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="243" name="挂载风驰电掣速度增加" effectSid="244" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="244" name="风驰电掣速度增加" effectStyleSid="244" attributeType="4" addType="2" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>15f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="245" name="挂载老当益壮伤害增加" effectSid="246" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="246" name="老当益壮伤害增加" effectStyleSid="246" attributeType="2" addType="1" maxAddNums="20" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.03f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="247" name="使用鬼狐伤害" effectSid="248" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.HurtEffect"  sid="248" name="鬼狐伤害" lethality="0.2f" hurtRate="-0.6f" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="249" name="使用风华绝代伤害" effectSid="250" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="250" name="风华绝代伤害" lethality="0.2f" baseValue="0" bwhRate="550f" bwhType="4" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="251" name="挂载知人善用智力增加" effectSid="252" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="252" name="知人善用智力增加" effectStyleSid="0" attributeType="9" addType="2" baseValue="0" bwhRate="0.2f" bwhType="3" isUseByAdd="true" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="253" name="挂载虎痴伤害加深" effectSid="254" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="254" name="虎痴伤害加深" effectStyleSid="254" attributeType="3" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.05f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="255" name="挂载百里连环分散伤害" effectSid="256" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.DisperseHurtEffect"  sid="256" name="百里连环分散伤害" lethality="0.2f" effectStyleSid="256" />
+ <sample class="game.fight.effect.AttackEffect"  sid="257" name="手戟反击伤害" lethality="0.2f" hurtRate="0.3f" />
+ <sample class="game.fight.effect.AttackEffect"  sid="258" name="连矢伤害" lethality="0.2f" hurtRate="0.4f" />
+ <sample class="game.fight.effect.AttackEffect"  sid="259" name="践踏伤害" lethality="0.2f" hurtRate="0.75f" />
+ <sample class="game.fight.effect.AddEffectEffect" sid="260" name="挂载太平要术伤害减少" effectSid="261">
+		<field name="probabilitys" declared="1">
+			<ints>100000,100000,100000,100000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.effect.ChangeAttributeEffect" sid="261" name="太平要术伤害减少" effectStyleSid="0" attributeType="3" addType="1" removeTrigger="32" removeFighterType="2">
+		<field name="effectValues" declared="1">
+			<floats>0f,0.3f,0.6f,0.9f</floats>
+		</field>
+	</sample>
+
+	<sample class="game.fight.effect.UseEffectEffect"  sid="300" name="使用张梁伤害" effectSid="301" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="301" name="张梁伤害" lethality="0.1f" baseValue="3500" bwhRate="95f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="302" name="使用张宝伤害" effectSid="303" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="303" name="张宝伤害" lethality="0.1f" baseValue="3500" bwhRate="100f" bwhType="3" />
+
+  <sample class="game.fight.effect.UseEffectEffect"  sid="304" name="使用张角伤害" effectSid="305" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="305" name="张角伤害" lethality="0.1f" baseValue="5000" bwhRate="105f" bwhType="2" />
+
+<sample class="game.fight.effect.UseEffectEffect"  sid="306" name="使用董卓伤害" effectSid="307" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="307" name="董卓伤害" lethality="0.2f" baseValue="18000" />
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="308" name="挂载华雄护盾" effectSid="309" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AbsorbHurtEffect"  sid="309" name="华雄护盾" hurtType="15" effectStyleSid="212" baseValue="12000" isUseByAdd="true"/>
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="310" name="挂载伤害加深" effectSid="311" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="311" name="李儒伤害加深" effectStyleSid="82" attributeType="3" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.15f</floats>
+	</field>
+ </sample>
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="312" name="使用文丑伤害" effectSid="313" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="313" name="文丑伤害" lethality="0.2f" baseValue="10000" bwhRate="80f" bwhType="1"/>
+
+  <sample class="game.fight.effect.AddEffectEffect"  sid="314" name="挂载颜良护盾" effectSid="315" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AbsorbHurtEffect"  sid="315" name="颜良护盾" hurtType="15" effectStyleSid="212" baseValue="10000"  bwhRate="65f" bwhType="3" isUseByAdd="true"/>
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="316" name="使用张辽武力较大时伤害" effectSid="317" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="317" name="张辽武力较大时伤害" lethality="0.2f" baseValue="12000" bwhRate="320f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="318" name="使用张辽武力较小时伤害" effectSid="319" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="319" name="张辽武力较小时伤害" lethality="0.2f" baseValue="8000" bwhRate="260f" bwhType="1" />
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="320" name="挂载臧霸触发特效" effectSid="321" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="321" name="臧霸触发特效" effectStyleSid="0" trigger="32" fighterType="2" spreadCamp="1" >
+ 	<field name="effectSids" declared="1">
+		<ints>322</ints>
+	</field>
+ </sample>
+  <sample class="game.fight.effect.AddEffectEffect"  sid="322" name="挂载臧霸伤害增加" effectSid="323" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+  <sample class="game.fight.effect.ChangeAttributeEffect"  sid="323" name="臧霸伤害增加" effectStyleSid="134" attributeType="2" addType="1" maxAddNums="5" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.04f</floats>
+	</field>
+ </sample>
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="324" name="使用高顺伤害" effectSid="325" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="325" name="高顺伤害" lethality="0.2f" baseValue="20000" bwhRate="180f" bwhType="2" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="326" name="使用进入回合cd" effectSid="327" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitarySkillRoundEffect"  sid="327" name="进入回合cd" modifyType="2" camp="2" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="328" name="使用医疗回复伤兵" effectSid="329" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryReliveEffect"  sid="329" name="医疗回复伤兵" baseValue="3000" bwhRate="20f" bwhType="2" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="330" name="使用孙策伤害" effectSid="331" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="331" name="孙策伤害" lethality="0.6f" baseValue="60000" bwhRate="350f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="332" name="使用徐庶伤害" effectSid="333" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="333" name="徐庶伤害" lethality="0.2f" baseValue="20000" bwhRate="100f" bwhType="2" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="334" name="使用祝融伤害" effectSid="335" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="335" name="祝融伤害" lethality="0.2f" baseValue="15000" bwhRate="150f" bwhType="3" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="400" name="使用冰锥伤害" effectSid="401" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="401" name="冰锥伤害" lethality="0.8f" baseValue="999999" bwhRate="50000f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="402" name="使用突击伤害" effectSid="403" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="403" name="突击伤害" lethality="0.8f" baseValue="999999" bwhRate="20000f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="404" name="使用巨浪伤害" effectSid="405" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="405" name="巨浪伤害" lethality="0.8f" baseValue="999999" bwhRate="75000f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="406" name="使用强化突击伤害" effectSid="407" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="407" name="强化突击伤害" lethality="0.8f" baseValue="99999" bwhRate="30000f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="408" name="使用npc强化突击伤害" effectSid="409" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="409" name="npc强化突击伤害" lethality="0.2f" baseValue="10000" bwhRate="100f" bwhType="1"/>
+
+  <sample class="game.fight.effect.AddEffectEffect"  sid="410" name="挂载风驰电掣触发效果" effectSid="411" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="411" name="风驰电掣触发效果" effectStyleSid="0" trigger="256" fighterType="1" spreadCamp="1" roundInterval="5" >
+ 	<field name="effectSids" declared="1">
+		<ints>412</ints>
+	</field>
+ </sample>
+
+<sample class="game.fight.effect.AddEffectEffect"  sid="412" name="挂载风驰电掣速度增加" effectSid="413" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="413" name="风驰电掣速度增加" effectStyleSid="244" attributeType="5" addType="2" maxAddNums="5" >
+ 	<field name="effectValues" declared="1">
+		<floats>5f</floats>
+	</field>
+ </sample>
+
+  <sample class="game.fight.effect.AddEffectEffect"  sid="414" name="挂载胡音琴韵攻击增加" effectSid="415" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+<sample class="game.fight.effect.ChangeAttributeEffect"  sid="415" name="胡音琴韵攻击增加" effectStyleSid="84" attributeType="4" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.15f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="416" name="使用胡音琴韵伤害" effectSid="417" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="417" name="胡音琴韵伤害" lethality="0.2f" baseValue="100000" bwhRate="400f" bwhType="2" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="418" name="使用魏延武力较大时伤害" effectSid="419" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="419" name="魏延武力较大时伤害" lethality="1f" baseValue="100000" bwhRate="400f" bwhType="1" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="420" name="使用魏延武力较小时伤害" effectSid="319" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="421" name="魏延武力较小时伤害" lethality="0.3f" baseValue="100000" bwhRate="400f" bwhType="1" />
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="422" name="挂载百战护主触发效果" effectSid="423" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="423" name="百战护主触发效果" effectStyleSid="0" trigger="256" fighterType="1" spreadCamp="1" roundInterval="5" >
+ 	<field name="effectSids" declared="1">
+		<ints>424,426</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="424" name="挂载百战护主伤害增加" effectSid="425" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="425" name="百战护主伤害增加" effectStyleSid="148" attributeType="2" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>0.1f</floats>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AddEffectEffect"  sid="426" name="挂载百战护主伤害加深" effectSid="427" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="427" name="百战护主伤害加深" effectStyleSid="254" attributeType="3" addType="1" maxAddNums="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.03f</floats>
+	</field>
+ </sample>
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="428" name="使用万箭齐发伤害" effectSid="429" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="429" name="万箭齐发伤害" lethality="0.2f" baseValue="20000" bwhRate="120f" bwhType="3" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="430" name="挂载万箭齐发伤害减少" effectSid="431" bwhType="1" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ChangeAttributeEffect"  sid="431" name="万箭齐发伤害减少" effectStyleSid="106" attributeType="2" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.15f</floats>
+	</field>
+ </sample>
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="432" name="挂载秀内慧中护盾" effectSid="433" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.AbsorbHurtEffect"  sid="433" name="秀内慧中护盾" hurtType="15" effectStyleSid="212" baseValue="10000"  bwhRate="50f" bwhType="2" isUseByAdd="true"/>
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="434" name="使用女中豪杰伤害" effectSid="435" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="435" name="女中豪杰伤害" lethality="0.2f" baseValue="70000" bwhRate="380f" bwhType="1" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="436" name="挂载女中豪杰行动力控制" effectSid="437" bwhType="3" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.ControlEffect"  sid="437" name="女中豪杰行动力控制" controlType="8" round="5" effectStyleSid="257"/>
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="438" name="使用闭月伤害" effectSid="439" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="439" name="闭月伤害" lethality="0.2f" baseValue="20000" bwhRate="130f" bwhType="2" />
+ <sample class="game.fight.effect.AddEffectEffect"  sid="440" name="挂载闭月攻击减少" effectSid="441" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+<sample class="game.fight.effect.ChangeAttributeEffect"  sid="441" name="闭月攻击减少" effectStyleSid="106" attributeType="2" addType="1" round="10" >
+ 	<field name="effectValues" declared="1">
+		<floats>-0.15f</floats>
+	</field>
+ </sample>
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="442" name="挂载苦肉计触发效果" effectSid="443" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.TriggerEffect"  sid="443" name="苦肉计触发效果" effectStyleSid="0" trigger="32" fighterType="2" triggerHurtType="2" spreadCamp="2" isSuccessNoContinue="true" >
+ 	<field name="effectSids" declared="1">
+		<ints>444,446</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.UseEffectEffect"  sid="444" name="使用苦肉计伤害" effectSid="445" bwhType="2" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.HurtEffect"  sid="445" name="苦肉计伤害" lethality="0.2f" hurtRate="-0.7f" />
+ <sample class="game.fight.effect.UseEffectEffect"  sid="446" name="使用苦肉计伤害" effectSid="447" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.HurtEffect"  sid="447" name="苦肉计伤害" lethality="0.2f" hurtRate="-0.8f" />
+
+ <sample class="game.fight.effect.AddEffectEffect"  sid="448" name="挂载风华绝代攻击力增加" effectSid="449" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryChangeAttributeEffect"  sid="449" name="风华绝代攻击力增加" effectStyleSid="84" attributeType="4" addType="1" round="10" baseValue="0" bwhRate="0.01f" bwhType="3" isUseByAdd="true" />
+
+ <sample class="game.fight.effect.UseEffectEffect"  sid="450" name="使用风华绝代伤害" effectSid="451" >
+ 	<field name="probabilitys" declared="1">
+		<ints>100000</ints>
+	</field>
+ </sample>
+ <sample class="game.fight.effect.MilitaryHurtEffect"  sid="451" name="风华绝代伤害" lethality="0.2f" baseValue="25000" bwhRate="130f" bwhType="2" />
+ </objects>

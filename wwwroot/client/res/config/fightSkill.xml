@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <!--
+   name：名字
+   desc：描述
+   icon: 图标
+   -->
+	<sample sid="1" className="game.player.FightSkill" name="砍杀" desc="近战普通攻击技能" icon="2" t1="" t2="" t3="" ></sample>
+  	<sample sid="2" className="game.player.FightSkill" name="射箭" desc="弓兵普通攻击技能" icon="1" t1="" t2="" t3="" ></sample>
+  	<sample sid="3" className="game.player.FightSkill" name="投石" desc="投石车普通攻击技能" icon="3" t1="" t2="" t3="" ></sample>
+  	<sample sid="4" className="game.player.FightSkill" name="击飞" desc="大象普通攻击技能" icon="4" t1="" t2="" t3="" ></sample>
+  	<sample sid="5" className="game.player.FightSkill" name="横扫" desc="10%概率对敌方横排全体单位造成一次伤害" icon="hengsao" t1="" t2="" t3="" ></sample>
+  	<sample sid="6" className="game.player.FightSkill" name="勇悍" desc="10%概率被攻击时，本次伤害造成的损失全部转化为伤兵，不会死亡" icon="yonghan" t1="" t2="" t3="" ></sample>
+  	<sample sid="7" className="game.player.FightSkill" name="武勇" desc="25%概率攻击时，额外造成50%伤害" icon="wuyong" t1="" t2="" t3="" ></sample>
+  	<sample sid="8" className="game.player.FightSkill" name="无当" desc="每次攻击时，都会提升自身20%伤害，最多叠加10次，自身受到伤害BUFF消失（武将技伤害不算）" icon="wudang" t1="" t2="" t3="" ></sample>
+  	<sample sid="9" className="game.player.FightSkill" name="手戟" desc="被弓兵系部队攻击时，30%概率反击一次，造成30%伤害" icon="shouji" t1="" t2="" t3="" ></sample>
+  	<sample sid="10" className="game.player.FightSkill" name="连矢" desc="10%概率攻击时，进入“一弩十矢”状态，随机对战场上的敌方单位进行10次攻击，每次攻击造成40%伤害" icon="lianshi" t1="" t2="" t3="" ></sample>
+  	<sample sid="11" className="game.player.FightSkill" name="突击" desc="25%概率攻击时使自身进入突击状态，额外攻击目标3次，同时受到目标2次反击（目标反击必然发动）" icon="tuji" t1="" t2="" t3="" ></sample>
+  	<sample sid="12" className="game.player.FightSkill" name="突击反击" icon="1" t1="" t2="" t3="" ></sample>
+  	<sample sid="13" className="game.player.FightSkill" name="玄甲" desc="受到近战攻击反击时，只受到50%伤害" icon="xuanjia" t1="" t2="" t3="" ></sample>
+  	<sample sid="14" className="game.player.FightSkill" name="攒射" desc="对骑兵伤害上升100%" icon="zanshe" t1="" t2="" t3="" ></sample>
+  	<sample sid="15" className="game.player.FightSkill" name="接阵" desc="每次受到骑兵系与步兵系攻击时，下次受到的伤害降低5%，最多叠加10次" icon="jiezhen" t1="" t2="" t3="" ></sample>
+  	<sample sid="16" className="game.player.FightSkill" name="死战" desc="每次受到攻击时，25%使自身攻击力提升5%，最多叠加5次" icon="sizhan" t1="" t2="" t3="" ></sample>
+  	<sample sid="17" className="game.player.FightSkill" name="彪悍" desc="被攻击时，提升自身攻击20%，最多叠加10次，攻击一次后效果消失" icon="biaohan" t1="" t2="" t3="" ></sample>
+  	<sample sid="18" className="game.player.FightSkill" name="践踏" desc="攻击时50%对目标横排所有单位造成75%的伤害" icon="jianta" t1="" t2="" t3="" ></sample>
+  	<sample sid="19" className="game.player.FightSkill" name="冲阵" desc="攻击时，10%概率对目标全军造成一次伤害" icon="chongzhen" t1="" t2="" t3="" ></sample>
+  	<sample sid="20" className="game.player.FightSkill" name="铁骑" desc="对步兵系造成的伤害提升30%" icon="tieqi" t1="" t2="" t3="" ></sample>
+  	<sample sid="21" className="game.player.FightSkill" name="藤甲" desc="受到的所有伤害下降30%" icon="tengjia" t1="" t2="" t3="" ></sample>
+  	<sample sid="22" className="game.player.FightSkill" name="老练" desc="受到攻击时，25%概率躲避攻击，并使自身下一次伤害提升25%" icon="laolian" t1="" t2="" t3="" ></sample>
+  	<sample sid="23" className="game.player.FightSkill" name="先登" desc="25%概率在受到近战攻击时，先出手攻击目标一次（此次攻击不影响反击）" icon="xiandeng" t1="" t2="" t3="" ></sample>
+  	<sample sid="24" className="game.player.FightSkill" name="威慑" desc="被攻击时，25%概率免疫此次伤害，自身依然可以触发反击" icon="weishe" t1="" t2="" t3="" ></sample>
+  	<sample sid="25" className="game.player.FightSkill" name="陷阵" desc="攻击时30%概率使其下次攻击无法发动任何需要攻击时触发的特技，持续5回合" icon="xianzhen" t1="" t2="" t3="" ></sample>
+  	<sample sid="26" className="game.player.FightSkill" name="破敌" desc="攻击骑兵系单位增加50%伤害，并且免疫所有骑兵部队的反击" icon="podi" t1="" t2="" t3="" ></sample>
+  	<sample sid="27" className="game.player.FightSkill" name="虎贲" desc="受到近战攻击必定反击" icon="huben" t1="" t2="" t3="" ></sample>
+  	<sample sid="28" className="game.player.FightSkill" name="锦帆" desc="当受到远程攻击时，25%概率躲避此次攻击，并回射目标" icon="jinfan" t1="" t2="" t3="" ></sample>
+  	<sample sid="29" className="game.player.FightSkill" name="飞熊" desc="当前排只有其一只部队时，受到的伤害降低30%，自身基础速度下降50点" icon="feixiong" t1="" t2="" t3="" ></sample>
+  	<sample sid="30" className="game.player.FightSkill" name="异族" desc="当同排只有其一只部队时，基础攻击+4，基础速度+10" icon="yizu" t1="" t2="" t3="" ></sample>
+  	<sample sid="31" className="game.player.FightSkill" name="捕猎" desc="50%概率攻击时，为目标附加下次伤害增加100%的状态，受到攻击后消失" icon="bulie" t1="" t2="" t3="" ></sample>
+  	<sample sid="32" className="game.player.FightSkill" name="藤牌" desc="当我方单位受到弓兵攻击时（包括自己），50%发动掩护，免疫此次伤害" icon="tengpai" t1="" t2="" t3="" ></sample>
+  	<sample sid="33" className="game.player.FightSkill" name="义气" desc="当我方近战单位攻击，25%概率跟随攻击一次，造成25%的伤害（义气不会消耗行动力）" icon="yiqi" t1="" t2="" t3="" ></sample>
+  	<sample sid="34" className="game.player.FightSkill" name="追袭" desc="当我方友军攻击时，25%概率发动一次辅助攻击，造成25%的伤害（追袭不会消耗行动力）" icon="zhuixi" t1="" t2="" t3="" ></sample>
+  	<sample sid="35" className="game.player.FightSkill" name="解烦" desc="20%概率攻击时，此次造成的伤害会强制全部成为死亡士兵（不会出现伤兵，并且优先级最高）" icon="jiefan" t1="" t2="" t3="" ></sample>
+  	<sample sid="36" className="game.player.FightSkill" name="无忧" desc="5%概率攻击时，清空被攻击单位的全部行动力" icon="wuyou" t1="" t2="" t3="" ></sample>
+  	<sample sid="37" className="game.player.FightSkill" name="奔射" desc="攻击时25%概率对目标全军造成一次伤害，但对目前部队只造成40%的伤害" icon="benshe" t1="" t2="" t3="" ></sample>
+  	<sample sid="38" className="game.player.FightSkill" name="孤胆" desc="当前排只有其一只部队时，每次攻击必然触发奔射，并且受到的伤害降低20%" icon="gudan" t1="" t2="" t3="" ></sample>
+  	<sample sid="39" className="game.player.FightSkill" name="狼群" desc="当部队内其他并州狼骑部队发动攻击时，100%发动“追袭”特技" icon="langqun" t1="" t2="" t3="" ></sample>
+  	<sample sid="40" className="game.player.FightSkill" name="金吾" desc="每次攻击时，随机对前排另外一个单位造成25%的伤害（如场上前面只有一个单位则无效）" icon="jinwu" t1="" t2="" t3="" ></sample>
+  	<sample sid="41" className="game.player.FightSkill" name="断后" desc="25%概率在我方场上部队遭受攻击时，强制将伤害转移到自身（不会触发老练）" icon="duanhou" t1="" t2="" t3="" ></sample>
+  	<sample sid="42" className="game.player.FightSkill" name="戟林" desc="每次受到骑兵系攻击时，反弹60%的伤害（反弹伤害不会使士兵死亡，只会成为伤兵）" icon="jilin" t1="" t2="" t3="" ></sample>
+  	<sample sid="1000" className="game.player.FightSkill" name="闭月" desc="对敌方全体造成一次伤害，并降低敌方全体攻击力一段时间，释放者的智力决定伤害效果；释放者的统帅值决定降低敌方攻击力加成效果" icon="biyue" t1="智力" t2="统帅" t3="" ></sample>
+  	<sample sid="1001" className="game.player.FightSkill" name="洛水神姬" desc="召唤洛水神力，恢复我方全体部队伤兵，并使我方全体部队一段时间内攻击伤害提升，释放者的智力决定恢复伤兵效果" icon="luoshuishenji" t1="智力" t2="" t3="" ></sample>
+  	<sample sid="1002" className="game.player.FightSkill" name="鏖战" desc="许褚越战越猛，战斗伊始不断使自身部队伤害提升，直到战斗结束" icon="laodangyizhuang" t1="" t2="" t3="" ></sample>
+  	<sample sid="1003" className="game.player.FightSkill" name="羞花" desc="智力技，对敌方随机单体目标造成一次伤害，并在一定时间内提升该目标受到的伤害" icon="xiuhua" t1="智力" t2="" t3="" ></sample>
+  	<sample sid="1004" className="game.player.FightSkill" name="风华绝代" desc="貂蝉剑舞，风华绝代召唤剑气对敌方全体目标造成一次伤害，同时激励我方全体单位，并使敌军全体受到的伤害提升一段时间，释放者的基础属性之和决定伤害效果与攻击力加成提升效果" icon="fenghuajuedai" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1005" className="game.player.FightSkill" name="胡音琴韵" desc="蔡文姬奏起胡琴，对敌方全体单位造成一次伤害，并鼓舞我方全体单位，一段时间内我方全体单位攻击力加成效果提升，释放者的基础属性之和决定伤害效果，智力决定攻击力加成提升效果" icon="huyinqinyun" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1006" className="game.player.FightSkill" name="铁骑突击" desc="武力技，召唤西凉骑兵集团冲锋，对敌方全体单位造成成吨的伤害，如果敌方没有将领武力高过马超，则降低敌方全体单位攻击力一段时间，统帅值可提供额外的降低攻击效果" icon="tieqituji" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1007" className="game.player.FightSkill" name="女中豪杰" desc="对敌方随机单体单位造成一次伤害，如果被攻击的敌军武将武力低于释放者，则一定时间内无法获得行动值，释放者的武力值决定伤害效果" icon="nvzhonghaojie" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1008" className="game.player.FightSkill" name="万箭齐发" desc="射出箭雨，对敌方全体单位造成一次伤害，如果敌方全单位中没有将领武力高过释放者，则使敌方全体伤害降低一段时间，释放者的武力值决定伤害效果" icon="wanjianqifa" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1009" className="game.player.FightSkill" name="火神降世" desc="召唤火神祝融，降下天火对敌军全体单位造成一次伤害。释放者的武力决定伤害效果" icon="huoshenjiangshi" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1010" className="game.player.FightSkill" name="仁义无双" desc="祈祷上苍，仁义之心通达天地之间，治疗我方全体单位的伤兵，并使我方全体单位受到天神庇佑，一段时间内降低受到的伤害。刘备的基础属性之和决定治疗效果" icon="renyiwushuang" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1011" className="game.player.FightSkill" name="乱世枭雄" desc="适逢乱世，枭雄本色使我方全体单位在进入战斗就斗志昂扬，提升攻击力直到战斗结束。曹操的基础属性之和决定提升效果" icon="luanshixiaoxiong" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1012" className="game.player.FightSkill" name="知人善用" desc="孙仲谋知人善用，使得我方全体单位武将的能力在战斗中全面提升。孙权的统帅决定提升效果" icon="zhirenshanyong" t1="统帅" t2="" t3="" ></sample>
+  	<sample sid="1013" className="game.player.FightSkill" name="江东猛虎" desc="武力技，如猛虎之势猛扑敌军随机单位，造成成吨的伤害。如果被攻击的敌军武将武力低于孙坚，则气势提升，一段时间使自身部队攻击力提升，统帅值可提供额外的攻击加成效果" icon="jiangdongmenghu" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1014" className="game.player.FightSkill" name="小霸王" desc="小霸王对敌军的随机单体单位发动攻击，造成伤害。如果被攻击的敌军武将武力低于释放者，将会受到巨大伤害。释放者的武力决定伤害效果" icon="xiaobawang" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1015" className="game.player.FightSkill" name="风驰电掣" desc="兵贵神速，马孟起在战斗中不断激励部队，使得部队的基础速度不停提升，直到战斗结束" icon="fengchidianche" t1="" t2="" t3="" ></sample>
+  	<sample sid="1016" className="game.player.FightSkill" name="三国无双" desc="武力技，鼓起气势对敌方全体单位造成成吨的伤害。如果敌军武将中没有武力高于吕布者，则自身部队基础攻击提升，此状态可以叠加" icon="renzhonglvbu" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1017" className="game.player.FightSkill" name="悬壶济世" desc="神医悬壶济世，使我方全体单位伤病得到治疗。华佗的基础属性之和决定治疗效果" icon="xuanhujishi" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1018" className="game.player.FightSkill" name="强化刚烈" desc="每当受到伤害时提升自身6%的伤害，最高可叠加10次" icon="ganglie" t1="" t2="" t3="" ></sample>
+  	<sample sid="1019" className="game.player.FightSkill" name="奇门遁甲" desc="召唤天地神鬼之力，发动奇门遁甲，对敌方全体单位造成一次伤害，如果敌方全体单位中没有武将智力高于释放者，则敌军全体单位会被困于八卦阵之中，一段时间内无法行动" icon="qimendunjia" t1="智力" t2="" t3="" ></sample>
+  	<sample sid="1020" className="game.player.FightSkill" name="麒麟儿" desc="统帅技，侍母至孝，文武全才，姜伯约进入战场时激励自身部队，使得自身部队受到的伤害降低20%，并提升自身部队的攻击效果直到战斗结束" icon="qiliner" t1="" t2="" t3="统帅" ></sample>
+  	<sample sid="1021" className="game.player.FightSkill" name="南蛮入侵" desc="武力技，召唤南方的部落蛮族联军发动攻击，对敌军全体单位造成成吨伤害，致死率极高" icon="nanmanruqin" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1022" className="game.player.FightSkill" name="虎痴" desc="许褚在战斗中逐渐兴奋，激发斗气并卸去铠甲，每隔一段时间都会提升自身伤害并增加自身受到的伤害，直到战斗结束" icon="huchi" t1="" t2="" t3="" ></sample>
+  	<sample sid="1023" className="game.player.FightSkill" name="汉末神仙" desc="召唤妖神降临，诅咒敌军全体单位，造成一次伤害，并使敌方全军一段时间内致死率降低。释放者的基础属性之和决定伤害效果" icon="hanmoshenxian" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1024" className="game.player.FightSkill" name="东吴枭姬" desc="武力技，尚香发动剑舞，对敌方全体单位造成成吨伤害，如果敌方没有将领武力值高过孙尚香，则该次伤害100%暴击" icon="dongwuxiaoji" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1025" className="game.player.FightSkill" name="百步穿杨" desc="百步之外，一箭穿杨，对敌方随机单体单位造成一次伤害，如果被攻击的敌军武将武力低于释放者，则强制武将技能进入冷却时间，释放者的武力值决定伤害效果" icon="baibuchuanyang" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1026" className="game.player.FightSkill" name="孤胆英豪" desc="常山赵子龙白马银枪，一身是胆，激发时，一段时间内自身部队免疫武将技伤害并减少来自远程部队的伤害" icon="gudanyinghao" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1027" className="game.player.FightSkill" name="鬼狐" desc="料敌先机，运筹帷幄，每次自身部队受到武将技能伤害时，会将一部分伤害反弹给释放者，如果释放者的智力低于自身，则额外增加反弹的效果" icon="guihu" t1="" t2="智力" t3="" ></sample>
+  	<sample sid="1028" className="game.player.FightSkill" name="鬼谋" desc="智力技，每次自受到伤害时，自身获得一个状态，当状态叠加5次后受到武将技能伤害时，会对全体敌军造成一次毁灭性的伤害" icon="guicai" t1="" t2="智力" t3="" ></sample>
+  	<sample sid="1029" className="game.player.FightSkill" name="恶来" desc="武力技，每次典韦受到伤害时，会积累自身怒气，当积累到10次时，就会爆发怒气对敌方全体单位造成一次伤害" icon="elai" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1030" className="game.player.FightSkill" name="秀内慧中" desc="利用机关之术为我方全体部队附加吸收伤害的护盾，护盾存在时，我方全体部队基础速度增加，释放者的三围之和决定护盾吸收效果" icon="xiuneihuizhong" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1031" className="game.player.FightSkill" name="火攻" desc="发动火攻,对敌方单体造成伤害" icon="huogong" t1="" t2="" t3="" ></sample>
+  	<sample sid="1032" className="game.player.FightSkill" name="落雷" icon="luolei" t1="" t2="" t3="" ></sample>
+  	<sample sid="1033" className="game.player.FightSkill" name="水攻" icon="shuigong" t1="" t2="" t3="" ></sample>
+  	<sample sid="1034" className="game.player.FightSkill" name="滚石" icon="gunshi" t1="" t2="" t3="" ></sample>
+  	<sample sid="1035" className="game.player.FightSkill" name="神火" icon="shenhuo" t1="" t2="" t3="" ></sample>
+  	<sample sid="1036" className="game.player.FightSkill" name="神雷" icon="shenlei" t1="" t2="" t3="" ></sample>
+  	<sample sid="1037" className="game.player.FightSkill" name="巨浪" icon="julang" t1="" t2="" t3="" ></sample>
+  	<sample sid="1038" className="game.player.FightSkill" name="山崩" icon="shanbeng" t1="" t2="" t3="" ></sample>
+  	<sample sid="1039" className="game.player.FightSkill" name="谣言" icon="yaoyan" t1="" t2="" t3="" ></sample>
+  	<sample sid="1040" className="game.player.FightSkill" name="谩骂" icon="manma" t1="" t2="" t3="" ></sample>
+  	<sample sid="1041" className="game.player.FightSkill" name="激励" icon="jili" t1="" t2="" t3="" ></sample>
+  	<sample sid="1042" className="game.player.FightSkill" name="防护" icon="fanghu" t1="" t2="" t3="" ></sample>
+  	<sample sid="1043" className="game.player.FightSkill" name="医疗" icon="yiliao" t1="" t2="" t3="" ></sample>
+  	<sample sid="1044" className="game.player.FightSkill" name="单骑突" icon="danqitu" t1="" t2="" t3="" ></sample>
+  	<sample sid="1045" className="game.player.FightSkill" name="破阵突" icon="pozhentu" t1="" t2="" t3="" ></sample>
+  	<sample sid="1046" className="game.player.FightSkill" name="铁壁" icon="tiebi" t1="" t2="" t3="" ></sample>
+  	<sample sid="1047" className="game.player.FightSkill" name="突击" icon="tuji" t1="" t2="" t3="" ></sample>
+  	<sample sid="1048" className="game.player.FightSkill" name="千军易辟" desc="鼓舞勇气，对敌方全体单位造成一次伤害，并使敌军士气降低，降低其造成的伤害下降10%一段时间。释放者的基础属性之和决定伤害效果" icon="qianjunyipi" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1049" className="game.player.FightSkill" name="单骑叩关" desc="武力技，对敌军随机单体单位发动突击，造成伤害。如果被攻击的敌军武将武力低于关羽，将会在短时间内再发动突击" icon="danqikouguan" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1050" className="game.player.FightSkill" name="当阳断喝" desc="武力技，对敌方全体单位造成成吨伤害。如果敌军没有武将武力高于张飞者，则会被威慑，一段时间内敌方全体攻击下降，统帅提供额外下降值，自身部队则受到鼓舞，下次攻击极大的提高" icon="dangyangduanhe" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1051" className="game.player.FightSkill" name="百里连环" desc="进入战斗后庞士元将全体单位的生命链接与一起，使我方每个受到的所有伤害都将平均分摊给每一个单位，直到战斗结束" icon="baililianhuan" t1="武力" t2="智力" t3="统帅" ></sample>
+	<sample sid="1052" className="game.player.FightSkill" name="火攻" desc="发动火攻,对敌方单体造成伤害，武力越高伤害越高" icon="huogong" t1="武力" t2="" t3="" ></sample>
+	<sample sid="1053" className="game.player.FightSkill" name="落雷" desc="发动落雷,对敌方单体造成伤害，统帅越高伤害越高" icon="luolei" t1="" t2="" t3="统帅" ></sample>
+	<sample sid="1054" className="game.player.FightSkill" name="狂风" desc="发动狂风,对敌方单体造成伤害，智力越高伤害越高" icon="shuigong" t1="" t2="智力" t3="" ></sample>
+	<sample sid="1055" className="game.player.FightSkill" name="突击" desc="发动突击,对敌方全体造成大量伤害" icon="danqitu" t1="" t2="" t3="" ></sample>
+	<sample sid="1056" className="game.player.FightSkill" name="铁壁" desc="发动铁壁,对自身加持一道可吸收伤害的护盾" icon="tiebi" t1="" t2="" t3="" ></sample>
+	<sample sid="1057" className="game.player.FightSkill" name="易伤" desc="发动易伤,使敌方随机单体目标接下来一段时间受到伤害提升15%" icon="yaoyan" t1="" t2="" t3="" ></sample>
+	<sample sid="1058" className="game.player.FightSkill" name="强化突击" desc="发动突击,对敌方全体造成大量伤害,武力值可提供额外伤害" icon="danqitu" t1="武力" t2="" t3="" ></sample>
+	<sample sid="1059" className="game.player.FightSkill" name="强化铁壁" desc="发动铁壁,对自身加持一道可吸收伤害的护盾,统帅值可提供额外护盾" icon="tiebi" t1="" t2="" t3="统帅" ></sample>
+	<sample sid="1060" className="game.player.FightSkill" name="奇袭" desc="武力技，对敌方单体目标发动一次奇袭，使其受到巨额伤害，若武力高于对手可造成额外伤害" icon="tieqituji" t1="武力" t2="" t3="" ></sample>
+	<sample sid="1061" className="game.player.FightSkill" name="刚烈" desc="每当受到伤害时提升自身4%的伤害，最高可叠加5次" icon="ganglie" t1="" t2="" t3="" ></sample>
+	<sample sid="1062" className="game.player.FightSkill" name="牵制" desc="智力技，对敌方单体目标造成伤害，如果被攻击的敌军武将智力低于释放者，则强制武将技能进入冷却时间" icon="manma" t1="" t2="智力" t3="" ></sample>
+	<sample sid="1063" className="game.player.FightSkill" name="医疗" desc="发动医疗,为我方单体目标恢复伤兵，智力值可提供额外恢复效果" icon="yiliao" t1="" t2="智力" t3="" ></sample>
+	<sample sid="1064" className="game.player.FightSkill" name="小霸王" desc="武力技，对敌方单体造成成吨伤害，致死率高，专门克制恢复类武将" icon="xiaobawang" t1="武力" t2="" t3="" ></sample>
+    <sample sid="1065" className="game.player.FightSkill" name="诡炎术" desc="智力技，对敌方单体造成伤害，技能发动频率高，专门克制血少的敌人" icon="manma" t1="" t2="智力" t3="" ></sample>
+    <sample sid="1066" className="game.player.FightSkill" name="火神降世" desc="进入战斗后立即对敌方全体造成高额伤害，统帅可提供额外伤害加成" icon="huoshenjiangshi" t1="" t2="" t3="" ></sample>
+	<sample sid="1067" className="game.player.FightSkill" name="风驰电掣" desc="马云禄在战斗中不断激励部队，使得部队的基础速度不停提升，直到战斗结束" icon="fengchidianche" t1="" t2="" t3="" ></sample>
+ 	<sample sid="1068" className="game.player.FightSkill" name="胡音琴韵" desc="智力技，蔡文姬奏起胡琴，对敌方随机单体目标造成一次伤害，并鼓舞我某个单位一段时间内攻击力提升" icon="huyinqinyun" t1="武力" t2="智力" t3="统帅" ></sample>
+	<sample sid="1069" className="game.player.FightSkill" name="地狱火" desc="武力技，魏延发动地狱火对敌方随机单体目标造成一次高额伤害，若武力高于对方则此次伤害造成100%士兵死亡" icon="huoshenjiangshi" t1="武力" t2="智力" t3="统帅" ></sample>
+	<sample sid="1070" className="game.player.FightSkill" name="百战护主" desc="周泰在战斗中越挫越勇，每回合大幅度提升自身造成伤害并小幅度增加自身受到的伤害，直到战斗结束" icon="huoshenjiangshi" t1="武力" t2="智力" t3="统帅" ></sample>
+	<sample sid="1071" className="game.player.FightSkill" name="万箭齐发" desc="统帅技，夏侯渊射出箭雨，对敌方全体单位造成一次伤害，如果敌方全单位中没有将领统帅高过夏侯渊，则使敌方全体攻击降低一段时间" icon="wanjianqifa" t1="" t2="" t3="" ></sample>
+	<sample sid="1072" className="game.player.FightSkill" name="秀内慧中" desc="智力技，黄月英利用机关之术为我方全体部队附加吸收伤害的护盾" icon="xiuneihuizhong" t1="武力" t2="智力" t3="统帅" ></sample>
+  	<sample sid="1073" className="game.player.FightSkill" name="女中豪杰" desc="武力技，对敌方随机单体造成高额伤害，如果被攻击的敌军武将统帅低于关银屏，则一定时间内该武将带领部队无法行动" icon="nvzhonghaojie" t1="武力" t2="" t3="" ></sample>
+  	<sample sid="1074" className="game.player.FightSkill" name="闭月" desc="智力技，对敌方全体造成一次高额伤害，并降低敌方全体攻击力一段时间" icon="biyue" t1="" t2="智力" t3="" ></sample>
+  	<sample sid="1075" className="game.player.FightSkill" name="苦肉计" desc="统帅技，黄盖豁出性命以血还血，当他的部队受到武将技伤害时会将一部分伤害反弹回去，如果释放者的统帅低于自身，则增加10%反弹的伤害" icon="guihu" t1="" t2="" t3="统帅" ></sample>
+    <sample sid="1076" className="game.player.FightSkill" name="风华绝代" desc="智力技，貂蝉剑舞，风华绝代召唤剑气对敌方全体目标造成一次巨额伤害，同时激励我方全体单位攻击力上升，统帅值可提供额外的提升攻击效果" icon="fenghuajuedai" t1="" t2="智力" t3="" ></sample>
+
+
+
+  	<sample sid="2000" className="game.player.FightSkill" name="太平要术" desc="初始减少伤害90%,失守一座关卡减少30%" icon="tengjia" t1="" t2="" t3="" ></sample>
+
+	<sample sid="2001" className="game.player.FightSkill" name="冰锥术" desc="秒杀技能，强力单体技能" icon="tengjia" t1="" t2="" t3="" ></sample>
+
+	<sample sid="2002" className="game.player.FightSkill" name="突击" desc="秒杀技，强力全体技能" icon="tengjia" t1="" t2="" t3="" ></sample>
+
+  	<sample sid="2003" className="game.player.FightSkill" name="巨浪" desc="秒杀技能，强力单体技能" icon="tengjia" t1="" t2="" t3="" ></sample>
+
+  	<sample sid="2004" className="game.player.FightSkill" name="强化突击" desc="秒杀技，强力全体技能" icon="tengjia" t1="" t2="" t3="" ></sample>
+
+  	<sample sid="2005" className="game.player.FightSkill" name="强化突击" desc="强力全体技能" icon="tengjia" t1="" t2="" t3="" ></sample>
+
+  </objects>

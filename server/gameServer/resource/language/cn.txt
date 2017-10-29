@@ -1,0 +1,805 @@
+game.httpchannel.GetRolePidChannelHandler,certify param is invalid=认证参数无效，请重试！
+game.httpchannel.GetRolePidChannelHandler,certify sid is invalid=认证标识无效，请重试！
+game.kit.HttpKit,system error=系统错误，请重试！
+
+game.httpchannel.CreateRoleChannelHandler,client error,plantID serverID is invalid=参数错误，平台id、服务器id无效！
+game.httpchannel.CreateRoleChannelHandler,param is invalid=参数无效！
+game.httpchannel.CreateRoleChannelHandler,name is invalid=用户名输入无效，请重新输入！
+game.httpchannel.CreateRoleChannelHandler,server error,create role db is error=系统错误，创建角色错误！
+game.httpchannel.CreateRoleChannelHandler,create role is fail,result1=已有角色，请退出后再次进入！
+game.httpchannel.CreateRoleChannelHandler,create role is fail,result2=角色名重复，请重新输入！
+game.httpchannel.CreateRoleChannelHandler,client error,name lenght is not enough=输入的用户名字符长度不正确，请重新输入！
+game.httpchannel.CreateRoleChannelHandler,certify sid is invalid=认证标识无效，请重试！
+
+game.httpchannel.CertifyChannelHandler,error1=时间参数超时，认证失败，请重试！
+game.httpchannel.CertifyChannelHandler,error2=认证参数无效，认证失败，请重试！
+game.httpchannel.CertifyChannelHandler,error3=系统内部错误，认证失败，请重试！
+
+game.session.certify.CertifyManager certify, already in process of certify=认证失败，已经在认证过程中，请稍后再试。
+game.session.certify.CertifyManager certify, invalid name or password=认证失败，无效的帐号或密码！
+game.session.certify.CertifyManager certify, account closure=认证失败，账号被封停x秒！
+game.session.SessionManager login, session amount is full=服务器在线玩家数量达到上限，无法登陆，请稍后再试或选择其他服务器。
+game.session.SessionManager login, server not be ok=服务器正在维护，请稍候重试！
+game.session.SessionManager,login error1=加载玩家数据失败！
+
+game.role.PlayerDBAccess,db error1=加载玩家数据失败！
+game.role.PlayerDBAccess,no player=没有玩家数据，加载失败！
+
+game.port.OperatorActivityAccessPort,operatorActivity is null=该活动不存在！
+game.port.OperatorActivityAccessPort,not have bundle=背包空位不足！
+game.port.OperatorActivityAccessPort,activityaward is null=奖励不存在！
+game.port.OperatorActivityAccessPort,activityaward is get=已经领取过该奖励！
+
+#通用
+not have player=该玩家不存在！
+level_not_enougth=玩家等级不够！
+no_money=铜币不足！
+no_gold=元宝不足！
+resouce_1=粮草不足！
+resouce_2=木材不足！
+resouce_3=钱币不足！
+resouce_4=铁锭不足！
+resouce_5=经验不足！
+resouce_6=劳役不足！
+resouce_7=文化不足！
+resouce_8=军械不足！
+resouce_9=训练值不足！
+no_online=玩家不在线！
+no_fightscore=功勋不足！
+
+#全服通告
+rich_man=%name%在商城中消费了%nums%金币，真是大手笔啊！
+
+#国家通告
+
+#邮件
+title too long=邮件标题太长！
+content too long=邮件内容太长！
+not send self=不能给自己发邮件！
+system_mail=系统邮件
+fight_mail=战报邮件
+fight_over_mail=国战邮件
+fight_over_mail1=黄巾余党排行榜奖励
+fight_over_mail3=迎天子排行榜奖励
+fight_over_mail2=朝贡活动排行榜奖励
+fight_over_mail4=朝贡活动战斗奖励
+fight_over_mail_title1=%city%进攻战
+fight_over_mail_title2=%city%防守战
+prop_award=奖励包裹
+prop_award1=副本每日奖励包裹
+city fight award=出征部队 %team% 在国战%city%获得的奖励！
+city fight award1=活动奖励包裹
+city fight award2=活动额外奖励包裹
+city fight award3=出征部队 %team% 在黄巾余党活动中获得的奖励！
+city fight award4=出征部队 %team% 在迎天子活动中获得的奖励！
+city fight award5=出征部队 %team% 在朝贡活动中获得的奖励！
+fight mail context=你的队伍%name%在%city%发生了战斗，%result%
+fight_result0=不幸，惨遭失败！
+fight_result1=恭喜，获得胜利！
+activity fight award=活动奖励包裹
+activity fight award1=恭喜你获得黄巾余党排行榜第%lvl%名奖励。
+activity fight award2=恭喜你获得迎天子排行榜第%lvl%名奖励。
+contribute fight award1=恭喜你获得朝贡活动奖励！
+contribute_no_join=您没有参加本次朝贡活动！
+country city fight award=南蛮入侵奖励
+country city fight award1=恭喜你获得阻击第%num%波南蛮入侵活动奖励！
+country city fight award2=恭喜你获得助蛮伐%country%活动奖励！
+no_mail=邮件不存在！
+not_mail_award=没有附件！
+had_get_award=附件已经领取过了！
+mail_too_busy=操作太频繁！
+#city fight over=%city%攻防战  %attact% VS %defence%\n%win_country%胜\n\n%lose_country%损失 %lose_soldier1%士兵  %lose_soldier2%人死亡 %lose_soldier3%人受伤\n损失 %lose_food%粮草\n\n%win_country%损失 %win_soldier1%士兵  %win_soldier2%人死亡 %win_soldier3%人受伤\n缴获 %win_food%粮草
+city fight over=%city%攻防战  %attact% VS %defence%\n%win_country%胜\n\n%lose_country%损失 %lose_soldier1%士兵  %lose_soldier2%人死亡 %lose_soldier3%人受伤\n\n%win_country%损失 %win_soldier1%士兵  %win_soldier2%人死亡 %win_soldier3%人受伤
+#\n\n此次战斗\n\t\t战功第一的是%top1%\n\t\t战功第二的是%top2%\n\t\t战功第三的是%top3%
+city fight over tip1=%country1%扫清了%country2%的%city%守军，夺取了%city%，势不可挡
+city fight over tip2=%country1%在%city%击退了%country2%的侵略部队，%city%固若金汤
+city fight tip=%country1%的%name%对%country2%的%city%发动了攻击
+npcteam=NPC部队
+#聊天
+chat too busy=您发送的太频繁了，请稍后发送！
+role in mute=角色禁言中！
+not send message to self=不能给自己发送消息！
+chat_too_long=您输入的字符超过上限！
+
+#领地相关
+build level up error1=官府等级不足！
+build level up error2=等级达到上限！
+build level up error3=建筑未开启！
+build level up error4=资源不足！
+build level up error5=爵位等级不足！
+
+#商店
+prop_not_enougth=商品数量不足！
+no_shop_prop=该商品不存在！
+no_shop=商店不存在!
+money_type_wrong=货币类型错误！
+not_enough_error10=元宝不足！
+not_enough_error13=功勋不足！
+not_enough_error14=声望不足！
+prestige phase limit=声望阶段不足!
+
+#装备
+no_equipment=装备不存在！
+can_not_equipment=该物品不是装备！
+no_gem=宝石不存在！
+same_gem=同类宝石只允许镶嵌一颗!
+no_holes=没有空的宝石孔！
+have_color_gem=已经镶嵌了五彩宝石！
+split_false=拆分失败！
+prop_not_enough=所需物品数量不足！
+combin_not=合成物品不存在！
+make_not=打造物品不存在！
+strength_max=强化等级已经达到上限！
+index_error=装备位置错误！
+material_not_enough=所需材料不足！
+stren_max=强化等级已达到上限！
+not_gem=不是宝石！
+can_not_combin=该物品不能合成！
+combin_nums_wrong=合成数量错误！
+not_open_hole=该宝石孔未开放！
+had_gem=该位置已经镶嵌有宝石了！
+no_equip=该武将不能穿戴此装备！
+mili_fight=不能操作战斗中的武将！
+not_open_resolve=分解装备功能未开启！
+make_purple=打造紫色物品功能未开启！
+make_orange=打造橙色物品功能未开启！
+make_red=打造红色物品功能未开启！
+not_open_stren=强化功能未开启！
+combin_purple=合成紫色物品功能未开启！
+combin_orange=合成橙色物品功能未开启！
+combin_red=合成红色物品功能未开启！
+player_not_nobiLv_make=玩家爵位等级太低,不能打造该物品！
+wash_not_open=洗煉功能未開啓！
+no_cimelia=宝物不存在！
+not_cimelia=该物品不是宝物！
+cimelia_type_error=该宝物位不能装备此类型的宝物！
+cimelia_chip_cant_equip=宝物碎片不能装备！
+plz_take_down_cimelia=已装备相同类型宝物：
+not_open_hole2=该宝物位未开放！
+chip_cant_lock=宝物碎片不能被锁定或解锁！
+cimelia_locked=该宝物已经被锁定！
+cimelia_not_locked=该宝物没有被锁定！
+chip_cant_eat_other=宝物碎片只能用来给其他宝物增加经验！
+cimelia_is_max_level=该宝物不能继续升级！
+cant_eat_self=不能吞噬自身！
+server_data_error=服务器数据错误，请暂时不要进行类似操作！
+hole_has_cimelia=请先取下该宝物位上的宝物再装备！
+locked_cimelia_cant_be_eat=锁定的宝物不能被吞噬！
+add_cimelia_success=添加宝物成功
+add_cimelia_fail=添加宝物失败
+delete_cimelia_fail=删除宝物失败
+delete_cimelia_success=删除宝物成功
+
+#背包
+empty_not_enough=背包空位不足！
+send military luck prop fail=赠送失败！
+no_prop=物品不存在！
+collate_busy=整理太频繁！
+soldier_card_not=士兵卡数量不足！
+
+#任务相关
+task sid is not invalidate=该任务不存在！
+get task fail=领取任务失败！
+report task fail=提交任务失败！
+cancel task fail=放弃任务失败！
+
+#武将系统
+invalite military sid=该武将不存在！
+the military get error=操作失败！
+the military luck value not enough=该武将对你的好感度还不足！
+the military has get it=该武将的武魂已领取！
+the military has get it1=该武将没有武魂！
+the military has recruited=该武将已招募！
+military convert life fail=转生失败！
+military convert life fail1=等级不足，转生失败！
+military luck value is full=该武将的好感度已满！
+military_not_recruit=该武将不可招募！
+main_military_not=主将不能更改官职！
+military convert number limit=转生次数达到上限！
+player_not_nobiLv=玩家爵位等级太低,不能招募该武将！
+
+#副本相关
+chapter not defined=当前章节不存在！
+duplicate can not fight=该章节副本还不允许你战斗！
+chapter duplicate not defined=该章节副本不存在！
+chapter duplicate award taked today=该章节副本的今日奖励已经领取！
+duplicate fight fail,ginger not enough=英雄令不足，战斗取消！
+chapter fightTeam is null=部队不存在！
+chapter not pass=该章节未通过！
+duplicate batch fight fail.duplicate not pass=副本未通关，不可扫荡！
+duplicate not pass=精英副本不可扫荡！
+duplicate nobi limit=需要爵位达到%lv%级！
+
+#好友
+friends_full=您的好友已满！
+other_friends_full=对方的好友已满！
+add_friends_fail=添加好友失败！
+del_friends_fail=删除好友失败！
+not_self=不能添加自己为好友！
+had_friend=已经有了该好友!
+
+#士兵相关
+recruit soldier fail=资源不足，招募失败！
+recruit soldier fail2=参数错误，招募失败！
+fight team update error=部队编组失败，同一支队伍中出现相同的武将！ 
+fight team update error1=部队编组失败，找不到武将！ 
+fight team update error2=部队编组失败，有武将已在编组队伍中！ 
+fight team update error3=部队编组失败，士兵不足！ 
+fight team update error4=部队编组失败，队伍中有武将出征！
+fight team update error5=部队编组失败，队伍名称出错！ 
+fight team update error6=部队编组失败，队伍中有武将在其他队伍中！
+fight team update error7=部队编组失败，你目前的爵位只能创建%num%只部队！
+fight team disband error=解散编组失败！
+invalid fightTeam=操作失败，没有队伍！
+invalid fightTeam1=操作失败，%team没有携带士兵！
+invalid move citys=操作失败，路线错误！
+player_not_nobiLv_sol=玩家爵位等级太低,不能招募该士兵！
+#科技
+no_science=该科技不存在！
+no_source=资源不足！
+source_less=您捐的资源太少了！
+source_more=您捐的资源太多了！
+science_max_lv=科技等级达到上限！
+source_type_wrong=该资源不能捐献！
+no_science_nums=科技点不足！
+science_up=%country%的%name%科技升级到%lv%级!
+
+#国家
+request param error=请求失败！
+not_king=只有国王才能操作！
+city recruit npc fail1=招募失败，参数错误！
+city recruit npc fail2=招募失败，权限不足！
+city recruit npc fail3=招募失败，该城不属于本国！
+city recruit npc fail4=招募失败，该部队无法招募！
+city recruit npc fail5=招募失败，国战中无法招募！
+city recruit npc fail6=招募失败，NPC部队已达到上限！
+fight team not founded=编组出征失败！
+march team not founded=行军部队不存在！
+fight team road way error=该路线行不通！
+fight team road way error1=不能行军到主城！
+fight team march error1=出征失败，粮草不足！
+fight team move fail=战斗中，无法撤离！
+fight team update fail=战斗中，无法更改！
+fight team recruit fail=战斗中，无法补给！
+fight team clear move time fail=行军令不足，无法扣除行军时间！
+city select chairman fail1=城主册封失败，你不是国王！
+city select chairman fail2=城主册封失败，该城不属于本国！
+city select chairman fail3=城主册封失败，对方不是本国人！
+city select chairman fail4=城主册封失败，对方已是城主！
+city select chairman fail5=城主册封失败，不能册封自己！
+city remove chairman fail1=城主撤封失败，你不是国王！
+city remove chairman fail2=城主撤封失败，该城不属于本国！
+city remove chairman fail3=城主撤封失败，对方不是本国人！
+city remove chairman fail4=城主撤封失败，对方不是城主！
+city chairman get award fail1=领取奖励失败，改城不属于本国！
+city chairman get award fail2=领取奖励失败，你不是该城城主！
+city chairman get award fail3=领取奖励失败，今日已领取！
+fight team road way error=出征路线错误！
+country_0=中立国
+country_1=魏国
+country_2=蜀国
+country_3=吴国
+team_app=队
+country union tips=结盟后最少48小时后才可以解除结盟操作！
+country union tips1=结盟失败，国家已经存在结盟关系！
+country union tip=恭喜，%countryA%和%countryB%建立结盟！
+country union tip1=%countryA%和%countryB%解除盟约！
+provoke team contain teamid=该队伍已在叫阵队列！
+provoke team fail1=叫阵失败，战役已经结束！
+provoke team fail2=叫阵失败，今日叫阵次数已经用完！
+provoke team fail6=叫阵失败，自己没有可参与叫阵的队伍！
+provoke team fail7=叫阵失败，该部队无法迎战！
+provoke team fail8=叫阵失败，叫阵卡不足！
+provoke team fail9=叫阵失败，敌方没有可迎战队伍！
+provoke team fail10=叫阵失败，请稍后重试！
+union apply error1=邀请失败，你不是国王！
+union apply error2=邀请失败，参数错误！
+union apply error3=邀请失败，你已发出过结盟请求！
+union apply error4=邀请失败，该国家无法结盟！
+union apply error5=邀请失败，对方国王不在线！
+union accept apply error1=接受邀请失败，邀请已过期！
+union disband error1=解除结盟失败，你不是国王！
+union disband error2=解除结盟失败，三国还没结盟！
+union disband erro3=解除结盟失败，您的国家没有结盟！
+no_fight=您没有在战斗中！
+not_enought_prop=叫阵卡不足，不能拉令！
+no_convene=您没有参加此次战斗，不能拉令！
+convene_ing=玩家正在拉令！
+convene_max=拉令數量達到上限！
+not_have_convene=拉令不存在！
+will_despond=最多還能有%num%支隊伍應召！
+no_respond=該拉令您已經應召過！
+respond_no_team=没有空闲队伍应召！
+convene fail=该城市没有在战斗中！
+retreat_error1=撤退失败，该城市不存在！
+retreat_error2=撤退失败，该城市没有在战斗中！
+retreat_error3=撤退失败，目标城市不存在！
+retreat_error4=撤退失败，目标城市正在战斗中！
+retreat_error5=撤退失败，目标城市不在撤退范围内！
+retreat_error6=撤退失败，部队数量错误！
+retreat_error7=撤退失败，本城市没有我方部队！
+retreat_error8=撤退失败，不能撤退到当前城市！
+retreat_error9=正在战斗中！
+march_error1=突进失败，该城市不存在！
+march_error2=突进失败，该城市没有在战斗中！
+march_error3=突进失败，目标城市不存在！
+march_error4=突进失败，目标城市不在攻击范围内！
+march_error5=突进失败，我方参战人数必须大于对方的2倍！
+march_error6=突进失败，部队数量错误！
+march_error7=突进失败，本城市没有我方部队！
+march_error8=突进失败，不能突进到当前城市！
+#国战活动
+enter activity fight error=操作失败，活动已结束！
+enter activity fight error1=进入失败，该城市的山匪已剿除完毕！
+enter activity fight error2=进入失败，请求参数错误！
+enter activity fight error3=进入失败，自己国家的山匪尚未剿除！
+all_hero_fight_activity1=【黄巾余党】结束，%level1%、%level2%、%level3%在此次讨伐中如入无人之境，杀得黄巾军人仰马翻！
+all_hero_fight_activity2=【董卓余党】结束，%level1%、%level2%、%level3%骁勇善战，董卓丢盔弃甲、狼狈不堪！
+contribute_fighting=活动中，不能领取奖励！
+contribute_will_start=请稍候再进入战斗！
+nobility level dissatisfy=爵位等级不足!
+
+#朝貢活动
+contribute_lv_lack=爵位等级达到%lv%才能参加！
+contribute_error1=撤退失败，你没有部队在活动中！
+
+#爵位
+can_not_official=您的爵位等级太低，不能册封该官职！
+
+#投票选举国王
+can_not_self=不能投票给自己！
+not_qualification=没有投票资格！
+had_vote=已经投过票了！
+no_have=没有该候选人！
+can_not_vote=候选者不能投票！
+no_had_vote=没有领奖资格！
+had_get_vote_award=已经领取过投票奖励！
+#武将被动技能
+This passive skill is not have in learning=这个技能不在已学习的技能中！
+skill book number dissatisfy=技能书数量不足！
+Passive skill sid does not exist=被动技能sid不存在！
+No empty skills grid=没有空的技能格子
+Already have the same type of skills=已经有同类型的技能！
+mlitary is null=武将不存在！
+level does not exist=等级不存在！
+limit level=等级上限了！
+skill book is null=技能书不存在！
+#探访系统
+visit is null=探访为空！
+award index is null=奖励下标不存在！
+award is null=奖励为空！
+can_not_official=您的爵位等级太低，不能册封该官职！
+visit is full= 探访已满！
+#登录奖励
+login award=登录奖励！
+#GM工具
+system_award=系统奖励！
+send gift fail=发送礼包失败！
+send gift award success=发送礼包成功！
+synchronized activity fail=同步活动失败！
+synchronized activity  success=同步活动成功！
+send gift fail=发送礼包失败！
+send gift success=发送礼包成功！
+add prop fail=添加道具失败！
+send affiche success=发送公告成功！
+session is null=会话不存在！
+kick ok=踢人成功！
+player not online=玩家不在线！
+userid not same with role's userid=角色名与uid不匹配！
+send mail success=发送邮件成功！
+make gift success=制作礼包成功！
+make gift fail=制作礼包失败！
+delete operator activity fail=删除运营活动失败！
+delete operator activity success=删除运营活动成功！
+update activity is fail=更新活动失败！
+udpate activity success=更新活动成功！
+no operatorActivity=没有运营活动！
+setting role mute ok=设置禁言成功！
+setting role mute fail=设置禁言失败！
+set gm ok=设置GM成功！
+cancel gm ok=取消GM成功！
+stop role ok=封停成功！
+prop is null=物品不存在！
+send mail fail=发送邮件失败！
+minute is null=时间为空
+stop role ok=封停成功
+delete gift success=删除礼包成功
+delete gift fail=删除礼包失败
+clear_rank_success=清除排行成功！
+immure is null=没有被封停的玩家
+user.immure=封停时间
+no_immure=未封停
+no_mutetime=未禁言
+effect.sid=BUFFER SID
+effect.fmType=BUFFER 加成类型
+effect.name=Buffer名
+#礼包
+gift_num_low=礼包数量不足！
+gift_error=前后台物品不一致！
+gift_not=该物品不是礼包！
+gift_not_award=礼包内没有奖励！
+#player
+player.pid=唯一ID
+player.plantID=平台ID
+player.name=名字
+player.country=国家
+player.equip=军械值
+player.exp=经验
+player.cityAwards=上次领取城主奖励的时间
+player.fightScore=总功勋值
+player.dayfightScore=每日功勋值
+player.nowfightScore=当前功勋值
+player.uid=账号id
+player.ginger=英雄令
+player.gold=元宝
+player.sysgold=系统元宝
+player.getloginTime=登录时间
+player.money=钱币
+player.nobilityLevel=爵位等级
+player.serverid=服务器ID
+player.recruit=募兵令
+player.food=粮食
+player.wood=木材
+player.iron=铁锭
+player.pep=劳役
+player.train=训练值
+player.score=积分
+player.paper=礼券
+player.tech=文化
+player.logoutTime=退出时间
+player.onlineTime=总在线时长
+player.woundedTime=上次伤兵恢复时间
+player.visit=未探访次数
+player.loginIp=登录IP
+player.roleMuteTime=禁言时间
+player.gm=GM状态
+player.vip=VIP等级
+player.payGold=元宝充值数
+player.prestige=总声望
+player.nowPrestige=当前声望
+#运营活动
+activity.actid=活动id
+activity.actName=活动名称
+activity.onOff=是否开启
+activity.beginTime=开始时间
+activity.endTime=结束时间
+activity.giftid=礼包id
+activity.giftType=礼包类型
+activity.actcontent=活动内容
+activity.acttype=活动类型
+activity.visible=是否显示
+activity.charge.values=充值数组
+activity.charge.giftTypes=奖励礼包类型数组
+activity.charge.giftIds=奖励礼包id数组
+activity.allOpen=永久有效
+activity.castleFight.citySid=首驻城市
+activity.ranking.type=排行榜类型
+activity.ranking.type5=等级排行榜
+activity.ranking.type2=战力排行榜
+activity.getters=礼包得主
+activity.castleFight.unionName=首驻联盟
+activity.charge.firstType=档位奖励类型
+activity.charge.firstType1=开服首次充值
+activity.charge.firstType2=活动开始后首次充值
+activity.order=排序
+activity.charge.gearType=档位类型
+activity.charge.gearType1=单独档位计算
+activity.charge.gearType2=循环档位计算
+activity.charge.awardType=档位奖励类型
+activity.charge.awardType1=一次性奖励
+activity.charge.awardType2=循环奖励
+activity.charge.names=档位名称
+activity.charge.conditions=档位领取条件
+activity.duplicate.values=副本sid数组
+activity.prop.values=物品sid数组
+activity.closeTime=活动关闭时间
+activity.militaryNum.types=武将收集品质数组
+activity.militaryNum.values=武将收集品质数量数组
+activity.militaryAttribute.types=武将成长属性数组
+activity.militaryAttribute.values=武将成长属性值数组
+charg_bace=充值回馈
+
+# user
+user.uid=用户id
+user.name=用户名
+user.isAdult=是否成年
+user.ip=用户IP
+user.gm=是否GM
+#道具
+prop.name=道具名
+prop.sid=道具sid
+prop.maxnums=最大重叠数
+prop.nums=数量
+prop.saleprice=卖出总价格
+add Resource fail=添加资源失败
+no prop=没有道具
+prop.materialId=分解材料id
+prop.makeMaterialId=打造材料id
+prop.quality=品质
+prop.isCombin=合成id
+gem.type=宝石类型
+equ.location=装备穿带位置
+equ.strenthLv=强化等级
+equ.suitId=套装ID
+equ.militaryId=特定武将穿戴id
+equ.force=武力
+equ.lead=统帅
+equ.wisdo=智力
+equ.attack=攻击
+equ.power=体力
+equ.leadSol=带兵数
+equ.attackLevel=攻击等级
+equ.powerLevel=体力等级
+equ.leadSolLevel=带兵数等级
+equ.forceLevel=武力等级
+equ.leadLevel=统帅等 级
+equ.wisdomLevel=智力等 级
+equ.critRateLevel=暴伤等 级
+equ.beCritRateLevel=韧性等级
+equ.aloneAttackLevel=单兵攻击等级
+equ.aloneLifeLevel=单兵生命等级
+equ.criteProbabilityLevel=暴击几率等级
+equ.blockProbabilityLevel=格挡几率等级
+equ.speedLevel=速度等级
+exp.value=经验值
+soul.attType=属性类型
+soul.value=属性值
+luck.luck=好感值
+luck.addCrit=暴击率
+award.sid=奖励sid
+equ.criteProbability=暴击倍率
+equ.beCritRate=韧性倍率 
+equ.blockProbability.odds=格挡几率
+equ.criteProbability.odds=暴击几率
+equ.skillmaxNums=装备技能最大数
+bundle.index=背包位置
+#洗练
+can_not washs practice=武将在出征不能洗练
+can_not practice=装备不能洗练
+#VIP
+giftpackage is null=VIP礼包错误
+is not vip=您不是VIP！
+vip level limit=需要VIP %level% 可购买
+already get vip award=已经获取VIP礼包
+buy prop limit=购买商品次数上限,不可购买
+buy prop rebate=你是VIP %level% 购买VIP商品获得了返利%nums%元宝！
+had_get_vip_once=已经领取过该等级的奖励！
+not_enough_vip=玩家未達到VIP%level%！
+had_get_charge_gift=已经领取过首充奖励！
+no_pay_no_gift=施主，你还没有充值，是没有奖励的！
+#功勋活跃度 
+fightscorebox_award=功勋宝箱奖励！
+send_dayfightScoreAward_fail=发送奖励失败！
+no FightScoreBox number=没有宝箱数量！
+fightScoreBox_award_error=没有达到领取条件！
+reset_fight_score_error1=你当前的战场功勋不需要重置！
+#滚屏公告
+vip_level_up=恭喜%name%用户的VIP等级达到了%level%等级，每日可以领取丰厚奖励
+get_military=恭喜%name%用户，名将%military%感其恩义，投奔麾下
+box_getgem=恭喜%name%用户，合成出了%gem_name%宝石，自此实力大增
+combin_getgem=恭喜%name%用户打开了%box_name%宝箱获得了%gem_name%宝石，真是鸿运当头
+get_nobili=恭喜%name%用户获得了%nobili%爵位，飞黄腾达
+first_duplicate=恭喜%name%用户通过了%duplicate%关卡，势不可挡
+get_purpleequ=恭喜%name%用户打造了%purpleequ%装备，自此实力大增
+get_purpleequ_award=恭喜%name%用户获得了%purpleequ%装备，自此实力大增
+buy_equ=恭喜%name%用户购买了%purpleequ%装备，自此实力大增
+#排行榜
+rank_no_award=没有排行榜奖励！
+rank_had_get=已经领取过该奖励！
+one key luck prop tip=本次批量赠送消耗了\n%prop%\n\n总计获得了\n好感度*%value%
+one key no prop=你包裹中没有喜好品！
+one key luck prop new tip1=本次总共结交%nums1%次，\n其中2倍暴击%nums2%次，\n5倍暴击%nums3%次，\n总计获得%nums4%好感度，\n消耗%nums5%元宝 \n消耗%prop%道具%nums6%个。
+one key luck prop new tip2=本次总共结交%nums1%次， \n2倍暴击%nums3%次，\n总计获得%nums4%好感度，\n消耗%nums5%功勋
+#产生国王
+new_king=恭喜%name%当选为本国国王！
+
+#防沉迷系统提示
+anti addiction tip3=您现在是未成年用户，已经上线超3个小时，进入不健康游戏时间，从现在开始：您无法提交任务，无法进行副本战斗，国战后无法获得战场宝箱，国战获得的经验与功勋减半，主城与封邑的资源产出减半，伤兵的治疗效果减半。
+anti addiction tip5=您现在是未成年用户，已经上线超5个小时，为了您的健康，请您下线休息，从现在开始，您无法从游戏中获得任何收益。
+
+gift.id=礼包id
+gift.time=更新时间
+gift.name=名字
+gift.icon=图标
+gift.desc=描述
+gift.type1=奖励类型1
+gift.number1=数量
+gift.item.desc1=描述
+gift.type2=奖励类型2
+gift.number2=数量
+gift.item.desc2=描述
+gift.type3=奖励类型3
+gift.number3=数量
+gift.item.desc3=描述
+gift.type4=奖励类型4
+gift.number4=数量
+gift.item.desc4=描述
+gift.type5=奖励类型5
+gift.number5=数量
+gift.item.desc5=描述
+gift.type6=奖励类型6
+gift.number6=数量
+gift.item.desc6=描述
+gift.type7=奖励类型7
+gift.number7=数量
+gift.item.desc7=描述
+gift.type8=奖励类型8
+gift.number8=数量
+gift.item.desc8=描述
+gift.type9=奖励类型9
+gift.number9=数量
+gift.item.desc9=描述
+gift.type10=奖励类型10
+gift.number10=数量
+gift.item.desc10=描述
+
+online_gift_type_invalid=在线奖励类型无效！
+online_gift_index_over=没有该在线奖励！
+online_gift_time_enough=在线奖励时间未到！
+online_gift_have_get=已领取过该奖励！
+
+#武将 GM工具使用
+military.sid=武将SID
+military.name=武将名字
+military.level=武将等级
+military.exp=武将经验
+military.changeTimes=转生次数
+military.lead=武将统帅
+military.force=武将武力
+military.wisdom=武将智力
+military.attack=武将攻击
+military.power=武将体力
+military.leadsol=武将带兵
+military.fightNum=武将战力
+military.needLuck=当前好感度/需要的好感度
+military.luck=当前的好感度
+skill.sid=被动技能SID
+skill.name=被动技能名字
+military has recruited=武将已经招募
+add military success=添加武将成功
+military in fight or invalite military sid=武将在战斗中或者未招募 不能删除.
+delete military success=删除武将成功
+setting_military_lv_error1=等级大于武将最高等级,%level%级,设置失败！
+setting_military_lv_error2=转生次数大于武将最高转生次数,%level%级,设置失败！
+setting_military_lv_success=设置成功
+#士兵  GM工具使用
+soldier.sid=士兵SID
+soldier.name=士兵名字
+soldier.num=士兵数量
+type.error=类型错误
+#宝石  GM工具使用
+gem.sid=宝石SID
+gem.military=镶嵌武将
+gem.index=镶嵌位置
+gem.name=宝石名字
+gem.type=宝石类型
+#强化  GM工具使用
+strength.loc=强化位置
+strength.level=强化等级
+#君主科技   GM工具使用
+eff.sid=君主科技SID
+eff.name=君主科技名字
+eff.level=君主科技等级
+eff.type=开启条件类型
+eff.openValue1=开启条件值1
+eff.openValue=开启条件值
+#任务  GM工具使用
+task.sid=任务SID
+task.name=任务名字
+task.plan=任务进度
+task.plan.show=%nowConditionNum%/%allConditionNum%
+add task success=添加任务成功
+remove task success=删除任务成功
+remove task fail=删除任务失败
+finish task fail=完成任务失败
+finish task success=完成任务成功
+add task fail=添加任务失败
+#道具
+delete prop success=删除道具成功
+add equipment success=添加装备成功
+delete prop fail=删除道具失败
+index error=装备位置错误
+update success=设置成功
+update fail=设置失败
+time=%day%天%hour%小时%minute%分钟
+#迎天子活动
+no in activity=没有在活动中
+other citys can fight=其他据点可以派兵攻打，点击其他据点可进行和本国对应据点一样的操作
+at present not to receive the award=目前不可领取奖励
+all npc no wipe=NPC未全部歼灭
+npc no wipe=NPC未歼灭
+team in country=队伍已经在该据点
+award have to receive=奖励已经领取
+no activity=没有这个活动
+wild team is fight=你的部队在战斗中!
+wildteam not quatar=队伍不在驻守中!
+#国家任务
+countrytask,error1=没有该国家任务！
+countrytask,error2=没有该国家任务！
+countrytask,error3=国家任务没有完成！
+countrytask,error4=没有奖励！
+countrytask,error5=你没有参与过该任务，没有奖励！
+countrytask,error6=优先领取全国家任务奖励！
+countrytask,error7=你已经完成了该任务，请领取奖励！
+countrytask,error8=请先完成全民任务！
+
+#名将录
+famous_general_null=名将录是空！
+#士兵解雇
+soldier_in_the_cooling=士兵解雇冷却中！
+soldier_no_recruit=士兵未招募！
+#强化位置  名字
+strength0=头盔
+strength1=腰带
+strength2=铠甲
+strength3=披风
+strength4=武器
+strength5=挂坠
+strength6=裤子
+strength7=鞋子
+#宝石转换
+gem_convert_error1=相同的宝石不能转换!
+gem_convert_error2=宝石数量不足!
+gem_convert_error4=不可以转换为此宝石!
+gem_convert_error5=货币不足，不能转换!
+#领取奖励
+no_award=奖励不存在！
+will_award_msg=本次%activity%您的排名为：第%rankIndex%名
+will_award_error=领取奖励失败！
+#领取礼包奖励
+card_key_error1=无效礼包卡！
+card_key_error2=该卡已经领取过奖励！
+card_key_error3=礼包类型错误！
+card_key_error4=你已经领取过该类型的礼包奖励了！
+card_key_error5=礼包卡奖励物品不存在！
+#七天登陆
+had_get_login_award=奖励已领取!
+login_day_error=登陆天数不足
+login_day_error1=奖励不存在!
+no_gift=礼包不存在
+level_error1=爵位等级不足！
+level_error2=VIP等级不足！
+open_server_mall_mail_title=开服特惠活动
+open_server_mall_mail_content=开服特惠商店商品邮件
+#开服活动
+act_is_start=活动结束后才能领取至尊奖励！
+get_gold_fail=领取至尊奖励失败！
+no_gold_award=没有可领取的奖励！
+can_not_get_award=没达到领奖条件！
+get_over_award=奖励已经被领取完！
+no_type_award=没有该类型的奖励！
+had_get_gold=您已经领取过该奖励！
+not_in_activity=活动未开启
+final_in_activity=活动已结束
+#card
+card.cdkey=礼包码
+card.type1=礼包大类型
+card.type2=礼包小类型
+card.isget=领取状态
+card.num=礼包卡序号
+card.get=已领取
+card.noget=未领取
+plz_input_type1=请填写礼包大类型
+plz_input_type2=请填写礼包小类型
+plz_input_num=请填写生成礼包数量
+plz_input_bagid=请填写礼包奖励id
+plz_input_start=请填写起始卡号
+plz_input_end=请填写结束卡号
+add_card_key_success=创建礼包卡成功！
+add_card_key_fail=创建礼包卡失败！
+new_player_car=新手礼包
+media_card=媒体礼包
+other_card=其他礼包
+error_card_type=未知类型
+card_no_find=没有找到对应的礼包
+award_not_find=请填写正确的礼包奖励id
+#设置开服时间
+setting_open_server_success=设置开服时间成功
+openServerTime=开服时间   :
+open_server_mall_mail_content=开服特惠商店商品邮件
+#猎宝
+gamble_error1=仓库剩余空间不足，请先清理仓库！
+gamble_error2=请选择正确的次数！
+gamble_award=猎宝获得：
+gamble_error3=没有物品可领取！
+cbundle_empty_not_enough=宝物背包空位不足！

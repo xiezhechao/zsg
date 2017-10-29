@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+ <objects>
+ <field class="game.team.Soldier" name="factory" id="soldierSampleFactory"/>
+ <method ref="soldierSampleFactory" name="init">
+ <ref id="context"/>
+ </method>
+ <!--
+ name：名字
+ type:类型 0无效，1骑兵，2步兵,4弓兵，8近战，16远程 多个类型，请填多个类型和
+ baseLife：基础生命
+ baseAttack：基础攻击
+ needArr：招募消耗数组int[]0征募令 1粮食，2木材，3钱，4铁锭，5经验，6劳役，7文化，8军械，9训练
+ speed：攻击速度
+ attackRange：攻击距离 0全部 1近战
+ attackSkillSid：攻击技能sid 见skills.xml
+ actionSkillSids:兵种技能sid数组int[] 见skills.xml
+ takeFood:队伍出征时单个士兵需要携带的粮草
+ stage:士兵阶位，用于伤兵恢复
+  -->
+<sample class="game.team.Soldier" sid="22" name="轻步兵" type="10" baseLife="60" baseAttack="3" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="1" level="1" needNobilityLevel="3" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,8,0,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>0</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="23" name="轻骑兵" type="9" baseLife="30" baseAttack="4" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="1" level="1" needNobilityLevel="4" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,8,0,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>0</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="4" name="轻弓兵" type="20" baseLife="20" baseAttack="6" speed="100" attackRange="0" attackSkillSid="2" takeFood="1" stage="1" level="1" needNobilityLevel="7" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,8,0,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>0</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="3" name="丹阳虎贲" type="9" baseLife="40" baseAttack="7" speed="105" attackRange="1" attackSkillSid="1" takeFood="1" stage="3" level="2" needNobilityLevel="17" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,20,1,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>7</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="6" name="青州精卒" type="10" baseLife="70" baseAttack="6" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="3" level="2" needNobilityLevel="12" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,20,1,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>6</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="7" name="无当飞军" type="20" baseLife="30" baseAttack="10" speed="95" attackRange="0" attackSkillSid="2" takeFood="1" stage="3" level="2" needNobilityLevel="20" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,20,1,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>8</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="1" name="白耳精兵" type="10" baseLife="85" baseAttack="8" speed="90" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="30" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>22,41</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="2" name="大戟悍士" type="10" baseLife="80" baseAttack="9" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="28" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>42,15</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="8" name="虎卫军士" type="10" baseLife="80" baseAttack="8" speed="105" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="26" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>5,9</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="9" name="虎豹突骑" type="9" baseLife="45" baseAttack="10" speed="115" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="35" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>11,13</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="16" name="山越弓手" type="20" baseLife="30" baseAttack="16" speed="95" attackRange="0" attackSkillSid="2" takeFood="1" stage="15" level="3" needNobilityLevel="40" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>30,31</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="10" name="元戒弩兵" type="20" baseLife="30" baseAttack="20" speed="100" attackRange="0" attackSkillSid="2" takeFood="1" stage="15" level="3" needNobilityLevel="30" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>10,14</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="11" name="先登死士" type="10" baseLife="75" baseAttack="10" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="33" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>23,16</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="12" name="飞熊骠骑" type="9" baseLife="110" baseAttack="10" speed="80" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="35" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>17,29</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="13" name="白马义从" type="9" baseLife="85" baseAttack="16" speed="115" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="50" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>37,38</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="14" name="并州狼骑" type="9" baseLife="70" baseAttack="20" speed="150" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="48" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>39,34</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="15" name="锦帆悍卒" type="20" baseLife="62" baseAttack="28" speed="110" attackRange="0" attackSkillSid="2" takeFood="1" stage="50" level="4" needNobilityLevel="60" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>28,33</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="5" name="虎贲甲士" type="10" baseLife="125" baseAttack="12" speed="105" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="55" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>27,40</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="17" name="南蛮象兵" type="9" baseLife="170" baseAttack="12" speed="50" attackRange="1" attackSkillSid="4" takeFood="1" stage="50" level="4" needNobilityLevel="50" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>18,24</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="18" name="西凉铁骑" type="9" baseLife="80" baseAttack="15" speed="125" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="50" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>19,20</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="19" name="藤甲蛮兵" type="10" baseLife="150" baseAttack="10" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="41" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>21,32</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="20" name="陷阵重步" type="10" baseLife="130" baseAttack="15" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="43" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>25,26</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="21" name="解烦弩兵" type="20" baseLife="56" baseAttack="25" speed="120" attackRange="0" attackSkillSid="2" takeFood="1" stage="50" level="4" needNobilityLevel="46" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>35,36</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="30" name="白耳精兵" type="10" baseLife="100" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="20" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>22,41</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="31" name="大戟悍士" type="10" baseLife="100" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="28" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>42,15</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="32" name="虎卫军士" type="10" baseLife="100" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="26" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>5,9</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="33" name="虎豹突骑" type="9" baseLife="100" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="24" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>11,13</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="34" name="山越弓手" type="20" baseLife="100" baseAttack="1" speed="100" attackRange="0" attackSkillSid="2" takeFood="1" stage="15" level="3" needNobilityLevel="22" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>30,31</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="35" name="元戒弩兵" type="20" baseLife="100" baseAttack="1" speed="100" attackRange="0" attackSkillSid="2" takeFood="1" stage="15" level="3" needNobilityLevel="30" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>10,14</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="36" name="先登死士" type="10" baseLife="100" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="33" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>23,16</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="37" name="飞熊骠骑" type="9" baseLife="100" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="15" level="3" needNobilityLevel="35" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>0,0,0,6000,1500,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>17,29</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="38" name="白马义从" type="9" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="40" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>37,38</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="39" name="并州狼骑" type="9" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="48" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>39,34</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="40" name="锦帆悍卒" type="20" baseLife="200" baseAttack="1" speed="100" attackRange="0" attackSkillSid="2" takeFood="1" stage="50" level="4" needNobilityLevel="44" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>28,33</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="41" name="虎贲甲士" type="10" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="47" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>27,40</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="42" name="南蛮象兵" type="9" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="4" takeFood="1" stage="50" level="4" needNobilityLevel="50" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>18,24</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="43" name="西凉铁骑" type="9" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="45" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>19,20</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="44" name="藤甲蛮兵" type="10" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="41" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>21,32</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="45" name="陷阵重步" type="10" baseLife="200" baseAttack="1" speed="100" attackRange="1" attackSkillSid="1" takeFood="1" stage="50" level="4" needNobilityLevel="43" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>25,26</ints>
+	</field>
+ </sample>
+ <sample class="game.team.Soldier" sid="46" name="解烦弩兵" type="20" baseLife="200" baseAttack="1" speed="100" attackRange="0" attackSkillSid="2" takeFood="1" stage="50" level="4" needNobilityLevel="46" woundRate="100" >
+ 	<field name="needArr" declared="1">
+		<ints>1,0,0,24000,6000,0,0,0,0,0</ints>
+	</field>
+ 	<field name="actionSkillSids" declared="1">
+		<ints>35,36</ints>
+	</field>
+ </sample>
+ </objects>

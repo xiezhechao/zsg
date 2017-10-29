@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 活动战斗数据存储 -->
+	<obj class="zmyth.orm.SqlPersistence" id="activityPersistence">
+		<method name="setConnectionManager">
+			<ref id="connectionManager" />
+		</method>
+		<method name="setTable">
+			<string>world_fight</string>
+		</method>
+	</obj>
+	
+	<!-- 黄巾余党活动战斗 -->
+	<obj class="game.country.activity.AllHeroActivityFight" id="allHeroActivityFight">
+		<!-- 战斗类型id，用于数据库存贮的主键，唯一 -->
+		<field name="activityFightId" declared="1">
+			<value>1</value>
+		</field>
+		<method name="setFightScenes" declared="1">
+			<objs class="game.country.activity.AllHeroActivityFightScene">
+				<!-- Boos点 -->
+				<obj class="game.country.activity.AllHeroActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>0</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110</ints>
+					</method>
+				</obj>
+				<!-- 魏国城门 -->
+				<obj class="game.country.activity.AllHeroActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>1</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105</ints>
+					</method>
+				</obj>
+				<!-- 蜀国城门 -->
+				<obj class="game.country.activity.AllHeroActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>2</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105</ints>
+					</method>
+				</obj>
+				<!-- 吴国城门 -->
+				<obj class="game.country.activity.AllHeroActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>3</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105</ints>
+					</method>
+				</obj>
+			</objs>
+		</method>
+		<method name="setWorldMapManager">
+			<ref id="worldMapManager" />
+		</method>
+		<method name="setActiviDateManager">
+			<ref id="activityDateManager" />
+		</method>
+		<method name="setSqlPersistence">
+			<ref id="activityPersistence" />
+		</method>
+	</obj>
+	
+	<method name="setActivityFight" ref="contributeScene">
+		<ref id="allHeroActivityFight"/>
+	</method>
+	
+	<!--朝貢活动战斗 -->
+	<obj class="game.country.activity.ContributeActivityManager" id="contributeManager">
+		<!-- 战斗类型id，用于数据库存贮的主键，唯一 -->
+		<field name="activityFightId" declared="1">
+			<value>2</value>
+		</field>
+		<method name="setFightScene" declared="1">
+			<obj class="game.country.activity.ContributeFightScene" id="contributeScene">
+				<!-- 战场大小 -->
+				<method name="setFightMaxNum" declared="1">
+					<value>10000</value>
+				</method>
+				<!-- 默认守城NPC队伍id -->
+				<method name="setFightTeamIds" declared="1">
+					<ints>5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000,5000</ints>
+				</method>
+			</obj>
+		</method>
+		<method name="setWorldMapManager">
+			<ref id="worldMapManager" />
+		</method>
+		<method name="setActiviDateManager">
+			<ref id="activityDateManager" />
+		</method>
+		<method name="setSqlPersistence">
+			<ref id="activityPersistence" />
+		</method>
+		<method name="setRankManager">
+			<ref id="rankManager" />
+		</method>
+	</obj>
+	
+	<method name="setActivityFight" ref="contributeScene">
+		<ref id="contributeManager"/>
+	</method>
+	
+	<!-- 蛮族入侵活动战斗 -->
+	<obj class="game.country.activity.CountryCityActivityFight" id="countryCityActivityFight">
+		<!-- 战斗类型id，用于数据库存贮的主键，唯一 -->
+		<field name="activityFightId" declared="1">
+			<value>3</value>
+		</field>
+		<!-- 助蛮伐敌击杀数量上限 -->
+		<field name="max_kill_num" declared="1">
+			<value>100000</value>
+		</field>
+		<!-- 奖励品爵位係數 -->
+		<method name="setContri_odds">
+ 			<floats>0,0,0,0,0,0,0,0,0,0,40,0,0</floats>
+		</method>
+		<method name="setWorldMapManager">
+			<ref id="worldMapManager" />
+		</method>
+		<!-- 魏蜀吴国家对应的城市sid（0坐标占位） -->
+		<method name="setCountryCitys">
+			<ints>0,105,27,199</ints>
+		</method>
+		<!-- 南蛮NPC波数对应的队伍id -->
+		<method name="setNpcTeams">
+			<objs class="[I">
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+				<ints>4200,4200,4200,4200,4200,4200,4200,4200,4200,4200</ints>
+ 			</objs>
+		</method>
+		<!-- 南蛮NPC波数对应的奖励包sid -->
+		<method name="setNpcAwardSids">
+ 			<ints>9015,9015,9015,9015,9015,9015,9015,9015,9015,9015,9015</ints>
+		</method>
+		<!-- 助蛮伐敌活动奖励sid -->
+		<method name="setActivityBAwardSid">
+ 			<value type="int">9016</value>
+		</method>
+		<method name="setActiviDateManager">
+			<ref id="activityDateManager" />
+		</method>
+		<method name="setSqlPersistence">
+			<ref id="activityPersistence" />
+		</method>
+	</obj>
+	
+	<!-- 迎天子 -->
+	<obj class="game.country.activity.EmperorActivityFight" id="emperorActivityFight">
+		<!-- 战斗类型id，用于数据库存贮的主键，唯一 -->
+		<field name="activityFightId" declared="1">
+			<value>7</value>
+		</field>
+		<method name="setFightScenes" declared="1">
+			<objs class="game.country.activity.EmperorActivityFightScene">
+				<!-- Boos点 -->
+				<obj class="game.country.activity.EmperorActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>0</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110,4106,4107,4108,4109,4110,4106,4107,4109,4110,4108,4109,4110</ints>
+					</method>
+				</obj>
+				<!-- 魏国城门 -->
+				<obj class="game.country.activity.EmperorActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>1</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105</ints>
+					</method>
+				</obj>
+				<!-- 蜀国城门 -->
+				<obj class="game.country.activity.EmperorActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>2</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105</ints>
+					</method>
+				</obj>
+				<!-- 吴国城门 -->
+				<obj class="game.country.activity.EmperorActivityFightScene">
+					<!-- 战场所属国家 -->
+					<method name="setCountryId" declared="1">
+						<value>3</value>
+					</method>
+					<!-- 战场大小 -->
+					<method name="setFightMaxNum" declared="1">
+						<value>10000</value>
+					</method>
+					<!-- 默认守城NPC队伍id -->
+					<method name="setFightTeamIds" declared="1">
+						<ints>4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105,4100,4101,4102,4103,4104,4105</ints>
+					</method>
+				</obj>
+			</objs>
+		</method>
+		<method name="setWorldMapManager">
+			<ref id="worldMapManager" />
+		</method>
+		<method name="setActiviDateManager">
+			<ref id="activityDateManager" />
+		</method>
+		<method name="setSqlPersistence">
+			<ref id="activityPersistence" />
+		</method>
+	</obj>
+	<!-- 添加活动开关监听 -->
+	<method name="addListener" ref="activityDateManager">
+		<ref id="allHeroActivityFight" />
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="countryCityActivityFight" />
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="contributeManager" />
+	</method>
+	<method name="addListener" ref="activityDateManager">
+		<ref id="emperorActivityFight" />
+	</method>
+	
+	<!-- 添加到时间推送管理器中 -->
+	<method name="addActivityManager" ref="activityTimerManager">
+		<ref id="allHeroActivityFight" />
+	</method>
+	<method name="addActivityManager" ref="activityTimerManager">
+		<ref id="countryCityActivityFight" />
+	</method>
+	<method name="addActivityManager" ref="activityTimerManager">
+		<ref id="contributeManager" />
+	</method>
+	<method name="addActivityManager" ref="activityTimerManager">
+		<ref id="emperorActivityFight" />
+	</method>
+	
+	<method name="setAllHeroActivityFight" ref="allHeroFightActivityAccessPort">
+		<ref id="allHeroActivityFight"/>
+	</method>
+	<method name="setCountryCityActivityFight" ref="countryCityActivityAccessPort">
+		<ref id="countryCityActivityFight"/>
+	</method>
+	<method name="setContributeActivityManager" ref="contributeAccessPort">
+		<ref id="contributeManager"/>
+	</method>
+	
+	<method name="setContManager" ref="rankManager">
+		<ref id="contributeManager" />
+	</method>
+	<method name="setEmperorActivityFight" ref="emperorActivityAccessPort">
+		<ref id="emperorActivityFight"/>
+	</method>
+	<method name="setContrManager" ref="playerLogoutHandle">
+		<ref id="contributeManager" />
+	</method>
+	<method name="setAlActivityFight" ref="playerLogoutHandle">
+		<ref id="allHeroActivityFight" />
+	</method>
+	<method name="setEmActivityFight" ref="playerLogoutHandle">
+		<ref id="emperorActivityFight" />
+	</method>
+	<method name="setCountCityActivityFight" ref="worldMapManager">
+		<ref id="countryCityActivityFight" />
+	</method>
+	
+	<!-- 加载数据 -->
+	<method name="init" ref="allHeroActivityFight"/>
+	<method name="init" ref="countryCityActivityFight"/>
+	<method name="init" ref="contributeManager"/>
+	<method name="init" ref="emperorActivityFight"/>
+	
+	
+</objects>

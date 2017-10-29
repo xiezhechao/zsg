@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+<!--
+		style=配置表中形象的名字 config=配置表名字
+		miduX miduY 控制阵型初始密度，横排和竖排的数量 speeds阵型的初始速度
+		moveType移动类型，1骑兵阵型 雁型，2弓兵阵型 线性 3步兵阵型 方阵
+		moveOffx是横向的排列距离 越小越密集
+		moveOffy是纵向的排列距离 越小越密集 对于1,2的移动类型 他表现的是三角的梯度  3类型表现的是上下随机的偏移位置
+		height="40" width="60" head="34" hand="22" center="20" 这些是描述单个兵的大小的
+		skills=特殊技能 normalSkill=普通攻击
+-->
+	<sample sid="1" className="game.player.SoldierShow" name="白耳精兵" style="baierjingbing" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100" height="30" width="30" head="34" hand="22" center="20" skills="[10]" normalSkill="1"/>
+	<sample sid="2" className="game.player.SoldierShow" name="大戟悍士" style="dajihanshi" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="1"/>
+	<sample sid="3" className="game.player.SoldierShow" name="丹阳虎贲" style="danyanghuben" miduX="6" miduY="5" scale="1.8" speeds="[4,7,10,7,4]" minspeed="7" maxspeed="10" moveType="1" moveOffx="200" moveOffy="40" height="40" width="60" head="34" hand="22" center="20" skills="[7]" normalSkill="1"/>
+	<sample sid="4" className="game.player.SoldierShow" name="弓兵" style="gongbin" miduX="6" miduY="5" scale="2" speeds="[4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="1" moveOffx="100" moveOffy="30" height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="2"/>
+	<sample sid="5" className="game.player.SoldierShow" name="虎贲甲士" style="hubenjiashi" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="6" className="game.player.SoldierShow" name="青州精卒" style="qingzhoujingzu" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="7" className="game.player.SoldierShow" name="无当飞军" style="wudangfeijun" miduX="6" miduY="5" scale="2" speeds="[4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="1" moveOffx="100" moveOffy="30" height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="2"/>
+	<sample sid="8" className="game.player.SoldierShow" name="虎卫军士" style="huweijunshi" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[7]" normalSkill="1"/>
+	<sample sid="9" className="game.player.SoldierShow" name="虎豹突骑" style="hubaotuqi" miduX="6" miduY="5" scale="1.8" speeds="[4,7,10,7,4]" minspeed="4" maxspeed="10" moveType="1" moveOffx="200" moveOffy="40" height="40" width="60" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="10" className="game.player.SoldierShow" name="元戒弩兵" style="yuanrongnubing" miduX="6" miduY="5" scale="2" speeds="[4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="1" moveOffx="100" moveOffy="30" height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="2"/>
+	<sample sid="11" className="game.player.SoldierShow" name="先登死士" style="xiandengsishi" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="12" className="game.player.SoldierShow" name="飞熊骠骑" style="feixiongbiaoqi" miduX="6" miduY="5" scale="1.8" speeds="[4,7,10,7,4]" minspeed="7" maxspeed="10" moveType="1" moveOffx="200" moveOffy="40" height="40" width="60" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="13" className="game.player.SoldierShow" name="白马义从" style="baimayicong" miduX="6" miduY="5" scale="1.8" speeds="[4,7,10,7,4]" minspeed="7" maxspeed="10" moveType="1" moveOffx="200" moveOffy="40" height="40" width="60" head="34" hand="22" center="20" skills="[7]" normalSkill="1"/>
+	<sample sid="14" className="game.player.SoldierShow" name="并州狼骑" style="bingzhoulangqi" miduX="6" miduY="5" scale="1.8" speeds="[4,7,10,7,4]" minspeed="7" maxspeed="10" moveType="1" moveOffx="200" moveOffy="40" height="40" width="60" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="15" className="game.player.SoldierShow" name="锦帆悍卒" style="jinfanhanzu" miduX="6" miduY="5" scale="2" speeds="[4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="1" moveOffx="100" moveOffy="30" height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="2"/>
+	<sample sid="16" className="game.player.SoldierShow" name="山越弓手" style="shanyuegongshou" miduX="6" miduY="5" scale="2" speeds="[4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="1" moveOffx="100" moveOffy="30" height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="2"/>
+	<sample sid="17" className="game.player.SoldierShow" name="南蛮象兵" style="nanmanxiangbing" miduX="3" miduY="2" scale="1.4" speeds="[2,2,2]" minspeed="4" maxspeed="8" moveType="2" moveOffx="100" moveOffy="150" height="50" width="180" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="18" className="game.player.SoldierShow" name="西凉铁骑" style="xiliangtieqi" miduX="6" miduY="5" scale="1.8" speeds="[4,7,10,7,4]" minspeed="7" maxspeed="10" moveType="1" moveOffx="200" moveOffy="40" height="40" width="60" head="34" hand="22" center="20" skills="[7]" normalSkill="1"/>
+	<sample sid="19" className="game.player.SoldierShow" name="藤甲蛮兵" style="tengjiamanbing" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="20" className="game.player.SoldierShow" name="陷阵重步" style="xianzhenzhongbu" miduX="7" miduY="6" scale="2.2" speeds="[4,4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="3" moveOffx="300" moveOffy="100"  height="30" width="30" head="34" hand="22" center="20" skills="[8]" normalSkill="1"/>
+	<sample sid="21" className="game.player.SoldierShow" name="解烦弩兵" style="jiefannubing" miduX="6" miduY="5" scale="2" speeds="[4,4,4,4,4]" minspeed="4" maxspeed="8" moveType="1" moveOffx="100" moveOffy="30" height="30" width="30" head="34" hand="22" center="20" skills="[11]" normalSkill="2"/>
+</objects>

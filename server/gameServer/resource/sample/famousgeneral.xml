@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <field class="game.famousGeneral.FamousGeneral" name="factory" id="famousGeneralSampleFactory" />
+   <method ref="famousGeneralSampleFactory" name="init">
+   <ref id="context" />
+   </method>
+   <!-- 
+   effbufferSid ：effect Buffer 数组 每个下标对应一个将星等级
+   militarySid： 武将SID数组
+   levels   将星等级升级数组   每个子数组中 配对应下标的武将升级条件
+    -->
+<sample class="game.famousGeneral.FamousGeneral" sid="1" name="黄天当立">
+ 	<field name="effbufferSid" declared="1">
+		<ints>100,101,102</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>5,6,7</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>15,25,45</ints>
+			<ints>15,25,45</ints>
+			<ints>15,25,45</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="2" name="西凉枭雄">
+ 	<field name="effbufferSid" declared="1">
+		<ints>103,104,105</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>8,9,10</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>20,40,60</ints>
+            <ints>20,40,60</ints>
+			<ints>20,40,60</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="3" name="勇冠三军">
+ 	<field name="effbufferSid" declared="1">
+		<ints>106,107,108</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>11,12,13</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>25,45,65</ints>
+            <ints>25,45,65</ints>
+			<ints>25,45,65</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="4" name="徐州三雄">
+ 	<field name="effbufferSid" declared="1">
+		<ints>109,110,111</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>14,15,16</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>40,90,140</ints>
+			<ints>40,90,140</ints>
+			<ints>40,90,140</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="5" name="肝胆相照">
+ 	<field name="effbufferSid" declared="1">
+		<ints>112,113,114</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>18,24</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>70,140,210</ints>
+			<ints>70,140,210</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="6" name="虎父无犬女">
+ 	<field name="effbufferSid" declared="1">
+		<ints>115,116,117</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>20,38</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>70,140,210</ints>
+			<ints>70,140,210</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="7" name="羞花闭月">
+ 	<field name="effbufferSid" declared="1">
+		<ints>118,119,120</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>21,39</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>70,140,210</ints>
+			<ints>70,140,210</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="8" name="夏侯双雄">
+ 	<field name="effbufferSid" declared="1">
+		<ints>121,122,123</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>25,41</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>70,140,210</ints>
+			<ints>70,140,210</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="100" name="张梁">
+ 	<field name="effbufferSid" declared="1">
+		<ints>500,501,502</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>5</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="101" name="张宝">
+ 	<field name="effbufferSid" declared="1">
+		<ints>503,504,505</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>6</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="102" name="张角">
+ 	<field name="effbufferSid" declared="1">
+		<ints>506,507,508</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>7</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="103" name="董卓">
+ 	<field name="effbufferSid" declared="1">
+		<ints>509,510,511,512</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>8</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30,40</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="104" name="华雄">
+ 	<field name="effbufferSid" declared="1">
+		<ints>513,514,515,516</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>9</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30,40</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="105" name="李儒">
+ 	<field name="effbufferSid" declared="1">
+		<ints>517,518,519,520</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>10</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30,40</ints>
+		</objs>
+	</field>
+ </sample>
+
+  <sample class="game.famousGeneral.FamousGeneral" sid="106" name="文丑">
+ 	<field name="effbufferSid" declared="1">
+		<ints>521,522,523,524,525</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>11</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30,40,50</ints>
+		</objs>
+	</field>
+ </sample>
+
+  <sample class="game.famousGeneral.FamousGeneral" sid="107" name="颜良">
+ 	<field name="effbufferSid" declared="1">
+		<ints>526,527,528,529,530</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>12</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30,40,50</ints>
+		</objs>
+	</field>
+ </sample>
+
+  <sample class="game.famousGeneral.FamousGeneral" sid="108" name="袁绍">
+ 	<field name="effbufferSid" declared="1">
+		<ints>531,532,533,534,535</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>13</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>10,20,30,40,50</ints>
+		</objs>
+	</field>
+ </sample>
+
+  <sample class="game.famousGeneral.FamousGeneral" sid="109" name="张辽">
+ 	<field name="effbufferSid" declared="1">
+		<ints>536,537,538,539,540</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>14</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>40,60,80,100,120</ints>
+		</objs>
+	</field>
+ </sample>
+
+  <sample class="game.famousGeneral.FamousGeneral" sid="110" name="臧霸">
+ 	<field name="effbufferSid" declared="1">
+		<ints>541,542,543,544,545</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>15</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>40,60,80,100,120</ints>
+		</objs>
+	</field>
+ </sample>
+
+   <sample class="game.famousGeneral.FamousGeneral" sid="111" name="高顺">
+ 	<field name="effbufferSid" declared="1">
+		<ints>546,547,548,549,550</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>16</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>40,60,80,100,120</ints>
+		</objs>
+	</field>
+ </sample>
+
+   <sample class="game.famousGeneral.FamousGeneral" sid="112" name="甄姬">
+ 	<field name="effbufferSid" declared="1">
+		<ints>551,552,553</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>124</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>40,90,150</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="113" name="马云禄">
+ 	<field name="effbufferSid" declared="1">
+		<ints>554,555,556</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>20</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="114" name="大乔">
+ 	<field name="effbufferSid" declared="1">
+		<ints>557,558,559</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>21</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+
+<sample class="game.famousGeneral.FamousGeneral" sid="115" name="蔡文姬">
+ 	<field name="effbufferSid" declared="1">
+		<ints>560,561,562</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>22</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="116" name="魏延">
+ 	<field name="effbufferSid" declared="1">
+		<ints>563,564,565</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>23</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="117" name="周泰">
+ 	<field name="effbufferSid" declared="1">
+		<ints>566,567,568</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>24</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="118" name="夏侯渊">
+ 	<field name="effbufferSid" declared="1">
+		<ints>569,570,571</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>25</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+
+ <sample class="game.famousGeneral.FamousGeneral" sid="119" name="黄月英">
+ 	<field name="effbufferSid" declared="1">
+		<ints>572,573,574</ints>
+	</field>
+	<field name="militarySid" declared="1">
+		<ints>26</ints>
+	</field>
+	<field name="levels" declared="1">
+		<objs class="[I">
+			<ints>60,130,200</ints>
+		</objs>
+	</field>
+ </sample>
+ </objects>

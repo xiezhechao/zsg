@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!--个人商店-->
+	<method name="addShop" ref="personalShopManager">
+		<obj class="game.shop.PersonalShop">
+			<method name="addShopProp">
+				<!--商店编号-->
+				<value type="int">1</value> 	
+				<!--商店名字-->
+			    <value type="string">个人商店</value>
+			    <!--商店显示商品数量-->
+				<value type="int">10</value>
+				<!--刷新间隔时间（秒）-->
+				<value type="int">7200</value>
+				<!--手动刷新消耗元宝数-->
+				<value type="int">50</value>
+				<!--（商品ID|出现几率）（#号分隔）-->
+				<strings separator="#">1|10#2|10#3|10#4|10#5|10#6|10#7|10#8|10#9|10#10|10#11|10#12|10#13|10#14|10#15|10#16|10</strings>
+			</method>
+		</obj>
+	</method>
+</objects>

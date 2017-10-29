@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 创建据点通讯端口 -->
+	<method name="setPort" ref="service">
+	    <value type="int">1000</value>
+	    <obj class="logServer.LogAccessPort">
+		    <method name="setLogManager"><ref id="logManager"/></method>
+	    </obj>
+    </method>
+
+</objects>

@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+ <objects>
+ <field class="game.role.Military" name="factory" id="militarySampleFactory"/>
+ <method ref="militarySampleFactory" name="init">
+ <ref id="context"/>
+ </method>
+ <!--
+ name：名称
+ color：品质 0 白色品质，1 绿色品质，2 蓝色品质，3 紫色品质，4 金色品质
+ lead：基础统帅
+ leadVariable：基础统帅成长
+ force：基础武力
+ forceVariable：基础武力成长
+ wisdom：基础智力
+ wisdomVariable：基础智力成长
+ level：等级，初始1级
+ changeTimes：转生次数
+ tacticsSid：主动战法sid
+ talentEffectSids：天赋技能sid数组int[] 见effectBuffers.xml
+ effectSids：初始被动技能sid数组int[] 见effectBuffers.xml
+ effectLevels:初始被动技能效果等级数组int[]
+ attsSid：武魂道具sid 见props.xml
+ recruitLuck:招募武将所需好感度
+ maxLuck：好感度上限
+  武将技能强度
+skillAttack 武将技能防御skillDefense;备用配置字段-->
+ <!-- 玩家武将 sid建议不要修改 -->
+<sample class="game.role.Military" sid="1" name="" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="1" forceVariable="1" wisdomVariable="1" recruitLuck="200" maxLuck="0" color="4" attsSid="0" tacticsSid="1048" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,71</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="2" name="" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="1" forceVariable="1" wisdomVariable="1" recruitLuck="200" maxLuck="0" color="4" attsSid="0" tacticsSid="1048" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,71</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="3" name="" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="1" forceVariable="1" wisdomVariable="1" recruitLuck="200" maxLuck="0" color="4" attsSid="0" tacticsSid="1048" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,71</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="4" name="" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="1" forceVariable="1" wisdomVariable="1" recruitLuck="200" maxLuck="0" color="4" attsSid="0" tacticsSid="1048" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,71</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="5" name="张梁" needNobilityLevel="0" lead="20" force="30" wisdom="10" leadVariable="1.4" forceVariable="2.1" wisdomVariable="0.7" recruitLuck="50" maxLuck="50" color="0" attsSid="0" tacticsSid="1052" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ </sample>
+ <sample class="game.role.Military" sid="6" name="张宝" needNobilityLevel="7" lead="30" force="15" wisdom="15" leadVariable="2.1" forceVariable="1.4" wisdomVariable="0.7" recruitLuck="50" maxLuck="50" color="0" attsSid="0" tacticsSid="1053" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ </sample>
+ <sample class="game.role.Military" sid="7" name="张角" needNobilityLevel="9" lead="20" force="20" wisdom="35" leadVariable="1.4" forceVariable="1.4" wisdomVariable="1.4" recruitLuck="50" maxLuck="50" color="1" attsSid="0" tacticsSid="1054" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ </sample>
+ <sample class="game.role.Military" sid="8" name="董卓" needNobilityLevel="16" lead="24" force="42" wisdom="24" leadVariable="1.6" forceVariable="2.4" wisdomVariable="0.8" recruitLuck="1000" maxLuck="1000" color="1" attsSid="0" tacticsSid="1055" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>43</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="9" name="华雄" needNobilityLevel="18" lead="36" force="36" wisdom="18" leadVariable="2.4" forceVariable="1.6" wisdomVariable="0.8" recruitLuck="1500" maxLuck="1500" color="1" attsSid="0" tacticsSid="1056" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>46</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="10" name="李儒" needNobilityLevel="20" lead="20" force="20" wisdom="50" leadVariable="1.6" forceVariable="0.8" wisdomVariable="2.4" recruitLuck="1500" maxLuck="1500" color="1" attsSid="0" tacticsSid="1057" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>49</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="11" name="文丑" needNobilityLevel="24" lead="32" force="56" wisdom="32" leadVariable="1.8" forceVariable="2.7" wisdomVariable="0.9" recruitLuck="2500" maxLuck="2500" color="2" attsSid="0" tacticsSid="1058" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>44</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="12" name="颜良" needNobilityLevel="27" lead="48" force="48" wisdom="24" leadVariable="2.7" forceVariable="1.8" wisdomVariable="0.9" recruitLuck="3000" maxLuck="3000" color="2" attsSid="0" tacticsSid="1059" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>47</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="13" name="袁绍" needNobilityLevel="30" lead="36" force="40" wisdom="44" leadVariable="0.9" forceVariable="1.8" wisdomVariable="1.8" recruitLuck="5000" maxLuck="5000" color="2" attsSid="0" tacticsSid="1063" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>50</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="14" name="张辽" needNobilityLevel="35" lead="40" force="70" wisdom="40" leadVariable="2" forceVariable="3" wisdomVariable="1" recruitLuck="10000" maxLuck="10000" color="3" attsSid="0" tacticsSid="1060" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>44,59</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="15" name="臧霸" needNobilityLevel="40" lead="60" force="60" wisdom="30" leadVariable="3" forceVariable="2" wisdomVariable="1" recruitLuck="10000" maxLuck="10000" color="3" attsSid="0" tacticsSid="1061" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>47,57</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="16" name="高顺" needNobilityLevel="45" lead="45" force="50" wisdom="55" leadVariable="1" forceVariable="2" wisdomVariable="2" recruitLuck="10000" maxLuck="10000" color="3" attsSid="0" tacticsSid="1062" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>50,56</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="17" name="祝融" needNobilityLevel="30" lead="60" force="60" wisdom="30" leadVariable="3" forceVariable="3" wisdomVariable="1" recruitLuck="5000" maxLuck="5000" color="3" attsSid="0" tacticsSid="1066" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>47,60</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="18" name="孙策" needNobilityLevel="30" lead="50" force="75" wisdom="35" leadVariable="2.5" forceVariable="3.5" wisdomVariable="1" recruitLuck="8000" maxLuck="8000" color="3" attsSid="0" tacticsSid="1064" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>44,60</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="19" name="徐庶" needNobilityLevel="50" lead="45" force="30" wisdom="75" leadVariable="2.5" forceVariable="2" wisdomVariable="3.5" recruitLuck="15000" maxLuck="15000" color="3" attsSid="0" tacticsSid="1065" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>50,58</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="20" name="马云禄" needNobilityLevel="54" lead="60" force="60" wisdom="30" leadVariable="3.5" forceVariable="3.5" wisdomVariable="1" recruitLuck="20000" maxLuck="20000" color="3" attsSid="0" tacticsSid="1067" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>44,63</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="21" name="大乔" needNobilityLevel="58" lead="60" force="30" wisdom="60" leadVariable="3" forceVariable="1.5" wisdomVariable="3.5" recruitLuck="20000" maxLuck="20000" color="3" attsSid="0" tacticsSid="1003" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>47,58</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="22" name="蔡文姬" needNobilityLevel="62" lead="45" force="35" wisdom="70" leadVariable="2.5" forceVariable="2" wisdomVariable="3.5" recruitLuck="20000" maxLuck="20000" color="3" attsSid="0" tacticsSid="1068" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>50,58</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="23" name="魏延" needNobilityLevel="66" lead="60" force="80" wisdom="30" leadVariable="4.5" forceVariable="4.5" wisdomVariable="1" recruitLuck="25000" maxLuck="25000" color="3" attsSid="0" tacticsSid="1069" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>45,60</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="24" name="周泰" needNobilityLevel="70" lead="50" force="90" wisdom="30" leadVariable="4" forceVariable="5" wisdomVariable="1" recruitLuck="25000" maxLuck="25000" color="3" attsSid="0" tacticsSid="1070" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,63</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="25" name="夏侯渊" needNobilityLevel="74" lead="65" force="60" wisdom="45" leadVariable="3" forceVariable="3.5" wisdomVariable="2.5" recruitLuck="25000" maxLuck="25000" color="3" attsSid="0" tacticsSid="1071" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>51,63</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="26" name="黄月英" needNobilityLevel="78" lead="60" force="40" wisdom="90" leadVariable="4" forceVariable="2" wisdomVariable="4" recruitLuck="30000" maxLuck="30000" color="4" attsSid="0" tacticsSid="1072" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>66,62</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="27" name="黄盖" needNobilityLevel="82" lead="60" force="80" wisdom="50" leadVariable="3" forceVariable="4" wisdomVariable="3" recruitLuck="30000" maxLuck="30000" color="3" attsSid="0" tacticsSid="1075" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>61,64</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="28" name="貂蝉" needNobilityLevel="86" lead="55" force="75" wisdom="60" leadVariable="3" forceVariable="3.5" wisdomVariable="3.5" recruitLuck="30000" maxLuck="30000" color="4" attsSid="0" tacticsSid="1076" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>54,62</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="29" name="庞统" needNobilityLevel="90" lead="60" force="40" wisdom="110" leadVariable="4" forceVariable="2" wisdomVariable="5" recruitLuck="40000" maxLuck="40000" color="4" attsSid="0" tacticsSid="1051" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>66,68</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="30" name="孙坚" needNobilityLevel="94" lead="100" force="80" wisdom="30" leadVariable="4" forceVariable="5" wisdomVariable="2" recruitLuck="40000" maxLuck="40000" color="3" attsSid="0" tacticsSid="1013" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="31" name="姜维" needNobilityLevel="98" lead="45" force="30" wisdom="75" leadVariable="2.5" forceVariable="2" wisdomVariable="3.5" recruitLuck="50000" maxLuck="50000" color="3" attsSid="0" tacticsSid="1020" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>66,52</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="32" name="华佗" needNobilityLevel="102" lead="70" force="40" wisdom="100" leadVariable="3.5" forceVariable="3" wisdomVariable="4.5" recruitLuck="50000" maxLuck="50000" color="3" attsSid="0" tacticsSid="1017" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,53</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="33" name="孙尚香" needNobilityLevel="106" lead="80" force="110" wisdom="50" leadVariable="5" forceVariable="5" wisdomVariable="1" recruitLuck="50000" maxLuck="50000" color="4" attsSid="0" tacticsSid="1024" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>51,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="34" name="刘备" needNobilityLevel="110" lead="120" force="80" wisdom="70" leadVariable="6" forceVariable="3" wisdomVariable="3" recruitLuck="50000" maxLuck="50000" color="4" attsSid="0" tacticsSid="1010" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>69,73</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="35" name="红将·典韦" needNobilityLevel="114" lead="90" force="130" wisdom="30" leadVariable="4.5" forceVariable="6.5" wisdomVariable="1.5" recruitLuck="60000" maxLuck="60000" color="5" attsSid="0" tacticsSid="1029" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="36" name="红将·赵云" needNobilityLevel="118" lead="90" force="120" wisdom="60" leadVariable="4" forceVariable="6" wisdomVariable="3" recruitLuck="60000" maxLuck="60000" color="5" attsSid="0" tacticsSid="1026" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="37" name="红将·孙权" needNobilityLevel="120" lead="90" force="90" wisdom="90" leadVariable="4.5" forceVariable="4" wisdomVariable="4.5" recruitLuck="60000" maxLuck="60000" color="5" attsSid="0" tacticsSid="1012" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>70,71</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="38" name="关银屏" needNobilityLevel="56" lead="80" force="60" wisdom="30" leadVariable="4" forceVariable="3.5" wisdomVariable="1.5" recruitLuck="25000" maxLuck="25000" color="3" attsSid="0" tacticsSid="1073" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>45,60</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="39" name="小乔" needNobilityLevel="60" lead="50" force="40" wisdom="80" leadVariable="3" forceVariable="2" wisdomVariable="4" recruitLuck="25000" maxLuck="25000" color="4" attsSid="0" tacticsSid="1074" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,58</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="40" name="马超" needNobilityLevel="68" lead="85" force="115" wisdom="40" leadVariable="4" forceVariable="6" wisdomVariable="1" recruitLuck="25000" maxLuck="25000" color="4" attsSid="0" tacticsSid="1006" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>45,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="41" name="夏侯惇" needNobilityLevel="64" lead="90" force="100" wisdom="40" leadVariable="4.5" forceVariable="5.5" wisdomVariable="1" recruitLuck="30000" maxLuck="30000" color="4" attsSid="0" tacticsSid="1018" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>45,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="42" name="黄忠" needNobilityLevel="72" lead="85" force="100" wisdom="60" leadVariable="5" forceVariable="5" wisdomVariable="2" recruitLuck="30000" maxLuck="30000" color="4" attsSid="0" tacticsSid="1025" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>51,52</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="43" name="许褚" needNobilityLevel="76" lead="80" force="120" wisdom="30" leadVariable="4" forceVariable="6" wisdomVariable="1" recruitLuck="30000" maxLuck="30000" color="4" attsSid="0" tacticsSid="1002" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="44" name="吕布" needNobilityLevel="92" lead="70" force="135" wisdom="30" leadVariable="4" forceVariable="7" wisdomVariable="1" recruitLuck="70000" maxLuck="70000" color="4" attsSid="0" tacticsSid="1016" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>67,72</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="45" name="贾诩" needNobilityLevel="84" lead="75" force="40" wisdom="105" leadVariable="4" forceVariable="2" wisdomVariable="5" recruitLuck="40000" maxLuck="40000" color="3" attsSid="0" tacticsSid="1027" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>66,68</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="46" name="孟获" needNobilityLevel="80" lead="75" force="105" wisdom="25" leadVariable="3.5" forceVariable="5" wisdomVariable="1" recruitLuck="50000" maxLuck="50000" color="3" attsSid="0" tacticsSid="1021" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>61,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="47" name="张飞" needNobilityLevel="88" lead="95" force="130" wisdom="35" leadVariable="4.5" forceVariable="6.5" wisdomVariable="1" recruitLuck="70000" maxLuck="70000" color="4" attsSid="0" tacticsSid="1050" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,55</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="48" name="郭嘉" needNobilityLevel="96" lead="80" force="40" wisdom="125" leadVariable="4" forceVariable="2" wisdomVariable="6" recruitLuck="80000" maxLuck="80000" color="4" attsSid="0" tacticsSid="1028" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>70,68</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="49" name="关羽" needNobilityLevel="100" lead="110" force="120" wisdom="75" leadVariable="6" forceVariable="6" wisdomVariable="2.5" recruitLuck="90000" maxLuck="90000" color="4" attsSid="0" tacticsSid="1049" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>69,52</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="50" name="曹操" needNobilityLevel="104" lead="110" force="100" wisdom="110" leadVariable="6" forceVariable="4.5" wisdomVariable="5" recruitLuck="100000" maxLuck="100000" color="4" attsSid="0" tacticsSid="1011" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>69,73</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="51" name="神仙·左慈" needNobilityLevel="108" lead="120" force="120" wisdom="120" leadVariable="6.5" forceVariable="6.5" wisdomVariable="6.5" recruitLuck="100000" maxLuck="100000" color="5" attsSid="0" tacticsSid="1065" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>45,74</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="52" name="神仙·于吉" needNobilityLevel="112" lead="120" force="120" wisdom="120" leadVariable="6.5" forceVariable="6.5" wisdomVariable="6.5" recruitLuck="100000" maxLuck="100000" color="5" attsSid="0" tacticsSid="1014" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,74</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="53" name="神仙·南华" needNobilityLevel="116" lead="120" force="120" wisdom="120" leadVariable="6.5" forceVariable="6.5" wisdomVariable="6.5" recruitLuck="100000" maxLuck="100000" color="5" attsSid="0" tacticsSid="1023" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>51,74</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="124" name="甄姬" needNobilityLevel="50" lead="60" force="40" wisdom="80" leadVariable="1" forceVariable="0.5" wisdomVariable="2.5" recruitLuck="5000" maxLuck="5000" color="3" attsSid="510" tacticsSid="1001" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>54,62</ints>
+	</field>
+ </sample>
+ <sample class="game.role.Military" sid="54" name="魔王·吕布" needNobilityLevel="100" lead="150" force="150" wisdom="150" leadVariable="8" forceVariable="8" wisdomVariable="8" recruitLuck="150000" maxLuck="150000" color="5" attsSid="0" tacticsSid="1016" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>45,74,105</ints>
+	</field>
+ </sample> 
+  <sample class="game.role.Military" sid="55" name="魔王·关羽" needNobilityLevel="100" lead="150" force="150" wisdom="150" leadVariable="8" forceVariable="8" wisdomVariable="8" recruitLuck="150000" maxLuck="150000" color="5" attsSid="0" tacticsSid="1010" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>48,74,114</ints>
+	</field>
+ </sample>
+  <sample class="game.role.Military" sid="56" name="魔王·貂蝉" needNobilityLevel="100" lead="150" force="150" wisdom="150" leadVariable="8" forceVariable="8" wisdomVariable="8" recruitLuck="150000" maxLuck="150000" color="5" attsSid="0" tacticsSid="1008" studySkillLen="0" baseLeadSol="300" isNpc="0" >
+ 	<field name="talentEffectSids" declared="1">
+		<ints>51,74,120</ints>
+	</field>
+ </sample>
+ 
+ <sample class="game.role.Military" sid="1000" name="山贼喽啰" needNobilityLevel="0" lead="5" force="5" wisdom="5" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1001" name="山贼头目" needNobilityLevel="0" lead="5" force="5" wisdom="5" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5" basePower="5" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1002" name="山贼大当家" needNobilityLevel="0" lead="10" force="10" wisdom="10" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1003" name="波才" needNobilityLevel="0" lead="15" force="15" wisdom="15" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1004" name="马元义" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1005" name="邓茂" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1006" name="程志远" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1007" name="管亥" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1008" name="张梁" needNobilityLevel="0" lead="25" force="25" wisdom="25" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1009" name="张宝" needNobilityLevel="0" lead="25" force="25" wisdom="25" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1010" name="张角" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1011" name="赵忠" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1012" name="张恭" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1013" name="左丰" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1014" name="夏晖" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1015" name="赵旷" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1016" name="郭胜" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1017" name="宋典" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1018" name="何苗" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1019" name="赛硕" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1020" name="张让" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="10" basePower="10" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1021" name="董卓军部将" needNobilityLevel="0" lead="20" force="20" wisdom="20" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="50" basePower="50" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1022" name="胡珍" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1052" studySkillLen="0" baseAttack="100" basePower="100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1023" name="李肃" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="150" basePower="150" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1024" name="赵忻" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="200" basePower="200" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1025" name="华雄" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="250" basePower="250" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1026" name="张济" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="300" basePower="300" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1027" name="樊稠" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="350" basePower="350" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1028" name="郭邑" needNobilityLevel="0" lead="30" force="30" wisdom="30" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="400" basePower="400" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1029" name="吕布" needNobilityLevel="0" lead="40" force="40" wisdom="40" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="450" basePower="450" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1030" name="李儒" needNobilityLevel="0" lead="40" force="40" wisdom="40" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="500" basePower="500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1031" name="董卓" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="550" basePower="550" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1032" name="公孙军部将" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="600" basePower="600" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1033" name="耿武" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="650" basePower="650" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1034" name="严纲" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="700" basePower="700" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1035" name="田凯" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="750" basePower="750" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1036" name="田豫" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="800" basePower="800" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1037" name="关靖" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="850" basePower="850" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1038" name="公孙越" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="900" basePower="900" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1039" name="公孙续" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="950" basePower="950" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1040" name="公孙瓒" needNobilityLevel="0" lead="80" force="80" wisdom="80" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1041" name="曹军部将" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1050" basePower="1050" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1042" name="于禁" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1100" basePower="1100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1043" name="乐进" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1150" basePower="1150" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1044" name="朱灵" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1200" basePower="1200" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1045" name="路昭" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1250" basePower="1250" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1046" name="夏侯惇" needNobilityLevel="0" lead="80" force="80" wisdom="80" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="2100" basePower="2100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1047" name="夏侯渊" needNobilityLevel="0" lead="90" force="90" wisdom="90" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="2100" basePower="2100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1048" name="刘繇军部将" needNobilityLevel="0" lead="80" force="80" wisdom="80" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="2100" basePower="2100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1049" name="陆康" needNobilityLevel="0" lead="90" force="90" wisdom="90" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="2800" basePower="2800" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1050" name="张英" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="3150" basePower="3150" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1051" name="樊能" needNobilityLevel="0" lead="110" force="110" wisdom="110" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="2975" basePower="2975" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1052" name="于糜" needNobilityLevel="0" lead="120" force="120" wisdom="120" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="3325" basePower="3325" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1053" name="太史慈" needNobilityLevel="0" lead="130" force="130" wisdom="130" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="3500" basePower="3500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1054" name="许贡" needNobilityLevel="0" lead="140" force="140" wisdom="140" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="3325" basePower="3325" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1055" name="刘繇" needNobilityLevel="0" lead="150" force="150" wisdom="150" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="3675" basePower="3675" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1056" name="袁术军部将" needNobilityLevel="0" lead="120" force="120" wisdom="120" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="3500" basePower="3500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1057" name="杨奉" needNobilityLevel="0" lead="130" force="130" wisdom="130" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="3500" basePower="3500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1058" name="韩禛" needNobilityLevel="0" lead="140" force="140" wisdom="140" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="3600" basePower="3600" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1059" name="梁刚" needNobilityLevel="0" lead="150" force="150" wisdom="150" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="4025" basePower="4025" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1060" name="纪灵" needNobilityLevel="0" lead="160" force="160" wisdom="160" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="4200" basePower="4200" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1061" name="袁术" needNobilityLevel="0" lead="170" force="170" wisdom="170" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="4375" basePower="4375" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1062" name="吕布军部将" needNobilityLevel="0" lead="170" force="170" wisdom="170" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="4400" basePower="4400" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1063" name="曹性" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="4550" basePower="4550" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1064" name="郝萌" needNobilityLevel="0" lead="210" force="210" wisdom="210" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="4550" basePower="4550" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1065" name="高顺" needNobilityLevel="0" lead="220" force="220" wisdom="220" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="4900" basePower="4900" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1066" name="臧霸" needNobilityLevel="0" lead="230" force="230" wisdom="230" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="4725" basePower="4725" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1067" name="侯成" needNobilityLevel="0" lead="240" force="240" wisdom="240" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="4725" basePower="4725" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1068" name="张辽" needNobilityLevel="0" lead="250" force="250" wisdom="250" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="4900" basePower="4900" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1069" name="陈宫" needNobilityLevel="0" lead="260" force="260" wisdom="260" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="5075" basePower="5075" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1070" name="貂蝉" needNobilityLevel="0" lead="270" force="270" wisdom="270" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="5075" basePower="5075" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1071" name="吕布" needNobilityLevel="0" lead="280" force="280" wisdom="280" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="5075" basePower="5075" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1072" name="袁绍军部将" needNobilityLevel="0" lead="280" force="280" wisdom="280" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5100" basePower="5100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1073" name="郭图" needNobilityLevel="0" lead="300" force="300" wisdom="300" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="5250" basePower="5250" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1074" name="荀慎" needNobilityLevel="0" lead="300" force="300" wisdom="300" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="5250" basePower="5250" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1075" name="逢纪" needNobilityLevel="0" lead="300" force="300" wisdom="300" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="5250" basePower="5250" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1076" name="蒋义渠" needNobilityLevel="0" lead="310" force="310" wisdom="310" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="5425" basePower="5425" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1077" name="蒋奇" needNobilityLevel="0" lead="310" force="310" wisdom="310" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="5425" basePower="5425" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1078" name="韩猛" needNobilityLevel="0" lead="310" force="310" wisdom="310" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="5425" basePower="5425" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1079" name="张颌" needNobilityLevel="0" lead="320" force="320" wisdom="320" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="5600" basePower="5600" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1080" name="高览" needNobilityLevel="0" lead="320" force="320" wisdom="320" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="5600" basePower="5600" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1081" name="颜良" needNobilityLevel="0" lead="330" force="330" wisdom="330" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="5775" basePower="5775" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1082" name="文丑" needNobilityLevel="0" lead="330" force="330" wisdom="330" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="5775" basePower="5775" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1083" name="田丰" needNobilityLevel="0" lead="340" force="340" wisdom="340" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="5950" basePower="5950" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1084" name="审配" needNobilityLevel="0" lead="340" force="340" wisdom="340" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="5950" basePower="5950" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1085" name="袁绍" needNobilityLevel="0" lead="340" force="340" wisdom="340" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="5950" basePower="5950" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1086" name="守关部将" needNobilityLevel="0" lead="350" force="350" wisdom="350" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="6125" basePower="6125" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1087" name="孔秀" needNobilityLevel="0" lead="360" force="360" wisdom="360" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="6300" basePower="6300" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1088" name="孟坦" needNobilityLevel="0" lead="370" force="370" wisdom="370" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="6475" basePower="6475" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1089" name="韩福" needNobilityLevel="0" lead="380" force="380" wisdom="380" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="6650" basePower="6650" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1090" name="卞喜" needNobilityLevel="0" lead="390" force="390" wisdom="390" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="6825" basePower="6825" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1091" name="王植" needNobilityLevel="0" lead="430" force="430" wisdom="430" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="7525" basePower="7525" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1092" name="秦琪" needNobilityLevel="0" lead="440" force="440" wisdom="440" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="7700" basePower="7700" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1093" name="夏侯惇" needNobilityLevel="0" lead="450" force="450" wisdom="450" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="7875" basePower="7875" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1094" name="蔡阳" needNobilityLevel="0" lead="400" force="400" wisdom="400" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1095" name="李典" needNobilityLevel="0" lead="460" force="460" wisdom="460" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="8050" basePower="8050" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1096" name="于禁" needNobilityLevel="0" lead="470" force="470" wisdom="470" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="8225" basePower="8225" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1097" name="乐进" needNobilityLevel="0" lead="480" force="480" wisdom="480" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="8400" basePower="8400" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1098" name="张颌" needNobilityLevel="0" lead="490" force="490" wisdom="490" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="8575" basePower="8575" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1099" name="高览" needNobilityLevel="0" lead="500" force="500" wisdom="500" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="8750" basePower="8750" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1100" name="侯成" needNobilityLevel="0" lead="510" force="510" wisdom="510" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="8925" basePower="8925" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1101" name="许褚" needNobilityLevel="0" lead="510" force="510" wisdom="510" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="9000" basePower="9000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1102" name="张辽" needNobilityLevel="0" lead="520" force="520" wisdom="520" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="9100" basePower="9100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1103" name="徐晃" needNobilityLevel="0" lead="530" force="530" wisdom="530" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="9275" basePower="9275" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1104" name="文聘" needNobilityLevel="0" lead="540" force="540" wisdom="540" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="9450" basePower="9450" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1105" name="夏侯惇" needNobilityLevel="0" lead="550" force="550" wisdom="550" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="9625" basePower="9625" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1106" name="夏侯渊" needNobilityLevel="0" lead="560" force="560" wisdom="560" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="9800" basePower="9800" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1107" name="夏侯恩" needNobilityLevel="0" lead="570" force="570" wisdom="570" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="9975" basePower="9975" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1108" name="曹仁" needNobilityLevel="0" lead="580" force="580" wisdom="580" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="10150" basePower="10150" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1109" name="曹洪" needNobilityLevel="0" lead="590" force="590" wisdom="590" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="10325" basePower="10325" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1110" name="曹操" needNobilityLevel="0" lead="600" force="600" wisdom="600" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="10500" basePower="10500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1111" name="郭嘉" needNobilityLevel="0" lead="80" force="80" wisdom="80" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="2000" basePower="2000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1112" name="李典" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="1800" basePower="1800" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1113" name="孔融" needNobilityLevel="0" lead="130" force="130" wisdom="130" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="2005" studySkillLen="0" baseAttack="3300" basePower="3300" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1114" name="张勋" needNobilityLevel="0" lead="140" force="140" wisdom="140" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="3600" basePower="3600" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1115" name="雷薄" needNobilityLevel="0" lead="150" force="150" wisdom="150" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1031" studySkillLen="0" baseAttack="4025" basePower="4025" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1116" name="刘勋" needNobilityLevel="0" lead="160" force="160" wisdom="160" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1032" studySkillLen="0" baseAttack="4200" basePower="4200" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1117" name="陈纪" needNobilityLevel="0" lead="170" force="170" wisdom="170" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="1033" studySkillLen="0" baseAttack="4375" basePower="4375" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="1118" name="曹军部将" needNobilityLevel="0" lead="400" force="400" wisdom="400" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="2000" maxLuck="2000" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2000" name="土匪头目" needNobilityLevel="0" lead="10" force="10" wisdom="10" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="500" basePower="500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2001" name="西凉守将" needNobilityLevel="0" lead="120" force="120" wisdom="120" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2002" name="天水守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2003" name="陇西守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2004" name="永安守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2005" name="成都守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2006" name="梓潼守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2007" name="武阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2008" name="江州守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2009" name="巴郡守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2010" name="云南守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2011" name="答郎甸守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2012" name="建宁守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2013" name="涪陵守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2014" name="石城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2015" name="潼关守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2016" name="汉中守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2017" name="剑阁守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2018" name="五丈原守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2019" name="长安守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2020" name="威武守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2021" name="街亭守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2022" name="咸阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2023" name="函谷关守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2024" name="汝阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2025" name="定军山守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2026" name="斜谷守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2027" name="上庸守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2028" name="晋阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2029" name="邺城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2030" name="虎牢关守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2031" name="平原守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2032" name="南皮守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2033" name="洛阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2034" name="白马守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2035" name="邯郸守军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2036" name="蓟城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2037" name="荥阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2038" name="平丘守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2039" name="东郡守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2040" name="匪军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2041" name="北平守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2042" name="北海守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2043" name="陈留守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2044" name="泗水守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2045" name="新野守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2046" name="许昌守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2047" name="宛城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2048" name="汝南守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2049" name="汉阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2050" name="樊城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2051" name="襄阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2052" name="江陵守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2053" name="麦城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2054" name="长坂坡守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2055" name="宜城守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2056" name="采桑守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2057" name="江夏守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2058" name="华容守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2059" name="三江口守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2060" name="赤壁守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2061" name="巫峡关守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2062" name="白帝守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2063" name="汉寿守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2064" name="夷陵守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2065" name="武陵守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2066" name="零陵守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2067" name="长沙守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2068" name="衡阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2069" name="桂阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2070" name="浔阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2071" name="建昌守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2072" name="武昌守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2073" name="丹阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2074" name="鄱阳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2075" name="曲阿守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2076" name="庐江守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2077" name="九江守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2078" name="汉津守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2079" name="湖口守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2080" name="建业守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2081" name="广陵守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2082" name="会稽守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2083" name="吴郡守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2084" name="南昌守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2085" name="建安守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2086" name="江都守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2087" name="濡须坞守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2088" name="合肥守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2089" name="寿春守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2090" name="下邳守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2091" name="徐州守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2092" name="临淄守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2093" name="官渡守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1000" basePower="1000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2094" name="东海守将" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="2100" basePower="2100" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2095" name="远征军" needNobilityLevel="0" lead="150" force="150" wisdom="150" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="2500" basePower="2500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2096" name="精英远征军" needNobilityLevel="0" lead="300" force="300" wisdom="300" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="4000" basePower="4000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="2097" name="禁卫军" needNobilityLevel="0" lead="500" force="500" wisdom="500" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1075" studySkillLen="0" baseAttack="8000" basePower="8000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="3000" name="吕布" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="5000" basePower="0" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="3001" name="貂蝉" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1004" studySkillLen="0" baseAttack="5000" basePower="0" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="3002" name="祝融" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1009" studySkillLen="0" baseAttack="5000" basePower="0" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="3003" name="关羽" needNobilityLevel="0" lead="2000" force="5000" wisdom="2000" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1049" studySkillLen="0" baseAttack="10000" basePower="500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="3004" name="张飞" needNobilityLevel="0" lead="2000" force="5000" wisdom="2000" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1050" studySkillLen="0" baseAttack="10000" basePower="500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="3005" name="孙尚香" needNobilityLevel="0" lead="2000" force="5000" wisdom="2000" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1024" studySkillLen="0" baseAttack="10000" basePower="500" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4001" name="蛮族" needNobilityLevel="0" lead="50" force="50" wisdom="50" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="20000" basePower="10000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4002" name="蛮族" needNobilityLevel="0" lead="60" force="60" wisdom="60" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="15000" basePower="6000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4003" name="蛮族" needNobilityLevel="0" lead="70" force="70" wisdom="70" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="20000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4004" name="蛮族" needNobilityLevel="0" lead="80" force="80" wisdom="80" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="25000" basePower="8000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4005" name="蛮族" needNobilityLevel="0" lead="90" force="90" wisdom="90" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="30000" basePower="9000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4006" name="蛮族" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="35000" basePower="10000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4007" name="蛮族" needNobilityLevel="0" lead="110" force="110" wisdom="110" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="40000" basePower="11000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4008" name="蛮族" needNobilityLevel="0" lead="120" force="120" wisdom="120" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="45000" basePower="12000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4009" name="蛮族" needNobilityLevel="0" lead="130" force="130" wisdom="130" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="50000" basePower="13000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4010" name="蛮族" needNobilityLevel="0" lead="140" force="140" wisdom="140" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="55000" basePower="14000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4011" name="蛮族" needNobilityLevel="0" lead="150" force="150" wisdom="150" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="60000" basePower="15000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4012" name="蛮族" needNobilityLevel="0" lead="160" force="160" wisdom="160" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="65000" basePower="16000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4013" name="蛮族" needNobilityLevel="0" lead="170" force="170" wisdom="170" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="70000" basePower="17000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4014" name="蛮族" needNobilityLevel="0" lead="180" force="180" wisdom="180" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="75000" basePower="18000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4015" name="蛮族" needNobilityLevel="0" lead="190" force="190" wisdom="190" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="80000" basePower="19000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4016" name="蛮族" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="85000" basePower="20000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4017" name="蛮族" needNobilityLevel="0" lead="210" force="210" wisdom="210" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="90000" basePower="21000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4018" name="蛮族" needNobilityLevel="0" lead="220" force="220" wisdom="220" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="95000" basePower="22000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4019" name="蛮族" needNobilityLevel="0" lead="230" force="230" wisdom="230" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="100000" basePower="23000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4020" name="蛮族" needNobilityLevel="0" lead="240" force="240" wisdom="240" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="105000" basePower="24000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4100" name="黄巾军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="2001" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4101" name="黄巾军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="2002" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4102" name="黄巾军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4103" name="黄巾军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4104" name="黄巾军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4105" name="黄巾军" needNobilityLevel="0" lead="100" force="100" wisdom="100" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4106" name="黄巾头目" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="2003" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4107" name="黄巾头目" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="2004" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4108" name="黄巾头目" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4109" name="黄巾头目" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4110" name="黄巾头目" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4111" name="黄巾头目" needNobilityLevel="0" lead="400" force="400" wisdom="400" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4112" name="黄巾军" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5000" basePower="5000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4113" name="黄巾头目" needNobilityLevel="0" lead="220" force="220" wisdom="220" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4114" name="黄巾军" needNobilityLevel="0" lead="120" force="120" wisdom="120" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5000" basePower="5000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4115" name="黄巾头目" needNobilityLevel="0" lead="240" force="240" wisdom="240" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4116" name="黄巾军" needNobilityLevel="0" lead="130" force="130" wisdom="130" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5000" basePower="5000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4117" name="黄巾头目" needNobilityLevel="0" lead="260" force="260" wisdom="260" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4118" name="黄巾军" needNobilityLevel="0" lead="140" force="140" wisdom="140" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5000" basePower="5000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4119" name="黄巾头目" needNobilityLevel="0" lead="280" force="280" wisdom="280" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4120" name="黄巾军" needNobilityLevel="0" lead="150" force="150" wisdom="150" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5000" basePower="5000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4121" name="黄巾头目" needNobilityLevel="0" lead="300" force="300" wisdom="300" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4122" name="黄巾军" needNobilityLevel="0" lead="160" force="160" wisdom="160" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="5000" basePower="5000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4123" name="黄巾头目" needNobilityLevel="0" lead="320" force="320" wisdom="320" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="7000" basePower="7000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4124" name="黄巾军" needNobilityLevel="0" lead="170" force="170" wisdom="170" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="65000" basePower="65000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4125" name="黄巾头目" needNobilityLevel="0" lead="340" force="340" wisdom="340" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="130000" basePower="130000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4126" name="黄巾军" needNobilityLevel="0" lead="180" force="180" wisdom="180" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="70000" basePower="70000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4127" name="黄巾头目" needNobilityLevel="0" lead="360" force="360" wisdom="360" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="140000" basePower="140000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4128" name="黄巾军" needNobilityLevel="0" lead="190" force="190" wisdom="190" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="75000" basePower="75000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4129" name="黄巾头目" needNobilityLevel="0" lead="380" force="380" wisdom="380" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="150000" basePower="150000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4130" name="黄巾军" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="80000" basePower="80000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4131" name="黄巾头目" needNobilityLevel="0" lead="400" force="400" wisdom="400" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="160000" basePower="160000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4132" name="黄巾军" needNobilityLevel="0" lead="210" force="210" wisdom="210" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="85000" basePower="85000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4133" name="黄巾头目" needNobilityLevel="0" lead="420" force="420" wisdom="420" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="170000" basePower="170000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4134" name="黄巾军" needNobilityLevel="0" lead="220" force="220" wisdom="220" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="90000" basePower="90000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4135" name="黄巾头目" needNobilityLevel="0" lead="440" force="440" wisdom="440" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="180000" basePower="180000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4136" name="黄巾军" needNobilityLevel="0" lead="230" force="230" wisdom="230" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="95000" basePower="95000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4137" name="黄巾头目" needNobilityLevel="0" lead="460" force="460" wisdom="460" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="190000" basePower="190000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4138" name="黄巾军" needNobilityLevel="0" lead="240" force="240" wisdom="240" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="100000" basePower="100000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="4139" name="黄巾头目" needNobilityLevel="0" lead="480" force="480" wisdom="480" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="0" studySkillLen="0" baseAttack="200000" basePower="200000" isNpc="1" >
+ </sample>
+ <sample class="game.role.Military" sid="5000" name="朝贡护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="2003" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+  <sample class="game.role.Military" sid="6000" name="神仙护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+  <sample class="game.role.Military" sid="6001" name="神仙护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+  <sample class="game.role.Military" sid="6002" name="神仙护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+  <sample class="game.role.Military" sid="6003" name="魔王护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+  <sample class="game.role.Military" sid="6004" name="魔王护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+  <sample class="game.role.Military" sid="6005" name="魔王护卫" needNobilityLevel="0" lead="200" force="200" wisdom="200" leadVariable="0" forceVariable="0" wisdomVariable="0" recruitLuck="200" maxLuck="200" color="1" attsSid="0" tacticsSid="1016" studySkillLen="0" baseAttack="1" basePower="1" isNpc="1" >
+ </sample>
+ </objects>

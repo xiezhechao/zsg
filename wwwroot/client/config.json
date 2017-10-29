@@ -1,0 +1,10 @@
+﻿{
+"resurl":"http://127.0.0.1/webgames/zsg/wwwroot/client/",
+"isDebug":"false",
+"ip":"127.0.0.1",
+"urlport":"8101",
+"tcpport":"8100",
+"showGuide":"true",
+"plantID":"1",
+"serverID":"1"
+}

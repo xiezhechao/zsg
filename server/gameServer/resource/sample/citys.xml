@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+   <objects>
+   <field class="game.country.city.City" name="factory" id="citySampleFactory" />
+   <method ref="citySampleFactory" name="init">
+   <ref id="context" />
+   </method>
+   <!-- 领地中的城市 -->
+   <!-- 
+   officialSid:官府sid(只有主城有该属性) 
+   needLevel:开启等级(需要的爵位等级)officialLevel需求的官府等级 
+   buildAreaArr:城市中的建筑区域
+    -->
+<sample class="game.country.city.MainCity" sid="1" name="主城" officialSid="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>11,2,3,4,5,6,7,8,9,10,1</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.PartCity" sid="2" name="封邑1" needLevel="20" officialLevel="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>21,22,23,24</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.PartCity" sid="3" name="封邑2" needLevel="30" officialLevel="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>31,32,33,34</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.PartCity" sid="4" name="封邑3" needLevel="40" officialLevel="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>41,42,43,44</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.PartCity" sid="5" name="封邑4" needLevel="50" officialLevel="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>51,52,53,54</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.PartCity" sid="6" name="封邑5" needLevel="60" officialLevel="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>61,62,63,64</ints>
+ </field>
+</sample>
+ <sample class="game.country.city.PartCity" sid="7" name="封邑6" needLevel="70" officialLevel="1" >
+ <field name="buildAreaArr" declared="1">
+ <ints>71,72,73,74</ints>
+ </field>
+</sample>
+ </objects>

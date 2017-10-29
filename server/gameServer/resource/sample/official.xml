@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <field class="game.official.Official" name="factory" id="officialSampleFactory" />
+   <method ref="officialSampleFactory" name="init">
+   <ref id="context" />
+   </method>
+   <!--
+   name:职称
+   force:武力
+   lead:统帅
+   wisdom:智力
+   leadSol:带兵数
+   -->
+<sample class="game.official.Official" sid="0" name="平民" />
+ <sample class="game.official.Official" sid="1" name="护军" force="7" lead="7" leadSol="5" />
+ <sample class="game.official.Official" sid="2" name="主薄" force="" lead="7" wisdom="7" leadSol="5" />
+ <sample class="game.official.Official" sid="3" name="偏将军" force="15" lead="15" wisdom="" leadSol="10" />
+ <sample class="game.official.Official" sid="4" name="别驾" force="" lead="15" wisdom="15" leadSol="10" />
+ <sample class="game.official.Official" sid="5" name="威东将军" force="30" lead="30" wisdom="" leadSol="15" />
+ <sample class="game.official.Official" sid="6" name="威南将军" force="" lead="30" wisdom="30" leadSol="15" />
+ <sample class="game.official.Official" sid="7" name="威北将军" force="45" lead="" wisdom="45" leadSol="25" />
+ <sample class="game.official.Official" sid="8" name="威西将军" force="" lead="45" wisdom="45" leadSol="25" />
+ <sample class="game.official.Official" sid="9" name="御史中丞" force="60" lead="" wisdom="60" leadSol="35" />
+ <sample class="game.official.Official" sid="10" name="太学博士" force="" lead="60" wisdom="60" leadSol="35" />
+ <sample class="game.official.Official" sid="11" name="行军祭酒" force="75" lead="" wisdom="75" leadSol="45" />
+ <sample class="game.official.Official" sid="12" name="黄门侍郎" force="" lead="75" wisdom="75" leadSol="45" />
+ <sample class="game.official.Official" sid="13" name="前将军" force="75" lead="75" wisdom="" leadSol="45" />
+ <sample class="game.official.Official" sid="14" name="后将军" force="90" lead="90" wisdom="" leadSol="60" />
+ <sample class="game.official.Official" sid="15" name="左将军" force="90" lead="" wisdom="90" leadSol="60" />
+ <sample class="game.official.Official" sid="16" name="右将军" force="105" lead="" wisdom="105" leadSol="75" />
+ <sample class="game.official.Official" sid="17" name="秘书监" force="" lead="105" wisdom="105" leadSol="75" />
+ <sample class="game.official.Official" sid="18" name="侍中" force="" lead="120" wisdom="120" leadSol="90" />
+ <sample class="game.official.Official" sid="19" name="中常侍" force="" lead="120" wisdom="120" leadSol="90" />
+ <sample class="game.official.Official" sid="20" name="太子太傅" force="135" lead="" wisdom="135" leadSol="110" />
+ <sample class="game.official.Official" sid="21" name="镇南将军" force="135" lead="135" wisdom="" leadSol="110" />
+ <sample class="game.official.Official" sid="22" name="镇北将军" force="" lead="150" wisdom="150" leadSol="130" />
+ <sample class="game.official.Official" sid="23" name="镇东将军" force="150" lead="" wisdom="150" leadSol="130" />
+ <sample class="game.official.Official" sid="24" name="镇西将军" force="" lead="165" wisdom="165" leadSol="150" />
+ <sample class="game.official.Official" sid="25" name="太府" force="165" lead="165" wisdom="" leadSol="150" />
+ <sample class="game.official.Official" sid="101" name="公士" force="5" lead="5" wisdom="5" leadSol="5" isMain="1" />
+ <sample class="game.official.Official" sid="102" name="大夫" force="10" lead="10" wisdom="10" leadSol="10" isMain="1" />
+ <sample class="game.official.Official" sid="103" name="上造" force="20" lead="20" wisdom="20" leadSol="15" isMain="1" />
+ <sample class="game.official.Official" sid="104" name="官大夫" force="30" lead="30" wisdom="30" leadSol="25" isMain="1" />
+ <sample class="game.official.Official" sid="105" name="公大夫" force="40" lead="40" wisdom="40" leadSol="35" isMain="1" />
+ <sample class="game.official.Official" sid="106" name="左庶长" force="50" lead="50" wisdom="50" leadSol="45" isMain="1" />
+ <sample class="game.official.Official" sid="107" name="右庶长" force="60" lead="60" wisdom="60" leadSol="60" isMain="1" />
+ <sample class="game.official.Official" sid="108" name="五大夫" force="70" lead="70" wisdom="70" leadSol="75" isMain="1" />
+ <sample class="game.official.Official" sid="109" name="少上造" force="80" lead="80" wisdom="80" leadSol="90" isMain="1" />
+ <sample class="game.official.Official" sid="110" name="大上造" force="90" lead="90" wisdom="90" leadSol="110" isMain="1" />
+ <sample class="game.official.Official" sid="111" name="大庶长" force="100" lead="100" wisdom="100" leadSol="130" isMain="1" />
+ <sample class="game.official.Official" sid="112" name="关内侯" force="110" lead="110" wisdom="110" leadSol="150" isMain="1" />
+ <sample class="game.official.Official" sid="113" name="列侯" force="450" lead="450" wisdom="450" leadSol="40000" isMain="1" />
+ <sample class="game.official.Official" sid="114" name="王" force="550" lead="550" wisdom="550" leadSol="50000" isMain="1" />
+ <sample class="game.official.Official" sid="115" name="一字并肩王" force="700" lead="700" wisdom="700" leadSol="100000" isMain="1" />
+ </objects>

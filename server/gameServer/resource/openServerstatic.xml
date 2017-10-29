@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!--七天登陆活动奖励  0占位  奖励为 giftpackage-->
+	<obj class="game.activity.TotalLoginActivityManager">
+		<field name="AWARDS">
+	        <ints>0,9043,9044,9045,9046,9047,9048,9049</ints>
+	    </field>
+	</obj>
+	<!--开服特惠活动sid-->
+	<field class="game.mall.MallManager" name="DISCOUNT_SID">
+		<value type="int">200</value>
+	</field>
+	
+	<!--开服活动 爵位大赛
+		GOLD_NOBI 至尊大奖最低爵位等级
+		GOLD_AWARD_SID至尊奖励配置 
+		LIMIT_PROP 限购道具SID(支持多个)
+		NOBI_AWARD_SID 达成奖励配置
+		NOBI_AND_AWARD_NUMS 爵位等级配置以及奖励名额
+	-->
+	<obj class="game.country.activity.OpenServerActivityOfNobiLv">
+		 <field name="GOLD_NOBI">
+	        <value type="int">40</value>
+	    </field>
+	    <field name="NOBI_AWARD_SID">
+	        <ints>9053,9054,9055,9056</ints>
+	    </field>
+	    <field name="NOBI_AND_AWARD_NUMS">
+			<objs class="[I">
+				<ints>10,999</ints>
+				<ints>20,500</ints>
+				<ints>25,100</ints>
+				<ints>30,20</ints>
+			</objs>
+		</field>
+	</obj>
+	<!--开服活动 武将冲级赛-->
+	<obj class="game.country.activity.OpenServerActivityOfMiliLv">
+		 <field name="GOLD_NOBI">
+	        <value type="int">40</value>
+	    </field>
+	    <field name="NOBI_AWARD_SID">
+	        <ints>9060,9061,9062,9063</ints>
+	    </field>
+	    <field name="NOBI_AND_AWARD_NUMS">
+			<objs class="[I">
+				<ints>15,500</ints>
+				<ints>25,200</ints>
+				<ints>35,50</ints>
+				<ints>45,15</ints>
+			</objs>
+		</field>
+	</obj>
+	<!--开服活动 战力大赛-->
+	<obj class="game.country.activity.OpenServerActivityOfAtt">
+		 <field name="GOLD_NOBI">
+	        <value type="int">120000</value>
+	    </field>
+	    <field name="NOBI_AWARD_SID">
+	        <ints>9067,9068,9069,9070</ints>
+	    </field>
+	    <field name="NOBI_AND_AWARD_NUMS">
+			<objs class="[I">
+				<ints>30000,200</ints>
+				<ints>50000,50</ints>
+				<ints>70000,20</ints>
+				<ints>100000,10</ints>
+			</objs>
+		</field>
+	</obj>
+	<!--开服活动 我是VIP-->
+	<obj class="game.country.activity.OpenServerActivityOfVIP">
+	    <field name="NOBI_AWARD_SID">
+	        <ints>9071,9072,9073,9074,9075,9076,9077,9078</ints>
+	    </field>
+	    <field name="NOBI_AND_AWARD_NUMS">
+			<objs class="[I">
+				<ints>2,999</ints>
+				<ints>3,999</ints>
+				<ints>4,999</ints>
+				<ints>5,999</ints>
+				<ints>6,999</ints>
+				<ints>7,999</ints>
+				<ints>8,999</ints>
+				<ints>9,999</ints>
+			</objs>
+		</field>
+	</obj>
+	<!--开服活动管理器  GOLD_NUM 至尊奖励个数(下标是类型) 1爵位大赛 2武将冲级赛 3我是VIP 4战力冲冲冲 -->
+	<obj class="game.country.activity.OpenServerActivityManager">
+	    <field name="GOLD_NUM">
+	        <ints>0,3,3,3,3</ints>
+	    </field>
+	</obj>
+</objects>

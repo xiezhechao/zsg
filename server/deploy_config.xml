@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<server plantID="1" serverID="1" name="www.18youxi.com" domain="127.0.0.1" version="1.0.0" sessionMax="3000" state="1" allowIp="*" plantIDs="1" serverIDs="1" lanip="127.0.0.1" debug="true" antiaddiction="false" showGuide="true" key="sdfasf484j4lpe8we4ev09as">
+	<java bin="java">
+	</java>
+	<db.game ip="localhost" user="root" password="root" database="zsg_rc">
+	</db.game>
+	<db.log ip="localhost" user="root" password="root" database="zsg_log_rc">
+	</db.log>
+	<db.bi ip="localhost" user="root" password="root" database="zsg_bi_rc">
+	</db.bi>
+	<server port="8100" httpPort="8101">
+	</server>
+	<logServer ip="127.0.0.1" port="8102" httpPort="8103" isOpen="true">
+	</logServer>
+	<biServer ip="127.0.0.1" port="8104" httpPort="8105" isOpen="true">
+	</biServer>
+	<client resurl="http://rc.sg.youkia.com/"/>
+</server>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 语言文件 -->
+	<file uri="[resource]cfg/textvalidity.xml" />
+	
+	<!-- 模板文件 -->
+	<file uri="[resource]sample/chapters.xml" />
+	<file uri="[resource]sample/task.xml" />
+	<file uri="[resource]sample/duplicates.xml" />
+	<file uri="[resource]sample/effectbuffer.xml" />
+	<file uri="[resource]sample/citys.xml" />
+	<file uri="[resource]sample/builds.xml" />
+	<file uri="[resource]sample/buildarea.xml" />
+	<file uri="[resource]sample/players.xml" />
+	<file uri="[resource]sample/props.xml" />
+	<file uri="[resource]sample/material.xml" />
+	<file uri="[resource]sample/awards.xml" />
+	<file uri="[resource]sample/skills.xml" />
+	<file uri="[resource]sample/spreads.xml" />
+	<file uri="[resource]sample/effects.xml" />
+	<file uri="[resource]sample/soldier.xml" />
+	<file uri="[resource]sample/visit.xml"/>
+	<file uri="[resource]sample/roadway.xml" />
+	<file uri="[resource]sample/worldcity.xml" />
+	<file uri="[resource]sample/militarys.xml" />
+	<file uri="[resource]sample/equipmentsuit.xml" />
+	<file uri="[resource]sample/official.xml" />
+	<file uri="[resource]sample/shopProps.xml" />
+	<file uri="[resource]sample/mallProps.xml" />
+	<file uri="[resource]sample/openGemHole.xml" />
+	<file uri="[resource]sample/equipmentskill.xml"/>
+	<file uri="[resource]sample/activitys.xml"/>
+	<file uri="[resource]sample/banneret.xml"/>
+	<file uri="[resource]sample/countrytasks.xml"/>
+	<file uri="[resource]sample/famousgeneral.xml"/>
+	
+	<!-- 系统配置文件 -->
+	<file uri="[resource]serverstatic.xml" />
+	<file uri="[resource]openServerstatic.xml" />
+	<file uri="[resource]serverconfig.xml" />
+	<file uri="[resource]serverport.xml" />
+	
+	<!--GM工具-->
+	<file uri="[resource]gmconfig.xml" />
+	
+	<!-- 其他文件 -->
+	<file uri="[resource]cfg/shop.xml" />
+	<file uri="[resource]cfg/strengtheffect.xml" />
+	<file uri="[resource]cfg/mall.xml" />
+	<file uri="[resource]cfg/fightteam.xml" />
+	<!-- 活动相关 -->
+	<file uri="[resource]cfg/worldfight.xml" />
+	<file uri="[resource]cfg/activityDate.xml" />
+	
+	<!-- 动态脚本 -->
+	<file uri="[resource]bsh.xml" />
+</objects>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- GMC管理器 -->
+	<obj class="gmc.GMCManager" id="gmcManager">
+		<!-- 服务器信息 -->
+		<method name="setServer">
+			<ref id="server" />
+		</method>
+		<!-- 在线session管理器 -->
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+		<!-- 登陆认证管理器 -->
+		<method name="setCertifyManager">
+			<ref id="certifyManager" />
+		</method>
+		<!-- 邮件管理器 -->
+		<method name="setMailManager">
+			<ref id="mailManager" />
+		</method>
+		<!-- 礼包管理器 -->
+		<method name="setGiftManager">
+			<ref id="giftManager" />
+		</method>
+		<!-- 运营活动管理器 -->
+		<method name="setOperatorActivityManager">
+			<ref id="operatorActivityManager" />
+		</method>
+		<!-- 名字管理器 -->
+		<method name="setNameManager">
+			<ref id="nameManager" />
+		</method>
+		<!-- 领地管理器 -->
+		<method name="setCityManager">
+			<ref id="cityCacheManager" />
+		</method>
+		<!-- player数据连接 -->
+		<method name="setConnectionManager">
+			<ref id="connectionManager"/>
+		</method>
+		<!-- 玩家数据操作类 -->
+		<method name="setPlayerDBAccess">
+			<ref id="playerDBAccess"/>
+		</method>
+		<!-- 设置世界管理器-->
+		<method name="setWorldMapManager">
+			<ref id="worldMapManager"/>
+		</method>
+		<!-- 设置礼包奖励管理器-->
+		<method name="setGiftAwardManager">
+			<ref id="giftAwardManager"/>
+		</method>
+		<!-- 设置排行管理器 -->
+		<method name="setRankManager">
+			<ref id="rankManager"/>
+		</method>
+		<!-- 设置排行管理器 -->
+		<method name="setOpenServerTimeManager">
+			<ref id="openServerTimeManager"/>
+		</method>
+		<!-- player 表名 -->
+		<method name="setCmTable">
+			<string>player</string>
+		</method>
+	</obj>
+	<method name="setGMCManager" ref="chargeManager">
+		<ref id="gmcManager"/>
+	</method>
+	<!-- 设置GMC HTTP 端口 -->
+
+	<!-- 设置服务通用请求 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/action</string>
+		<obj class="gmc.channel.BaseGmcChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置服务器状态端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/server_status</string>
+		<obj class="gmc.channel.ServerStatusChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置踢人端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/login_out</string>
+		<obj class="gmc.channel.KickChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置封停端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/stop_role</string>
+		<obj class="gmc.channel.StopRoleChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置执行脚本端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/groovy</string>
+		<obj class="gmc.channel.GroovyChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置为gm帐号端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/set_gm</string>
+		<obj class="gmc.channel.SetGmChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置服务器属性端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/change_config</string>
+		<obj class="gmc.channel.ServerConfigChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 获取用户信息端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/get_user_info</string>
+		<obj class="gmc.channel.GetUserInfoChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 获取角色信息端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/get_role_info</string>
+		<obj class="gmc.channel.GetRoleInfoChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+
+	<!--添加道具-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/add_prop</string>
+		<obj class="gmc.channel.PropChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--发送邮件-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/mail_send</string>
+		<obj class="gmc.channel.MailChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--角色禁言-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/role_mute</string>
+		<obj class="gmc.channel.RoleMuteChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--礼包发放-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/add_gift</string>
+		<obj class="gmc.channel.AddGiftChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 设置运营活动端口 -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/add_activity_gift</string>
+		<obj class="gmc.channel.AddActivityChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--获取领地数据-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/get_bases_info</string>
+		<obj class="gmc.channel.GetSelectCityChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--奖励包制作-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/make_gift</string>
+		<obj class="gmc.channel.MakeGiftChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--删除礼包-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/delete_gift</string>
+		<obj class="gmc.channel.DeleteGiftChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--公告-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/affiche_send</string>
+		<obj class="gmc.channel.AfficheChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--运营活动操作通道-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/operator_activity_gift</string>
+		<obj class="gmc.channel.OperatorActivityChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--获取背包数据-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/get_bundle_info</string>
+		<obj class="gmc.channel.SelectBundleChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--查询打包礼包-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_gift</string>
+		<obj class="gmc.channel.SelectGiftChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--武将-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_military</string>
+		<obj class="gmc.channel.MilitaryChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 士兵 -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_soldier</string>
+		<obj class="gmc.channel.SoldierChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	
+	<!-- GEM -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_gem</string>
+		<obj class="gmc.channel.GemChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	
+	<!-- GEM -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_strength</string>
+		<obj class="gmc.channel.StrengthChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	
+	<!-- 君主科技 -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_kingscience</string>
+		<obj class="gmc.channel.KingScienceChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	
+		<!--任务 -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_task</string>
+		<obj class="gmc.channel.TaskChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--任务 -->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/country</string>
+		<obj class="gmc.channel.CountryScienceChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--扣除资源-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/update_resource</string>
+		<obj class="gmc.channel.UpdateResourceChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--清除排行榜-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/clear_rank</string>
+		<obj class="gmc.channel.ClearRankChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--查询被封停的账号-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_immure</string>
+		<obj class="gmc.channel.SeleteImmureChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+	<!--礼包卡操作-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/select_cardkey</string>
+		<obj class="gmc.channel.AddCardKeyChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+			<method name="setCardManager">
+				<ref id="cardManager" />
+			</method>
+			<method name="setGiftManager">
+				<ref id="giftManager" />
+			</method>
+		</obj>
+	</method>
+	<!--开服活动处理接口-->
+	<method name="setChannelHandler" ref="httpService"> 
+		<string>/open_server</string>
+		<obj class="gmc.channel.ActivityChannel">
+			<method name="setGMCManager">
+				<ref id="gmcManager" />
+			</method>
+		</obj>
+	</method>
+</objects>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 初始化同步通讯接口超时时间 -->
+	<method class="zmyth.net.DataAccessHandler" name="getInstance" 
+		id="dataAccessHandler"/>
+	<method ref="dataAccessHandler" name="setTimeout">
+		<value type="int">30000</value>
+	</method>
+
+	<!-- 配置数据库连接管理器 -->
+	<obj class="zmyth.orm.ConnectionManager" id="connectionManager">
+		<!-- 取出连接属性 -->
+		<method name="getProperties" id="__properties"/>
+		<!-- 设置连接的账号和密码 -->
+		<method ref="__properties" name="put"><string>user</string><ref id="dbName"/></method>
+		<method ref="__properties" name="put"><string>password</string><ref id="dbPassword"/></method>
+		<!-- JDBC驱动 -->
+		<method name="setDriver">com.mysql.jdbc.Driver</method>
+		<!-- 数据库地址 -->
+		<method name="setURL"><ref id="biServerDBIP"/></method>
+		<!-- 字符编码方式（可以不设置，默认为java的字符编码方式） -->
+		<method name="setCharacterEncoding"><ref id="dbEncode"/></method>
+		<!-- 初始连接数（可以不设置，默认为2） -->
+		<method name="setInitSize">2</method>
+		<!-- 最大连接数（可以不设置，默认为20） -->
+		<method name="setMaxSize">1000</method>
+		<!-- 连接的超时时间（可以不设置，默认为180000毫秒－3分钟） -->
+		<method name="setTimeout">180000</method>
+		<!-- 连接的最大使用次数（可以不设置，默认为0－表示无限使用） -->
+		<method name="setMaxUsedCount">20000</method>
+		<!-- 取出连接时是否先判断连接可用（可以不设置，默认为true） -->
+		<method name="setCheck">true</method>
+		<!-- 连接是否自动提交事务（可以不设置，默认为true） -->
+		<method name="setAutoCommit">false</method>
+		<!-- 初始化数据库连接管理器 -->
+		<method name="init"/>
+	</obj>
+	<!-- ########################################## -->
+    <!-- 安装连接注册服务 -->
+    <method name="setPort" ref="service">
+	    <field class="zmyth.net.PortService" name="CONNECT_REGISTER_PORT"/>
+	    <obj class="zmyth.back.ConnectRegisterPort" id="connectRegisterPort">
+		    <method name="setSessionContainer"><ref id="serverSessionContainer"/></method>
+	    </obj>
+    </method>
+    <!-- ########################################## -->
+	<obj class="biServer.BiManager" id="bimanager">
+		<method name="setConnectionManager">
+			<ref id="connectionManager"/>
+		</method>
+		<!-- 玩家消费表 -->
+		<method name="setConsumeTable">
+			<string>bi_consume_logs</string>
+		</method>
+		<!-- 日采集数据表 -->
+		<method name="setDayTable">
+			<string>bi_day</string>
+		</method>
+		<!-- 登陆日志表 -->
+		<method name="setLoginTable">
+			<string>bi_login_logs</string>
+		</method>
+		<!-- 在线采集人数表 -->
+		<method name="setOnlineTable">
+			<string>bi_online_times</string>
+		</method>
+		<!-- 充值日志表 -->
+		<method name="setOrderTable">
+			<string>bi_order_logs</string>
+		</method>
+		<!-- 玩家信息表 -->
+		<method name="setPlayerInfoTable">
+			<string>bi_player</string>
+		</method>
+		<!-- 玩家任务表 -->
+		<method name="setPlayerTaskTable">
+			<string>bi_task</string>
+		</method>
+		<!-- 玩家关卡分布表 -->
+		<method name="setCustomspassTable">
+			<string>bi_customspass_info</string>
+		</method>
+		<!-- 设置道具信息表 -->
+		<method name="setPropTable">
+			<string>bi_tool_list</string>
+		</method>
+		<!-- 设置货币流水表 -->
+		<method name="setMoneyTable">
+			<string>bi_money_list</string>
+		</method>
+	</obj>
+
+
+	
+
+</objects>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="client_release" default="project_release">
+	<property file="build.cfg" />
+	<property name="FLEX_HOME" location="${flex_path}" />
+	<taskdef resource="flexTasks.tasks" classpath="${flex_path}/ant/lib/flexTasks.jar" />
+	<condition property="isWindows">
+		<os family="windows" />
+	</condition>
+	<condition property="isUnix">
+		<os family="unix" />
+	</condition>
+	<target name="project_checkout_linux" if="isUnix">
+		<exec executable="/bin/bash" failonerror="true" output="ant.client.log">
+			<arg line="-c 'svn co --no-auth-cache ${svn_url}/${update_version}/client ${checkout_url} --username ${svn_user} --password ${svn_password}'" />
+		</exec>
+	</target>
+	<target name="project_checkout_windows" if="isWindows">
+		<exec executable="cmd" failonerror="true" output="ant.client.log">
+			<arg line="/c svn co ${svn_url}/${update_version}/client ${checkout_url} --username ${svn_user} --password ${svn_password}" />
+		</exec>
+	</target>
+	<target name="project_release">
+		<mkdir dir="${checkout_url}" />
+		<antcall target="project_checkout_linux" />
+		<antcall target="project_checkout_windows" />
+		<mxmlc file="${checkout_url}/src/zsg.as" output="${basedir}/zsg.swf" actionscript-file-encoding="UTF-8" keep-generated-actionscript="false" incremental="false" fork="true" maxmemory="256m">
+			<source-path path-element="${checkout_url}/src" />
+			<debug>false</debug>
+			<static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+			<target-player>11.1</target-player>
+			<library-path dir="${checkout_url}/swcs" append="true">
+				<include name="UIcomponent.swc" />
+			</library-path>
+			<default-background-color>0xFFFFFF</default-background-color>
+		</mxmlc>
+		<mxmlc file="${checkout_url}/src/login/index.as" output="${basedir}/index.swf" actionscript-file-encoding="UTF-8" keep-generated-actionscript="false" incremental="false" fork="true" maxmemory="256m">
+			<source-path path-element="${checkout_url}/src" />
+			<debug>false</debug>
+			<static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+			<target-player>11.1</target-player>
+			<library-path dir="${checkout_url}/swcs" append="true">
+				<include name="UIcomponent.swc" />
+			</library-path>
+			<default-background-color>0xFFFFFF</default-background-color>
+		</mxmlc>
+		<mxmlc file="${checkout_url}/src/login/create/CreateRole.as" output="${basedir}/CreateRole.swf" actionscript-file-encoding="UTF-8" keep-generated-actionscript="false" incremental="false" fork="true" maxmemory="256m">
+			<source-path path-element="${checkout_url}/src" />
+			<debug>false</debug>
+			<static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+			<target-player>11.1</target-player>
+			<library-path dir="${checkout_url}/swcs" append="true">
+				<include name="UIcomponent.swc" />
+			</library-path>
+			<default-background-color>0xFFFFFF</default-background-color>
+		</mxmlc>
+		<copy todir="${basedir}">
+			<fileset dir="${checkout_url}/src/">
+				<include name="res/**/*" />
+				<include name="history/**/*" />
+				<include name="CreateRole.swf" />
+				<include name="index.swf" />
+				<include name="index.html" />
+				<include name="zsg.swf" />
+				<include name="config.json" />
+				<include name="resourceConfig.xml" />
+				<include name="swfobject.js" />
+				<include name="playerProductInstall.swf" />
+				<include name="deploy_tools.jar" />
+				<include name="resource_tools.jar" />
+				<include name="template/**/*" />
+			</fileset>
+		</copy>
+		<zip destfile="${basedir}/res/config/config.zip">
+			<zipfileset dir="${basedir}/res/config">
+				<exclude name="*.zip" />
+			</zipfileset>
+		</zip>
+		<delete dir="${checkout_url}" includeemptydirs="true">
+		</delete>
+	</target>
+</project>

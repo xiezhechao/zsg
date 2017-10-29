@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	
+	 -->
+<objects>
+	<field class="game.activity.operator.OperatorActivity" name="factory" id="activitySampleFactory"/>
+	<method ref="activitySampleFactory" name="init">
+		<ref id="context"/>
+	</method>
+	<sample class="game.activity.operator.LoginOperatorActivity" sid="1" actName="登录有奖"></sample>
+	<sample class="game.activity.operator.ChargeOperatorActivity" sid="2" actName="累积充值"></sample>
+	<sample class="game.activity.operator.FirstChargeOperatorActivity" sid="3" actName="首充"></sample>
+	<sample class="game.activity.operator.SingleChargeOperatorActivity" sid="4" actName="单笔充值"></sample>
+	<sample class="game.activity.operator.DuplicateOperatorActivity" sid="5" actName="通关副本"></sample>
+	<sample class="game.activity.operator.PropOperatorActivity" sid="6" actName="物品收集"></sample>
+	<sample class="game.activity.operator.MilitaryNumOperatorActivity" sid="7" actName="武将收集"></sample>
+	<sample class="game.activity.operator.MilitaryAttributeOperatorActivity" sid="8" actName="武将成长"></sample>
+</objects>

@@ -1,0 +1,1836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<field class="game.fight.Skill" name="factory" id="skillSampleFactory"/>
+	<method ref="skillSampleFactory" name="init">
+		<ref id="context"/>
+	</method>
+	<!-- 
+		class:类名  game.fight.Skill技能 game.fight.ActionSkill行动技能 
+			        game.fight.AssistSkill 协助技能game.fight.PositionSkill位置判断技能
+			        game.fight.AssaultSkill突击技能 game.fight.ContinuationSkill目标确定，连续攻击
+		name：名字
+		skillStyleSid:技能样式sid
+		spreadSid:施放sid
+		hurtEffectSid:伤害效果sid
+		hurtType:伤害类型
+		trigger:触发时机
+		fighterType:触发战斗者类型
+		probabilitys:触发概率数组
+		myselfEffectSids:己方挂载效果sid数组
+		triggerAttackType:触发攻击类型
+		triggerAttackFighterType:触发攻击类型的战斗者类型
+		triggerHurtType:触发伤害类型
+		fighterType:触发战斗者类型
+		isUseStyleSid:是否使用形象sid
+		beatBackEndNums:反击结束次数
+		oppositeEffectSids:对方效果sid数组
+		spreadFighterType:施放对象
+		triggerFighterSid:触发战斗者sid
+		postion:位置
+		isMySelf:是否包含自己
+		nums:数量
+		isBeatBack:是否是反击
+		attackNums:次数
+		beatBackSkillSid:反击技能sid
+		beatBackStartNums:反击开始次数
+	-->
+	<sample class="game.fight.Skill" sid="1" name="砍杀" skillStyleSid="1" spreadSid="1" hurtEffectSid="1" hurtType="1"></sample>
+	<sample class="game.fight.Skill" sid="2" name="射箭" skillStyleSid="2" spreadSid="2" hurtEffectSid="1" hurtType="1"></sample>
+	<sample class="game.fight.Skill" sid="3" name="投石" skillStyleSid="3" spreadSid="2" hurtEffectSid="1" hurtType="1"></sample>
+	<sample class="game.fight.Skill" sid="4" name="击飞" skillStyleSid="1" spreadSid="1" hurtEffectSid="1" hurtType="1"></sample>
+	<sample class="game.fight.ActionSkill" sid="5" name="横扫" skillStyleSid="67" spreadSid="3" hurtEffectSid="1" trigger="1" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>10000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="6" name="勇悍" skillStyleSid="59" trigger="128" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>10000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>4</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="7" name="武勇" skillStyleSid="60" spreadSid="4" trigger="64" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>6</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="8" name="无当" skillStyleSid="66" spreadSid="4" trigger="64" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>8</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="9" name="手戟" skillStyleSid="86" hurtEffectSid="257" trigger="8" triggerAttackType="4" triggerAttackFighterType="1" triggerHurtType="1" fighterType="2" hurtType="4" isBeatBack="true">
+		<field name="probabilitys" declared="1">
+			<ints>30000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ContinuationRandomSkill" sid="10" name="连矢" skillStyleSid="38" spreadSid="2" hurtEffectSid="258" trigger="1" fighterType="1" hurtType="1" attackNums="10">
+		<field name="probabilitys" declared="1">
+			<ints>10000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.AssaultSkill" sid="11" name="突击" skillStyleSid="61" spreadSid="1" hurtEffectSid="1" trigger="1" fighterType="1" hurtType="1" attackNums="4" beatBackSkillSid="12" beatBackStartNums="2" beatBackEndNums="3">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="12" name="突击反击" skillStyleSid="0" hurtEffectSid="1" hurtType="4" isUseStyleSid="false" isBeatBack="true">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="13" name="玄甲" skillStyleSid="90" spreadSid="4" trigger="128" triggerAttackType="8" triggerAttackFighterType="1" triggerHurtType="1" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>10</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="14" name="攒射" skillStyleSid="89" spreadSid="4" trigger="64" triggerAttackType="1" triggerAttackFighterType="2" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>12</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="15" name="接阵" skillStyleSid="68" spreadSid="4" isNullRemove="true" trigger="2" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>14</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="16" name="死战" skillStyleSid="69" spreadSid="4" trigger="32" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>16</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="17" name="彪悍" skillStyleSid="70" spreadSid="4" trigger="32" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>18</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="18" name="践踏" skillStyleSid="81" spreadSid="3" hurtEffectSid="259" trigger="1" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>50000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="19" name="冲阵" skillStyleSid="37" spreadSid="5" hurtEffectSid="1" trigger="2" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>10000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="20" name="铁骑" skillStyleSid="0" spreadSid="4" trigger="64" fighterType="1" triggerAttackType="2" triggerAttackFighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>20</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="21" name="藤甲" skillStyleSid="0" spreadSid="4" trigger="128" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>22</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="22" name="老练" skillStyleSid="62" spreadSid="4" trigger="4" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>24,26</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="23" name="先登" skillStyleSid="65" hurtEffectSid="1" trigger="4" fighterType="2" triggerAttackType="8" triggerAttackFighterType="1" hurtType="1" isBeatBack="true">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="24" name="威慑" skillStyleSid="79" spreadSid="4" trigger="4" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>28</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="25" name="陷阵" skillStyleSid="83" trigger="8" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>30000</ints>
+		</field>
+		<field name="oppositeEffectSids" declared="1">
+			<ints>30</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="26" name="破敌" skillStyleSid="87" spreadSid="4" trigger="64" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>32</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="27" name="虎贲" skillStyleSid="84" hurtEffectSid="1" trigger="8" triggerAttackType="8" triggerAttackFighterType="1" triggerHurtType="1" fighterType="2" hurtType="4" isUseStyleSid="false" isBeatBack="true">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="28" name="锦帆" skillStyleSid="71" hurtEffectSid="1" trigger="4" fighterType="2" hurtType="1" isBeatBack="true">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>34</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.PositionSkill" sid="29" name="飞熊" spreadSid="0" trigger="256" fighterType="1" hurtType="1" postion="1" isMySelf="true" nums="1" roundCD="9999">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>36,38</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.PositionSkill" sid="30" name="异族" spreadSid="0" trigger="256" fighterType="1" hurtType="1" postion="3" isMySelf="true" nums="0" roundCD="9999">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>40,42</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="31" name="捕猎" skillStyleSid="72" spreadSid="4" trigger="16" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>50000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>44</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.AssistSkill" sid="32" name="藤牌" skillStyleSid="64" trigger="128" fighterType="2" triggerAttackType="4" triggerAttackFighterType="1" spreadFighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>50000</ints>
+		</field>
+		<field name="oppositeEffectSids" declared="1">
+			<ints>46</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.AssistSkill" sid="33" name="义气" skillStyleSid="78" hurtEffectSid="50" trigger="16" fighterType="1" triggerAttackType="8" triggerAttackFighterType="1" spreadFighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.AssistSkill" sid="34" name="追袭" skillStyleSid="77" hurtEffectSid="51" trigger="16" fighterType="1" triggerAttackType="8" triggerAttackFighterType="1" spreadFighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="limitSids" declared="1">
+			<ints>34</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="35" name="解烦" skillStyleSid="88" spreadSid="3" hurtEffectSid="52" trigger="1" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>20000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="36" name="无忧" skillStyleSid="73" trigger="16" fighterType="1" hurtType="1" roundCD="3">
+		<field name="probabilitys" declared="1">
+			<ints>5000</ints>
+		</field>
+		<field name="oppositeEffectSids" declared="1">
+			<ints>53</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="37" name="奔射" skillStyleSid="36" spreadSid="5" hurtEffectSid="55" trigger="1" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.PositionSkill" sid="38" name="孤胆" spreadSid="0" trigger="256" fighterType="1" hurtType="1" postion="1" isMySelf="true" nums="0" roundCD="9999">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>56,58</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.AssistSkill" sid="39" name="狼群" isNullRemove="true" trigger="16" fighterType="1" triggerAttackType="8" triggerAttackFighterType="1" spreadFighterType="2" triggerFighterSid="14" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>60</ints>
+		</field>
+		<field name="limitSids" declared="1">
+			<ints>34</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="40" name="金吾" skillStyleSid="85" spreadSid="6" hurtEffectSid="62" trigger="1" fighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>2</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.AssistSkill" sid="41" name="断后" skillStyleSid="63" trigger="128" fighterType="2" spreadFighterType="2" hurtType="8">
+		<field name="probabilitys" declared="1">
+			<ints>25000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>63</ints>
+		</field>
+		<field name="oppositeEffectSids" declared="1">
+			<ints>65</ints>
+		</field>
+	</sample>
+	<sample class="game.fight.ActionSkill" sid="42" name="戟林" skillStyleSid="80" trigger="32" fighterType="2" triggerAttackType="1" triggerAttackFighterType="1" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="oppositeEffectSids" declared="1">
+			<ints>67</ints>
+		</field>
+	</sample>
+	
+	<sample class="game.fight.MilitarySkill" sid="1000" name="闭月" skillStyleSid="20" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>71,69</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1001" name="洛水神姬" skillStyleSid="23" trigger="256" fighterType="1" roundCD="50" roundInterval="18" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>73,75</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1002" name="鏖战" skillStyleSid="91" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>77</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1003" name="羞花" skillStyleSid="21" trigger="256" fighterType="1" roundCD="50" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>81,79</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1004" name="风华绝代" skillStyleSid="22" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>83</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>85,249</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1005" name="胡音琴韵" skillStyleSid="24" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>89</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>87</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1006" name="铁骑突击" skillStyleSid="44" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>95,97</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1007" name="女中豪杰" skillStyleSid="25" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>99,101</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1008" name="万箭齐发" skillStyleSid="57" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>105,103</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1009" name="火神降世" skillStyleSid="26" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>107</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1010" name="仁义无双" skillStyleSid="95" trigger="256" fighterType="1" roundCD="50" roundInterval="18" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>109,111</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1011" name="乱世枭雄" skillStyleSid="96" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>113</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1012" name="知人善用" skillStyleSid="97" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>115,251</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1013" name="江东猛虎" skillStyleSid="52" trigger="256" fighterType="1" roundCD="50" roundInterval="16" hurtType="2" checkSpreadSid="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>119</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>117</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1014" name="小霸王" skillStyleSid="58" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>121,123</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1015" name="风驰电掣" skillStyleSid="92" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>125</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1016" name="三国无双" skillStyleSid="28" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>127</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>129</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1017" name="悬壶济世" skillStyleSid="35" trigger="256" fighterType="1" roundCD="50" roundInterval="18" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>131</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1018" name="强化刚烈" skillStyleSid="107" trigger="256" fighterType="1" roundCD="9999" hurtType="15">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>48</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1019" name="奇门遁甲" skillStyleSid="30" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>135,137</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1020" name="麒麟儿" skillStyleSid="98" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>139,141</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1021" name="南蛮入侵" skillStyleSid="53" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>143</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1022" name="虎痴" skillStyleSid="94" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>145</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1023" name="汉末神仙" skillStyleSid="46" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>149,151</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1024" name="东吴枭姬" skillStyleSid="50" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>91,93</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1025" name="百步穿杨" skillStyleSid="29" trigger="256" fighterType="1" roundCD="50" roundInterval="15" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>153,155</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1026" name="孤胆英豪" skillStyleSid="99" trigger="256" fighterType="1" roundCD="9999" roundInterval="0" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>159,161</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1027" name="鬼狐" skillStyleSid="74" trigger="256" fighterType="1" roundCD="9999" hurtType="8">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>163</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1028" name="鬼谋" skillStyleSid="51" trigger="32" fighterType="2" triggerHurtType="2" hurtType="2" maxAnger="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>167</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1029" name="恶来" skillStyleSid="31" trigger="32" fighterType="2" triggerHurtType="3" hurtType="2" maxAnger="10">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>169</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1030" name="秀内慧中" skillStyleSid="41" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>171,173</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1031" name="烈火" skillStyleSid="32" trigger="256" fighterType="1" roundCD="40" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>219,175</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1032" name="惊雷" skillStyleSid="33" trigger="256" fighterType="1" roundCD="40" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>221,177</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1033" name="冰锥" skillStyleSid="40" trigger="256" fighterType="1" roundCD="40" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>223,179</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1034" name="滚石" skillStyleSid="34" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>225,181</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1035" name="神火" skillStyleSid="4" trigger="256" fighterType="1" roundCD="25" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>227,183</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1036" name="神雷" skillStyleSid="4" trigger="256" fighterType="1" roundCD="25" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>229,185</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1037" name="巨浪" skillStyleSid="4" trigger="256" fighterType="1" roundCD="25" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>231,187</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1038" name="山崩" skillStyleSid="4" trigger="256" fighterType="1" roundCD="25" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>233,189</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1039" name="谣言" skillStyleSid="4" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>191</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1040" name="谩骂" skillStyleSid="4" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>195</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1041" name="激励" skillStyleSid="4" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">8</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>199</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1042" name="防护" skillStyleSid="54" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">8</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>201</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1043" name="医疗" skillStyleSid="35" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">8</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>203</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1044" name="单骑突" skillStyleSid="4" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>205,207</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1045" name="破阵突" skillStyleSid="4" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>209</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1046" name="铁壁" skillStyleSid="4" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">8</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>211</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1047" name="突击" skillStyleSid="6" trigger="256" fighterType="1" roundCD="20" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>213</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1048" name="千军易辟" skillStyleSid="4" trigger="256" fighterType="1" roundCD="50" roundInterval="14" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>215,217</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1049" name="单骑叩关" skillStyleSid="49" trigger="256" fighterType="1" roundCD="20" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>193,197</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1050" name="当阳断喝" skillStyleSid="27" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>239,237</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>235</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+	<sample class="game.fight.MilitarySkill" sid="1051" name="百里连环" skillStyleSid="43" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>255</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+	<sample class="game.fight.MilitarySkill" sid="1052" name="火攻" skillStyleSid="32" trigger="256" fighterType="1" roundCD="30" roundInterval="8" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>300</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+	<sample class="game.fight.MilitarySkill" sid="1053" name="落雷" skillStyleSid="33" trigger="256" fighterType="1" roundCD="30" roundInterval="9" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>302</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+	<sample class="game.fight.MilitarySkill" sid="1054" name="狂风" skillStyleSid="5" trigger="256" fighterType="1" roundCD="30" roundInterval="10" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>304</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+	<sample class="game.fight.MilitarySkill" sid="1055" name="突击" skillStyleSid="6" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>306</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1056" name="铁壁" skillStyleSid="39" trigger="256" fighterType="1" roundCD="50" roundInterval="10" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>308</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1057" name="易伤" skillStyleSid="100" trigger="256" fighterType="1" roundCD="30" roundInterval="5" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>310</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1058" name="强化突击" skillStyleSid="6" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>312</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1059" name="强化铁壁" skillStyleSid="39" trigger="256" fighterType="1" roundCD="50" roundInterval="10" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>314</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1060" name="奇袭" skillStyleSid="102" trigger="256" fighterType="1" roundCD="50" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>316,318</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1061" name="刚烈" skillStyleSid="93" trigger="256" fighterType="1" roundCD="9999" hurtType="15">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>320</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1062" name="牵制" skillStyleSid="29" trigger="256" fighterType="1" roundCD="50" roundInterval="12" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>324,326</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1063" name="医疗" skillStyleSid="35" trigger="256" fighterType="1" roundCD="50" roundInterval="18" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">8</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>328</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1064" name="小霸王" skillStyleSid="104" trigger="256" fighterType="1" roundCD="50" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>330</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1065" name="诡炎术" skillStyleSid="103" trigger="256" fighterType="1" roundCD="15" roundInterval="10" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>332</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1066" name="火神降世" skillStyleSid="26" trigger="256" fighterType="1" roundCD="20" roundInterval="2" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>334</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1067" name="风驰电掣" skillStyleSid="92" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>410</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1068" name="胡音琴韵" skillStyleSid="24" trigger="256" fighterType="1" roundCD="50" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">8</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>414</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>416</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1069" name="地狱火" skillStyleSid="105" trigger="256" fighterType="1" roundCD="50" roundInterval="19" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="isSuccessNoContinue" declared="1">
+						<value type="boolean">true</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>418,420</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1070" name="百战护主" skillStyleSid="106" trigger="256" fighterType="1" roundCD="9999" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>423</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1071" name="万箭齐发" skillStyleSid="57" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2" checkSpreadSid="5">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="effectSids" declared="1">
+						<ints>430,428</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1072" name="秀内慧中" skillStyleSid="41" trigger="256" fighterType="1" roundCD="40" roundInterval="15" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>432</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1073" name="女中豪杰" skillStyleSid="25" trigger="256" fighterType="1" roundCD="50" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>434,436</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1074" name="闭月" skillStyleSid="20" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>440,438</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1075" name="苦肉计" skillStyleSid="74" trigger="256" fighterType="1" roundCD="9999" hurtType="8">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">4</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>442</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="1076" name="风华绝代" skillStyleSid="22" trigger="256" fighterType="1" roundCD="50" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">7</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>448</ints>
+					</field>
+				</obj>
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>450</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.ActionSkill" sid="2000" name="太平要术" skillStyleSid="0" spreadSid="4" trigger="128" fighterType="2" hurtType="1">
+		<field name="probabilitys" declared="1">
+			<ints>100000,100000,100000,100000</ints>
+		</field>
+		<field name="myselfEffectSids" declared="1">
+			<ints>260</ints>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="2001" name="冰锥术" skillStyleSid="40" trigger="256" fighterType="1" roundCD="20" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>400</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="2002" name="突击" skillStyleSid="28" trigger="256" fighterType="1" roundCD="20" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>402</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="2003" name="巨浪" skillStyleSid="40" trigger="256" fighterType="1" roundCD="20" roundInterval="16" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">2</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>404</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="2004" name="强化突击" skillStyleSid="28" trigger="256" fighterType="1" roundCD="20" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>406</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+<sample class="game.fight.MilitarySkill" sid="2005" name="npc用强化突击" skillStyleSid="6" trigger="256" fighterType="1" roundCD="25" roundInterval="17" hurtType="2">
+		<field name="probabilitys" declared="1">
+			<ints>100000</ints>
+		</field>
+		<field name="militarySubSkills" declared="1">
+			<objs class="game.fight.MilitarySubSkill">
+				<obj class="game.fight.MilitarySubSkill">
+					<field name="spreadSid" declared="1">
+						<value type="int">5</value>
+					</field>
+					<field name="effectSids" declared="1">
+						<ints>312</ints>
+					</field>
+				</obj>
+			</objs>
+		</field>
+	</sample>
+
+</objects>

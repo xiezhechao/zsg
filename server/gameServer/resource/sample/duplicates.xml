@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+ <!-- 定义角色样品工厂，并进行初始化 -->
+ <field class="game.duplicate.Duplicate" name="factory" id="duplicateFactory" />
+ <method ref="duplicateFactory" name="init">
+<ref id="context" />
+ </method>
+<!-- 
+   name:副本名字
+   ginger:英雄令
+   fightSids:战斗sid数组
+   awardSid:通关奖励
+   fightMaxNum:战场大小
+    -->
+<sample sid="1"  class="game.duplicate.Duplicate" name="山贼喽啰" ginger="1" awardSid="1" fightMaxNum="300" nobiLimit="1" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>1</ints>
+ 	</field>
+ </sample>
+ <sample sid="2"  class="game.duplicate.Duplicate" name="山贼头目" ginger="1" awardSid="2" fightMaxNum="300" nobiLimit="2" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>2</ints>
+ 	</field>
+ </sample>
+ <sample sid="3"  class="game.duplicate.Duplicate" name="山贼大当家" ginger="1" awardSid="3" fightMaxNum="300" nobiLimit="3" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>3</ints>
+ 	</field>
+ </sample>
+ <sample sid="4"  class="game.duplicate.Duplicate" name="马元义" ginger="1" awardSid="4" fightMaxNum="300" nobiLimit="4" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>4</ints>
+ 	</field>
+ </sample>
+ <sample sid="5"  class="game.duplicate.Duplicate" name="邓茂" ginger="1" awardSid="5" fightMaxNum="300" nobiLimit="5" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>5</ints>
+ 	</field>
+ </sample>
+ <sample sid="6"  class="game.duplicate.Duplicate" name="程志远" ginger="1" awardSid="6" fightMaxNum="300" nobiLimit="6" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>6</ints>
+ 	</field>
+ </sample>
+ <sample sid="7"  class="game.duplicate.Duplicate" name="张梁" ginger="1" awardSid="7" fightMaxNum="300" nobiLimit="6" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>7</ints>
+ 	</field>
+ </sample>
+ <sample sid="8"  class="game.duplicate.Duplicate" name="张宝" ginger="1" awardSid="8" fightMaxNum="300" nobiLimit="7" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>8</ints>
+ 	</field>
+ </sample>
+ <sample sid="9"  class="game.duplicate.Duplicate" name="张角" ginger="1" awardSid="9" fightMaxNum="300" nobiLimit="8" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>9</ints>
+ 	</field>
+ </sample>
+ <sample sid="10"  class="game.duplicate.Duplicate" name="黄巾之乱" ginger="0" fightMaxNum="400" nobiLimit="9" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>10</ints>
+ 	</field>
+ </sample>
+ <sample sid="11"  class="game.duplicate.Duplicate" name="赵忠" ginger="1" awardSid="11" fightMaxNum="500" nobiLimit="10" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>11</ints>
+ 	</field>
+ </sample>
+ <sample sid="12"  class="game.duplicate.Duplicate" name="左丰" ginger="1" awardSid="12" fightMaxNum="500" nobiLimit="11" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>12</ints>
+ 	</field>
+ </sample>
+ <sample sid="13"  class="game.duplicate.Duplicate" name="赵旷" ginger="1" awardSid="13" fightMaxNum="500" nobiLimit="12" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>13</ints>
+ 	</field>
+ </sample>
+ <sample sid="14"  class="game.duplicate.Duplicate" name="何苗" ginger="1" awardSid="14" fightMaxNum="500" nobiLimit="13" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>14</ints>
+ 	</field>
+ </sample>
+ <sample sid="15"  class="game.duplicate.Duplicate" name="胡轸" ginger="1" awardSid="15" fightMaxNum="500" nobiLimit="14" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>15</ints>
+ 	</field>
+ </sample>
+ <sample sid="16"  class="game.duplicate.Duplicate" name="李肃" ginger="1" awardSid="16" fightMaxNum="500" nobiLimit="15" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>16</ints>
+ 	</field>
+ </sample>
+ <sample sid="17"  class="game.duplicate.Duplicate" name="华雄" ginger="1" awardSid="17" fightMaxNum="500" nobiLimit="16" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>17</ints>
+ 	</field>
+ </sample>
+ <sample sid="18"  class="game.duplicate.Duplicate" name="张济" ginger="1" awardSid="18" fightMaxNum="500" nobiLimit="17" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>18</ints>
+ 	</field>
+ </sample>
+ <sample sid="19"  class="game.duplicate.Duplicate" name="吕布" ginger="1" awardSid="19" fightMaxNum="500" nobiLimit="17" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>19</ints>
+ 	</field>
+ </sample>
+ <sample sid="20"  class="game.duplicate.Duplicate" name="董卓乱政" ginger="0" fightMaxNum="600" nobiLimit="18" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>20</ints>
+ 	</field>
+ </sample>
+ <sample sid="21"  class="game.duplicate.Duplicate" name="公孙军部将" ginger="1" awardSid="21" fightMaxNum="700" nobiLimit="18" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>21</ints>
+ 	</field>
+ </sample>
+ <sample sid="22"  class="game.duplicate.Duplicate" name="耿武" ginger="1" awardSid="22" fightMaxNum="700" nobiLimit="19" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>22</ints>
+ 	</field>
+ </sample>
+ <sample sid="23"  class="game.duplicate.Duplicate" name="严纲" ginger="1" awardSid="23" fightMaxNum="700" nobiLimit="19" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>23</ints>
+ 	</field>
+ </sample>
+ <sample sid="24"  class="game.duplicate.Duplicate" name="田凯" ginger="1" awardSid="24" fightMaxNum="700" nobiLimit="20" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>24</ints>
+ 	</field>
+ </sample>
+ <sample sid="25"  class="game.duplicate.Duplicate" name="田豫" ginger="1" awardSid="25" fightMaxNum="700" nobiLimit="20" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>25</ints>
+ 	</field>
+ </sample>
+ <sample sid="26"  class="game.duplicate.Duplicate" name="关靖" ginger="1" awardSid="26" fightMaxNum="700" nobiLimit="21" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>26</ints>
+ 	</field>
+ </sample>
+ <sample sid="27"  class="game.duplicate.Duplicate" name="公孙越" ginger="1" awardSid="27" fightMaxNum="700" nobiLimit="21" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>27</ints>
+ 	</field>
+ </sample>
+ <sample sid="28"  class="game.duplicate.Duplicate" name="公孙续" ginger="1" awardSid="28" fightMaxNum="700" nobiLimit="22" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>28</ints>
+ 	</field>
+ </sample>
+ <sample sid="29"  class="game.duplicate.Duplicate" name="公孙瓒" ginger="1" awardSid="29" fightMaxNum="700" nobiLimit="22" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>29</ints>
+ 	</field>
+ </sample>
+ <sample sid="30"  class="game.duplicate.Duplicate" name="火烧易京楼" ginger="0" fightMaxNum="800" nobiLimit="23" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>30</ints>
+ 	</field>
+ </sample>
+ <sample sid="31"  class="game.duplicate.Duplicate" name="曹军部将" ginger="1" awardSid="31" fightMaxNum="1000" nobiLimit="23" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>31</ints>
+ 	</field>
+ </sample>
+ <sample sid="32"  class="game.duplicate.Duplicate" name="于禁" ginger="1" awardSid="32" fightMaxNum="1000" nobiLimit="24" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>32</ints>
+ 	</field>
+ </sample>
+ <sample sid="33"  class="game.duplicate.Duplicate" name="李典" ginger="1" awardSid="33" fightMaxNum="1000" nobiLimit="24" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>33</ints>
+ 	</field>
+ </sample>
+ <sample sid="34"  class="game.duplicate.Duplicate" name="乐进" ginger="1" awardSid="34" fightMaxNum="1000" nobiLimit="25" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>34</ints>
+ 	</field>
+ </sample>
+ <sample sid="35"  class="game.duplicate.Duplicate" name="朱灵" ginger="1" awardSid="35" fightMaxNum="1000" nobiLimit="25" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>35</ints>
+ 	</field>
+ </sample>
+ <sample sid="36"  class="game.duplicate.Duplicate" name="路昭" ginger="1" awardSid="36" fightMaxNum="1000" nobiLimit="26" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>36</ints>
+ 	</field>
+ </sample>
+ <sample sid="37"  class="game.duplicate.Duplicate" name="郭嘉" ginger="1" awardSid="37" fightMaxNum="1000" nobiLimit="26" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>37</ints>
+ 	</field>
+ </sample>
+ <sample sid="38"  class="game.duplicate.Duplicate" name="夏侯渊" ginger="1" awardSid="38" fightMaxNum="1000" nobiLimit="27" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>38</ints>
+ 	</field>
+ </sample>
+ <sample sid="39"  class="game.duplicate.Duplicate" name="夏侯惇" ginger="1" awardSid="39" fightMaxNum="1000" nobiLimit="27" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>39</ints>
+ 	</field>
+ </sample>
+ <sample sid="40"  class="game.duplicate.Duplicate" name="刘玄德千里援徐州" ginger="0" fightMaxNum="1200" nobiLimit="28" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>40</ints>
+ 	</field>
+ </sample>
+ <sample sid="41"  class="game.duplicate.Duplicate" name="刘繇军部将" ginger="1" awardSid="41" fightMaxNum="1400" nobiLimit="29" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>41</ints>
+ 	</field>
+ </sample>
+ <sample sid="42"  class="game.duplicate.Duplicate" name="陆康" ginger="1" awardSid="42" fightMaxNum="1400" nobiLimit="30" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>42</ints>
+ 	</field>
+ </sample>
+ <sample sid="43"  class="game.duplicate.Duplicate" name="张英" ginger="1" awardSid="43" fightMaxNum="1400" nobiLimit="31" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>43</ints>
+ 	</field>
+ </sample>
+ <sample sid="44"  class="game.duplicate.Duplicate" name="樊能" ginger="1" awardSid="44" fightMaxNum="1400" nobiLimit="32" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>44</ints>
+ 	</field>
+ </sample>
+ <sample sid="45"  class="game.duplicate.Duplicate" name="于糜" ginger="1" awardSid="45" fightMaxNum="1400" nobiLimit="33" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>45</ints>
+ 	</field>
+ </sample>
+ <sample sid="46"  class="game.duplicate.Duplicate" name="孔融" ginger="1" awardSid="46" fightMaxNum="1400" nobiLimit="34" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>46</ints>
+ 	</field>
+ </sample>
+ <sample sid="47"  class="game.duplicate.Duplicate" name="太史慈" ginger="1" awardSid="47" fightMaxNum="1400" nobiLimit="35" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>47</ints>
+ 	</field>
+ </sample>
+ <sample sid="48"  class="game.duplicate.Duplicate" name="许贡" ginger="1" awardSid="48" fightMaxNum="1400" nobiLimit="36" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>48</ints>
+ 	</field>
+ </sample>
+ <sample sid="49"  class="game.duplicate.Duplicate" name="刘繇" ginger="1" awardSid="49" fightMaxNum="1400" nobiLimit="37" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>49</ints>
+ 	</field>
+ </sample>
+ <sample sid="50"  class="game.duplicate.Duplicate" name="孙伯符平定江东" ginger="0" fightMaxNum="1600" nobiLimit="38" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>50</ints>
+ 	</field>
+ </sample>
+ <sample sid="51"  class="game.duplicate.Duplicate" name="杨奉" ginger="1" awardSid="51" fightMaxNum="1800" nobiLimit="39" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>51</ints>
+ 	</field>
+ </sample>
+ <sample sid="52"  class="game.duplicate.Duplicate" name="韩禛" ginger="1" awardSid="52" fightMaxNum="1800" nobiLimit="40" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>52</ints>
+ 	</field>
+ </sample>
+ <sample sid="53"  class="game.duplicate.Duplicate" name="张勋" ginger="1" awardSid="53" fightMaxNum="1800" nobiLimit="41" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>53</ints>
+ 	</field>
+ </sample>
+ <sample sid="54"  class="game.duplicate.Duplicate" name="雷薄" ginger="1" awardSid="54" fightMaxNum="1800" nobiLimit="42" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>54</ints>
+ 	</field>
+ </sample>
+ <sample sid="55"  class="game.duplicate.Duplicate" name="刘勋" ginger="1" awardSid="55" fightMaxNum="1800" nobiLimit="43" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>55</ints>
+ 	</field>
+ </sample>
+ <sample sid="56"  class="game.duplicate.Duplicate" name="梁刚" ginger="1" awardSid="56" fightMaxNum="1800" nobiLimit="44" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>56</ints>
+ 	</field>
+ </sample>
+ <sample sid="57"  class="game.duplicate.Duplicate" name="陈纪" ginger="1" awardSid="57" fightMaxNum="1800" nobiLimit="45" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>57</ints>
+ 	</field>
+ </sample>
+ <sample sid="58"  class="game.duplicate.Duplicate" name="纪灵" ginger="1" awardSid="58" fightMaxNum="1800" nobiLimit="46" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>58</ints>
+ 	</field>
+ </sample>
+ <sample sid="59"  class="game.duplicate.Duplicate" name="袁术" ginger="1" awardSid="59" fightMaxNum="1800" nobiLimit="47" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>59</ints>
+ 	</field>
+ </sample>
+ <sample sid="60"  class="game.duplicate.Duplicate" name="讨伐袁术" ginger="0" fightMaxNum="2000" nobiLimit="48" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>60</ints>
+ 	</field>
+ </sample>
+ <sample sid="61"  class="game.duplicate.Duplicate" name="曹性" ginger="1" awardSid="61" fightMaxNum="2400" nobiLimit="49" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>61</ints>
+ 	</field>
+ </sample>
+ <sample sid="62"  class="game.duplicate.Duplicate" name="郝萌" ginger="1" awardSid="62" fightMaxNum="2400" nobiLimit="50" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>62</ints>
+ 	</field>
+ </sample>
+ <sample sid="63"  class="game.duplicate.Duplicate" name="高顺" ginger="1" awardSid="63" fightMaxNum="2400" nobiLimit="51" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>63</ints>
+ 	</field>
+ </sample>
+ <sample sid="64"  class="game.duplicate.Duplicate" name="臧霸" ginger="1" awardSid="64" fightMaxNum="2400" nobiLimit="52" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>64</ints>
+ 	</field>
+ </sample>
+ <sample sid="65"  class="game.duplicate.Duplicate" name="侯成" ginger="1" awardSid="65" fightMaxNum="2400" nobiLimit="53" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>65</ints>
+ 	</field>
+ </sample>
+ <sample sid="66"  class="game.duplicate.Duplicate" name="张辽" ginger="1" awardSid="66" fightMaxNum="2400" nobiLimit="54" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>66</ints>
+ 	</field>
+ </sample>
+ <sample sid="67"  class="game.duplicate.Duplicate" name="陈宫" ginger="1" awardSid="67" fightMaxNum="2400" nobiLimit="55" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>67</ints>
+ 	</field>
+ </sample>
+ <sample sid="68"  class="game.duplicate.Duplicate" name="貂蝉" ginger="1" awardSid="68" fightMaxNum="2400" nobiLimit="56" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>68</ints>
+ 	</field>
+ </sample>
+ <sample sid="69"  class="game.duplicate.Duplicate" name="吕布" ginger="1" awardSid="69" fightMaxNum="2400" nobiLimit="57" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>69</ints>
+ 	</field>
+ </sample>
+ <sample sid="70"  class="game.duplicate.Duplicate" name="吕布白门楼陨命" ginger="0" fightMaxNum="2800" nobiLimit="58" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>70</ints>
+ 	</field>
+ </sample>
+ <sample sid="71"  class="game.duplicate.Duplicate" name="郭图" ginger="1" awardSid="71" fightMaxNum="3000" nobiLimit="59" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>71</ints>
+ 	</field>
+ </sample>
+ <sample sid="72"  class="game.duplicate.Duplicate" name="逢纪" ginger="1" awardSid="72" fightMaxNum="3000" nobiLimit="60" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>72</ints>
+ 	</field>
+ </sample>
+ <sample sid="73"  class="game.duplicate.Duplicate" name="高览" ginger="1" awardSid="73" fightMaxNum="3000" nobiLimit="61" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>73</ints>
+ 	</field>
+ </sample>
+ <sample sid="74"  class="game.duplicate.Duplicate" name="审配" ginger="1" awardSid="74" fightMaxNum="3000" nobiLimit="62" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>74</ints>
+ 	</field>
+ </sample>
+ <sample sid="75"  class="game.duplicate.Duplicate" name="颜良" ginger="1" awardSid="75" fightMaxNum="3000" nobiLimit="63" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>75</ints>
+ 	</field>
+ </sample>
+ <sample sid="76"  class="game.duplicate.Duplicate" name="文丑" ginger="1" awardSid="76" fightMaxNum="3000" nobiLimit="64" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>76</ints>
+ 	</field>
+ </sample>
+ <sample sid="77"  class="game.duplicate.Duplicate" name="田丰" ginger="1" awardSid="77" fightMaxNum="3000" nobiLimit="65" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>77</ints>
+ 	</field>
+ </sample>
+ <sample sid="78"  class="game.duplicate.Duplicate" name="张颌" ginger="1" awardSid="78" fightMaxNum="3000" nobiLimit="66" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>78</ints>
+ 	</field>
+ </sample>
+ <sample sid="79"  class="game.duplicate.Duplicate" name="袁绍" ginger="1" awardSid="79" fightMaxNum="3000" nobiLimit="67" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>79</ints>
+ 	</field>
+ </sample>
+ <sample sid="80"  class="game.duplicate.Duplicate" name="官渡之战" ginger="0" fightMaxNum="3500" nobiLimit="68" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>80</ints>
+ 	</field>
+ </sample>
+ <sample sid="81"  class="game.duplicate.Duplicate" name="守关部将" ginger="1" awardSid="81" fightMaxNum="4000" nobiLimit="69" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>81</ints>
+ 	</field>
+ </sample>
+ <sample sid="82"  class="game.duplicate.Duplicate" name="孔秀" ginger="1" awardSid="82" fightMaxNum="4000" nobiLimit="70" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>82</ints>
+ 	</field>
+ </sample>
+ <sample sid="83"  class="game.duplicate.Duplicate" name="孟坦" ginger="1" awardSid="83" fightMaxNum="4000" nobiLimit="71" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>83</ints>
+ 	</field>
+ </sample>
+ <sample sid="84"  class="game.duplicate.Duplicate" name="韩福" ginger="1" awardSid="84" fightMaxNum="4000" nobiLimit="72" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>84</ints>
+ 	</field>
+ </sample>
+ <sample sid="85"  class="game.duplicate.Duplicate" name="卞喜" ginger="1" awardSid="85" fightMaxNum="4000" nobiLimit="73" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>85</ints>
+ 	</field>
+ </sample>
+ <sample sid="86"  class="game.duplicate.Duplicate" name="王植" ginger="1" awardSid="86" fightMaxNum="4000" nobiLimit="74" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>86</ints>
+ 	</field>
+ </sample>
+ <sample sid="87"  class="game.duplicate.Duplicate" name="秦琪" ginger="1" awardSid="87" fightMaxNum="4000" nobiLimit="75" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>87</ints>
+ 	</field>
+ </sample>
+ <sample sid="88"  class="game.duplicate.Duplicate" name="夏侯惇" ginger="1" awardSid="88" fightMaxNum="4000" nobiLimit="76" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>88</ints>
+ 	</field>
+ </sample>
+ <sample sid="89"  class="game.duplicate.Duplicate" name="蔡阳" ginger="1" awardSid="89" fightMaxNum="4000" nobiLimit="77" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>89</ints>
+ 	</field>
+ </sample>
+ <sample sid="90"  class="game.duplicate.Duplicate" name="千里走单骑" ginger="0" fightMaxNum="4500" nobiLimit="78" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>90</ints>
+ 	</field>
+ </sample>
+ <sample sid="91"  class="game.duplicate.Duplicate" name="李典" ginger="1" awardSid="91" fightMaxNum="5000" nobiLimit="79" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>91</ints>
+ 	</field>
+ </sample>
+ <sample sid="92"  class="game.duplicate.Duplicate" name="于禁" ginger="1" awardSid="92" fightMaxNum="5000" nobiLimit="80" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>92</ints>
+ 	</field>
+ </sample>
+ <sample sid="93"  class="game.duplicate.Duplicate" name="乐进" ginger="1" awardSid="93" fightMaxNum="5000" nobiLimit="81" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>93</ints>
+ 	</field>
+ </sample>
+ <sample sid="94"  class="game.duplicate.Duplicate" name="张颌" ginger="1" awardSid="94" fightMaxNum="5000" nobiLimit="82" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>94</ints>
+ 	</field>
+ </sample>
+ <sample sid="95"  class="game.duplicate.Duplicate" name="张辽" ginger="1" awardSid="95" fightMaxNum="5000" nobiLimit="83" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>95</ints>
+ 	</field>
+ </sample>
+ <sample sid="96"  class="game.duplicate.Duplicate" name="许褚" ginger="1" awardSid="96" fightMaxNum="5000" nobiLimit="84" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>96</ints>
+ 	</field>
+ </sample>
+ <sample sid="97"  class="game.duplicate.Duplicate" name="夏侯惇" ginger="1" awardSid="97" fightMaxNum="5000" nobiLimit="85" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>97</ints>
+ 	</field>
+ </sample>
+ <sample sid="98"  class="game.duplicate.Duplicate" name="曹仁" ginger="1" awardSid="98" fightMaxNum="5000" nobiLimit="86" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>98</ints>
+ 	</field>
+ </sample>
+ <sample sid="99"  class="game.duplicate.Duplicate" name="曹操" ginger="1" awardSid="99" fightMaxNum="5000" nobiLimit="87" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>99</ints>
+ 	</field>
+ </sample>
+ <sample sid="100"  class="game.duplicate.Duplicate" name="赤壁之战" ginger="0" fightMaxNum="5500" nobiLimit="88" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>100</ints>
+ 	</field>
+ </sample>
+ 
+  <sample sid="101"  class="game.duplicate.Duplicate" name="神仙护卫" ginger="1" awardSid="95" fightMaxNum="5000" nobiLimit="83" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>101</ints>
+ 	</field>
+ </sample>
+ <sample sid="102"  class="game.duplicate.Duplicate" name="神仙护卫" ginger="1" awardSid="96" fightMaxNum="5000" nobiLimit="84" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>102</ints>
+ 	</field>
+ </sample>
+ <sample sid="103"  class="game.duplicate.Duplicate" name="神仙护卫" ginger="1" awardSid="97" fightMaxNum="5000" nobiLimit="85" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>103</ints>
+ 	</field>
+ </sample>
+ <sample sid="104"  class="game.duplicate.Duplicate" name="魔王护卫" ginger="1" awardSid="98" fightMaxNum="5000" nobiLimit="86" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>104</ints>
+ 	</field>
+ </sample>
+ <sample sid="105"  class="game.duplicate.Duplicate" name="魔王护卫" ginger="1" awardSid="99" fightMaxNum="5000" nobiLimit="87" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>105</ints>
+ 	</field>
+ </sample>
+ <sample sid="106"  class="game.duplicate.Duplicate" name="魔王护卫" ginger="0" fightMaxNum="5500" nobiLimit="88" >
+ 	<field name="fightSids" declared="1">
+ 		<ints>106</ints>
+ 	</field>
+ </sample>
+ </objects>

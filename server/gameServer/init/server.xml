@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!--服务器信息-->
+	<obj class="xlib.server.Server" id="server">
+		<!--平台id-->
+		<field name="PLANTID" declared="1">1</field>
+		<!--服务器id-->
+		<field name="SERVERNAME" declared="1">外网测试服</field>
+		<!--服务器id-->
+		<field name="SERVERID" declared="1">1</field>
+		<!-- 服务器域名 -->
+		<field name="SERVERDOMAIN" declared="1">127.0.0.1</field>
+		<!-- 服务器版本号 -->
+		<field name="SERVERVERSION" declared="1">1.0.0</field>
+		<!--游戏人数上限-->
+		<field name="SESSIONMAX">3000</field>
+		<!--服务器状态-->
+		<field name="STATE">2</field>
+		<!-- 服务器允许gm工具的http请求的的ip -->
+		<field name="ALLOWIP" declared="1">
+			<strings separator=",">*</strings>
+		</field>
+		<!-- 服务器认证id -->
+		<field name="KEY">
+			<string>sdfasf484j4lpe8we4ev09as</string>
+		</field>
+		<field name="DEBUG">
+			<value type="boolean">false</value>
+		</field>
+		<field name="ANTIADDICTION">
+			<value type="boolean">false</value>
+		</field>
+		<!-- 初始化平台服务器id数组，合服后需要添加新的 -->
+		<method name="init">
+			<!-- 平台id数组 -->
+			<ints>1</ints>
+			<!-- 服务器id数组 -->
+			<ints>1</ints>
+		</method>
+	</obj>
+	<!--数据库用户名-->
+	<String id="dbName">root</String>
+	<!--数据库密码-->
+	<String id="dbPassword">root</String>
+	<!--数据库编码-->
+	<String id="dbEncode">utf-8</String>
+	<!--游戏数据库地址-->
+	<String id="gameDB">jdbc:mysql://127.0.0.1:3306/zsg_rc</String>
+	<!--sever地址-->
+	<String id="serverIP">tcp://127.0.0.1:8100</String>
+	<!--日志地址-->
+	<String id="logServerIP">tcp://127.0.0.1:8102</String>
+	<!--bi地址-->
+	<String id="biServerIP">tcp://127.0.0.1:8104</String>
+	<!-- 日志服务器开关 -->
+	<String id="logSwitch">false</String>
+	<!-- BI服务器开关 -->
+	<String id="biSwitch">false</String>
+</objects>

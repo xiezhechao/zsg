@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+ <!--TaskCondition一般的只用最大数量的类型 maxNum最大数量
+
+  MilitaryGetCondition招募某个武将的条件类型 militarySid武将的SID maxNum招募次数一般为1 color招募某种品质的武将
+
+  ResouceRateCondition需要产量的条件类型 maxNum为需要达到多少
+
+  DuplicateCondition通关副本的条件类型 chapterSid章节的SID duplicateSid如果没有就是通关全章节 如果有指某1个副本
+
+ clickEvent点击链接 1打开副本 2打开强化 3打开国家 4打开科技 5进入主城 6打开募兵 7打开商城 8打开任务界面
+-->
+<sample sid="5" className="game.window.task.data.TaskCondition" name="升级林地至2级" maxNum="2" clickEvent="5" ></sample>
+ <sample sid="7" className="game.window.task.data.TaskCondition" name="升级官府至3级" maxNum="3" clickEvent="5" ></sample>
+ <sample sid="9" className="game.window.task.data.TaskCondition" name="升级民居至3级" maxNum="3" clickEvent="5" ></sample>
+ <sample sid="11" className="game.window.task.data.TaskCondition" name="升级林地至3级" maxNum="3" clickEvent="5" ></sample>
+ <sample sid="16" className="game.window.task.data.TaskCondition" name="击败山贼头目" maxNum="1" bigSid="1" smallsid="2" clickEvent="1" ></sample>
+ <sample sid="17" className="game.window.task.data.TaskCondition" name="升级官府至5级" maxNum="5" clickEvent="5" ></sample>
+ <sample sid="19" className="game.window.task.data.TaskCondition" name="升级林地至5级" maxNum="5" clickEvent="5" ></sample>
+ <sample sid="20" className="game.window.task.data.TaskCondition" name="升级民居至5级" maxNum="5" clickEvent="5" ></sample>
+ <sample sid="21" className="game.window.task.data.TaskCondition" name="升级市场至5级" maxNum="5" clickEvent="5" ></sample>
+ <sample sid="23" className="game.window.task.data.TaskCondition" name="招募500轻步兵" maxNum="500" clickEvent="20" ></sample>
+ <sample sid="24" className="game.window.task.data.TaskCondition" name="击败山贼大当家" maxNum="1" bigSid="1" smallsid="3" clickEvent="1" ></sample>
+ <sample sid="25" className="game.window.task.data.TaskCondition" name="打开编组补给士兵" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="26" className="game.window.task.data.TaskCondition" name="击败马元义" maxNum="1" bigSid="1" smallsid="4" clickEvent="1" ></sample>
+ <sample sid="28" className="game.window.task.data.TaskCondition" name="招募2000轻骑兵" maxNum="2000" clickEvent="31" ></sample>
+ <sample sid="29" className="game.window.task.data.TaskCondition" name="将主角带兵替换为轻骑兵" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="30" className="game.window.task.data.TaskCondition" name="再次击败马元义" maxNum="1" bigSid="1" smallsid="4" clickEvent="1" ></sample>
+ <sample sid="32" className="game.window.task.data.TaskCondition" name="升级官府至6级" maxNum="6" clickEvent="5" ></sample>
+ <sample sid="34" className="game.window.task.data.TaskCondition" name="升级农田至6级" maxNum="6" clickEvent="5" ></sample>
+ <sample sid="35" className="game.window.task.data.TaskCondition" name="升级锻造司至6级" maxNum="6" clickEvent="5" ></sample>
+ <sample sid="36" className="game.window.task.data.TaskCondition" name="击败邓茂" maxNum="1" bigSid="1" smallsid="5" clickEvent="1" ></sample>
+ <sample sid="38" className="game.window.task.data.TaskCondition" name="升级官府至7级" maxNum="7" clickEvent="5" ></sample>
+ <sample sid="40" className="game.window.task.data.TaskCondition" name="升级医疗营至7级" maxNum="7" clickEvent="5" ></sample>
+ <sample sid="41" className="game.window.task.data.TaskCondition" name="升级御医所至7级" maxNum="7" clickEvent="5" ></sample>
+ <sample sid="42" className="game.window.task.data.TaskCondition" name="击败程志远" maxNum="1" bigSid="1" smallsid="6" clickEvent="1" ></sample>
+ <sample sid="43" className="game.window.task.data.TaskCondition" name="穿戴新兵长刀" maxNum="1" bigSid="1000" clickEvent="29" ></sample>
+ <sample sid="44" className="game.window.task.data.TaskCondition" name="击败张梁" maxNum="1" bigSid="1" smallsid="7" clickEvent="1" ></sample>
+ <sample sid="46" className="game.window.task.data.TaskCondition" name="再败张梁" maxNum="1" bigSid="1" smallsid="7" clickEvent="1" ></sample>
+ <sample sid="47" className="game.window.task.data.TaskCondition" name="穿戴新兵皮甲" maxNum="1" bigSid="1001" clickEvent="29" ></sample>
+ <sample sid="48" className="game.window.task.data.TaskCondition" name="提升主角武将等级至7级" maxNum="7" clickEvent="28" ></sample>
+ <sample sid="50" className="game.window.task.data.TaskCondition" name="三败张梁" maxNum="1" bigSid="1" smallsid="7" clickEvent="1" ></sample>
+ <sample sid="53" className="game.window.task.data.TaskCondition" name="上阵张梁（建议带轻步兵）" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="55" className="game.window.task.data.TaskCondition" name="击败张宝" maxNum="1" bigSid="1" smallsid="8" clickEvent="1" ></sample>
+ <sample sid="57" className="game.window.task.data.TaskCondition" name="招募2000轻弓兵" maxNum="2000" clickEvent="32" ></sample>
+ <sample sid="58" className="game.window.task.data.TaskCondition" name="张梁带轻弓兵并拖至后排" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="59" className="game.window.task.data.TaskCondition" name="升级林地至7级" maxNum="7" clickEvent="5" ></sample>
+ <sample sid="60" className="game.window.task.data.TaskCondition" name="升级民居至7级" maxNum="7" clickEvent="5" ></sample>
+ <sample sid="61" className="game.window.task.data.TaskCondition" name="升级农田至7级" maxNum="7" clickEvent="5" ></sample>
+ <sample sid="62" className="game.window.task.data.TaskCondition" name="再次击败张宝" maxNum="1" bigSid="1" smallsid="8" clickEvent="1" ></sample>
+ <sample sid="64" className="game.window.task.data.TaskCondition" name="进入伤兵营治疗伤兵" maxNum="1" clickEvent="23" ></sample>
+ <sample sid="65" className="game.window.task.data.MilitaryGetCondition" name="招募张宝" maxNum="1" militarySid="6" color="0" clickEvent="9" ></sample>
+ <sample sid="66" className="game.window.task.data.TaskCondition" name="提升张梁至7级" maxNum="7" clickEvent="28" ></sample>
+ <sample sid="67" className="game.window.task.data.TaskCondition" name="提升张宝至7级" maxNum="7" clickEvent="28" ></sample>
+ <sample sid="68" className="game.window.task.data.TaskCondition" name="上阵张宝" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="69" className="game.window.task.data.TaskCondition" name="击败张角" maxNum="1" bigSid="1" smallsid="9" clickEvent="1" ></sample>
+ <sample sid="71" className="game.window.task.data.TaskCondition" name="进入伤兵营治疗伤兵" maxNum="1" clickEvent="23" ></sample>
+ <sample sid="72" className="game.window.task.data.TaskCondition" name="升级官府至9级" maxNum="9" clickEvent="5" ></sample>
+ <sample sid="73" className="game.window.task.data.TaskCondition" name="提升主角武将至9级" maxNum="9" clickEvent="28" ></sample>
+ <sample sid="74" className="game.window.task.data.TaskCondition" name="提升张梁至9级" maxNum="9" clickEvent="28" ></sample>
+ <sample sid="75" className="game.window.task.data.TaskCondition" name="提升张宝至9级" maxNum="9" clickEvent="28" ></sample>
+ <sample sid="77" className="game.window.task.data.TaskCondition" name="使用碾压功能通关张角" maxNum="1" bigSid="1" smallsid="9" clickEvent="1" ></sample>
+ <sample sid="79" className="game.window.task.data.TaskCondition" name="功勋换购粮食包" maxNum="1" clickEvent="14" ></sample>
+ <sample sid="80" className="game.window.task.data.TaskCondition" name="功勋换购木材包" maxNum="1" clickEvent="14" ></sample>
+ <sample sid="81" className="game.window.task.data.TaskCondition" name="升级官府至10级" maxNum="10" clickEvent="5" ></sample>
+ <sample sid="82" className="game.window.task.data.TaskCondition" name="升级城门至8级" maxNum="8" clickEvent="5" ></sample>
+ <sample sid="83" className="game.window.task.data.TaskCondition" name="升级箭楼至8级" maxNum="8" clickEvent="5" ></sample>
+ <sample sid="84" className="game.window.task.data.TaskCondition" name="通关黄巾之乱" maxNum="1" bigSid="1" smallsid="10" clickEvent="1" ></sample>
+ <sample sid="85" className="game.window.task.data.MilitaryGetCondition" name="招募张角" maxNum="1" militarySid="7" color="1" clickEvent="9" ></sample>
+ <sample sid="88" className="game.window.task.data.TaskCondition" name="提升张角至10级" maxNum="10" clickEvent="28" ></sample>
+ <sample sid="89" className="game.window.task.data.TaskCondition" name="提升张宝至10级" maxNum="10" clickEvent="28" ></sample>
+ <sample sid="90" className="game.window.task.data.TaskCondition" name="提升张梁至10级" maxNum="10" clickEvent="28" ></sample>
+ <sample sid="92" className="game.window.task.data.TaskCondition" name="打开编组补给士兵" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="93" className="game.window.task.data.TaskCondition" name="击败赵忠" maxNum="1" bigSid="2" smallsid="11" clickEvent="1" ></sample>
+ <sample sid="95" className="game.window.task.data.TaskCondition" name="换购初级经验卷轴" maxNum="1" clickEvent="14" ></sample>
+ <sample sid="96" className="game.window.task.data.TaskCondition" name="提升主角武将至11级" maxNum="11" clickEvent="28" ></sample>
+ <sample sid="97" className="game.window.task.data.TaskCondition" name="击败左丰" maxNum="1" bigSid="2" smallsid="12" clickEvent="1" ></sample>
+ <sample sid="98" className="game.window.task.data.TaskCondition" name="进入伤兵营治疗伤兵" maxNum="1" clickEvent="23" ></sample>
+ <sample sid="99" className="game.window.task.data.TaskCondition" name="升级官府至12级" maxNum="12" clickEvent="5" ></sample>
+ <sample sid="100" className="game.window.task.data.TaskCondition" name="升级冶铁所至10级" maxNum="10" clickEvent="5" ></sample>
+ <sample sid="101" className="game.window.task.data.TaskCondition" name="升级锻铁场至10级" maxNum="10" clickEvent="5" ></sample>
+ <sample sid="103" className="game.window.task.data.TaskCondition" name="招募800青州精卒" maxNum="800" clickEvent="20" ></sample>
+ <sample sid="104" className="game.window.task.data.TaskCondition" name="替换主角带兵为青州精卒" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="105" className="game.window.task.data.TaskCondition" name="击败赵旷" maxNum="1" bigSid="2" smallsid="13" clickEvent="1" ></sample>
+ <sample sid="107" className="game.window.task.data.TaskCondition" name="击败何苗" maxNum="1" bigSid="2" smallsid="14" clickEvent="1" ></sample>
+ <sample sid="110" className="game.window.task.data.TaskCondition" name="打造精兵长剑" maxNum="1" bigSid="1018" clickEvent="16" ></sample>
+ <sample sid="111" className="game.window.task.data.TaskCondition" name="击败胡轸" maxNum="1" bigSid="2" smallsid="15" clickEvent="1" ></sample>
+ <sample sid="112" className="game.window.task.data.TaskCondition" name="进入伤兵营治疗伤兵" maxNum="1" clickEvent="23" ></sample>
+ <sample sid="113" className="game.window.task.data.TaskCondition" name="打造精兵皮甲" maxNum="1" bigSid="1019" clickEvent="16" ></sample>
+ <sample sid="114" className="game.window.task.data.TaskCondition" name="打造精兵头盔" maxNum="1" bigSid="1020" clickEvent="16" ></sample>
+ <sample sid="115" className="game.window.task.data.TaskCondition" name="打造精兵长靴" maxNum="1" bigSid="1021" clickEvent="16" ></sample>
+ <sample sid="116" className="game.window.task.data.TaskCondition" name="击败李肃" maxNum="1" bigSid="2" smallsid="16" clickEvent="1" ></sample>
+ <sample sid="117" className="game.window.task.data.TaskCondition" name="功勋换购粮食包" maxNum="1" clickEvent="14" ></sample>
+ <sample sid="118" className="game.window.task.data.TaskCondition" name="功勋换购木材包" maxNum="1" clickEvent="14" ></sample>
+ <sample sid="119" className="game.window.task.data.TaskCondition" name="击败华雄" maxNum="1" bigSid="2" smallsid="17" clickEvent="1" ></sample>
+ <sample sid="121" className="game.window.task.data.MilitaryGetCondition" name="招募董卓" maxNum="1" militarySid="8" color="1" clickEvent="9" ></sample>
+ <sample sid="122" className="game.window.task.data.TaskCondition" name="提升董卓至10级" maxNum="10" clickEvent="28" ></sample>
+ <sample sid="123" className="game.window.task.data.TaskCondition" name="提升张角至15级" maxNum="15" clickEvent="28" ></sample>
+ <sample sid="124" className="game.window.task.data.TaskCondition" name="提升张宝至15级" maxNum="15" clickEvent="28" ></sample>
+ <sample sid="125" className="game.window.task.data.TaskCondition" name="提升张梁至15级" maxNum="15" clickEvent="28" ></sample>
+ <sample sid="126" className="game.window.task.data.TaskCondition" name="上阵董卓" maxNum="1" clickEvent="30" ></sample>
+ <sample sid="127" className="game.window.task.data.TaskCondition" name="击败张济" maxNum="1" bigSid="2" smallsid="18" clickEvent="1" ></sample>
+ <sample sid="130" className="game.window.task.data.TaskCondition" name="击败吕布" maxNum="1" bigSid="2" smallsid="19" clickEvent="1" ></sample>
+ <sample sid="133" className="game.window.task.data.TaskCondition" name="通关董卓乱政" maxNum="1" bigSid="2" smallsid="20" clickEvent="1" ></sample>
+ <sample sid="134" className="game.window.task.data.TaskCondition" name="公孙军部将" maxNum="1" bigSid="3" smallsid="21" clickEvent="1" ></sample>
+ <sample sid="135" className="game.window.task.data.TaskCondition" name="耿武" maxNum="1" bigSid="3" smallsid="22" clickEvent="1" ></sample>
+ <sample sid="136" className="game.window.task.data.TaskCondition" name="严纲" maxNum="1" bigSid="3" smallsid="23" clickEvent="1" ></sample>
+ <sample sid="137" className="game.window.task.data.TaskCondition" name="田凯" maxNum="1" bigSid="3" smallsid="24" clickEvent="1" ></sample>
+ <sample sid="138" className="game.window.task.data.TaskCondition" name="田豫" maxNum="1" bigSid="3" smallsid="25" clickEvent="1" ></sample>
+ <sample sid="139" className="game.window.task.data.TaskCondition" name="关靖" maxNum="1" bigSid="3" smallsid="26" clickEvent="1" ></sample>
+ <sample sid="140" className="game.window.task.data.TaskCondition" name="公孙越" maxNum="1" bigSid="3" smallsid="27" clickEvent="1" ></sample>
+ <sample sid="141" className="game.window.task.data.TaskCondition" name="公孙续" maxNum="1" bigSid="3" smallsid="28" clickEvent="1" ></sample>
+ <sample sid="142" className="game.window.task.data.TaskCondition" name="公孙瓒" maxNum="1" bigSid="3" smallsid="29" clickEvent="1" ></sample>
+ <sample sid="143" className="game.window.task.data.TaskCondition" name="火烧易京楼" maxNum="1" bigSid="3" smallsid="30" clickEvent="1" ></sample>
+ <sample sid="144" className="game.window.task.data.TaskCondition" name="曹军部将" maxNum="1" bigSid="4" smallsid="31" clickEvent="1" ></sample>
+ <sample sid="145" className="game.window.task.data.TaskCondition" name="于禁" maxNum="1" bigSid="4" smallsid="32" clickEvent="1" ></sample>
+ <sample sid="146" className="game.window.task.data.TaskCondition" name="李典" maxNum="1" bigSid="4" smallsid="33" clickEvent="1" ></sample>
+ <sample sid="147" className="game.window.task.data.TaskCondition" name="乐进" maxNum="1" bigSid="4" smallsid="34" clickEvent="1" ></sample>
+ <sample sid="148" className="game.window.task.data.TaskCondition" name="朱灵" maxNum="1" bigSid="4" smallsid="35" clickEvent="1" ></sample>
+ <sample sid="149" className="game.window.task.data.TaskCondition" name="路昭" maxNum="1" bigSid="4" smallsid="36" clickEvent="1" ></sample>
+ <sample sid="150" className="game.window.task.data.TaskCondition" name="郭嘉" maxNum="1" bigSid="4" smallsid="37" clickEvent="1" ></sample>
+ <sample sid="151" className="game.window.task.data.TaskCondition" name="夏侯渊" maxNum="1" bigSid="4" smallsid="38" clickEvent="1" ></sample>
+ <sample sid="152" className="game.window.task.data.TaskCondition" name="夏侯惇" maxNum="1" bigSid="4" smallsid="39" clickEvent="1" ></sample>
+ <sample sid="153" className="game.window.task.data.TaskCondition" name="刘玄德千里援徐州" maxNum="1" bigSid="4" smallsid="40" clickEvent="1" ></sample>
+ <sample sid="154" className="game.window.task.data.TaskCondition" name="刘繇军部将" maxNum="1" bigSid="5" smallsid="41" clickEvent="1" ></sample>
+ <sample sid="155" className="game.window.task.data.TaskCondition" name="陆康" maxNum="1" bigSid="5" smallsid="42" clickEvent="1" ></sample>
+ <sample sid="156" className="game.window.task.data.TaskCondition" name="张英" maxNum="1" bigSid="5" smallsid="43" clickEvent="1" ></sample>
+ <sample sid="157" className="game.window.task.data.TaskCondition" name="樊能" maxNum="1" bigSid="5" smallsid="44" clickEvent="1" ></sample>
+ <sample sid="158" className="game.window.task.data.TaskCondition" name="于糜" maxNum="1" bigSid="5" smallsid="45" clickEvent="1" ></sample>
+ <sample sid="159" className="game.window.task.data.TaskCondition" name="孔融" maxNum="1" bigSid="5" smallsid="46" clickEvent="1" ></sample>
+ <sample sid="160" className="game.window.task.data.TaskCondition" name="太史慈" maxNum="1" bigSid="5" smallsid="47" clickEvent="1" ></sample>
+ <sample sid="161" className="game.window.task.data.TaskCondition" name="许贡" maxNum="1" bigSid="5" smallsid="48" clickEvent="1" ></sample>
+ <sample sid="162" className="game.window.task.data.TaskCondition" name="刘繇" maxNum="1" bigSid="5" smallsid="49" clickEvent="1" ></sample>
+ <sample sid="163" className="game.window.task.data.TaskCondition" name="孙伯符平定江东" maxNum="1" bigSid="5" smallsid="50" clickEvent="1" ></sample>
+ <sample sid="164" className="game.window.task.data.TaskCondition" name="杨奉" maxNum="1" bigSid="6" smallsid="51" clickEvent="1" ></sample>
+ <sample sid="165" className="game.window.task.data.TaskCondition" name="韩禛" maxNum="1" bigSid="6" smallsid="52" clickEvent="1" ></sample>
+ <sample sid="166" className="game.window.task.data.TaskCondition" name="张勋" maxNum="1" bigSid="6" smallsid="53" clickEvent="1" ></sample>
+ <sample sid="167" className="game.window.task.data.TaskCondition" name="雷薄" maxNum="1" bigSid="6" smallsid="54" clickEvent="1" ></sample>
+ <sample sid="168" className="game.window.task.data.TaskCondition" name="刘勋" maxNum="1" bigSid="6" smallsid="55" clickEvent="1" ></sample>
+ <sample sid="169" className="game.window.task.data.TaskCondition" name="梁刚" maxNum="1" bigSid="6" smallsid="56" clickEvent="1" ></sample>
+ <sample sid="170" className="game.window.task.data.TaskCondition" name="陈纪" maxNum="1" bigSid="6" smallsid="57" clickEvent="1" ></sample>
+ <sample sid="171" className="game.window.task.data.TaskCondition" name="纪灵" maxNum="1" bigSid="6" smallsid="58" clickEvent="1" ></sample>
+ <sample sid="172" className="game.window.task.data.TaskCondition" name="袁术" maxNum="1" bigSid="6" smallsid="59" clickEvent="1" ></sample>
+ <sample sid="173" className="game.window.task.data.TaskCondition" name="讨伐袁术" maxNum="1" bigSid="6" smallsid="60" clickEvent="1" ></sample>
+ <sample sid="174" className="game.window.task.data.TaskCondition" name="曹性" maxNum="1" bigSid="7" smallsid="61" clickEvent="1" ></sample>
+ <sample sid="175" className="game.window.task.data.TaskCondition" name="郝萌" maxNum="1" bigSid="7" smallsid="62" clickEvent="1" ></sample>
+ <sample sid="176" className="game.window.task.data.TaskCondition" name="高顺" maxNum="1" bigSid="7" smallsid="63" clickEvent="1" ></sample>
+ <sample sid="177" className="game.window.task.data.TaskCondition" name="臧霸" maxNum="1" bigSid="7" smallsid="64" clickEvent="1" ></sample>
+ <sample sid="178" className="game.window.task.data.TaskCondition" name="侯成" maxNum="1" bigSid="7" smallsid="65" clickEvent="1" ></sample>
+ <sample sid="179" className="game.window.task.data.TaskCondition" name="张辽" maxNum="1" bigSid="7" smallsid="66" clickEvent="1" ></sample>
+ <sample sid="180" className="game.window.task.data.TaskCondition" name="陈宫" maxNum="1" bigSid="7" smallsid="67" clickEvent="1" ></sample>
+ <sample sid="181" className="game.window.task.data.TaskCondition" name="貂蝉" maxNum="1" bigSid="7" smallsid="68" clickEvent="1" ></sample>
+ <sample sid="182" className="game.window.task.data.TaskCondition" name="吕布" maxNum="1" bigSid="7" smallsid="69" clickEvent="1" ></sample>
+ <sample sid="183" className="game.window.task.data.TaskCondition" name="吕布白门楼陨命" maxNum="1" bigSid="7" smallsid="70" clickEvent="1" ></sample>
+ <sample sid="184" className="game.window.task.data.TaskCondition" name="郭图" maxNum="1" bigSid="8" smallsid="71" clickEvent="1" ></sample>
+ <sample sid="185" className="game.window.task.data.TaskCondition" name="逢纪" maxNum="1" bigSid="8" smallsid="72" clickEvent="1" ></sample>
+ <sample sid="186" className="game.window.task.data.TaskCondition" name="高览" maxNum="1" bigSid="8" smallsid="73" clickEvent="1" ></sample>
+ <sample sid="187" className="game.window.task.data.TaskCondition" name="审配" maxNum="1" bigSid="8" smallsid="74" clickEvent="1" ></sample>
+ <sample sid="188" className="game.window.task.data.TaskCondition" name="颜良" maxNum="1" bigSid="8" smallsid="75" clickEvent="1" ></sample>
+ <sample sid="189" className="game.window.task.data.TaskCondition" name="文丑" maxNum="1" bigSid="8" smallsid="76" clickEvent="1" ></sample>
+ <sample sid="190" className="game.window.task.data.TaskCondition" name="田丰" maxNum="1" bigSid="8" smallsid="77" clickEvent="1" ></sample>
+ <sample sid="191" className="game.window.task.data.TaskCondition" name="张颌" maxNum="1" bigSid="8" smallsid="78" clickEvent="1" ></sample>
+ <sample sid="192" className="game.window.task.data.TaskCondition" name="袁绍" maxNum="1" bigSid="8" smallsid="79" clickEvent="1" ></sample>
+ <sample sid="193" className="game.window.task.data.TaskCondition" name="官渡之战" maxNum="1" bigSid="8" smallsid="80" clickEvent="1" ></sample>
+ <sample sid="194" className="game.window.task.data.TaskCondition" name="守关部将" maxNum="1" bigSid="9" smallsid="81" clickEvent="1" ></sample>
+ <sample sid="195" className="game.window.task.data.TaskCondition" name="孔秀" maxNum="1" bigSid="9" smallsid="82" clickEvent="1" ></sample>
+ <sample sid="196" className="game.window.task.data.TaskCondition" name="孟坦" maxNum="1" bigSid="9" smallsid="83" clickEvent="1" ></sample>
+ <sample sid="197" className="game.window.task.data.TaskCondition" name="韩福" maxNum="1" bigSid="9" smallsid="84" clickEvent="1" ></sample>
+ <sample sid="198" className="game.window.task.data.TaskCondition" name="卞喜" maxNum="1" bigSid="9" smallsid="85" clickEvent="1" ></sample>
+ <sample sid="199" className="game.window.task.data.TaskCondition" name="王植" maxNum="1" bigSid="9" smallsid="86" clickEvent="1" ></sample>
+ <sample sid="200" className="game.window.task.data.TaskCondition" name="秦琪" maxNum="1" bigSid="9" smallsid="87" clickEvent="1" ></sample>
+ <sample sid="201" className="game.window.task.data.TaskCondition" name="夏侯惇" maxNum="1" bigSid="9" smallsid="88" clickEvent="1" ></sample>
+ <sample sid="202" className="game.window.task.data.TaskCondition" name="蔡阳" maxNum="1" bigSid="9" smallsid="89" clickEvent="1" ></sample>
+ <sample sid="203" className="game.window.task.data.TaskCondition" name="千里走单骑" maxNum="1" bigSid="9" smallsid="90" clickEvent="1" ></sample>
+ <sample sid="204" className="game.window.task.data.TaskCondition" name="李典" maxNum="1" bigSid="10" smallsid="91" clickEvent="1" ></sample>
+ <sample sid="205" className="game.window.task.data.TaskCondition" name="于禁" maxNum="1" bigSid="10" smallsid="92" clickEvent="1" ></sample>
+ <sample sid="206" className="game.window.task.data.TaskCondition" name="乐进" maxNum="1" bigSid="10" smallsid="93" clickEvent="1" ></sample>
+ <sample sid="207" className="game.window.task.data.TaskCondition" name="张颌" maxNum="1" bigSid="10" smallsid="94" clickEvent="1" ></sample>
+ <sample sid="208" className="game.window.task.data.TaskCondition" name="张辽" maxNum="1" bigSid="10" smallsid="95" clickEvent="1" ></sample>
+ <sample sid="209" className="game.window.task.data.TaskCondition" name="许褚" maxNum="1" bigSid="10" smallsid="96" clickEvent="1" ></sample>
+ <sample sid="210" className="game.window.task.data.TaskCondition" name="夏侯惇" maxNum="1" bigSid="10" smallsid="97" clickEvent="1" ></sample>
+ <sample sid="211" className="game.window.task.data.TaskCondition" name="曹仁" maxNum="1" bigSid="10" smallsid="98" clickEvent="1" ></sample>
+ <sample sid="212" className="game.window.task.data.TaskCondition" name="曹操" maxNum="1" bigSid="10" smallsid="99" clickEvent="1" ></sample>
+ <sample sid="213" className="game.window.task.data.TaskCondition" name="赤壁之战" maxNum="1" bigSid="10" smallsid="100" clickEvent="1" ></sample>
+ </objects>

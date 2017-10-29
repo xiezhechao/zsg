@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+
+	<!--数据库用户名-->
+	<String id="dbName">root</String>
+	<!--数据库密码-->
+	<String id="dbPassword">root</String>
+	<!--数据库编码-->
+	<String id="dbEncode">utf-8</String>
+	<!--游戏日志数据库地址-->
+	<String id="biServerDBIP">jdbc:mysql://127.0.0.1:3306/zsg_bi_rc</String>
+
+	<!--biSever地址-->
+	<String id="biServerIP">tcp://${bi.server.ip}:${bi.server.port}</String>
+	<!--日志地址-->
+</objects>

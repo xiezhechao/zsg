@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+<sample className="game.window.vip.VipData" sid="1" needValue="100" privilege='[["每日可领取","铜币30000"],["每日可领取","中级经验卷轴5个"]]' awardSid="6005" />
+ <sample className="game.window.vip.VipData" sid="2" needValue="500" privilege='[["每日可领取","铜币45000"],["每日可领取","中级经验卷轴10个"]]' awardSid="6006" />
+ <sample className="game.window.vip.VipData" sid="3" needValue="1000" privilege='[["每日可领取","铜币60000"],["每日可领取","中级经验卷轴15个"]]' awardSid="6007" />
+ <sample className="game.window.vip.VipData" sid="4" needValue="2000" privilege='[["每日可领取","铜币75000"],["每日可领取","中级经验卷轴20个"]]' awardSid="6008" />
+ <sample className="game.window.vip.VipData" sid="5" needValue="5000" privilege='[["每日可领取","铜币90000"],["每日可领取","中级经验卷轴25个"]]' awardSid="6009" />
+ <sample className="game.window.vip.VipData" sid="6" needValue="10000" privilege='[["每日可领取","铜币105000"],["每日可领取","高级经验卷轴5个"]]' awardSid="6010" />
+ <sample className="game.window.vip.VipData" sid="7" needValue="20000" privilege='[["每日可领取","铜币120000"],["每日可领取","高级经验卷轴10个"]]' awardSid="6011" />
+ <sample className="game.window.vip.VipData" sid="8" needValue="50000" privilege='[["每日可领取","铜币135000"],["每日可领取","高级经验卷轴15个"]]' awardSid="6012" />
+ <sample className="game.window.vip.VipData" sid="9" needValue="100000" privilege='[["每日可领取","铜币150000"],["每日可领取","高级经验卷轴20个"]]' awardSid="6013" />
+ <sample className="game.window.vip.VipData" sid="10" needValue="200000" privilege='[["每日可领取","铜币165000"],["每日可领取","高级经验卷轴25个"]]' awardSid="6014" />
+ <sample className="game.window.vip.VipData" sid="11" needValue="500000" privilege='[["每日可领取","铜币180000"],["每日可领取","超级经验卷轴5个"]]' awardSid="6015" />
+ <sample className="game.window.vip.VipData" sid="12" needValue="1000000" privilege='[["每日可领取","铜币195000"],["每日可领取","超级经验卷轴10个"]]' awardSid="6016" />
+ </objects>

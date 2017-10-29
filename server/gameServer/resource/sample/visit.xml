@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <field class="game.visit.Visit" name="factory" id="visitSampleFactory" />
+   <method ref="visitSampleFactory" name="init">
+   <ref id="context" />
+   </method>
+   <!--awardSid 奖励SID-->
+   <!--事件配置-->
+<sample class="game.visit.Visit" sid="1" name="巡查治安">
+ 	<field name="awardSid" declared="1">
+		<ints>3001,3002</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="2" name="奇怪女子">
+ 	<field name="awardSid" declared="1">
+		<ints>3003,3004</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="3" name="先秦遗作">
+ 	<field name="awardSid" declared="1">
+		<ints>3005,3006</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="4" name="城中悍匪">
+ 	<field name="awardSid" declared="1">
+		<ints>3007,3008</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="5" name="兄弟不和">
+ 	<field name="awardSid" declared="1">
+		<ints>3009,3010</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="6" name="神秘洞窟">
+ 	<field name="awardSid" declared="1">
+		<ints>3011,3012</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="7" name="误入贼窝">
+ 	<field name="awardSid" declared="1">
+		<ints>3013,3014</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="8" name="落魄少年">
+ 	<field name="awardSid" declared="1">
+		<ints>3015,3016</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="9" name="夫妻矛盾">
+ 	<field name="awardSid" declared="1">
+		<ints>3017,3018</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="10" name="擂台比武">
+ 	<field name="awardSid" declared="1">
+		<ints>3019,3020</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="11" name="城中道士">
+ 	<field name="awardSid" declared="1">
+		<ints>3021,3022</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="12" name="调戏民女">
+ 	<field name="awardSid" declared="1">
+		<ints>3023,3024</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="13" name="孙子兵法">
+ 	<field name="awardSid" declared="1">
+		<ints>3025,3026</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="14" name="临终托孤">
+ 	<field name="awardSid" declared="1">
+		<ints>3027,3028</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="15" name="神医华佗">
+ 	<field name="awardSid" declared="1">
+		<ints>3029,3030</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="16" name="久旱不雨">
+ 	<field name="awardSid" declared="1">
+		<ints>3031,3032</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="17" name="才子齐聚">
+ 	<field name="awardSid" declared="1">
+		<ints>3033,3034</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="18" name="资源利用">
+ 	<field name="awardSid" declared="1">
+		<ints>3035,3036</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="19" name="军士选拔">
+ 	<field name="awardSid" declared="1">
+		<ints>3037,3038</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="20" name="洪涝成灾">
+ 	<field name="awardSid" declared="1">
+		<ints>3039,3040</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="21" name="钱仓小吏">
+ 	<field name="awardSid" declared="1">
+		<ints>3001,3002</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="22" name="路遇悍妇">
+ 	<field name="awardSid" declared="1">
+		<ints>3003,3004</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="23" name="洪涝成灾">
+ 	<field name="awardSid" declared="1">
+		<ints>3005,3006</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="24" name="赤地千里">
+ 	<field name="awardSid" declared="1">
+		<ints>3007,3008</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="25" name="义女貂蝉">
+ 	<field name="awardSid" declared="1">
+		<ints>3009,3010</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="26" name="曹冲称象">
+ 	<field name="awardSid" declared="1">
+		<ints>3011,3012</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="27" name="孔明娶妻">
+ 	<field name="awardSid" declared="1">
+		<ints>3013,3014</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="28" name="刁蛮祝融">
+ 	<field name="awardSid" declared="1">
+		<ints>3015,3016</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="29" name="京城怪盗">
+ 	<field name="awardSid" declared="1">
+		<ints>3017,3018</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="30" name="蝗虫成灾">
+ 	<field name="awardSid" declared="1">
+		<ints>3019,3020</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="31" name="文姬归汉">
+ 	<field name="awardSid" declared="1">
+		<ints>3021,3022</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="32" name="城中劫匪">
+ 	<field name="awardSid" declared="1">
+		<ints>3023,3024</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="33" name="东吴枭姬">
+ 	<field name="awardSid" declared="1">
+		<ints>3025,3026</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="34" name="悍匪横行">
+ 	<field name="awardSid" declared="1">
+		<ints>3027,3028</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="35" name="长坂坡战">
+ 	<field name="awardSid" declared="1">
+		<ints>3029,3030</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="36" name="寒流来袭">
+ 	<field name="awardSid" declared="1">
+		<ints>3031,3032</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="37" name="敌军来袭">
+ 	<field name="awardSid" declared="1">
+		<ints>3033,3034</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="38" name="周瑜娶亲">
+ 	<field name="awardSid" declared="1">
+		<ints>3035,3036</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="39" name="雅帝左慈">
+ 	<field name="awardSid" declared="1">
+		<ints>3037,3038</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="40" name="再遇劫匪">
+ 	<field name="awardSid" declared="1">
+		<ints>3039,3040</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="41" name="强抢民女">
+ 	<field name="awardSid" declared="1">
+		<ints>3001,3002</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="42" name="乱世乞儿">
+ 	<field name="awardSid" declared="1">
+		<ints>3003,3004</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="43" name="狼群食人">
+ 	<field name="awardSid" declared="1">
+		<ints>3005,3006</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="44" name="兴修水利">
+ 	<field name="awardSid" declared="1">
+		<ints>3007,3008</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="45" name="可怜瞎妇">
+ 	<field name="awardSid" declared="1">
+		<ints>3009,3010</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="46" name="休夫奇闻">
+ 	<field name="awardSid" declared="1">
+		<ints>3011,3012</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="47" name="老汉再娶">
+ 	<field name="awardSid" declared="1">
+		<ints>3013,3014</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="48" name="讨好贿赂">
+ 	<field name="awardSid" declared="1">
+		<ints>3015,3016</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="49" name="树敌无数">
+ 	<field name="awardSid" declared="1">
+		<ints>3017,3018</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="50" name="城中命案">
+ 	<field name="awardSid" declared="1">
+		<ints>3019,3020</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="51" name="江东小乔">
+ 	<field name="awardSid" declared="1">
+		<ints>3021,3022</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="52" name="抢夺食物">
+ 	<field name="awardSid" declared="1">
+		<ints>3023,3024</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="53" name="城外马贼">
+ 	<field name="awardSid" declared="1">
+		<ints>3025,3026</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="54" name="吟诗文人">
+ 	<field name="awardSid" declared="1">
+		<ints>3027,3028</ints>
+	</field>
+ </sample>
+ <sample class="game.visit.Visit" sid="55" name="才女齐聚">
+ 	<field name="awardSid" declared="1">
+		<ints>3029,3030</ints>
+	</field>
+ </sample>
+ </objects>

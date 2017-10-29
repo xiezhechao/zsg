@@ -1,0 +1,3498 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <field class="game.task.Task" name="factory" id="taskSampleFactory" />
+   <method ref="taskSampleFactory" name="init">
+   <ref id="context" />
+   </method>
+   <!-- 
+   name:任务名称
+   key:任务键 从0开始 (任务键名和标记组合使用,用来标记已经完成过的一次性任务)
+   value:任务标记 以2的n次方递增,不能超过int的长度(如果长度>32,key++)
+   neverGiveUp:是否不能放弃
+   awardSid:完成任务奖励sid
+   appTask:任务完成后自动接受的下一个主线任务和附加的支线任务
+   type:任务类型 1主线、2支线、3日常
+   (A)acceptLimitCondition:接受任务的限制条件
+   有下列类型的任务接受条件:
+   1):game.task.condition.GetTaskCondition
+   level 官府等级最低限制
+   maxLevel 官府等级最高限制
+   limitTask:接受任务时必须完成的前置任务sid
+   (B)taskConditions:完成任务的必须条件
+   有下列类型的任务完成条件:
+   1):game.task.condition.CountingCondition  计数任务条件类
+    requiredNum 需要达成的次数
+    type 类型
+    
+   1=封邑个数增加   2=装备拆分
+   3=宝石合成
+   4=赠送喜好品   5=爵位升级
+    9=成功领取国家资源点    10=获取指定的功勋值 2):game.task.condition.BuildCondition 建筑条件
+   buildsid 建筑sid
+   requirdValue 需要达成值
+   type 类型
+    
+   1=升级指定次数
+    
+   2=等级到达指定值
+   3):game.task.condition.MilitaryCondition 武将条件
+   militarySid 武将sid
+   requirdValue 需要达成值
+   type 类型
+    
+   1=转生次数指定数值
+    
+   2=等级达到指定数值
+   4):game.task.condition.DuplicateCondition 副本条件
+   chapterSid 通过的关卡sid
+   duplicateSid 通过的关卡副本sid(0表示将该关卡完全通过)
+   5):game.task.condition.MilitaryGetCondition 获得武将
+   militarySid 武将sid
+   color 武将品质
+   6):game.task.condition.PropGetCondition 获取物品
+   propSid 物品sid
+   requirdTimes 得到的次数
+   7):game.task.condition.StrengthCondition 部位强化
+   loc 强化的部位
+   requiredLevel 需要强化达到的等级
+   8):game.task.condition.ResouceRateCondition 资源产出
+   rate 需要到达的产率
+   type 资源类型
+   1=粮食值
+   2=木材值
+   3=钱币值
+   4=铁锭值
+   5=经验值
+   6=劳役值
+   7=文化值
+   8=军械值
+   9=训练值
+   9):game.task.condition.KingScienceUpCondition 君主科技升级
+   scienceSid 君主科技sid
+   requirdValue 需要等级
+   type 类型
+    
+   1=升级指定次数
+    
+   2=等级到达指定值
+  game.task.condition. RecruitSoldCondition  招募指定数量  指定sid的士兵
+  soldSid  士兵sid   needNum  指定的招募数量
+ game.task.condition.MallGetPropCondition  购买商城指定物品
+ propSid 商城购买sid  requirdTimes= 需要购买数量 -->
+<sample class="game.task.NewPlayerTask" sid="1"  name="欢迎" key="1" value="1" neverGiveUp="true" awardSid="11000" type="4" >
+ <field name="appTask" declared="1">
+	<ints>2</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints></ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="2"  name="进入主城" key="1" value="2" neverGiveUp="true" awardSid="11001" type="4" >
+ <field name="appTask" declared="1">
+	<ints>3</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>1</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="3"  name="升级官府" key="1" value="4" neverGiveUp="true" awardSid="11002" type="4" >
+ <field name="appTask" declared="1">
+	<ints>4</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>2</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="4"  name="林地指引" key="1" value="8" neverGiveUp="true" awardSid="11003" type="4" >
+ <field name="appTask" declared="1">
+	<ints>5</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>3</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="5"  name="升级林地" key="1" value="16" neverGiveUp="true" awardSid="11004" type="1" >
+ <field name="appTask" declared="1">
+	<ints>6</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>4</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1001" requirdValue="2"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="6"  name="爵位指引" key="1" value="32" neverGiveUp="true" awardSid="11005" type="4" >
+ <field name="appTask" declared="1">
+	<ints>7</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>5</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="7"  name="升级官府" key="1" value="64" neverGiveUp="true" awardSid="11006" type="1" >
+ <field name="appTask" declared="1">
+	<ints>8</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>6</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="3"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="8"  name="民居指引" key="1" value="128" neverGiveUp="true" awardSid="11007" type="4" >
+ <field name="appTask" declared="1">
+	<ints>9</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>7</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="9"  name="升级民居" key="1" value="256" neverGiveUp="true" awardSid="11008" type="1" >
+ <field name="appTask" declared="1">
+	<ints>10</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>8</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="801" requirdValue="3"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="10"  name="林地指引2" key="1" value="512" neverGiveUp="true" awardSid="11009" type="4" >
+ <field name="appTask" declared="1">
+	<ints>11</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>9</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="11"  name="升级林地" key="1" value="1024" neverGiveUp="true" awardSid="11010" type="1" >
+ <field name="appTask" declared="1">
+	<ints>12</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>10</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1001" requirdValue="3"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="12"  name="募兵指引" key="1" value="2048" neverGiveUp="true" awardSid="11011" type="4" >
+ <field name="appTask" declared="1">
+	<ints>13</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>11</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="13"  name="编组指引" key="1" value="4096" neverGiveUp="true" awardSid="11012" type="4" >
+ <field name="appTask" declared="1">
+	<ints>14</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>12</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="14"  name="副本指引" key="1" value="8192" neverGiveUp="true" awardSid="11013" type="4" >
+ <field name="appTask" declared="1">
+	<ints>15</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>13</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="15"  name="补给士兵指引" key="1" value="32768" neverGiveUp="true" awardSid="11014" type="4" >
+ <field name="appTask" declared="1">
+	<ints>16</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>14</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="16"  name="击败山贼头目" key="1" value="65536" neverGiveUp="true" awardSid="11015" type="1" >
+ <field name="appTask" declared="1">
+	<ints>17</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>15</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="2"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="17"  name="升级官府" key="2" value="1" neverGiveUp="true" awardSid="11016" type="1" >
+ <field name="appTask" declared="1">
+	<ints>18</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>16</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="5"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="18"  name="市场指引" key="2" value="2" neverGiveUp="true" awardSid="11017" type="4" >
+ <field name="appTask" declared="1">
+	<ints>19,21</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>17</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="19"  name="升级林地" key="2" value="4" neverGiveUp="true" awardSid="11018" type="2" >
+ <field name="appTask" declared="1">
+	<ints>20</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>18</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1001" requirdValue="5"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="20"  name="升级民居" key="2" value="8" neverGiveUp="true" awardSid="11019" type="2" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>19</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="801" requirdValue="5"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="21"  name="升级市场" key="2" value="16" neverGiveUp="true" awardSid="11020" type="1" >
+ <field name="appTask" declared="1">
+	<ints>22</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>18</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="101" requirdValue="5"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="22"  name="副本指引" key="2" value="32" neverGiveUp="true" awardSid="11021" type="4" >
+ <field name="appTask" declared="1">
+	<ints>23</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>21</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="23"  name="招募士兵" key="2" value="64" neverGiveUp="true" awardSid="11022" type="1" >
+ <field name="appTask" declared="1">
+	<ints>24</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>22</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.RecruitSoldCondition" soldSid="22" needNum="500"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="24"  name="击败山贼大当家" key="2" value="128" neverGiveUp="true" awardSid="11023" type="1" >
+ <field name="appTask" declared="1">
+	<ints>26</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>23</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="3"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="25"  name="补给士兵" key="2" value="256" neverGiveUp="true" awardSid="11024" type="1" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints></ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="26"  name="击败马元义" key="2" value="512" neverGiveUp="true" awardSid="11025" type="1" >
+ <field name="appTask" declared="1">
+	<ints>27</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>24</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="4"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="27"  name="新兵种指引" key="2" value="1024" neverGiveUp="true" awardSid="11026" type="4" >
+ <field name="appTask" declared="1">
+	<ints>28</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>26</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="28"  name="招募士兵" key="2" value="2048" neverGiveUp="true" awardSid="11027" type="1" >
+ <field name="appTask" declared="1">
+	<ints>29</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>27</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.RecruitSoldCondition" soldSid="23" needNum="2000"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="29"  name="替换士兵" key="2" value="4096" neverGiveUp="true" awardSid="11028" type="1" >
+ <field name="appTask" declared="1">
+	<ints>30</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>28</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="30"  name="击败马元义" key="2" value="8192" neverGiveUp="true" awardSid="11029" type="1" >
+ <field name="appTask" declared="1">
+	<ints>31</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>29</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="4" isMust="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="31"  name="治疗伤兵指引" key="2" value="32768" neverGiveUp="true" awardSid="11031" type="4" >
+ <field name="appTask" declared="1">
+	<ints>32</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>30</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="32"  name="升级官府" key="2" value="65536" neverGiveUp="true" awardSid="11032" type="1" >
+ <field name="appTask" declared="1">
+	<ints>33</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>31</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="6"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="33"  name="农田指引" key="3" value="1" neverGiveUp="true" awardSid="11033" type="4" >
+ <field name="appTask" declared="1">
+	<ints>34</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>32</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="34"  name="升级农田" key="3" value="2" neverGiveUp="true" awardSid="11034" type="1" >
+ <field name="appTask" declared="1">
+	<ints>35,36</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>33</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="901" requirdValue="6"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="35"  name="升级锻造司" key="3" value="4" neverGiveUp="true" awardSid="11035" type="2" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>34</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="201" requirdValue="6"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="36"  name="击败邓茂" key="3" value="8" neverGiveUp="true" awardSid="11036" type="1" >
+ <field name="appTask" declared="1">
+	<ints>37</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>34</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="5"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="37"  name="装备穿戴指引" key="3" value="16" neverGiveUp="true" awardSid="11037" type="4" >
+ <field name="appTask" declared="1">
+	<ints>38</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>36</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="38"  name="升级官府" key="3" value="32" neverGiveUp="true" awardSid="11038" type="1" >
+ <field name="appTask" declared="1">
+	<ints>39</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>37</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="39"  name="新建筑指引" key="3" value="64" neverGiveUp="true" awardSid="11039" type="4" >
+ <field name="appTask" declared="1">
+	<ints>40</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>38</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="40"  name="升级医疗营" key="3" value="128" neverGiveUp="true" awardSid="11040" type="1" >
+ <field name="appTask" declared="1">
+	<ints>41</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>39</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="301" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="41"  name="升级御医所" key="3" value="256" neverGiveUp="true" awardSid="11041" type="1" >
+ <field name="appTask" declared="1">
+	<ints>42</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>40</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="401" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="42"  name="击败程志远" key="3" value="512" neverGiveUp="true" awardSid="11042" type="1" >
+ <field name="appTask" declared="1">
+	<ints>43</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>41</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="6"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="43"  name="装备穿戴" key="3" value="1024" neverGiveUp="true" awardSid="11043" type="1" >
+ <field name="appTask" declared="1">
+	<ints>44</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>42</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryEquipCondition" militarySid="0" equSid="1000" isEquip="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="44"  name="击败张梁" key="3" value="2048" neverGiveUp="true" awardSid="11044" type="1" >
+ <field name="appTask" declared="1">
+	<ints>45</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>43</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="45"  name="升级指引" key="3" value="4096" neverGiveUp="true" awardSid="11045" type="4" >
+ <field name="appTask" declared="1">
+	<ints>46</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>44</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="46"  name="再败张梁" key="3" value="8192" neverGiveUp="true" awardSid="11046" type="1" >
+ <field name="appTask" declared="1">
+	<ints>47</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>45</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="7" isMust="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="47"  name="装备穿戴" key="3" value="32768" neverGiveUp="true" awardSid="11047" type="1" >
+ <field name="appTask" declared="1">
+	<ints>48</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>46</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryEquipCondition" militarySid="0" equSid="1001" isEquip="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="48"  name="提升等级" key="3" value="65536" neverGiveUp="true" awardSid="11049" type="1" >
+ <field name="appTask" declared="1">
+	<ints>49</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>47</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="0" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="49"  name="副本指引2" key="4" value="1" neverGiveUp="true" awardSid="11050" type="4" >
+ <field name="appTask" declared="1">
+	<ints>50</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>48</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="50"  name="三败张梁" key="4" value="2" neverGiveUp="true" awardSid="11051" type="1" >
+ <field name="appTask" declared="1">
+	<ints>51</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>49</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="7" isMust="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="51"  name="招将指引" key="4" value="4" neverGiveUp="true" awardSid="11052" type="4" >
+ <field name="appTask" declared="1">
+	<ints>52</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>50</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="52"  name="上阵指引" key="4" value="8" neverGiveUp="true" awardSid="11053" type="4" >
+ <field name="appTask" declared="1">
+	<ints>53</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>51</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="53"  name="上阵张梁" key="4" value="16" neverGiveUp="true" awardSid="11054" type="1" >
+ <field name="appTask" declared="1">
+	<ints>54</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>52</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="54"  name="副本指引3" key="4" value="32" neverGiveUp="true" awardSid="11055" type="4" >
+ <field name="appTask" declared="1">
+	<ints>55</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>53</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="55"  name="击败张宝" key="4" value="64" neverGiveUp="true" awardSid="11056" type="1" >
+ <field name="appTask" declared="1">
+	<ints>56</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>54</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="8"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="56"  name="新兵种指引2" key="4" value="128" neverGiveUp="true" awardSid="11057" type="4" >
+ <field name="appTask" declared="1">
+	<ints>57</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>55</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="57"  name="招募士兵" key="4" value="256" neverGiveUp="true" awardSid="11058" type="1" >
+ <field name="appTask" declared="1">
+	<ints>58</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>56</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.RecruitSoldCondition" soldSid="4" needNum="2000"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="58"  name="替换士兵" key="4" value="512" neverGiveUp="true" awardSid="11059" type="1" >
+ <field name="appTask" declared="1">
+	<ints>59</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>57</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="59"  name="升级林地" key="4" value="1024" neverGiveUp="true" awardSid="11060" type="1" >
+ <field name="appTask" declared="1">
+	<ints>60</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>58</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1001" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="60"  name="升级民居" key="4" value="2048" neverGiveUp="true" awardSid="11061" type="1" >
+ <field name="appTask" declared="1">
+	<ints>61</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>59</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="801" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="61"  name="升级农田" key="4" value="4096" neverGiveUp="true" awardSid="11062" type="1" >
+ <field name="appTask" declared="1">
+	<ints>62</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>60</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="901" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="62"  name="再败张宝" key="4" value="8192" neverGiveUp="true" awardSid="11063" type="1" >
+ <field name="appTask" declared="1">
+	<ints>63</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>61</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="8" isMust="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="63"  name="招将指引2" key="4" value="32768" neverGiveUp="true" awardSid="11064" type="4" >
+ <field name="appTask" declared="1">
+	<ints>64</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>62</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="64"  name="治疗伤兵" key="4" value="65536" neverGiveUp="true" awardSid="11065" type="1" >
+ <field name="appTask" declared="1">
+	<ints>65</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>63</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="13"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="65"  name="招募张宝" key="5" value="1" neverGiveUp="true" awardSid="11066" type="1" >
+ <field name="appTask" declared="1">
+	<ints>66</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>64</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryGetCondition" militarySid="6" color="0"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="66"  name="提升等级" key="5" value="2" neverGiveUp="true" awardSid="11067" type="1" >
+ <field name="appTask" declared="1">
+	<ints>67</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>65</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="5" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="67"  name="提升等级" key="5" value="4" neverGiveUp="true" awardSid="11068" type="1" >
+ <field name="appTask" declared="1">
+	<ints>68</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>66</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="6" requirdValue="7"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="68"  name="上阵张宝" key="5" value="8" neverGiveUp="true" awardSid="11069" type="1" >
+ <field name="appTask" declared="1">
+	<ints>69</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>67</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="69"  name="击败张角" key="5" value="16" neverGiveUp="true" awardSid="11070" type="1" >
+ <field name="appTask" declared="1">
+	<ints>70</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>68</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="9"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="70"  name="招将指引3" key="5" value="32" neverGiveUp="true" awardSid="11071" type="4" >
+ <field name="appTask" declared="1">
+	<ints>71</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>69</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="71"  name="治疗伤兵" key="5" value="64" neverGiveUp="true" awardSid="11072" type="1" >
+ <field name="appTask" declared="1">
+	<ints>72</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>70</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="13"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="72"  name="升级官府" key="5" value="128" neverGiveUp="true" awardSid="11073" type="1" >
+ <field name="appTask" declared="1">
+	<ints>73,74</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>71</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="9"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="73"  name="提升等级" key="5" value="256" neverGiveUp="true" awardSid="11074" type="1" >
+ <field name="appTask" declared="1">
+	<ints>76</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>72</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="0" requirdValue="9"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="74"  name="提升等级" key="5" value="512" neverGiveUp="true" awardSid="11075" type="2" >
+ <field name="appTask" declared="1">
+	<ints>75</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>72</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="5" requirdValue="9"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="75"  name="提升等级" key="5" value="1024" neverGiveUp="true" awardSid="11076" type="2" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>74</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="6" requirdValue="9"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="76"  name="碾压指引" key="5" value="2048" neverGiveUp="true" awardSid="11077" type="4" >
+ <field name="appTask" declared="1">
+	<ints>77</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>73</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="77"  name="通关张角" key="5" value="4096" neverGiveUp="true" awardSid="11078" type="1" >
+ <field name="appTask" declared="1">
+	<ints>78</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>76</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="9" isMust="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="78"  name="商城指引" key="5" value="8192" neverGiveUp="true" awardSid="11079" type="4" >
+ <field name="appTask" declared="1">
+	<ints>79</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>77</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="79"  name="功勋换购粮食包" key="5" value="32768" neverGiveUp="true" awardSid="11080" type="1" >
+ <field name="appTask" declared="1">
+	<ints>80,81</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>78</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MallGetPropCondition" propSid="500" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="80"  name="功勋换购木材包" key="5" value="65536" neverGiveUp="true" awardSid="11081" type="2" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>79</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MallGetPropCondition" propSid="501" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="81"  name="升级官府" key="6" value="1" neverGiveUp="true" awardSid="11082" type="1" >
+ <field name="appTask" declared="1">
+	<ints>82</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>79</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="82"  name="升级城门" key="6" value="2" neverGiveUp="true" awardSid="11083" type="1" >
+ <field name="appTask" declared="1">
+	<ints>83</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>81</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="601" requirdValue="8"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="83"  name="升级箭楼" key="6" value="4" neverGiveUp="true" awardSid="11084" type="1" >
+ <field name="appTask" declared="1">
+	<ints>84</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>82</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="701" requirdValue="8"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="84"  name="通关黄巾之乱" key="6" value="8" neverGiveUp="true" awardSid="11085" type="1" >
+ <field name="appTask" declared="1">
+	<ints>85</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>83</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="1" duplicateSid="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="85"  name="招募张角" key="6" value="16" neverGiveUp="true" awardSid="11086" type="1" >
+ <field name="appTask" declared="1">
+	<ints>86</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>84</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryGetCondition" militarySid="7" color="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="86"  name="将星录指引" key="6" value="32" neverGiveUp="true" awardSid="11087" type="4" >
+ <field name="appTask" declared="1">
+	<ints>87</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>85</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="87"  name="将星录指引2" key="6" value="64" neverGiveUp="true" awardSid="11088" type="4" >
+ <field name="appTask" declared="1">
+	<ints>88</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>86</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="88"  name="提升等级" key="6" value="128" neverGiveUp="true" awardSid="11089" type="1" >
+ <field name="appTask" declared="1">
+	<ints>89</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>87</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="7" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="89"  name="提升等级" key="6" value="256" neverGiveUp="true" awardSid="11090" type="1" >
+ <field name="appTask" declared="1">
+	<ints>90</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>88</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="6" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="90"  name="提升等级" key="6" value="512" neverGiveUp="true" awardSid="11091" type="1" >
+ <field name="appTask" declared="1">
+	<ints>91</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>89</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="5" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="91"  name="将星录指引3" key="6" value="1024" neverGiveUp="true" awardSid="11092" type="4" >
+ <field name="appTask" declared="1">
+	<ints>93</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>90</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="92"  name="补给士兵" key="6" value="2048" neverGiveUp="true" awardSid="11093" type="1" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints></ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="93"  name="击败赵忠" key="6" value="4096" neverGiveUp="true" awardSid="11094" type="1" >
+ <field name="appTask" declared="1">
+	<ints>94</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>91</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="11"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="94"  name="爵位指引2" key="6" value="8192" neverGiveUp="true" awardSid="11095" type="4" >
+ <field name="appTask" declared="1">
+	<ints>95</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>93</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="95"  name="换购初级经验卷轴" key="6" value="32768" neverGiveUp="true" awardSid="11096" type="1" >
+ <field name="appTask" declared="1">
+	<ints>96</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>94</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MallGetPropCondition" propSid="503" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="96"  name="提升等级" key="6" value="65536" neverGiveUp="true" awardSid="11097" type="1" >
+ <field name="appTask" declared="1">
+	<ints>97</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>95</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="0" requirdValue="11"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="97"  name="击败左丰" key="7" value="1" neverGiveUp="true" awardSid="11098" type="1" >
+ <field name="appTask" declared="1">
+	<ints>98</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>96</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="98"  name="治疗伤兵" key="7" value="2" neverGiveUp="true" awardSid="11099" type="1" >
+ <field name="appTask" declared="1">
+	<ints>99</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>97</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="13"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="99"  name="升级官府" key="7" value="4" neverGiveUp="true" awardSid="11100" type="1" >
+ <field name="appTask" declared="1">
+	<ints>100</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>98</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1" requirdValue="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="100"  name="升级冶铁所" key="7" value="8" neverGiveUp="true" awardSid="11101" type="1" >
+ <field name="appTask" declared="1">
+	<ints>101</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>99</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="1101" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="101"  name="升级锻铁场" key="7" value="16" neverGiveUp="true" awardSid="11102" type="1" >
+ <field name="appTask" declared="1">
+	<ints>102</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>100</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.BuildCondition" type="2" buildsid="501" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="102"  name="新资源介绍" key="7" value="32" neverGiveUp="true" awardSid="11103" type="4" >
+ <field name="appTask" declared="1">
+	<ints>103</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>101</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="103"  name="招募士兵" key="7" value="64" neverGiveUp="true" awardSid="11104" type="1" >
+ <field name="appTask" declared="1">
+	<ints>104</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>102</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.RecruitSoldCondition" soldSid="6" needNum="800"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="104"  name="替换士兵" key="7" value="128" neverGiveUp="true" awardSid="11107" type="1" >
+ <field name="appTask" declared="1">
+	<ints>105</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>103</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="105"  name="击败赵旷" key="7" value="256" neverGiveUp="true" awardSid="11108" type="1" >
+ <field name="appTask" declared="1">
+	<ints>106</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>104</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="13"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="106"  name="打造指引" key="7" value="8192" neverGiveUp="true" awardSid="11109" type="4" >
+ <field name="appTask" declared="1">
+	<ints>107</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>105</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="107"  name="击败何苗" key="7" value="32768" neverGiveUp="true" awardSid="11110" type="1" >
+ <field name="appTask" declared="1">
+	<ints>108</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>106</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="14"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="108"  name="打造指引2" key="7" value="65536" neverGiveUp="true" awardSid="11111" type="4" >
+ <field name="appTask" declared="1">
+	<ints>109</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>107</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="109"  name="打造指引3" key="8" value="1" neverGiveUp="true" awardSid="11112" type="4" >
+ <field name="appTask" declared="1">
+	<ints>110</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>108</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="110"  name="打造装备" key="8" value="2" neverGiveUp="true" awardSid="11113" type="1" >
+ <field name="appTask" declared="1">
+	<ints>111</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>109</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.PropGetCondition" propSid="1018" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="111"  name="击败胡轸" key="8" value="4" neverGiveUp="true" awardSid="11114" type="1" >
+ <field name="appTask" declared="1">
+	<ints>112</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>110</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="15"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="112"  name="治疗伤兵" key="8" value="8" neverGiveUp="true" awardSid="11115" type="1" >
+ <field name="appTask" declared="1">
+	<ints>113</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>111</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="13"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="113"  name="打造装备" key="8" value="16" neverGiveUp="true" awardSid="11116" type="1" >
+ <field name="appTask" declared="1">
+	<ints>114</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>112</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.PropGetCondition" propSid="1019" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="114"  name="打造装备" key="8" value="32" neverGiveUp="true" awardSid="11117" type="1" >
+ <field name="appTask" declared="1">
+	<ints>115</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>113</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.PropGetCondition" propSid="1020" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="115"  name="打造装备" key="8" value="64" neverGiveUp="true" awardSid="11118" type="1" >
+ <field name="appTask" declared="1">
+	<ints>116</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>114</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.PropGetCondition" propSid="1021" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="116"  name="击败李肃" key="8" value="128" neverGiveUp="true" awardSid="11119" type="1" >
+ <field name="appTask" declared="1">
+	<ints>117</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>115</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="16"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="117"  name="功勋换购粮食包" key="8" value="256" neverGiveUp="true" awardSid="11120" type="1" >
+ <field name="appTask" declared="1">
+	<ints>118,119</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>116</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MallGetPropCondition" propSid="500" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="118"  name="功勋换购木材包" key="8" value="512" neverGiveUp="true" awardSid="11121" type="2" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>117</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MallGetPropCondition" propSid="501" requirdTimes="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="119"  name="击败华雄" key="8" value="1024" neverGiveUp="true" awardSid="11122" type="1" >
+ <field name="appTask" declared="1">
+	<ints>120</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>117</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="17"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="120"  name="招将指引4" key="8" value="2048" neverGiveUp="true" awardSid="11123" type="4" >
+ <field name="appTask" declared="1">
+	<ints>121</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>119</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="121"  name="招募董卓" key="8" value="4096" neverGiveUp="true" awardSid="11124" type="1" >
+ <field name="appTask" declared="1">
+	<ints>122,123</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>120</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryGetCondition" militarySid="8" color="1"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="122"  name="提升等级" key="8" value="8192" neverGiveUp="true" awardSid="11125" type="1" >
+ <field name="appTask" declared="1">
+	<ints>126</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>121</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="8" requirdValue="10"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="123"  name="提升等级" key="8" value="32768" neverGiveUp="true" awardSid="11126" type="2" >
+ <field name="appTask" declared="1">
+	<ints>124</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>121</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="7" requirdValue="15"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="124"  name="提升等级" key="8" value="65536" neverGiveUp="true" awardSid="11127" type="2" >
+ <field name="appTask" declared="1">
+	<ints>125</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>123</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="6" requirdValue="15"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="125"  name="提升等级" key="9" value="1" neverGiveUp="true" awardSid="11128" type="2" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>124</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.MilitaryCondition" type="2" militarySid="5" requirdValue="15"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="126"  name="上阵董卓" key="9" value="2" neverGiveUp="true" awardSid="11129" type="1" >
+ <field name="appTask" declared="1">
+	<ints>127</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>122</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.CountingCondition" requiredNum="1" type="12"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="127"  name="击败张济" key="9" value="4" neverGiveUp="true" awardSid="11130" type="1" >
+ <field name="appTask" declared="1">
+	<ints>128</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>126</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="18"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="128"  name="官印指引" key="9" value="8" neverGiveUp="true" awardSid="11131" type="4" >
+ <field name="appTask" declared="1">
+	<ints>129</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>127</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="129"  name="世界指引" key="9" value="16" neverGiveUp="true" awardSid="11132" type="4" >
+ <field name="appTask" declared="1">
+	<ints>130</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>128</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="130"  name="击败吕布" key="9" value="32" neverGiveUp="true" awardSid="11133" type="1" >
+ <field name="appTask" declared="1">
+	<ints>131</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>129</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="19"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="131"  name="城战指引" key="9" value="64" neverGiveUp="true" awardSid="11134" type="4" >
+ <field name="appTask" declared="1">
+	<ints>132</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>130</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.NewPlayerTask" sid="132"  name="城战指引2" key="9" value="128" neverGiveUp="true" awardSid="11135" type="4" >
+ <field name="appTask" declared="1">
+	<ints>133</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>131</ints>
+			</field>
+		</sample>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="133"  name="通关董卓乱政" key="9" value="256" neverGiveUp="true" awardSid="11136" type="1" >
+ <field name="appTask" declared="1">
+	<ints>134</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>132</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="2" duplicateSid="20"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="134"  name="公孙军部将" key="9" value="512" neverGiveUp="true" awardSid="12000" type="1" >
+ <field name="appTask" declared="1">
+	<ints>135</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>133</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="21"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="135"  name="耿武" key="9" value="1024" neverGiveUp="true" awardSid="12001" type="1" >
+ <field name="appTask" declared="1">
+	<ints>136</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>134</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="22"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="136"  name="严纲" key="9" value="2048" neverGiveUp="true" awardSid="12002" type="1" >
+ <field name="appTask" declared="1">
+	<ints>137</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>135</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="23"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="137"  name="田凯" key="9" value="4096" neverGiveUp="true" awardSid="12003" type="1" >
+ <field name="appTask" declared="1">
+	<ints>138</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>136</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="24"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="138"  name="田豫" key="9" value="8192" neverGiveUp="true" awardSid="12004" type="1" >
+ <field name="appTask" declared="1">
+	<ints>139</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>137</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="25"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="139"  name="关靖" key="9" value="32768" neverGiveUp="true" awardSid="12005" type="1" >
+ <field name="appTask" declared="1">
+	<ints>140</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>138</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="26"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="140"  name="公孙越" key="9" value="65536" neverGiveUp="true" awardSid="12006" type="1" >
+ <field name="appTask" declared="1">
+	<ints>141</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>139</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="27"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="141"  name="公孙续" key="10" value="1" neverGiveUp="true" awardSid="12007" type="1" >
+ <field name="appTask" declared="1">
+	<ints>142</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>140</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="28"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="142"  name="公孙瓒" key="10" value="2" neverGiveUp="true" awardSid="12008" type="1" >
+ <field name="appTask" declared="1">
+	<ints>143</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>141</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="29"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="143"  name="火烧易京楼" key="10" value="4" neverGiveUp="true" awardSid="12009" type="1" >
+ <field name="appTask" declared="1">
+	<ints>144</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>142</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="3" duplicateSid="30"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="144"  name="曹军部将" key="10" value="8" neverGiveUp="true" awardSid="12010" type="1" >
+ <field name="appTask" declared="1">
+	<ints>145</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>143</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="31"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="145"  name="于禁" key="10" value="16" neverGiveUp="true" awardSid="12011" type="1" >
+ <field name="appTask" declared="1">
+	<ints>146</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>144</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="32"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="146"  name="李典" key="10" value="32" neverGiveUp="true" awardSid="12012" type="1" >
+ <field name="appTask" declared="1">
+	<ints>147</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>145</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="33"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="147"  name="乐进" key="10" value="64" neverGiveUp="true" awardSid="12013" type="1" >
+ <field name="appTask" declared="1">
+	<ints>148</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>146</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="34"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="148"  name="朱灵" key="10" value="128" neverGiveUp="true" awardSid="12014" type="1" >
+ <field name="appTask" declared="1">
+	<ints>149</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>147</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="35"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="149"  name="路昭" key="10" value="256" neverGiveUp="true" awardSid="12015" type="1" >
+ <field name="appTask" declared="1">
+	<ints>150</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>148</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="36"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="150"  name="郭嘉" key="10" value="512" neverGiveUp="true" awardSid="12016" type="1" >
+ <field name="appTask" declared="1">
+	<ints>151</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>149</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="37"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="151"  name="夏侯渊" key="10" value="1024" neverGiveUp="true" awardSid="12017" type="1" >
+ <field name="appTask" declared="1">
+	<ints>152</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>150</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="38"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="152"  name="夏侯惇" key="10" value="2048" neverGiveUp="true" awardSid="12018" type="1" >
+ <field name="appTask" declared="1">
+	<ints>153</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>151</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="39"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="153"  name="刘玄德千里援徐州" key="10" value="4096" neverGiveUp="true" awardSid="12019" type="1" >
+ <field name="appTask" declared="1">
+	<ints>154</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>152</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="4" duplicateSid="40"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="154"  name="刘繇军部将" key="10" value="8192" neverGiveUp="true" awardSid="12020" type="1" >
+ <field name="appTask" declared="1">
+	<ints>155</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>153</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="41"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="155"  name="陆康" key="10" value="32768" neverGiveUp="true" awardSid="12021" type="1" >
+ <field name="appTask" declared="1">
+	<ints>156</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>154</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="42"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="156"  name="张英" key="10" value="65536" neverGiveUp="true" awardSid="12022" type="1" >
+ <field name="appTask" declared="1">
+	<ints>157</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>155</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="43"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="157"  name="樊能" key="11" value="1" neverGiveUp="true" awardSid="12023" type="1" >
+ <field name="appTask" declared="1">
+	<ints>158</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>156</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="44"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="158"  name="于糜" key="11" value="2" neverGiveUp="true" awardSid="12024" type="1" >
+ <field name="appTask" declared="1">
+	<ints>159</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>157</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="45"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="159"  name="孔融" key="11" value="4" neverGiveUp="true" awardSid="12025" type="1" >
+ <field name="appTask" declared="1">
+	<ints>160</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>158</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="46"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="160"  name="太史慈" key="11" value="8" neverGiveUp="true" awardSid="12026" type="1" >
+ <field name="appTask" declared="1">
+	<ints>161</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>159</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="47"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="161"  name="许贡" key="11" value="16" neverGiveUp="true" awardSid="12027" type="1" >
+ <field name="appTask" declared="1">
+	<ints>162</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>160</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="48"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="162"  name="刘繇" key="11" value="32" neverGiveUp="true" awardSid="12028" type="1" >
+ <field name="appTask" declared="1">
+	<ints>163</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>161</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="49"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="163"  name="孙伯符平定江东" key="11" value="64" neverGiveUp="true" awardSid="12029" type="1" >
+ <field name="appTask" declared="1">
+	<ints>164</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>162</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="5" duplicateSid="50"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="164"  name="杨奉" key="11" value="128" neverGiveUp="true" awardSid="12030" type="1" >
+ <field name="appTask" declared="1">
+	<ints>165</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>163</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="51"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="165"  name="韩禛" key="11" value="256" neverGiveUp="true" awardSid="12031" type="1" >
+ <field name="appTask" declared="1">
+	<ints>166</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>164</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="52"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="166"  name="张勋" key="11" value="512" neverGiveUp="true" awardSid="12032" type="1" >
+ <field name="appTask" declared="1">
+	<ints>167</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>165</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="53"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="167"  name="雷薄" key="11" value="1024" neverGiveUp="true" awardSid="12033" type="1" >
+ <field name="appTask" declared="1">
+	<ints>168</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>166</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="54"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="168"  name="刘勋" key="11" value="2048" neverGiveUp="true" awardSid="12034" type="1" >
+ <field name="appTask" declared="1">
+	<ints>169</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>167</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="55"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="169"  name="梁刚" key="11" value="4096" neverGiveUp="true" awardSid="12035" type="1" >
+ <field name="appTask" declared="1">
+	<ints>170</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>168</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="56"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="170"  name="陈纪" key="11" value="8192" neverGiveUp="true" awardSid="12036" type="1" >
+ <field name="appTask" declared="1">
+	<ints>171</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>169</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="57"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="171"  name="纪灵" key="11" value="32768" neverGiveUp="true" awardSid="12037" type="1" >
+ <field name="appTask" declared="1">
+	<ints>172</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>170</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="58"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="172"  name="袁术" key="11" value="65536" neverGiveUp="true" awardSid="12038" type="1" >
+ <field name="appTask" declared="1">
+	<ints>173</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>171</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="59"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="173"  name="讨伐袁术" key="12" value="1" neverGiveUp="true" awardSid="12039" type="1" >
+ <field name="appTask" declared="1">
+	<ints>174</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>172</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="6" duplicateSid="60"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="174"  name="曹性" key="12" value="2" neverGiveUp="true" awardSid="12040" type="1" >
+ <field name="appTask" declared="1">
+	<ints>175</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>173</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="61"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="175"  name="郝萌" key="12" value="4" neverGiveUp="true" awardSid="12041" type="1" >
+ <field name="appTask" declared="1">
+	<ints>176</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>174</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="62"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="176"  name="高顺" key="12" value="8" neverGiveUp="true" awardSid="12042" type="1" >
+ <field name="appTask" declared="1">
+	<ints>177</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>175</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="63"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="177"  name="臧霸" key="12" value="16" neverGiveUp="true" awardSid="12043" type="1" >
+ <field name="appTask" declared="1">
+	<ints>178</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>176</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="64"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="178"  name="侯成" key="12" value="32" neverGiveUp="true" awardSid="12044" type="1" >
+ <field name="appTask" declared="1">
+	<ints>179</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>177</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="65"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="179"  name="张辽" key="12" value="64" neverGiveUp="true" awardSid="12045" type="1" >
+ <field name="appTask" declared="1">
+	<ints>180</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>178</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="66"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="180"  name="陈宫" key="12" value="128" neverGiveUp="true" awardSid="12046" type="1" >
+ <field name="appTask" declared="1">
+	<ints>181</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>179</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="67"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="181"  name="貂蝉" key="12" value="256" neverGiveUp="true" awardSid="12047" type="1" >
+ <field name="appTask" declared="1">
+	<ints>182</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>180</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="68"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="182"  name="吕布" key="12" value="512" neverGiveUp="true" awardSid="12048" type="1" >
+ <field name="appTask" declared="1">
+	<ints>183</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>181</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="69"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="183"  name="吕布白门楼陨命" key="12" value="1024" neverGiveUp="true" awardSid="12049" type="1" >
+ <field name="appTask" declared="1">
+	<ints>184</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>182</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="7" duplicateSid="70"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="184"  name="郭图" key="12" value="2048" neverGiveUp="true" awardSid="12050" type="1" >
+ <field name="appTask" declared="1">
+	<ints>185</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>183</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="71"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="185"  name="逢纪" key="12" value="4096" neverGiveUp="true" awardSid="12051" type="1" >
+ <field name="appTask" declared="1">
+	<ints>186</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>184</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="72"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="186"  name="高览" key="12" value="8192" neverGiveUp="true" awardSid="12052" type="1" >
+ <field name="appTask" declared="1">
+	<ints>187</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>185</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="73"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="187"  name="审配" key="12" value="32768" neverGiveUp="true" awardSid="12053" type="1" >
+ <field name="appTask" declared="1">
+	<ints>188</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>186</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="74"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="188"  name="颜良" key="12" value="65536" neverGiveUp="true" awardSid="12054" type="1" >
+ <field name="appTask" declared="1">
+	<ints>189</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>187</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="75"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="189"  name="文丑" key="13" value="1" neverGiveUp="true" awardSid="12055" type="1" >
+ <field name="appTask" declared="1">
+	<ints>190</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>188</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="76"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="190"  name="田丰" key="13" value="2" neverGiveUp="true" awardSid="12056" type="1" >
+ <field name="appTask" declared="1">
+	<ints>191</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>189</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="77"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="191"  name="张颌" key="13" value="4" neverGiveUp="true" awardSid="12057" type="1" >
+ <field name="appTask" declared="1">
+	<ints>192</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>190</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="78"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="192"  name="袁绍" key="13" value="8" neverGiveUp="true" awardSid="12058" type="1" >
+ <field name="appTask" declared="1">
+	<ints>193</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>191</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="79"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="193"  name="官渡之战" key="13" value="16" neverGiveUp="true" awardSid="12059" type="1" >
+ <field name="appTask" declared="1">
+	<ints>194</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>192</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="8" duplicateSid="80"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="194"  name="守关部将" key="13" value="32" neverGiveUp="true" awardSid="12060" type="1" >
+ <field name="appTask" declared="1">
+	<ints>195</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>193</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="81"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="195"  name="孔秀" key="13" value="64" neverGiveUp="true" awardSid="12061" type="1" >
+ <field name="appTask" declared="1">
+	<ints>196</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>194</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="82"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="196"  name="孟坦" key="13" value="128" neverGiveUp="true" awardSid="12062" type="1" >
+ <field name="appTask" declared="1">
+	<ints>197</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>195</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="83"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="197"  name="韩福" key="13" value="256" neverGiveUp="true" awardSid="12063" type="1" >
+ <field name="appTask" declared="1">
+	<ints>198</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>196</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="84"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="198"  name="卞喜" key="13" value="512" neverGiveUp="true" awardSid="12064" type="1" >
+ <field name="appTask" declared="1">
+	<ints>199</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>197</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="85"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="199"  name="王植" key="13" value="1024" neverGiveUp="true" awardSid="12065" type="1" >
+ <field name="appTask" declared="1">
+	<ints>200</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>198</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="86"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="200"  name="秦琪" key="13" value="2048" neverGiveUp="true" awardSid="12066" type="1" >
+ <field name="appTask" declared="1">
+	<ints>201</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>199</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="87"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="201"  name="夏侯惇" key="13" value="4096" neverGiveUp="true" awardSid="12067" type="1" >
+ <field name="appTask" declared="1">
+	<ints>202</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>200</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="88"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="202"  name="蔡阳" key="13" value="8192" neverGiveUp="true" awardSid="12068" type="1" >
+ <field name="appTask" declared="1">
+	<ints>203</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>201</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="89"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="203"  name="千里走单骑" key="13" value="32768" neverGiveUp="true" awardSid="12069" type="1" >
+ <field name="appTask" declared="1">
+	<ints>204</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>202</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="9" duplicateSid="90"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="204"  name="李典" key="13" value="65536" neverGiveUp="true" awardSid="12070" type="1" >
+ <field name="appTask" declared="1">
+	<ints>205</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>203</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="91"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="205"  name="于禁" key="14" value="1" neverGiveUp="true" awardSid="12071" type="1" >
+ <field name="appTask" declared="1">
+	<ints>206</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>204</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="92"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="206"  name="乐进" key="14" value="2" neverGiveUp="true" awardSid="12072" type="1" >
+ <field name="appTask" declared="1">
+	<ints>207</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>205</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="93"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="207"  name="张颌" key="14" value="4" neverGiveUp="true" awardSid="12073" type="1" >
+ <field name="appTask" declared="1">
+	<ints>208</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>206</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="94"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="208"  name="张辽" key="14" value="8" neverGiveUp="true" awardSid="12074" type="1" >
+ <field name="appTask" declared="1">
+	<ints>209</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>207</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="95"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="209"  name="许褚" key="14" value="16" neverGiveUp="true" awardSid="12075" type="1" >
+ <field name="appTask" declared="1">
+	<ints>210</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>208</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="96"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="210"  name="夏侯惇" key="14" value="32" neverGiveUp="true" awardSid="12076" type="1" >
+ <field name="appTask" declared="1">
+	<ints>211</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>209</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="97"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="211"  name="曹仁" key="14" value="64" neverGiveUp="true" awardSid="12077" type="1" >
+ <field name="appTask" declared="1">
+	<ints>212</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>210</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="98"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="212"  name="曹操" key="14" value="128" neverGiveUp="true" awardSid="12078" type="1" >
+ <field name="appTask" declared="1">
+	<ints>213</ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>211</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="99"/>
+ 		</objs>
+	</field>
+ </sample>
+ <sample class="game.task.Task" sid="213"  name="赤壁之战" key="14" value="256" neverGiveUp="true" awardSid="12079" type="1" >
+ <field name="appTask" declared="1">
+	<ints></ints>
+	</field>
+ <field name="acceptLimitCondition" declared="1">
+		<sample sid="0" class="game.task.condition.GetTaskCondition" level="0" >
+ <field name="limitTask" declared="1">
+				<ints>212</ints>
+			</field>
+		</sample>
+	</field>
+ <field name="taskConditions" declared="1">
+		<objs class="game.task.condition.TaskCondition">
+ <sample sid="0" class="game.task.condition.DuplicateCondition" chapterSid="10" duplicateSid="100"/>
+ 		</objs>
+	</field>
+ </sample>
+ </objects>

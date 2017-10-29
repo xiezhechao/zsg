@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+ <field class="game.equipment.OpenGemHole" name="factory" id="openGemHoleSampleFactory"/>
+ <method ref="openGemHoleSampleFactory" name="init">
+  <ref id="context"/>
+ </method>
+ 
+ 	<!--
+ 		type:宝石孔类型
+ 		initHoles:初始宝石孔个数
+ 		maxHole:宝石孔个数上限
+ 		openHoleByLv:开放宝石孔（武将等级）(数组下标就是增加的个数)0占位,开启第一个额外孔的武将真实等级
+ 		openHoleByQu:开放宝石孔（武将品质）(数组下标代表武将品质)0白色武将,1绿色武将开启的总额外孔数
+	-->
+	
+	<sample class="game.equipment.OpenGemHole" sid="1" type="0" initHoles="3" maxHole="9">
+		<field name="openHoleByLv" declared="1">
+			<ints>0,41,41,41,91,91,91</ints>
+		</field>
+		<field name="openHoleByQu" declared="1">
+			<ints>0,0,0,0,0,0,0,0,0,0,0</ints>
+		</field>
+	</sample>
+	<sample class="game.equipment.OpenGemHole" sid="2" type="1" initHoles="3" maxHole="9">
+		<field name="openHoleByLv" declared="1">
+			<ints>0,41,41,41,91,91,91</ints>
+		</field>
+		<field name="openHoleByQu" declared="1">
+			<ints>0,0,0,0,0,0,0,0,0,0,0</ints>
+		</field>
+	</sample>
+	<sample class="game.equipment.OpenGemHole" sid="3" type="2" initHoles="3" maxHole="9">
+		<field name="openHoleByLv" declared="1">
+			<ints>0,41,41,41,91,91,91</ints>
+		</field>
+		<field name="openHoleByQu" declared="1">
+			<ints>0,0,0,0,0,0,0,0,0,0,0</ints>
+		</field>
+	</sample>
+	<sample class="game.equipment.OpenGemHole" sid="4" type="3" initHoles="3" maxHole="7">
+		<field name="openHoleByLv" declared="1">
+			<ints>0,41,91,151,151</ints>
+		</field>
+		<field name="openHoleByQu" declared="1">
+			<ints>0,0,0,0,0,0,0,0,0,0,0</ints>
+		</field>
+	</sample>
+
+</objects>

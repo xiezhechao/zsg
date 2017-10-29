@@ -1,0 +1,10 @@
+﻿{
+"resurl":"${client.resurl}",
+"isDebug":"${server.debug}",
+"ip":"${server.domain}",
+"urlport":"${server.httpPort}",
+"tcpport":"${server.port}",
+"showGuide":"${server.showGuide}",
+"plantID":"${server.plantID}",
+"serverID":"${server.serverID}"
+}

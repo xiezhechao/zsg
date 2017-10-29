@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+<!--
+	[g]绿色		[r]红色		[w]白色		[y]黄色		[o]橙色		[s=数字]字号		[b]加粗
+
+	样式使用例子：[g]文字[/]
+	
+	文字中的@是需要替换的内容，程序会按顺序替换其中内容
+-->
+	<key value="加载资源" reset="正在努力加载资源" />
+	<key value="奖励提示" reset="获得：@+@" />
+	<!--错误提示-->
+	<key value="erro1" reset="包裹不足请先清理" />
+	<key value="erro2" reset="等级已满" />
+	<key value="erro3" reset="资源不足" />
+	<key value="erro4" reset="包裹不足请先清理" />
+	<key value="erro5" reset="包裹不足请先清理" />
+	<key value="erro6" reset="包裹不足请先清理" />
+	<key value="erro7" reset="包裹不足请先清理" />
+	<key value="erro8" reset="包裹不足请先清理" />
+	<key value="erro9" reset="包裹不足请先清理" />
+	<key value="erro10" reset="包裹不足请先清理" />
+
+	<!--任务-->
+	<key value="re100" reset="完成任务" />
+	<key value="re101" reset="放弃任务" />
+	<key value="re102" reset="免费刷新" />
+	<key value="re103" reset="@元宝刷新" />
+	<key value="re104" reset="主线" />
+	<key value="re105" reset="日常" />
+	<key value="re106" reset="任务" />
+	<!--世界城池面板-->
+	<key value="re107" reset="城市总览" />
+	<key value="re108" reset="册封城主" />
+	<key value="re109" reset="撤销城主" />
+	<key value="re110" reset="购买NPC部队" />
+	<key value="re111" reset="领取城主奖励" />
+	<key value="re112" reset="放弃城主" />
+	<key value="re113" reset="您确定需要撤销城主吗？" />
+	<key value="re114" reset="仅城主使用功能" />
+	<key value="re115" reset="您确定需要放弃城主吗？" />
+	<key value="re116" reset="撤销城主" />
+	<key value="re117" reset="撤销城主" />
+	<key value="re118" reset="撤销城主" />
+	<!--邮件面板-->
+	<key value="mail1" reset="邮件" />
+	<key value="mail2" reset="领取" />
+	<key value="mail3" reset="发送" />
+	<key value="mail4" reset="还未选取邮件" />
+	<key value="mail5" reset="是否删除已选邮件" />
+	<key value="mail6" reset="共[y]@[/]封邮件 :[y]@[/]封未读" />
+
+
+	<key value="quanxuan" reset="全选" />
+	<key value="shanchu" reset="删除" />
+	<key value="xiexin" reset="写信" />
+
+	<!--官职册封面板-->
+	<key value="offical1" reset="册封" />
+	<key value="offical2" reset="撤销官职" />
+	<key value="offical3" reset="你现在是@,可以分配@个官职" />
+	<key value="offical4" reset="@\n佩戴中" />
+	<key value="offical5" reset="点击册封" />
+	<!--建筑升级面板-->
+	<key value="buildup1" reset="建筑升级" />
+	<key value="buildup2" reset="升级" />
+	<key value="buildup3" reset="@  @级" />
+	<!--副本面板-->
+	<key value="duplic1" reset="副本" />
+	<key value="duplic2" reset="进入准备" />
+	<key value="duplic3" reset="请先选择攻打副本" />
+	<key value="duplic4" reset="@  @级" />
+	<key value="duplic5" reset="@  @级" />
+	<key value="duplic6" reset="@  @级" />
+	<key value="duplic7" reset="@  @级" />
+	<key value="duplic8" reset="@  @级" />
+	<key value="duplic9" reset="@  @级" />
+	<!--包裹-->
+	<key value="全部" reset="全部" />
+	<key value="装备" reset="装备" />
+	<key value="物品" reset="物品" />
+	<key value="材料" reset="材料" />
+	<key value="宝石" reset="宝石" />
+	<key value="包裹" reset="包裹" />
+	<key value="整理" reset="整理" />
+	<key value="警告" reset="警告" />
+	<key value="提示" reset="提示" />
+	<key value="开格子" reset="是否打开@个格子消耗@点功勋" />
+	<key value="使用" reset="使用" />
+	<key value="批量使用" reset="批量使用" />
+	<key value="功勋不足" reset="功勋不足" />
+	<key value="主将无法册封官职" reset="主将无法册封官职" />
+	<key value="是否删除物品" reset="是否删除@？" />
+	<!--结盟-->
+	<key value="结盟" reset="结盟" />
+	<key value="申请结盟" reset="申请结盟" />
+	<!--南蛮入侵-->
+	<key value="南蛮入侵" reset="南蛮入侵" />
+	<key value="助蛮伐敌" reset="助蛮伐敌" />
+	<key value="蛮夷正在入侵我们的家园，请将军火速前往" reset="蛮夷正在入侵我们的家园，请将军火速前往" />
+	<key value="保卫家园" reset="保卫家园" />
+	<key value="抵御住此波进攻奖励" reset="抵御住此波进攻奖励" />
+	<key value="南蛮波数" reset="总共@波蛮子,目前进行到第@波,剩余敌军部队@支。" />
+	<key value="击杀指定数目的士兵奖励" reset="击杀指定数目的士兵奖励" />
+	<key value="需要击杀" reset="需要击杀@名@士兵我方已击杀@" />
+	<key value="蛮夷欲与我国交好" reset="蛮夷欲与我国交好联合抗击@，请火速前往" />
+	<key value="升级" reset="升级" />
+	
+	<!--国家面板-->
+	<key value="累计点" reset="累计点" />
+	<key value="无资源领取" reset="无资源领取" />
+	<key value="下级信息" reset="下级信息" />
+	<key value="官职一览" reset="官职一览" />
+	<key value="爵位一览" reset="爵位一览" />
+	<key value="武力" reset="武力" />
+	<key value="统帅" reset="统帅" />
+	<key value="智力" reset="智力" />
+	<key value="内政" reset="内政" />
+	<key value="军事" reset="军事" />
+	<key value="内政科技点" reset="内政科技点" />
+	<key value="军事科技点" reset="军事科技点" />
+	<key value="等级已满" reset="等级已满" />
+	<key value="国家科技升级成功" reset="主公，您成功行使了国王的权利，升级成功。" />
+	<key value="粮食" reset="粮食" />
+	<key value="木材" reset="木材" />
+	<key value="铁锭" reset="铁锭" />
+	<key value="铜币" reset="铜币" />
+	<key value="捐献" reset="捐献" />
+	<key value="确定" reset="确定" />
+	<key value="取消" reset="取消" />
+	<key value="科技" reset="科技" />
+	<key value="爵位" reset="爵位" />
+	<key value="奖励" reset="奖励" />
+	<key value="国家标题" reset="国家" />
+	<!--国家任务-->
+	<key value="攻占" reset="攻占" />
+	<key value="防守" reset="防守" />
+	<key value="杀敌" reset="杀敌" />
+	<key value="国家任务" reset="国家任务" />
+	<key value="任务未完成" reset="任务未完成" />
+	<key value="完成任务领奖励" reset="完成任务领奖励" />
+	<key value="任务失败" reset="任务失败" />
+	<key value="任务完成" reset="任务完成" />
+	<key value="任务过期" reset="任务过期" />
+	<key value="任务即将过期" reset="该任务将在 @ 后过期" />
+	<key value="任务即将过期2" reset="该任务将在完成后或 @ 后刷新重置" />
+
+	<key value="国家科技" reset="国家科技" />
+	<key value="今日功勋" reset="今日功勋" />
+	<!--副本-->
+	<key value="每日奖励无法领取" reset="通关章节后，能领取每日章节奖励" />
+	<key value="已经领取过每日奖励" reset="已经领取过每日奖励" />
+	<key value="英雄令" reset="英雄令" />
+	<key value="英雄令数量" reset="@个英雄令" />
+	
+	<key value="选择军团" reset="选择军团" />
+	<key value="开始战斗" reset="开始战斗" />
+	<key value="没有选择队伍" reset="没有选择队伍" />
+	<key value="武将没携带兵力" reset="武将没携带兵力" />
+	<key value="关卡未开启" reset="关卡未开启" />
+	<key value="请选择出战军团" reset="请选择出战军团" />
+	<key value="士兵不足" reset="您的剩余士兵不足，请将军" />
+	<key value="结盟" reset="结盟" />
+	<key value="前往募兵" reset="前往募兵" />
+	<key value="无空闲队伍" reset="您没有空闲可选择的队伍，请先编成队伍，或等待队伍空闲" />
+	<!--打造-->
+	<key value="打造" reset="打造" />
+	<key value="白色" reset="白色" />
+	<key value="绿色" reset="绿色" />
+	<key value="蓝色" reset="蓝色" />
+	<key value="紫色" reset="紫色" />
+	<key value="黄色" reset="黄色" />
+	<key value="红色" reset="红色" />
+	<key value="拆分" reset="拆分" />
+	<key value="虎威石" reset="虎威石" />
+	<key value="破阵石" reset="破阵石" />
+	<key value="天机石" reset="天机石" />
+	<key value="乾坤石" reset="乾坤石" />
+	
+	<key value="头盔" reset="头盔" />
+	<key value="腰带" reset="腰带" />
+	<key value="铠甲" reset="铠甲" />
+	<key value="披风" reset="披风" />
+	<key value="武器" reset="武器" />
+	<key value="挂坠" reset="挂坠" />
+	<key value="裤子" reset="裤子" />
+	<key value="靴子" reset="靴子" />
+	<key value="坐骑" reset="坐骑" />
+	<key value="强化等级" reset="强化等级" />
+	<key value="强化" reset="强化" />
+	<key value="当前等级" reset="当前等级" />
+	<key value="已经是最高级" reset="已经是最高级" />
+	<key value="下一级" reset="下一级" />
+	<key value="铜币" reset="铜币" />
+	<key value="攻击" reset="攻击" />
+	<key value="体力" reset="体力" />
+	<key value="带兵数" reset="带兵数" />
+
+	<key value="基础属性加成" reset="基础属性加成" />
+	<key value="铜币不足" reset="铜币不足" />
+	
+	<key value="合成" reset="合成" />
+	<key value="合成数" reset="合成数" />
+	<key value="功能未开启" reset="功能未开启" />
+	
+	
+	<key value="洗练" reset="洗练" />
+	<key value="洗练前属性" reset="洗练前属性" />
+	<key value="洗练后属性" reset="洗练后属性" />
+	<key value="材料不足" reset="材料不足" />
+	<key value="包裹空间不足" reset="包裹空间不足" />
+	<key value="宝石孔开放条件" reset="开放等级：@ 转 @ 级" />
+	
+	<!--使用经验卷轴-->
+	<key value="批量使用" reset="批量使用" />
+	<key value="没选择经验卷轴" reset="主公，您还没有选择需要学习的典籍。" />
+	<key value="武将等级已满" reset="武将等级已满" />
+	
+	
+	<!--邮件-->
+	<key value="普通" reset="普通" />
+	<key value="战报" reset="战报" />
+	<key value="附件" reset="附件" />
+	<key value="回复" reset="回复" />
+	<key value="删除" reset="删除" />
+	<key value="查看战报" reset="查看战报" />
+	
+	<!--转生-->
+	<key value="达到100级才能转生" reset="达到100级才能转生" />
+	<key value="转生" reset="转生" />
+	
+	<key value="开孔0" reset="新开孔:@个天机石孔" />
+	<key value="开孔1" reset="新开孔:@个虎威石孔" />
+	<key value="开孔2" reset="新开孔:@个破阵石孔" />
+	<key value="开孔3" reset="新开孔:@个乾坤石孔" />
+	
+	<!--精彩活动-->
+	<key value="精彩活动" reset="精彩活动" />
+	<key value="领取" reset="领取" />
+	<key value="已领取" reset="已领取" />
+	<key value="活动列表" reset="活动列表" />
+	<key value="活动剩余时间" reset="活动剩余时间" />
+	<key value="活动已结束" reset="活动已结束" />
+	<key value="永久开启" reset="永久开启" />
+	
+	<!--君主科技-->
+	<key value="资源不足" reset="资源不足" />
+	<key value="君主科技" reset="君主科技" />
+	
+	<!--声望商店-->
+	<key value="限购" reset="限购" />
+	<key value="汉室声望" reset="汉室声望" />
+	<key value="声望商店" reset="声望商店" />
+	
+	<!--人物属性-->
+	<key value="战斗力" reset="战斗力" />
+	<key value="转身等级" reset="转" />
+	<key value="进入军团" reset="进入军团" />
+	<key value="增加部队攻击力" reset="增加部队攻击力" />
+	<key value="增加部队士兵生命值" reset="增加部队士兵生命值" />
+	<key value="增加带兵上限" reset="增加带兵上限" />
+	<key value="增加士兵出手速度" reset="增加士兵出手速度" />
+	<key value="增加暴击几率" reset="转增加暴击几率" />
+	<key value="增加暴击伤害" reset="增加暴击伤害" />
+	<key value="增加武将技能伤害" reset="增加武将技能伤害" />
+	<key value="减少受到的武将技能伤害" reset="减少受到的武将技能伤害" />
+	<key value="武将所在军团" reset="武将所在军团" />
+	
+	<key value="武将" reset="武将" />
+	<key value="经验" reset="经验" />
+	<key value="属性" reset="属性" />
+	<key value="技能" reset="技能" />
+	<key value="武将名字" reset="武将名字" />
+
+	<key value="智力tips" reset="智力成长 @\n1点智力=2点攻击，2点体力" />
+	<key value="武力tips" reset="武力成长 @\n1点武力=3点攻击，1点体力" />
+	<key value="统帅tips" reset="统帅成长 @\n1点统帅=1点攻击，3点体力" />
+	
+	<!--排行-->
+	<key value="每日功勋榜" reset="每日功勋榜" />
+	<key value="每日杀敌榜" reset="每日杀敌榜" />
+	<key value="总功勋榜" reset="总功勋榜" />
+	<key value="总战力榜" reset="总战力榜" />
+	<key value="排行榜" reset="排行榜" />
+	<key value="总功勋" reset="总功勋" />
+	<key value="总战力" reset="总战力" />
+	<key value="领取奖励" reset="领取奖励" />
+	<key value="领取成功" reset="领取成功" />
+	<key value="无" reset="无" />
+	
+	<!--招募士兵-->
+	<key value="元宝治疗" reset="元宝治疗" />
+	<key value="粮食治疗" reset="粮食治疗" />
+	<key value="确定" reset="确定" />
+	<key value="元宝治疗提示" reset="元宝治疗@个@需要消耗@元宝" />
+	<key value="粮食治疗提示" reset="粮食治疗@个@需要消耗@粮食" />
+	<key value="治疗" reset="治疗" />
+	<key value="防沉迷5小时" reset="您现在是未成年用户，已经上线5个小时，\n为了您的健康，请您下线休息，\n从现在开始，您无法从游戏中获得任何收益。" />
+	<key value="恢复伤兵元宝不足" reset="主公啊！没有元宝了。老夫也好着急的呢。" />
+	<key value="恢复伤兵粮食不足" reset="主公啊！没有粮食了。老夫也好着急的呢。" />
+	<key value="几阶兵种" reset="@阶兵种" />
+	<key value="消耗几元宝" reset="消耗@元宝" />
+	<key value="消耗多少粮食" reset="消耗@粮食" />
+	<key value="治疗" reset="治疗" />
+	<key value="招募" reset="招募" />
+	<key value="几阶" reset="@阶" />
+	<key value="几个" reset="@个" />
+	<key value="步兵" reset="步兵" />
+	<key value="弓兵" reset="弓兵" />
+	<key value="骑兵" reset="骑兵" />
+	<key value="伤兵营" reset="伤兵营" />
+	<key value="募兵" reset="募兵" />
+	<key value="几个" reset="@个" />
+	<key value="招募士兵资源不足" reset="主公，没资源了!这让老夫如何是好呢。" />
+	
+	<!--招募武将-->
+	<key value="换" reset="换" />
+	<key value="点击学习技能" reset="点击学习技能" />
+	<key value="已经是最高级" reset="已经是最高级" />
+	<key value="无法学习新技能" reset="无法学习新技能" />
+	
+	<!--商城-->
+	<key value="没有搜到相关物品" reset="没有搜到相关物品" />
+	<key value="充值" reset="充值" />
+	<key value="商城" reset="商城" />
+	<key value="消费播报" reset="消费播报" />
+	<key value="功勋" reset="功勋" />
+	<key value="vip" reset="vip" />
+	<key value="资源" reset="资源" />
+	<key value="热销" reset="热销" />
+	<key value="购买资源不足" reset="@不足" />
+	<key value="购买数量" reset="购买数量" />
+	<key value="花费" reset="花费" />
+	<key value="购买" reset="购买" />
+	<key value="vip等级不足" reset="vip等级不足，需要vip@" />
+	
+	<!--探访-->
+	<key value="探访事件" reset="探访事件" />
+	
+	<!--技能学习-->
+	<key value="学习技能消耗" reset="学习[g]@[/]需要花费[g]@[/]个[g]@[/]" />
+	<key value="升级技能消耗" reset="学习[g]@[/]级需要花费[g]@[/]个[g]@[/]" />
+	<key value="学习技能" reset="学习技能" />
+	<key value="学习" reset="学习" />
+	<key value="已经是满级了" reset="已经是满级了" />
+	<key value="物品不足" reset="物品不足" />
+	<key value="学习技能成功" reset="学习@成功" />
+	<key value="兵书大典" reset="兵书大典" />
+	
+	<!--迎天子-->
+	<key value="当前还没有队伍进行战斗" reset="当前还没有队伍进行战斗" />
+	<key value="等待各国到达关卡" reset="请先等待各国到达关卡，才能攻占关卡" />
+	<key value="必须先攻下路上的关卡" reset="必须先攻下路上的关卡，才能抢占许昌" />
+	<key value="未上榜" reset="未上榜" />
+	<key value="迎奉天子" reset="迎奉天子" />
+	<key value="排行" reset="排行" />
+	<key value="自动叫阵" reset="自动叫阵" />
+	
+	<!--宝石-->
+	<key value="一级" reset="一级" />
+	<key value="二级" reset="二级" />
+	<key value="三级" reset="三级" />
+	<key value="四级" reset="四级" />
+	<key value="五级" reset="五级" />
+	<key value="六级" reset="六级" />
+	<key value="七级" reset="七级" />
+	<key value="八级" reset="八级" />
+	<key value="九级" reset="九级" />
+	<key value="十级" reset="十级" />
+	<key value="合成成功" reset="合成成功" />
+	
+	<!--拉令-->
+	<key value="出征" reset="出征" />
+	<key value="召集令" reset="召集令" />
+	<key value="没有数据" reset="没有需要支援的数据" />
+	<key value="您没有选择队伍" reset="您没有选择队伍，请先编组" />
+	<key value="获得叫阵次数" reset="获得:叫阵次数+@" />
+	<key value="没有目标" reset="没有目标" />
+	<key value="已结束" reset="已结束" />
+	<key value="下一个" reset="下一个" />
+	<key value="拉令内容" reset="@.@ 发布号令  我军将士集结@" />
+	
+	<!--任务-->
+	<key value="主线任务标识" reset="(主)" />
+	<key value="主线" reset="主线" />
+	<key value="支线" reset="支线" />
+	<key value="日常" reset="日常" />
+	<key value="新手" reset="新手" />
+	<key value="任务追踪" reset="任务追踪" />
+	
+	<!--朝贡-->
+	<key value="出征选择" reset="出征选择" />
+	<key value="派遣成功" reset="派遣成功" />
+	<key value="朝贡之路" reset="朝贡之路" />
+	<key value="派遣部队" reset="派遣部队" />
+	<key value="查看战况" reset="查看战况" />
+	<key value="查看排行" reset="查看排行" />
+	<key value="守方人数" reset="守方人数：@" />
+	<key value="攻方人数" reset="攻方人数：@" />
+	<key value="开始到结束" reset="到" />
+	<key value="开始时间" reset="活动开始时间：" />
+	<key value="剩余时间" reset="到达目的地剩余时间：" />
+	<key value="活动结束" reset="活动结束" />
+	<key value="没有可查看的战斗" reset="没有可查看的战斗" />
+	
+	<!--聊天-->
+	<key value="系统" reset="系统" />
+	<key value="世界" reset="世界" />
+	<key value="国家" reset="国家" />
+	<key value="私聊" reset="私聊" />
+	<key value="输入对方名字" reset="/输入对方名字 " />
+	<key value="聊天频繁" reset="发送消息过于频繁，请@秒后再试" />
+	
+	<!--战斗-->
+	<key value="叫阵卡不足" reset="叫阵卡不足" />
+	<key value="叫阵次数不足" reset="叫阵次数不足" />
+	<key value="召集令发布成功" reset="召集令发布成功" />
+	<key value="自动叫阵" reset="自动叫阵" />
+	<key value="召集令消耗" reset="消耗叫阵卡×2，发布一道召集命令，召集各路豪杰聚集于此" />
+	<key value="叫阵描述" reset="派出我方一支部队和对面一支部队进行单挑" />
+	<key value="撤退描述" reset="我方未上阵的部队撤退到周围我方未发生战斗的城池" />
+	<key value="突进描述" reset="当我方人数大于对方2倍时，可派遣一支部队突进到后方城池" />
+</objects>

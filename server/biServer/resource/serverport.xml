@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 创建精力通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1001</value>
+		<obj class="biServer.BIPort">
+			<method name="setBiManager">
+				<ref id="bimanager"/>
+			</method>
+			<method name="setMethodTypse">
+				<strings>0</strings>
+			</method>
+		</obj>
+	</method>
+
+</objects>

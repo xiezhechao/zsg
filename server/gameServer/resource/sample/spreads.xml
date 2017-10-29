@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<field class="game.fight.Spread" name="factory" id="spreadSampleFactory"/>
+	<method ref="spreadSampleFactory" name="init">
+		<ref id="context"/>
+	</method>
+	<!--
+		class:game.fight.Spread施放
+		name：名字
+		targetCamp:目标阵营
+		range:范围
+		priority:优先级
+	-->
+	<sample class="game.fight.Spread" sid="1" name="近战施放" targetCamp="2" range="1" priority="1"></sample>
+	<sample class="game.fight.Spread" sid="2" name="远程施放" targetCamp="2" range="1" priority="3"></sample>
+	<sample class="game.fight.Spread" sid="3" name="横排施放" targetCamp="2" range="3" priority="1"></sample>
+	<sample class="game.fight.Spread" sid="4" name="单体自己施放" targetCamp="1" range="5"></sample>
+	<sample class="game.fight.Spread" sid="5" name="全体施放" targetCamp="2" range="2"></sample>
+	<sample class="game.fight.Spread" sid="6" name="单排两人施放" targetCamp="2" range="4" priority="1"></sample>
+	<sample class="game.fight.Spread" sid="7" name="己方全体施放" targetCamp="1" range="2"></sample>
+	<sample class="game.fight.Spread" sid="8" name="己方单体随机施放" targetCamp="1" range="1" priority="3"></sample>
+	<sample class="game.fight.Spread" sid="9" name="己方除自己全体施放" targetCamp="1" range="6"></sample>
+</objects>

@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <field class="game.mall.MallProp" name="factory" id="mallPropSampleFactory"/>
+   <method ref="mallPropSampleFactory" name="init">
+   <ref id="context"/>
+   </method>
+   <!--
+    
+   propId:引用物品ID
+   name：引用物品名字
+   coinType：价格类型
+   1粮食
+    
+   2木材
+   3钱币
+   4铁锭
+   5经验
+   6劳役
+   7文化
+   8军械
+   9训练
+   10元宝
+   11礼券
+   12积分
+   price：价格
+   buyLevel:购买爵位等级限制
+ game.mall.VipMallPorp   VIP商品类 以下是VIP商品类   isRestric VIP商品是否限购
+  restricNum VIP商品限购物品数量
+  needVipLv  VIP商品购买需要的VIP等级 
+ game.mall.ScoreMallProp 功勋商店物品 restricNum 限购数量  不限购配置0
+ -->
+ <sample class="game.mall.MallProp" sid="100" propId="8035" name="功勋令牌（大）" coinType="1" price="1000000" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="101" propId="8035" name="功勋令牌（大）" coinType="2" price="1000000" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="102" propId="8035" name="功勋令牌（大）" coinType="3" price="1000000" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="103" propId="8035" name="功勋令牌（大）" coinType="4" price="1000000" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="200" propId="26" name="行军令" coinType="10" price="10" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="201" propId="27" name="叫阵卡" coinType="10" price="10" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="202" propId="3108" name="珍品宝石箱" coinType="10" price="200" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="203" propId="3104" name="五级宝石箱" coinType="10" price="1000" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="204" propId="3001" name="白色材料包" coinType="10" price="20" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="205" propId="5002" name="高级经验卷轴" coinType="10" price="20" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="206" propId="2000" name="一级天机石·锋锐" coinType="10" price="1" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="207" propId="2036" name="一级虎威石·翻天" coinType="10" price="1" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="208" propId="2072" name="一级破阵石·七星" coinType="10" price="2" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="209" propId="8033" name="征募令（大）" coinType="10" price="200" buyLevel="0" />
+ <sample class="game.mall.MallProp" sid="210" propId="5558" name="10个英雄令" coinType="10" price="1000" buyLevel="0" />
+ <sample class="game.mall.VipMallPorp" sid="400" propId="8009" name="钱币资源包（大）" coinType="10" price="20" buyLevel="0" restricNum="200" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="401" propId="8014" name="铁锭资源包（大）" coinType="10" price="20" buyLevel="0" restricNum="200" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="402" propId="8004" name="粮食资源包（大）" coinType="10" price="20" buyLevel="0" restricNum="200" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="403" propId="503" name="夜光杯" coinType="10" price="100" buyLevel="0" restricNum="10" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="404" propId="3100" name="一级宝石箱" coinType="10" price="1" buyLevel="0" restricNum="500" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="405" propId="3108" name="珍品宝石箱" coinType="10" price="100" buyLevel="0" restricNum="20" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="406" propId="7003" name="青州精卒虎符" coinType="10" price="20" buyLevel="0" restricNum="20" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="407" propId="7004" name="无当飞军虎符" coinType="10" price="20" buyLevel="0" restricNum="20" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="408" propId="7005" name="丹阳虎贲虎符" coinType="10" price="20" buyLevel="0" restricNum="20" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="409" propId="3001" name="白色材料包" coinType="10" price="15" buyLevel="0" restricNum="1000" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="410" propId="3003" name="绿色材料包" coinType="10" price="60" buyLevel="0" restricNum="1000" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="411" propId="3005" name="蓝色材料包" coinType="10" price="200" buyLevel="0" restricNum="1000" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="412" propId="5002" name="高级经验卷轴" coinType="10" price="15" buyLevel="0" restricNum="100" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="413" propId="46" name="百炼钢" coinType="10" price="100" buyLevel="0" restricNum="160" needVipLv="0" />
+ <sample class="game.mall.VipMallPorp" sid="414" propId="48" name="宝石精华" coinType="10" price="100" buyLevel="0" restricNum="500" needVipLv="0" />
+ <sample class="game.mall.ScoreMallProp" sid="500" propId="8003" name="粮食资源包（中）" coinType="13" price="100" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>6,13,17,22,27</ints>
+ <ints>100,100,100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="501" propId="8017" name="木材资源包（小）" coinType="13" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>6,13,17</ints>
+ <ints>100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="502" propId="503" name="夜光杯" coinType="13" price="1500" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>21,27,33</ints>
+ <ints>100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="503" propId="5000" name="初级经验卷轴" coinType="13" price="50" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10,13,17,22,27</ints>
+ <ints>1000,1000,1000,1000,1000</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="504" propId="5001" name="中级经验卷轴" coinType="13" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>16,22,27,33,42</ints>
+ <ints>100,100,100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="505" propId="5002" name="高级经验卷轴" coinType="13" price="1000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>26,33,42</ints>
+ <ints>100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="506" propId="3001" name="白色材料包" coinType="13" price="50" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>12,15,18,22,27</ints>
+ <ints>100,100,100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="507" propId="3003" name="绿色材料包" coinType="13" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>21,27,33,42</ints>
+ <ints>100,100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="508" propId="3005" name="蓝色材料包" coinType="13" price="1000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>32,33,42</ints>
+ <ints>100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="509" propId="8031" name="征募令（小）" coinType="13" price="1500" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>26,33,42</ints>
+ <ints>100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="510" propId="3100" name="一级宝石箱" coinType="13" price="500" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>37,42</ints>
+ <ints>100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="511" propId="26" name="行军令" coinType="13" price="25" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>11,22,33</ints>
+ <ints>100,100,100</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="512" propId="27" name="叫阵卡" coinType="13" price="10" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>16,22,33</ints>
+ <ints>100,100,150</ints>
+ </objs>
+     </field>
+ </sample>
+ <!-- <sample class="game.mall.ScoreMallProp" sid="513" propId="8009" name="钱币资源包（大）" coinType="13" price="100000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>20</ints>
+ <ints>999</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.ScoreMallProp" sid="514" propId="8014" name="铁锭资源包（大）" coinType="13" price="100000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>20</ints>
+ <ints>999</ints>
+ </objs>
+     </field> -->
+<!--  </sample> -->
+ <sample class="game.mall.PrestigeMallProp" sid="600" propId="3100" name="一级宝石箱" coinType="14" price="100" buyLevel="0" restricNum="0" needPresPhase="0" />
+ <sample class="game.mall.PrestigeMallProp" sid="601" propId="5002" name="高级经验卷轴" coinType="14" price="100" buyLevel="0" restricNum="0" needPresPhase="0" />
+ <sample class="game.mall.PrestigeMallProp" sid="602" propId="3005" name="蓝色材料包" coinType="14" price="300" buyLevel="0" restricNum="0" needPresPhase="0" />
+ <sample class="game.mall.PrestigeMallProp" sid="603" propId="3108" name="珍品宝石箱" coinType="14" price="5000" buyLevel="0" restricNum="0" needPresPhase="2" />
+ <sample class="game.mall.PrestigeMallProp" sid="604" propId="33" name="先锋套装打造图纸" coinType="14" price="5000" buyLevel="0" restricNum="0" needPresPhase="0" />
+ <sample class="game.mall.PrestigeMallProp" sid="605" propId="34" name="征讨套装打造图纸" coinType="14" price="10000" buyLevel="0" restricNum="0" needPresPhase="1" />
+ <sample class="game.mall.PrestigeMallProp" sid="606" propId="35" name="中郎将套装打造图纸" coinType="14" price="25000" buyLevel="0" restricNum="0" needPresPhase="2" />
+ <sample class="game.mall.PrestigeMallProp" sid="607" propId="37" name="御史中丞套装打造图纸" coinType="14" price="50000" buyLevel="0" restricNum="0" needPresPhase="3" />
+ <sample class="game.mall.PrestigeMallProp" sid="608" propId="1080" name="西域马" coinType="14" price="50000" buyLevel="0" restricNum="0" needPresPhase="0" />
+ <sample class="game.mall.PrestigeMallProp" sid="609" propId="1081" name="铁骑马" coinType="14" price="100000" buyLevel="0" restricNum="0" needPresPhase="1" />
+ <sample class="game.mall.PrestigeMallProp" sid="610" propId="1082" name="白龙马" coinType="14" price="500000" buyLevel="0" restricNum="0" needPresPhase="2" />
+ <sample class="game.mall.PrestigeMallProp" sid="611" propId="1083" name="汗血" coinType="14" price="1000000" buyLevel="0" restricNum="0" needPresPhase="3" />
+ <sample class="game.mall.PrestigeMallProp" sid="612" propId="36" name="执金吾套装打造图纸" coinType="14" price="80000" buyLevel="0" restricNum="0" needPresPhase="3" />
+ <sample class="game.mall.PrestigeMallProp" sid="613" propId="47" name="罗刹套装图纸" coinType="14" price="120000" buyLevel="0" restricNum="0" needPresPhase="3" />
+ <sample class="game.mall.PrestigeMallProp" sid="614" propId="46" name="百炼钢" coinType="14" price="50000" buyLevel="0" restricNum="0" needPresPhase="3" />
+ <sample class="game.mall.PrestigeMallProp" sid="615" propId="48" name="宝石精华" coinType="14" price="100000" buyLevel="0" restricNum="0" needPresPhase="3" />
+ <sample class="game.mall.VipActivityMallProp" sid="1000" propId="5516" name="50个白色材料包" coinType="10" price="10" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>1</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1001" propId="5517" name="100个初级经验卷轴" coinType="10" price="10" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>1</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1002" propId="5518" name="20个英雄令" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>1</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1003" propId="5519" name="2个铁锭资源包（大）" coinType="10" price="10" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>1</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1004" propId="5520" name="50个白色材料包" coinType="10" price="10" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>2</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1005" propId="5521" name="100个初级经验卷轴" coinType="10" price="10" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>2</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1006" propId="5522" name="50个功勋令牌" coinType="10" price="50" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>2</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1007" propId="5523" name="20个蓝色材料包" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>2</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1008" propId="5524" name="100个白色材料包" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>3</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1009" propId="5525" name="8个先锋套装打造图纸" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>3</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1010" propId="5526" name="100个功勋令牌" coinType="10" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>3</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1011" propId="5527" name="40个英雄令" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>3</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1012" propId="5528" name="200个白色材料包" coinType="10" price="30" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>4</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1013" propId="5529" name="50个中级经验卷轴" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>4</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1014" propId="5530" name="1个五级天机石·锋锐" coinType="10" price="15" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>4</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1015" propId="5531" name="1个五级虎威石.翻天" coinType="10" price="15" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>4</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1016" propId="5532" name="50个绿色材料包" coinType="10" price="30" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>5</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1017" propId="5533" name="60个英雄令" coinType="10" price="60" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>5</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1018" propId="5534" name="1个五级破阵石.七星" coinType="10" price="22" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>5</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1019" propId="5535" name="5个征募令（中）" coinType="10" price="250" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>5</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1020" propId="5536" name="100个绿色材料包" coinType="10" price="60" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>6</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1021" propId="5537" name="1个五级乾坤石.紫薇" coinType="10" price="37" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>6</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1022" propId="5538" name="5个铁锭资源包（大）" coinType="10" price="50" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>6</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1023" propId="5539" name="100个中级经验卷轴" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>6</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1024" propId="5540" name="150个绿色材料包" coinType="10" price="90" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>7</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1025" propId="5541" name="15个功勋令牌（大）" coinType="10" price="60" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>7</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1026" propId="5542" name="10个征募令（中）" coinType="10" price="100" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>7</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1027" propId="5543" name="1个七级宝石箱" coinType="10" price="135" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>7</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1028" propId="5544" name="1个八级天机石.锐锋" coinType="10" price="400" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>8</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1029" propId="5545" name="1个八级破阵石.七星" coinType="10" price="600" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>8</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1030" propId="5546" name="4个御史套装打造图纸" coinType="10" price="480" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>8</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1031" propId="5547" name="5个至尊资源包" coinType="10" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>8</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1032" propId="5548" name="1个八级虎威石.镇海" coinType="10" price="400" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>9</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1033" propId="5549" name="1个八级乾坤石.紫薇" coinType="10" price="1000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>9</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1034" propId="5550" name="4个御史套装打造图纸" coinType="10" price="480" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>9</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1035" propId="5551" name="100个高级经验卷轴" coinType="10" price="100" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>9</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1036" propId="5552" name="1个十级乾坤石.紫薇" coinType="10" price="9999" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1037" propId="5553" name="1个十级破阵石.七星" coinType="10" price="5000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1038" propId="5554" name="20个征募令（中）" coinType="10" price="1000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.VipActivityMallProp" sid="1039" propId="5555" name="25个功勋令牌（大）" coinType="10" price="400" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1100" propId="5556" name="30个白色材料包" coinType="10" price="12" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1101" propId="5557" name="50个初级经验卷轴" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1102" propId="5558" name="10个英雄令" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1103" propId="5559" name="2个铁锭资源包（大）" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>10</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1104" propId="5560" name="50个白色材料包" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>20</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1105" propId="5561" name="100个初级经验卷轴" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>20</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1106" propId="5562" name="20个功勋令牌" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>20</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1107" propId="5563" name="20个蓝色材料包" coinType="10" price="80" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>20</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1108" propId="5564" name="50个白色材料包" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>30</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1109" propId="5565" name="50个功勋令牌" coinType="10" price="100" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>30</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1110" propId="5566" name="2个铁锭资源包（大）" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>30</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1111" propId="5567" name="20个英雄令" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>30</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1112" propId="5568" name="100个白色材料包" coinType="10" price="30" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>35</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1113" propId="5569" name="30个中级经验卷轴" coinType="10" price="24" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>35</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1114" propId="5570" name="1个五级天机石·锋锐" coinType="10" price="30" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>35</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1115" propId="5571" name="2个铁定资源包（大）" coinType="10" price="20" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>35</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1116" propId="5572" name="30个绿色材料包" coinType="10" price="36" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>40</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1117" propId="5573" name="30个英雄令" coinType="10" price="60" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>40</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1118" propId="5574" name="1个五级虎威石.翻天" coinType="10" price="30" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>40</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1119" propId="5575" name="2个征募令（中）" coinType="10" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>40</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1120" propId="5576" name="50个绿色材料包" coinType="10" price="60" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>45</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1121" propId="5577" name="3个铁锭资源包（大）" coinType="10" price="60" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>45</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1122" propId="5578" name="50个中级经验卷轴" coinType="10" price="40" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>45</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1123" propId="5579" name="1个五级破阵石.七星" coinType="10" price="44" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>45</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1124" propId="5580" name="100个绿色材料包" coinType="10" price="120" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>50</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1125" propId="5581" name="50个功勋令牌" coinType="10" price="200" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>50</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1126" propId="5582" name="5个征募令（中）" coinType="10" price="500" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>50</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1127" propId="5583" name="1个五级宝石箱" coinType="10" price="30" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>50</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1128" propId="5584" name="1个七级宝石箱" coinType="10" price="260" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>55</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1129" propId="5585" name="1个七级宝石箱" coinType="10" price="260" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>55</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1130" propId="5586" name="1个七级宝石箱" coinType="10" price="260" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>55</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1131" propId="5587" name="3个至尊资源包" coinType="10" price="240" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>55</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1132" propId="5588" name="1个七级乾坤石.破军" coinType="10" price="666" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>60</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1133" propId="5589" name="1个七级破阵石.六合" coinType="10" price="400" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>60</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1134" propId="5590" name="10个征募令（中）" coinType="10" price="1000" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>60</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.NobilityActivityMallProp" sid="1135" propId="5591" name="10个功勋令牌（大）" coinType="10" price="400" buyLevel="0" >
+ <field name="restricNum" declared="1">
+     <objs class="[I">
+ <ints>60</ints>
+ <ints>1</ints>
+ </objs>
+     </field>
+ </sample>
+ <sample class="game.mall.OpenServerMallProp" sid="1200" propId="5512" name="爵位大礼包" coinType="10" price="1000" buyLevel="0" activitySid="201" restricNum="3" />
+ <sample class="game.mall.OpenServerMallProp" sid="1201" propId="5513" name="武将大礼包" coinType="10" price="1000" buyLevel="0" activitySid="202" restricNum="2" />
+ <sample class="game.mall.OpenServerMallProp" sid="1202" propId="5514" name="vip超值大礼包" coinType="10" price="5000" buyLevel="0" activitySid="203" restricNum="2" />
+ <sample class="game.mall.OpenServerMallProp" sid="1203" propId="5515" name="战力大礼包" coinType="10" price="2000" buyLevel="0" activitySid="204" restricNum="2" />
+ </objects>

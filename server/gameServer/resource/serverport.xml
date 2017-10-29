@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 创建认证http通讯端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/certify</string>
+		<obj class="game.httpchannel.CertifyChannelHandler">
+			<method name="setCertifyManager">
+				<ref id="certifyManager" />
+			</method>
+			<method name="setSessionManager">
+				<ref id="manager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 创建认证http通讯端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/getRolePid</string>
+		<obj class="game.httpchannel.GetRolePidChannelHandler">
+			<method name="setCertifyManager">
+				<ref id="certifyManager" />
+			</method>
+			<method name="setGetRolePidDBAccess">
+				<obj class="game.httpchannel.db.GetRolePidDBAccess">
+					<method name="setConnectionManager">
+						<ref id="connectionManager" />
+					</method>
+				</obj>
+			</method>
+		</obj>
+	</method>
+	<!-- 创建创建玩家http通讯端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/createRole</string>
+		<obj class="game.httpchannel.CreateRoleChannelHandler">
+			<method name="setCertifyManager">
+				<ref id="certifyManager" />
+			</method>
+			<method name="setCreateRoleDBAccess">
+				<obj class="game.httpchannel.db.CreateRoleDBAccess">
+					<method name="setSqlPersistence">
+						<obj class="zmyth.orm.SqlPersistence">
+							<method name="setConnectionManager">
+								<ref id="connectionManager" />
+							</method>
+							<method name="setTable">
+								<string>player</string>
+							</method>
+						</obj>
+					</method>
+				</obj>
+			</method>
+			<method name="setTextValidity">
+				<ref id="textValidity" />
+			</method>
+			<method name="setCityCacheManager">
+				<ref id="cityCacheManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 创建充值http通讯端口 -->
+	<method name="setChannelHandler" ref="httpService">
+		<string>/charge</string>
+		<obj class="game.httpchannel.ChargeHttpChannelHandler">
+			<method name="setChargeManager">
+				<ref id="chargeManager" />
+			</method>
+		</obj>
+	</method>
+	<!--创建玩家登陆通讯端口 -->
+	<method name="setPort" ref="service">
+		<field class="zmyth.net.PortService" name="LOGIN_PORT" />
+		<obj class="game.port.LoginAccessPort">
+			<method name="setSessionManager">
+				<ref id="manager" />
+			</method>
+		</obj>
+	</method>
+	<!--创建加载玩家数据通讯端口 -->
+	<method name="setPort" ref="service">
+		<field class="zmyth.net.PortService" name="LOAD_PORT" />
+		<obj class="game.port.LoadAccessPort">
+			<method name="setSessionManager">
+				<ref id="manager" />
+			</method>
+		</obj>
+	</method>
+	<!--安装时间服务通讯端口 -->
+	<method name="setPort" ref="service">
+		<field class="zmyth.net.PortService" name="TIME_PORT" />
+		<obj class="zmyth.net.TimePort" />
+	</method>
+	<!-- 安装玩家退出通讯端口 -->
+	<method name="setPort" ref="service">
+		<field class="zmyth.net.PortService" name="EXIT_PORT" />
+		<obj class="game.port.ExitPort">
+			<method name="setSessionManager">
+				<ref id="manager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 聊天通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1000</value>
+		<obj class="game.port.SendMessagePort">
+			<method name="setTextValidity">
+				<ref id="textValidity" />
+			</method>
+		</obj>
+	</method>
+	<obj class="game.kit.MessageKit" id="messageKit">
+		<method name="setSessionManager">
+			<ref id="manager" />
+		</method>
+	</obj>
+	<!-- 邮件通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1001</value>
+		<obj class="game.port.MailAccessPort">
+			<method name="setMailManager">
+				<ref id="mailManager" />
+			</method>
+		</obj>
+	</method>
+	<!--客户端数据刷新-->
+	<field class="game.kit.RefreshDataKit" name="CLIENT_PORT">
+		<value type="int">1002</value>
+	</field>
+	<!-- 背包通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1003</value>
+		<obj class="game.port.BundlePort">
+			<method name="setBundleOperation">
+				<ref id="bundleOperation" />
+			</method>
+		</obj>
+	</method>
+	<!-- 领地通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1005</value>
+		<obj class="game.port.BuildAccessPort">
+			<method name="setCityCacheManager">
+				<ref id="cityCacheManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 商店通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1006</value>
+		<obj class="game.port.ShopPort">
+			<method name="setPersonalShopManager">
+				<ref id="personalShopManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 装备通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1007</value>
+		<obj class="game.port.EquipmentPort">
+			<method name="setEquipmentManager">
+				<ref id="equipmentManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 武将系统通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1008</value>
+		<obj class="game.port.MilitaryAccessPort">
+			<method name="setMailManager">
+				<ref id="mailManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 主线支线任务系统通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1009</value>
+		<obj class="game.port.TaskAccessPort">
+			<method name="setTaskManager">
+				<ref id="taskManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 日常任务系统通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1010</value>
+		<obj class="game.port.DailyTaskAccessPort">
+			<method name="setTaskManager">
+				<ref id="taskManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 好友通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1012</value>
+		<obj class="game.port.FriendsPort">
+			<method name="setFriendsManager">
+				<ref id="friendsManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 副本通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1013</value>
+		<obj class="game.port.DuplicateAccessPort">
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager" />
+			</method>
+			<method name="setDuplicateManager">
+				<ref id="duplicateManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 商城通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1014</value>
+		<obj class="game.port.MallPort">
+			<method name="setMallManager">
+				<ref id="mallManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 部队通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1015</value>
+		<obj class="game.port.SoldierAccessPort">
+			<method name="setSoldierManager">
+				<ref id="soldierManager" />
+			</method>
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 探访通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1016</value>
+		<obj class="game.port.VisitAccessPort">
+			<method name="setVisitManager">
+				<ref id="visitManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 科技通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1017</value>
+		<obj class="game.port.SciencePort">
+			<method name="setScienceManager">
+				<ref id="scienceManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 排行榜通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1018</value>
+		<obj class="game.port.RankListPort">
+			<method name="setRankManager">
+				<ref id="rankManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 国家科技通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1019</value>
+		<obj class="game.port.ScienceCountryPort">
+			<method name="setScienceCountryManager">
+				<ref id="scienceCountryManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 爵位通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1021</value>
+		<obj class="game.port.OfficialPort">
+			<method name="setOfficialManager">
+				<ref id="officialManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 世界相关通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1022</value>
+		<obj class="game.port.WorldFightAccessPort">
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager" />
+			</method>
+			<method name="setCityCacheManager">
+				<ref id="cityCacheManager" />
+			</method>
+			<method name="setSoldierManager">
+				<ref id="soldierManager" />
+			</method>
+		</obj>
+	</method>
+	<!--武将被动技能 -->
+	<method name="setPort" ref="service">
+		<value type="int">1023</value>
+		<obj class="game.port.MilitaryPassiveAccessPort">
+		</obj>
+	</method>
+	<!-- 战报查看器 -->
+	<method name="setPort" ref="service">
+		<value type="int">1025</value>
+		<obj class="game.port.FightLogAccessPort">
+			<method name="setFightLogManager">
+				<ref id="fightLogManager" />
+			</method>
+		</obj>
+	</method>
+	<!-- 活动时间通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1026</value>
+		<obj class="game.port.ActivityDateAccessPort">
+			<method name="setActiviDateManager">
+				<ref id="activityDateManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 国家信息通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1027</value>
+		<obj class="game.port.CountryInfoPort">
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 黄巾董卓余党活动通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1029</value>
+		<obj class="game.port.AllHeroFightActivityAccessPort" id="allHeroFightActivityAccessPort">
+			<method name="setActiviDateManager">
+				<ref id="activityDateManager"/>
+			</method>
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager"/>
+			</method>
+		</obj>
+	</method>
+	<!--武将被动技能 -->
+	<method name="setPort" ref="service">
+		<value type="int">1030</value>
+		<obj class="game.port.GiftPackageAccessPort">
+		</obj>
+	</method>
+	<!--洗练 -->
+	<method name="setPort" ref="service">
+		<value type="int">1031</value>
+		<obj class="game.port.EquipmentPolishedPort">
+			<method name="setEquipmentManager">
+				<ref id="equipmentManager"/>
+			</method>
+		</obj>
+	</method>
+	<!--VIP -->
+	<method name="setPort" ref="service">
+		<value type="int">1032</value>
+		<obj class="game.port.VipAccessPort">
+			<method name="setVipManager">
+				<ref id="vipManager"/>
+			</method>
+		</obj>
+	</method>
+	<!--每日功勋活跃度-->
+	<method name="setPort" ref="service">
+		<value type="int">1034</value>
+		<obj class="game.port.DayFightScoreAccessPort">
+			<method name="setDayFightScoreManager">
+				<ref id="dayFightScoreManager"/>
+			</method>
+		</obj>
+	</method>
+	<!--通关副本公告-->
+	<method name="setPort" ref="service">
+		<value type="int">1035</value>
+		<obj class="game.port.NoticeAccessPort"/>
+	</method>
+	<!-- 指引通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1036</value>
+		<obj class="game.port.GuideAccessPort">
+			<method name="setFightGuideManager">
+				<ref id="fightGuideManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 运营活动通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1037</value>
+		<obj class="game.port.OperatorActivityAccessPort">
+		</obj>
+	</method>
+	<!-- 在线礼包通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1038</value>
+		<obj class="game.port.OnlineGiftAccessPort">
+			<method name="setOnlineGiftManager">
+				<ref id="onlineGiftManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 朝贡活动通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1039</value>
+		<obj class="game.port.ContributeActivityAccessPort" id="contributeAccessPort">
+			<method name="setActiviDateManager">
+				<ref id="activityDateManager"/>
+			</method>
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 南蛮入侵余党活动通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1040</value>
+		<obj class="game.port.CountryCityActivityAccessPort" id="countryCityActivityAccessPort">
+			<method name="setActiviDateManager">
+				<ref id="activityDateManager"/>
+			</method>
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 迎天子活动通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1042</value>
+		<obj class="game.port.EmperorActivityAccessPort" id="emperorActivityAccessPort">
+			<method name="setActiviDateManager">
+				<ref id="activityDateManager"/>
+			</method>
+			<method name="setWorldMapManager">
+				<ref id="worldMapManager"/>
+			</method>
+			<method name="setRankManager">
+				<ref id="rankManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 国家任务通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1041</value>
+		<obj class="game.port.CountryTaskAsscessPort">
+			<method name="setCountryTaskManager">
+				<ref id="countryTaskManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 宝物通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1043</value>
+		<obj class="game.port.CimeliaAccessPort">
+			<method name="setCimeLiaManager">
+				<ref id="cimeliaManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 未领取奖励通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1044</value>
+		<obj class="game.port.WillGetAwardPort">
+			<method name="setWillAwardManager">
+				<ref id="willGetAwardManager"/>
+			</method>
+		</obj>
+	</method>
+	<method name="setPort" ref="service">
+		<value type="int">1045</value>
+		<obj class="game.port.TotalLoginActivityAccessPort">
+			<method name="setActivityManager">
+				<ref id="totalLoginManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 礼包卡通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1047</value>
+		<obj class="game.port.CardAccessPort">
+			<method name="setCardManager">
+				<ref id="cardManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 开服活动通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1046</value>
+		<obj class="game.port.OpenActivityAccessPort">
+			<method name="setOpenManager">
+				<ref id="openManager"/>
+			</method>
+		</obj>
+	</method>
+	<!-- 猎宝通讯端口 -->
+	<method name="setPort" ref="service">
+		<value type="int">1048</value>
+		<obj class="game.port.GambleAccessProt">
+			<method name="setGambleManager">
+				<ref id="gambleManager"/>
+			</method>
+		</obj>
+	</method>
+</objects>

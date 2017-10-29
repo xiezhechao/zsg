@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <field class="game.equipment.EquipmentSuit" name="factory" id="equipmemtSuitSampleFactory"/>
+   <method ref="equipmemtSuitSampleFactory" name="init">
+   <ref id="context"/>
+   </method>
+   <!--
+   name:名字
+   eqId：套装内物品
+   addsNeed:套装加成等级需求
+   addsEffect:套装加成效果
+   0占位1统帅2武力3智力4暴击倍率
+   5韧性倍率
+    6单兵攻击7单兵生命8暴击机率9格挡机率10攻击
+    11体力12带兵数13攻击等级14体力等级15带兵数等级
+    16武力等级17统帅等级18智力等级19暴伤等级20韧性等级
+    21单兵攻击等级22单兵生命等级23暴击几率等级24格挡几率等级25速度等级
+   addsNeed和addsEffect长度相同，没有占位的数组了
+   -->
+<sample  class="game.equipment.EquipmentSuit" sid="1" name="武卒套装">
+ <field name="eqId" declared="1">
+ <ints>1009,1010,1011,1012,1013,1014,1015,1016</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="2" name="精兵套装">
+ <field name="eqId" declared="1">
+ <ints>1018,1019,1020,1021,1022,1023,1024,1025</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,25,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="3" name="都尉套装">
+ <field name="eqId" declared="1">
+ <ints>1027,1028,1029,1030,1031,1032,1033,1034</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,10,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="4" name="先锋套装">
+ <field name="eqId" declared="1">
+ <ints>1036,1037,1038,1039,1040,1041,1042,1043</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,15,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="5" name="征讨将军套装">
+ <field name="eqId" declared="1">
+ <ints>1045,1046,1047,1048,1049,1050,1051,1052</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,150,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,25,25,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,150,0</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="6" name="五官中郎将套装">
+ <field name="eqId" declared="1">
+ <ints>1054,1055,1056,1057,1058,1059,1060,1061</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,200,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,35,35,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,240,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="7" name="御史中丞套装">
+ <field name="eqId" declared="1">
+ <ints>1063,1064,1065,1066,1067,1068,1069,1070</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,300,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,50,50,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,300,150</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="8" name="执金吾套装">
+ <field name="eqId" declared="1">
+ <ints>1072,1073,1074,1075,1076,1077,1078,1079</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,400,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,175,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,70,70,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,500,300</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="9" name="罗刹套装">
+ <field name="eqId" declared="1">
+ <ints>2500,2501,2502,2503,2504,2505,2506,2507</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,600,600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1000,600</floats>
+ </objs>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="50" name="精炼天机石">
+ <field name="eqId" declared="1">
+ <ints>2200,2201,2202,2203,2204,2205,2206,2207,2208,2209</ints>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="51" name="精炼虎威石">
+ <field name="eqId" declared="1">
+ <ints>2250,2251,2252,2253,2254,2255,2256,2257,2258,2259</ints>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="52" name="精炼破阵石">
+ <field name="eqId" declared="1">
+ <ints>2300,2301,2302,2303,2304,2305,2306,2307,2308,2309</ints>
+ </field>
+ </sample>
+ <sample  class="game.equipment.EquipmentSuit" sid="53" name="精炼乾坤石">
+ <field name="eqId" declared="1">
+ <ints>2350,2351,2352,2353,2354,2355,2356,2357,2358,2359</ints>
+ </field>
+ </sample>
+  <sample  class="game.equipment.EquipmentSuit" sid="10" name="魔王套装">
+ <field name="eqId" declared="1">
+ <ints>2508,2509,2510,2511,2512,2513,2514,2515</ints>
+ </field>
+ <field name="addsNeed" declared="1">
+ <ints>2,4,6,8</ints>
+ </field>
+ <field name="addsEffect" declared="1">
+ <objs class="[F">
+ <floats>0,0,0,0,0,0,0,0,0,0,1200,1200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,200,200,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+ <floats>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2000,1200</floats>
+ </objs>
+ </field>
+ </sample>
+ </objects>

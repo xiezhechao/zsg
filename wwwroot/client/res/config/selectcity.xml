@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<sample sid="1" className="game.city.builddata.SelectCityData" name="沙盘" bgimg="shapan" cityArr="[1,2,3,4,5,6,7]" />
+</objects>

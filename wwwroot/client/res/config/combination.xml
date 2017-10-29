@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<objects>
+	<sample sid="1" className="game.window.combination.data.CombinationData" name="黄天当立" miliArr="[5,6,7]" buffsid="[100,101,102]" tiaojianArr="[[15,15,15],[25,25,25],[45,45,45]]"/>
+	<sample sid="2" className="game.window.combination.data.CombinationData" name="西凉枭雄" miliArr="[8,9,10]" buffsid="[103,104,105]" tiaojianArr="[[20,20,20],[40,40,40],[60,60,60]]"/>
+	<sample sid="3" className="game.window.combination.data.CombinationData" name="割据一方" miliArr="[11,12,13]" buffsid="[106,107,108]" tiaojianArr="[[25,25,25],[45,45,45],[65,65,65]]"/>
+	<sample sid="4" className="game.window.combination.data.CombinationData" name="徐州三雄" miliArr="[14,15,16]" buffsid="[109,110,111]" tiaojianArr="[[40,40,40],[90,90,90],[140,140,140]]"/>
+	<sample sid="5" className="game.window.combination.data.CombinationData" name="肝胆相照" miliArr="[18,24]" buffsid="[112,113,114]" tiaojianArr="[[70,70],[140,140],[210,210]]"/>
+	<sample sid="6" className="game.window.combination.data.CombinationData" name="虎父无犬女" miliArr="[20,38]" buffsid="[115,116,117]" tiaojianArr="[[70,70],[140,140],[210,210]]"/>
+	<sample sid="7" className="game.window.combination.data.CombinationData" name="羞花闭月" miliArr="[21,39]" buffsid="[118,119,120]" tiaojianArr="[[70,70],[140,140],[210,210]]"/>
+	<sample sid="8" className="game.window.combination.data.CombinationData" name="夏侯双雄" miliArr="[25,41]" buffsid="[121,122,123]" tiaojianArr="[[70,70],[140,140],[210,210]]"/>
+
+	<sample sid="100" className="game.window.combination.data.CombinationData" name="张梁" miliArr="[5]" buffsid="[500,501,502]" tiaojianArr="[[10],[20],[30]]"/>
+	<sample sid="101" className="game.window.combination.data.CombinationData" name="张宝" miliArr="[6]" buffsid="[503,504,505]" tiaojianArr="[[10],[20],[30]]"/>
+	<sample sid="102" className="game.window.combination.data.CombinationData" name="张角" miliArr="[7]" buffsid="[506,507,508]" tiaojianArr="[[10],[20],[30]]"/>
+	<sample sid="103" className="game.window.combination.data.CombinationData" name="董卓" miliArr="[8]" buffsid="[509,510,511,512]" tiaojianArr="[[10],[20],[30],[40]]"/>
+	<sample sid="104" className="game.window.combination.data.CombinationData" name="华雄" miliArr="[9]" buffsid="[513,514,515,516]" tiaojianArr="[[10],[20],[30],[40]]"/>
+	<sample sid="105" className="game.window.combination.data.CombinationData" name="李儒" miliArr="[10]" buffsid="[517,518,519,520]" tiaojianArr="[[10],[20],[30],[40]]"/>
+	<sample sid="106" className="game.window.combination.data.CombinationData" name="文丑" miliArr="[11]" buffsid="[521,522,523,524,525]" tiaojianArr="[[10],[20],[30],[40],[50]]"/>
+	<sample sid="107" className="game.window.combination.data.CombinationData" name="颜良" miliArr="[12]" buffsid="[526,527,528,529,530]" tiaojianArr="[[10],[20],[30],[40],[50]]"/>
+	<sample sid="108" className="game.window.combination.data.CombinationData" name="袁绍" miliArr="[13]" buffsid="[531,532,533,534,535]" tiaojianArr="[[10],[20],[30],[40],[50]]"/>
+	<sample sid="109" className="game.window.combination.data.CombinationData" name="张辽" miliArr="[14]" buffsid="[536,537,538,539,540]" tiaojianArr="[[40],[60],[80],[100],[120]]"/>
+	<sample sid="110" className="game.window.combination.data.CombinationData" name="臧霸" miliArr="[15]" buffsid="[541,542,543,544,545]" tiaojianArr="[[40],[60],[80],[100],[120]]"/>
+	<sample sid="111" className="game.window.combination.data.CombinationData" name="高顺" miliArr="[16]" buffsid="[546,547,548,549,550]" tiaojianArr="[[40],[60],[80],[100],[120]]"/>
+	<sample sid="112" className="game.window.combination.data.CombinationData" name="甄姬" miliArr="[124]" buffsid="[551,552,553]" tiaojianArr="[[40],[90],[150]]"/>
+	<sample sid="113" className="game.window.combination.data.CombinationData" name="马云禄" miliArr="[20]" buffsid="[554,555,556]" tiaojianArr="[[60],[130],[200]]"/>
+	<sample sid="114" className="game.window.combination.data.CombinationData" name="大乔" miliArr="[21]" buffsid="[557,558,559]" tiaojianArr="[[60],[130],[200]]"/>
+	<sample sid="115" className="game.window.combination.data.CombinationData" name="蔡文姬" miliArr="[22]" buffsid="[560,561,562]" tiaojianArr="[[60],[130],[200]]"/>
+	<sample sid="116" className="game.window.combination.data.CombinationData" name="魏延" miliArr="[23]" buffsid="[563,564,565]" tiaojianArr="[[60],[130],[200]]"/>
+	<sample sid="117" className="game.window.combination.data.CombinationData" name="周泰" miliArr="[24]" buffsid="[566,567,568]" tiaojianArr="[[60],[130],[200]]"/>
+	<sample sid="118" className="game.window.combination.data.CombinationData" name="夏侯渊" miliArr="[25]" buffsid="[569,570,571]" tiaojianArr="[[60],[130],[200]]"/>
+    <sample sid="119" className="game.window.combination.data.CombinationData" name="黄月英" miliArr="[26]" buffsid="[572,573,574]" tiaojianArr="[[60],[130],[200]]"/>
+
+</objects>

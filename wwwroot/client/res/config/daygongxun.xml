@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<sample className="game.window.dayGongxun.data.DayGongxunData" sid="1" awardBoxNum="3" needGongxun="6000" openNo="10"/>
+	<sample className="game.window.dayGongxun.data.DayGongxunData" sid="2" awardBoxNum="5" needGongxun="15000" openNo="14"/>
+	<sample className="game.window.dayGongxun.data.DayGongxunData" sid="3" awardBoxNum="8" needGongxun="30000" openNo="18"/>
+	<sample className="game.window.dayGongxun.data.DayGongxunData" sid="4" awardBoxNum="11" needGongxun="60000" openNo="23"/>
+	<sample className="game.window.dayGongxun.data.DayGongxunData" sid="5" awardBoxNum="14" needGongxun="100000" openNo="29"/>
+	<sample className="game.window.dayGongxun.data.DayGongxunData" sid="6" awardBoxNum="17" needGongxun="150000" openNo="35"/>
+</objects>

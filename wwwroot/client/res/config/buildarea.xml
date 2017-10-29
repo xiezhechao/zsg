@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+<sample className="game.city.builddata.BuildAreaData" sid="1" name="市场" needLevel="5" style='[["gongfang","1"]]' x="459.95" y="413" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="2" name="锻造司" needLevel="6" style='[["jianzaosi","1"]]' x="465.45" y="313" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="3" name="医疗营" needLevel="7" style='[["bingying","1"]]' x="668.95" y="309" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="4" name="御医所" needLevel="7" style='[["taixueyuan","1"]]' x="1050.4" y="361.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="5" name="锻铁场" needLevel="12" style='[["jiangwutang","1"]]' x="807.95" y="397" titleOffx="-50" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="6" name="城门" needLevel="10" style='[["chengmen","1"]]' x="688.95" y="489.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="7" name="箭楼" needLevel="10" style='[["jianlou","1"]]' x="279.45" y="462" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="8" name="民居" needLevel="3" style='[["minju","1"]]' x="505.5" y="229.5" titleOffx="240" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="9" name="农田" needLevel="6" style='[["nongtian","1"]]' x="860.7" y="298" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="10" name="林地" needLevel="2" style='[["lindi","1"]]' x="209" y="277" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="11" name="冶铁所" needLevel="12" style='[["tiekuangchang","1"]]' x="197" y="379" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="21" name="良田" needLevel="1" style='[["fengyi1_nongtian","1"]]' x="747.4" y="423.45" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="22" name="磨坊" needLevel="1" style='[["fengyi1_mofang","1"]]' x="386.95" y="491" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="23" name="作坊" needLevel="1" style='[["fengyi1_zuofang","1"]]' x="655.95" y="331.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="24" name="劳役所" needLevel="1" style='[["fengyi1_laoyisuo","1"]]' x="976.4" y="445" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="31" name="村落" needLevel="1" style='[["fengyi2_minju","1"]]' x="248.45" y="467.45" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="32" name="钱庄" needLevel="1" style='[["fengyi2_qianzhuang","1"]]' x="716.95" y="393" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="33" name="铸币所" needLevel="1" style='[["fengyi2_zhubisuo","1"]]' x="972.45" y="493.95" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="34" name="书院" needLevel="1" style='[["fengyi2_shuyuan","1"]]' x="549.45" y="476.45" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="41" name="林场" needLevel="1" style='[["fengyi3_linchang","1"]]' x="527.95" y="348" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="42" name="伐木场" needLevel="1" style='[["fengyi3_famuchang","1"]]' x="369.95" y="457.95" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="43" name="木料坊" needLevel="1" style='[["fengyi3_mukedu","1"]]' x="780.95" y="407.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="44" name="兵营" needLevel="1" style='[["fengyi3_bingying","1"]]' x="792.45" y="318.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="51" name="矿山" needLevel="1" style='[["fengyi4_kuangshan","1"]]' x="801.45" y="314.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="52" name="采矿所" needLevel="1" style='[["fengyi4_caikuangsuo","1"]]' x="854.95" y="440.95" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="53" name="探矿所" needLevel="1" style='[["fengyi4_tankuangsuo","1"]]' x="584.95" y="319.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="54" name="铁匠铺" needLevel="1" style='[["fengyi4_jianzaosuo","1"]]' x="463.45" y="396" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="61" name="军疗驿" needLevel="1" style='[["fengyi5_junliaoyi","1"]]' x="335.45" y="480" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="62" name="城墙" needLevel="1" style='[["fengyi5_chengqiang","1"]]' x="804.95" y="443.5" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="63" name="校场" needLevel="1" style='[["fengyi5_jiaochang","1"]]' x="654.95" y="372.95" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="64" name="木监所" needLevel="1" style='[["fengyi5_mujiansuo","1"]]' x="539.45" y="500" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="71" name="医疗营" needLevel="1" style='[["fengyi6_junliaoyi","1"]]' x="910" y="470.95" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="72" name="哨塔" needLevel="1" style='[["fengyi6_shaota","1"]]' x="187.95" y="389" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="73" name="军械坊" needLevel="1" style='[["fengyi6_tiejiang","1"]]' x="398.95" y="473.45" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="74" name="采矿营" needLevel="1" style='[["fengyi6_yingdi","1"]]' x="642.5" y="355" ></sample>
+ <sample className="game.city.builddata.BuildAreaData" sid="65534" name="官府" needLevel="0" style='[["guanfu","1"]]' x="498.95" y="206.5" ></sample>
+ </objects>

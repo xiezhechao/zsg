@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   <objects>
+   <!--
+   商城配置
+   showPrice显示的原价 price实际出售价格
+   type 标签分类，策划先定义，定义好了告诉程序
+ buyLevel 购买爵位等级 restricNum 限购数量needVipLv 需要VIP等级  buytype 
+   1粮食
+    
+   2木材
+   3钱币
+   4铁锭
+   5经验
+   6劳役
+   7文化
+   8军械
+   9训练
+   10元宝
+   11礼券
+  12积分 13功勋
+   -->
+<sample sid="100" propSid="8035" buytype="1" price="1000000" buyLevel="0" type="1" />
+ <sample sid="101" propSid="8035" buytype="2" price="1000000" buyLevel="0" type="1" />
+ <sample sid="102" propSid="8035" buytype="3" price="1000000" buyLevel="0" type="1" />
+ <sample sid="103" propSid="8035" buytype="4" price="1000000" buyLevel="0" type="1" />
+ <sample sid="200" propSid="26" buytype="10" price="10" buyLevel="0" type="2" />
+ <sample sid="201" propSid="27" buytype="10" price="10" buyLevel="0" type="2" />
+ <sample sid="202" propSid="3108" buytype="10" price="200" buyLevel="0" type="2" />
+ <sample sid="203" propSid="3104" buytype="10" price="1000" buyLevel="0" type="2" />
+ <sample sid="204" propSid="3001" buytype="10" price="20" buyLevel="0" type="2" />
+ <sample sid="205" propSid="5002" buytype="10" price="20" buyLevel="0" type="2" />
+ <sample sid="206" propSid="2000" buytype="10" price="1" buyLevel="0" type="2" />
+ <sample sid="207" propSid="2036" buytype="10" price="1" buyLevel="0" type="2" />
+ <sample sid="208" propSid="2072" buytype="10" price="2" buyLevel="0" type="2" />
+ <sample sid="209" propSid="8033" buytype="10" price="500" buyLevel="0" type="2" />
+ <sample sid="400" propSid="8009" buytype="10" price="20" buyLevel="0" restricNum="200" needVipLv="0" type="0" />
+ <sample sid="401" propSid="8014" buytype="10" price="20" buyLevel="0" restricNum="200" needVipLv="0" type="0" />
+ <sample sid="402" propSid="8004" buytype="10" price="20" buyLevel="0" restricNum="200" needVipLv="0" type="0" />
+ <sample sid="403" propSid="503" buytype="10" price="100" buyLevel="0" restricNum="10" needVipLv="0" type="0" />
+ <sample sid="404" propSid="3100" buytype="10" price="1" buyLevel="0" restricNum="500" needVipLv="0" type="0" />
+ <sample sid="405" propSid="3108" buytype="10" price="100" buyLevel="0" restricNum="20" needVipLv="0" type="0" />
+ <sample sid="406" propSid="7003" buytype="10" price="20" buyLevel="0" restricNum="20" needVipLv="0" type="0" />
+ <sample sid="407" propSid="7004" buytype="10" price="20" buyLevel="0" restricNum="20" needVipLv="0" type="0" />
+ <sample sid="408" propSid="7005" buytype="10" price="20" buyLevel="0" restricNum="20" needVipLv="0" type="0" />
+ <sample sid="409" propSid="3001" buytype="10" price="15" buyLevel="0" restricNum="100" needVipLv="0" type="0" />
+ <sample sid="410" propSid="3003" buytype="10" price="60" buyLevel="0" restricNum="100" needVipLv="0" type="0" />
+ <sample sid="411" propSid="3005" buytype="10" price="200" buyLevel="0" restricNum="100" needVipLv="0" type="0" />
+ <sample sid="412" propSid="5002" buytype="10" price="15" buyLevel="0" restricNum="100" needVipLv="0" type="0" />
+ <sample sid="413" propSid="46" buytype="10" price="100" buyLevel="0" restricNum="160" needVipLv="0" type="0" />
+ <sample sid="414" propSid="48" buytype="10" price="1000" buyLevel="0" restricNum="500" needVipLv="0" type="0" />
+ <sample sid="500" propSid="8003" buytype="13" price="100" buyLevel="0" restricNum="1" type="3" restricArr="[[6,5],[13,20],[17,30],[22,40],[27,50]]" />
+ <sample sid="501" propSid="8017" buytype="13" price="200" buyLevel="0" restricNum="1" type="3" restricArr="[[6,3],[13,10],[17,15]]" />
+ <sample sid="502" propSid="503" buytype="13" price="1500" buyLevel="0" restricNum="1" type="3" restricArr="[[21,2],[27,4],[33,6]]" />
+ <sample sid="503" propSid="5000" buytype="13" price="50" buyLevel="0" restricNum="1" type="3" restricArr="[[10,10],[13,20],[17,30],[22,40],[27,50]]" />
+ <sample sid="504" propSid="5001" buytype="13" price="200" buyLevel="0" restricNum="1" type="3" restricArr="[[16,5],[22,10],[27,15],[33,20],[42,25]]" />
+ <sample sid="505" propSid="5002" buytype="13" price="1000" buyLevel="0" restricNum="1" type="3" restricArr="[[26,5],[33,10],[42,15]]" />
+ <sample sid="506" propSid="3001" buytype="13" price="50" buyLevel="0" restricNum="1" type="3" restricArr="[[12,10],[15,20],[18,30],[22,40],[27,50]]" />
+ <sample sid="507" propSid="3003" buytype="13" price="200" buyLevel="0" restricNum="1" type="3" restricArr="[[21,10],[27,20],[33,30],[42,40]]" />
+ <sample sid="508" propSid="3005" buytype="13" price="1000" buyLevel="0" restricNum="1" type="3" restricArr="[[32,10],[33,20],[42,30]]" />
+ <sample sid="509" propSid="8031" buytype="13" price="1500" buyLevel="0" restricNum="1" type="3" restricArr="[[26,20],[33,30],[42,40]]" />
+ <sample sid="510" propSid="3100" buytype="13" price="500" buyLevel="0" restricNum="1" type="3" restricArr="[[37,50],[42,100]]" />
+ <sample sid="511" propSid="26" buytype="13" price="25" buyLevel="0" restricNum="1" type="3" restricArr="[[11,20],[22,30],[33,50]]" />
+ <sample sid="512" propSid="27" buytype="13" price="10" buyLevel="0" restricNum="1" type="3" restricArr="[[16,50],[22,100],[33,150]]" />
+<!--  <sample sid="513" propSid="8009" buytype="13" price="100000" buyLevel="0" restricNum="1" type="3" restricArr="[[20,999]]" />
+ <sample sid="514" propSid="8014" buytype="13" price="100000" buyLevel="0" restricNum="1" type="3" restricArr="[[20,999]]" /> -->
+ <sample sid="600" propSid="3100" buytype="14" price="100" buyLevel="0" restricNum="0" type="6" needPresPhase="0" />
+ <sample sid="601" propSid="5002" buytype="14" price="100" buyLevel="0" restricNum="0" type="6" needPresPhase="0" />
+ <sample sid="602" propSid="3005" buytype="14" price="300" buyLevel="0" restricNum="0" type="6" needPresPhase="0" />
+ <sample sid="603" propSid="3108" buytype="14" price="5000" buyLevel="0" restricNum="0" type="6" needPresPhase="2" />
+ <sample sid="604" propSid="33" buytype="14" price="5000" buyLevel="0" restricNum="0" type="6" needPresPhase="0" />
+ <sample sid="605" propSid="34" buytype="14" price="10000" buyLevel="0" restricNum="0" type="6" needPresPhase="1" />
+ <sample sid="606" propSid="35" buytype="14" price="25000" buyLevel="0" restricNum="0" type="6" needPresPhase="2" />
+ <sample sid="607" propSid="37" buytype="14" price="50000" buyLevel="0" restricNum="0" type="6" needPresPhase="3" />
+ <sample sid="608" propSid="1080" buytype="14" price="50000" buyLevel="0" restricNum="0" type="6" needPresPhase="0" />
+ <sample sid="609" propSid="1081" buytype="14" price="100000" buyLevel="0" restricNum="0" type="6" needPresPhase="1" />
+ <sample sid="610" propSid="1082" buytype="14" price="500000" buyLevel="0" restricNum="0" type="6" needPresPhase="2" />
+ <sample sid="611" propSid="1083" buytype="14" price="1000000" buyLevel="0" restricNum="0" type="6" needPresPhase="3" />
+ <sample sid="612" propSid="36" buytype="14" price="80000" buyLevel="0" restricNum="0" type="6" needPresPhase="3" />
+ <sample sid="613" propSid="47" buytype="14" price="120000" buyLevel="0" restricNum="0" type="6" needPresPhase="3" />
+ <sample sid="614" propSid="46" buytype="14" price="50000" buyLevel="0" restricNum="0" type="6" needPresPhase="3" />
+ <sample sid="615" propSid="48" buytype="14" price="100000" buyLevel="0" restricNum="0" type="6" needPresPhase="3" />
+ <sample sid="1000" propSid="5516" buytype="10" price="10" buyLevel="0" showPrice="100" restricNum="1" type="8" restricArr="[[1,1]]" />
+ <sample sid="1001" propSid="5517" buytype="10" price="10" buyLevel="0" showPrice="100" restricNum="1" type="8" restricArr="[[1,1]]" />
+ <sample sid="1002" propSid="5518" buytype="10" price="20" buyLevel="0" showPrice="200" restricNum="1" type="8" restricArr="[[1,1]]" />
+ <sample sid="1003" propSid="5519" buytype="10" price="10" buyLevel="0" showPrice="100" restricNum="1" type="8" restricArr="[[1,1]]" />
+ <sample sid="1004" propSid="5520" buytype="10" price="10" buyLevel="0" showPrice="100" restricNum="1" type="8" restricArr="[[2,1]]" />
+ <sample sid="1005" propSid="5521" buytype="10" price="10" buyLevel="0" showPrice="100" restricNum="1" type="8" restricArr="[[2,1]]" />
+ <sample sid="1006" propSid="5522" buytype="10" price="50" buyLevel="0" showPrice="500" restricNum="1" type="8" restricArr="[[2,1]]" />
+ <sample sid="1007" propSid="5523" buytype="10" price="40" buyLevel="0" showPrice="400" restricNum="1" type="8" restricArr="[[2,1]]" />
+ <sample sid="1008" propSid="5524" buytype="10" price="20" buyLevel="0" showPrice="200" restricNum="1" type="8" restricArr="[[3,1]]" />
+ <sample sid="1009" propSid="5525" buytype="10" price="40" buyLevel="0" showPrice="400" restricNum="1" type="8" restricArr="[[3,1]]" />
+ <sample sid="1010" propSid="5526" buytype="10" price="200" buyLevel="0" showPrice="2000" restricNum="1" type="8" restricArr="[[3,1]]" />
+ <sample sid="1011" propSid="5527" buytype="10" price="40" buyLevel="0" showPrice="400" restricNum="1" type="8" restricArr="[[3,1]]" />
+ <sample sid="1012" propSid="5528" buytype="10" price="30" buyLevel="0" showPrice="300" restricNum="1" type="8" restricArr="[[4,1]]" />
+ <sample sid="1013" propSid="5529" buytype="10" price="20" buyLevel="0" showPrice="200" restricNum="1" type="8" restricArr="[[4,1]]" />
+ <sample sid="1014" propSid="5530" buytype="10" price="15" buyLevel="0" showPrice="150" restricNum="1" type="8" restricArr="[[4,1]]" />
+ <sample sid="1015" propSid="5531" buytype="10" price="15" buyLevel="0" showPrice="150" restricNum="1" type="8" restricArr="[[4,1]]" />
+ <sample sid="1016" propSid="5532" buytype="10" price="30" buyLevel="0" showPrice="300" restricNum="1" type="8" restricArr="[[5,1]]" />
+ <sample sid="1017" propSid="5533" buytype="10" price="60" buyLevel="0" showPrice="600" restricNum="1" type="8" restricArr="[[5,1]]" />
+ <sample sid="1018" propSid="5534" buytype="10" price="22" buyLevel="0" showPrice="220" restricNum="1" type="8" restricArr="[[5,1]]" />
+ <sample sid="1019" propSid="5535" buytype="10" price="250" buyLevel="0" showPrice="2500" restricNum="1" type="8" restricArr="[[5,1]]" />
+ <sample sid="1020" propSid="5536" buytype="10" price="60" buyLevel="0" showPrice="600" restricNum="1" type="8" restricArr="[[6,1]]" />
+ <sample sid="1021" propSid="5537" buytype="10" price="37" buyLevel="0" showPrice="370" restricNum="1" type="8" restricArr="[[6,1]]" />
+ <sample sid="1022" propSid="5538" buytype="10" price="50" buyLevel="0" showPrice="500" restricNum="1" type="8" restricArr="[[6,1]]" />
+ <sample sid="1023" propSid="5539" buytype="10" price="40" buyLevel="0" showPrice="400" restricNum="1" type="8" restricArr="[[6,1]]" />
+ <sample sid="1024" propSid="5540" buytype="10" price="90" buyLevel="0" showPrice="900" restricNum="1" type="8" restricArr="[[7,1]]" />
+ <sample sid="1025" propSid="5541" buytype="10" price="60" buyLevel="0" showPrice="600" restricNum="1" type="8" restricArr="[[7,1]]" />
+ <sample sid="1026" propSid="5542" buytype="10" price="100" buyLevel="0" showPrice="1000" restricNum="1" type="8" restricArr="[[7,1]]" />
+ <sample sid="1027" propSid="5543" buytype="10" price="135" buyLevel="0" showPrice="1350" restricNum="1" type="8" restricArr="[[7,1]]" />
+ <sample sid="1028" propSid="5544" buytype="10" price="400" buyLevel="0" showPrice="4000" restricNum="1" type="8" restricArr="[[8,1]]" />
+ <sample sid="1029" propSid="5545" buytype="10" price="600" buyLevel="0" showPrice="6000" restricNum="1" type="8" restricArr="[[8,1]]" />
+ <sample sid="1030" propSid="5546" buytype="10" price="480" buyLevel="0" showPrice="4800" restricNum="1" type="8" restricArr="[[8,1]]" />
+ <sample sid="1031" propSid="5547" buytype="10" price="200" buyLevel="0" showPrice="2000" restricNum="1" type="8" restricArr="[[8,1]]" />
+ <sample sid="1032" propSid="5548" buytype="10" price="400" buyLevel="0" showPrice="4000" restricNum="1" type="8" restricArr="[[9,1]]" />
+ <sample sid="1033" propSid="5549" buytype="10" price="1000" buyLevel="0" showPrice="10000" restricNum="1" type="8" restricArr="[[9,1]]" />
+ <sample sid="1034" propSid="5550" buytype="10" price="480" buyLevel="0" showPrice="4800" restricNum="1" type="8" restricArr="[[9,1]]" />
+ <sample sid="1035" propSid="5551" buytype="10" price="100" buyLevel="0" showPrice="1000" restricNum="1" type="8" restricArr="[[9,1]]" />
+ <sample sid="1036" propSid="5552" buytype="10" price="9999" buyLevel="0" showPrice="99999" restricNum="1" type="8" restricArr="[[10,1]]" />
+ <sample sid="1037" propSid="5553" buytype="10" price="5000" buyLevel="0" showPrice="50000" restricNum="1" type="8" restricArr="[[10,1]]" />
+ <sample sid="1038" propSid="5554" buytype="10" price="1000" buyLevel="0" showPrice="10000" restricNum="1" type="8" restricArr="[[10,1]]" />
+ <sample sid="1039" propSid="5555" buytype="10" price="400" buyLevel="0" showPrice="4000" restricNum="1" type="8" restricArr="[[10,1]]" />
+ <sample sid="1100" propSid="5556" buytype="10" price="12" buyLevel="0" showPrice="60" restricNum="1" type="7" restricArr="[[10,1]]" />
+ <sample sid="1101" propSid="5557" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[10,1]]" />
+ <sample sid="1102" propSid="5558" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[10,1]]" />
+ <sample sid="1103" propSid="5559" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[10,1]]" />
+ <sample sid="1104" propSid="5560" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[20,1]]" />
+ <sample sid="1105" propSid="5561" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[20,1]]" />
+ <sample sid="1106" propSid="5562" buytype="10" price="40" buyLevel="0" showPrice="200" restricNum="1" type="7" restricArr="[[20,1]]" />
+ <sample sid="1107" propSid="5563" buytype="10" price="80" buyLevel="0" showPrice="400" restricNum="1" type="7" restricArr="[[20,1]]" />
+ <sample sid="1108" propSid="5564" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[30,1]]" />
+ <sample sid="1109" propSid="5565" buytype="10" price="100" buyLevel="0" showPrice="500" restricNum="1" type="7" restricArr="[[30,1]]" />
+ <sample sid="1110" propSid="5566" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[30,1]]" />
+ <sample sid="1111" propSid="5567" buytype="10" price="40" buyLevel="0" showPrice="200" restricNum="1" type="7" restricArr="[[30,1]]" />
+ <sample sid="1112" propSid="5568" buytype="10" price="30" buyLevel="0" showPrice="150" restricNum="1" type="7" restricArr="[[35,1]]" />
+ <sample sid="1113" propSid="5569" buytype="10" price="24" buyLevel="0" showPrice="120" restricNum="1" type="7" restricArr="[[35,1]]" />
+ <sample sid="1114" propSid="5570" buytype="10" price="30" buyLevel="0" showPrice="150" restricNum="1" type="7" restricArr="[[35,1]]" />
+ <sample sid="1115" propSid="5571" buytype="10" price="20" buyLevel="0" showPrice="100" restricNum="1" type="7" restricArr="[[35,1]]" />
+ <sample sid="1116" propSid="5572" buytype="10" price="36" buyLevel="0" showPrice="180" restricNum="1" type="7" restricArr="[[40,1]]" />
+ <sample sid="1117" propSid="5573" buytype="10" price="60" buyLevel="0" showPrice="300" restricNum="1" type="7" restricArr="[[40,1]]" />
+ <sample sid="1118" propSid="5574" buytype="10" price="30" buyLevel="0" showPrice="150" restricNum="1" type="7" restricArr="[[40,1]]" />
+ <sample sid="1119" propSid="5575" buytype="10" price="200" buyLevel="0" showPrice="1000" restricNum="1" type="7" restricArr="[[40,1]]" />
+ <sample sid="1120" propSid="5576" buytype="10" price="60" buyLevel="0" showPrice="300" restricNum="1" type="7" restricArr="[[45,1]]" />
+ <sample sid="1121" propSid="5577" buytype="10" price="60" buyLevel="0" showPrice="300" restricNum="1" type="7" restricArr="[[45,1]]" />
+ <sample sid="1122" propSid="5578" buytype="10" price="40" buyLevel="0" showPrice="200" restricNum="1" type="7" restricArr="[[45,1]]" />
+ <sample sid="1123" propSid="5579" buytype="10" price="44" buyLevel="0" showPrice="220" restricNum="1" type="7" restricArr="[[45,1]]" />
+ <sample sid="1124" propSid="5580" buytype="10" price="120" buyLevel="0" showPrice="600" restricNum="1" type="7" restricArr="[[50,1]]" />
+ <sample sid="1125" propSid="5581" buytype="10" price="200" buyLevel="0" showPrice="1000" restricNum="1" type="7" restricArr="[[50,1]]" />
+ <sample sid="1126" propSid="5582" buytype="10" price="500" buyLevel="0" showPrice="2500" restricNum="1" type="7" restricArr="[[50,1]]" />
+ <sample sid="1127" propSid="5583" buytype="10" price="30" buyLevel="0" showPrice="150" restricNum="1" type="7" restricArr="[[50,1]]" />
+ <sample sid="1128" propSid="5584" buytype="10" price="260" buyLevel="0" showPrice="1300" restricNum="1" type="7" restricArr="[[55,1]]" />
+ <sample sid="1129" propSid="5585" buytype="10" price="260" buyLevel="0" showPrice="1300" restricNum="1" type="7" restricArr="[[55,1]]" />
+ <sample sid="1130" propSid="5586" buytype="10" price="260" buyLevel="0" showPrice="1300" restricNum="1" type="7" restricArr="[[55,1]]" />
+ <sample sid="1131" propSid="5587" buytype="10" price="240" buyLevel="0" showPrice="1200" restricNum="1" type="7" restricArr="[[55,1]]" />
+ <sample sid="1132" propSid="5588" buytype="10" price="666" buyLevel="0" showPrice="3330" restricNum="1" type="7" restricArr="[[60,1]]" />
+ <sample sid="1133" propSid="5589" buytype="10" price="400" buyLevel="0" showPrice="2000" restricNum="1" type="7" restricArr="[[60,1]]" />
+ <sample sid="1134" propSid="5590" buytype="10" price="1000" buyLevel="0" showPrice="5000" restricNum="1" type="7" restricArr="[[60,1]]" />
+ <sample sid="1135" propSid="5591" buytype="10" price="400" buyLevel="0" showPrice="2000" restricNum="1" type="7" restricArr="[[60,1]]" />
+ <sample sid="1200" propSid="5512" buytype="10" price="1000" buyLevel="0" showPrice="2000" restricNum="3" type="9" />
+ <sample sid="1201" propSid="5513" buytype="10" price="1000" buyLevel="0" showPrice="2000" restricNum="2" type="9" />
+ <sample sid="1202" propSid="5514" buytype="10" price="5000" buyLevel="0" showPrice="9999" restricNum="2" type="9" />
+ <sample sid="1203" propSid="5515" buytype="10" price="2000" buyLevel="0" showPrice="4000" restricNum="2" type="9" />
+ </objects>

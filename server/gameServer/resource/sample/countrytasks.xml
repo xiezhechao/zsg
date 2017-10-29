@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	
+	 -->
+<objects>
+	<field class="game.country.task.CountryTask" name="factory" id="countryTaskSampleFactory"/>
+	<method ref="countryTaskSampleFactory" name="init">
+		<ref id="context"/>
+	</method>
+	<sample class="game.country.task.KillCountryTask" sid="1" name="击杀任务" objectValue="5000" awardSid="9017" loseAwardSid="0" timeOut="1800" type="1"></sample>
+	<sample class="game.country.task.AttackCityCountryTask" sid="2" name="个人攻城任务" objectValue="0" awardSid="9017" loseAwardSid="0" timeOut="1800" type="2"></sample>
+	<sample class="game.country.task.DefenseCityCountryTask" sid="3" name="个人守城任务" objectValue="0" awardSid="9017" loseAwardSid="0" timeOut="1800" type="3"></sample>
+	<sample class="game.country.task.AttackCityCountryTask" sid="4" name="国家攻城任务" objectValue="0" awardSid="9018" loseAwardSid="9019" timeOut="3600" type="2"></sample>
+	<sample class="game.country.task.DefenseCityCountryTask" sid="5" name="国家守城任务" objectValue="0" awardSid="9018" loseAwardSid="9019" timeOut="3600" type="3"></sample>
+</objects>

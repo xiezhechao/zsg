@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<sample sid="1" className="game.window.celebration.data.CelebrationData" name="爵位" tuijianPropSid="1200" rankThreeAward="[9050,9051,9052]" diaosiTiaoJian="[10,20,25,30]" diaosiAward="[9053,9054,9055,9056]" diaoMaxNum="[999,500,100,20]"/>
+	<sample sid="2" className="game.window.celebration.data.CelebrationData" name="等级" tuijianPropSid="1201" rankThreeAward="[9057,9058,9059]" diaosiTiaoJian="[15,25,35,45]" diaosiAward="[9060,9061,9062,9063]" diaoMaxNum="[500,200,50,20]"/>
+	<sample sid="3" className="game.window.celebration.data.CelebrationData" name="VIP" tuijianPropSid="1202" diaosiTiaoJian="[2,3,4,5,6,7,8,9]" diaosiAward="[9071,9072,9073,9074,9075,9076,9077,9078]" diaoMaxNum="[999,999,999,999,999,999,999,999]"/>
+	<sample sid="4" className="game.window.celebration.data.CelebrationData" name="战力" tuijianPropSid="1203" rankThreeAward="[9064,9065,9066]" diaosiTiaoJian="[30000,50000,70000,100000]" diaosiAward="[9067,9068,9069,9070]" diaoMaxNum="[200,50,20,10]"/>
+</objects>

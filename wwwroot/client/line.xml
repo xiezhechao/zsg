@@ -1,0 +1,13 @@
+<root>
+	<line name="南天门">
+		<data value=" -DgameServer=tcp://s1.xj901.com:8000 -DimServer=tcp://s1.xj901.com:8800 -verbose:gc -cp log4j-1.2.8.jar;js.jar;bsh-2.0b4.jar;zlib.zip;zmyth.zip;seasky.zip;. zmyth.xlib.Start start.dat"/>
+	</line>
+	<line name="北天门（新服）">
+		<data value=" -DgameServer=tcp://s1.xj901.com:9000 -DimServer=tcp://s1.xj901.com:9800 -verbose:gc -cp log4j-1.2.8.jar;js.jar;bsh-2.0b4.jar;zlib.zip;zmyth.zip;seasky.zip;. zmyth.xlib.Start start.dat"/>
+	</line>
+
+<command>
+		<path value="bin\javaw.exe"/>
+		<data value="-Xms64m -Xmx256m -Dfile.encoding=gb2312"/>
+	</command>
+</root>

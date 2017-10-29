@@ -1,0 +1,1764 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+      <objects>
+       <field class="game.prop.Prop" name="factory" id="propSampleFactory"/>
+       <method ref="propSampleFactory" name="init">
+        <ref id="context"/>
+       </method>
+       
+       
+      <!--
+      class:game.equipment.Equipment装备 game.prop.Prop普通物品 game.prop.LuckProp喜好品 game.prop.SoulProp武魂 game.equipment.Gem宝石 game.prop.ExpProp经验卷轴
+      name：名字
+      salePrice:售出价格
+      sortId:排序ID
+      maxNums:堆叠上限
+      location:装备位置
+      materialId:分解材料ID
+      makeMaterialId:打造材料ID
+      quality:品质
+      suitId:套装ID
+      militaryId:限制武将ID
+      force:武力
+      lead:统帅
+      wisdom:智力
+      attack:攻击
+      power:体力
+      leadSol:带兵数
+      attackLevel:攻击等级
+      powerLevel:体力等级
+      leadSolLevel:带兵数等级
+      forceLevel:武力等级
+      leadLevel:统帅等级
+      wisdomLevel:智力等级
+      critRateLevel:暴击等级
+      beCritRateLevel:韧性等级
+      aloneAttackLevel:单兵攻击等级
+      aloneLifeLevel:单兵生命等级
+      criteProbabilityLevel:暴击几率
+      blockProbabilityLevel:格挡几率
+      addCrit:赠送好感度暴击(3倍好感度)的几率 范围 (0-100]
+      luck:增加武将的好感度的值
+      attType:属性类型
+      attValue:属性值
+      isRecover:是否可回收
+      isUse:是否可直接使用
+      isCombin:合成的下级ID
+      atts:宝石附加属性 1统帅2武力3智力4暴击倍率5韧性倍率(0.01代表1%倍率)   
+       6单兵攻击7单兵生命8暴击机率9格挡机率(10万代表100%几率)10攻击
+       11体力12带兵数13攻击等级14体力等级15带兵数等级
+       16武力等级17统帅等级18智力等级19暴伤等级20韧性等级
+       21单兵攻击等级22单兵生命等级23暴击几率等级24格挡几率等级25速度等级26技能伤害27技能防御
+      speedLevel:速度等级
+      exp：经验书增加的经验awardSid：奖励sid 
+  skillMaxNum 装备技能随机生成最大数skillSid 随机附加属性类对应equipmentskill的SID
+  randomAwardSid  awardsid随机数组 7034:50,7034:50  
+
+ awardNum   需要随机多少个awardsid   
+     class :game.equipment.HorseEquipment 坐骑    包括装备所有属性
+
+       soldierSid(指定的士兵SID)
+
+       horsLife(指定士兵SID的生命加成值)
+
+       horsAttack(指定的士兵SID的攻击加成值)
+
+       horsSpeed(指定的士兵SID的速度加成值)
+
+       addAllSoldLife(全体士兵加成生命值)
+
+       addAllSoldAttack(全体士兵加成攻击值)
+
+       addAllSoldSpeed(全体士兵加成属性)
+
+       soldType (指定士兵类型  :类型 0无效，1骑兵，2步兵,4弓兵，8近战，16远程 多个类型)
+
+       addTypeSoldAttack(指定类型士兵加成攻击值)
+
+       addTypeSoldLife(指定类型士兵加成生命值)
+
+       addTypeSoldSpeed(指定类型士兵加成速度值)
+
+       skillAttack(技能强度)
+
+       skillDefense(技能防御)
+ -->
+<sample sid="1" class="game.prop.Prop" name="一品陨铁" salePrice="10" sortId="1001"  maxNums="255" quality="0" isCombin="6" isRecover="1" isUse="0" />
+ <sample sid="2" class="game.prop.Prop" name="一品沉木" salePrice="10" sortId="1001"  maxNums="255" quality="0" isCombin="7" isRecover="1" isUse="0" />
+ <sample sid="3" class="game.prop.Prop" name="一品丝绸" salePrice="10" sortId="1001"  maxNums="255" quality="0" isCombin="8" isRecover="1" isUse="0" />
+ <sample sid="4" class="game.prop.Prop" name="一品金玉" salePrice="10" sortId="1001"  maxNums="255" quality="0" isCombin="9" isRecover="1" isUse="0" />
+ <sample sid="5" class="game.prop.Prop" name="一品良驹" salePrice="10" sortId="1001"  maxNums="255" quality="0" isCombin="10" isRecover="1" isUse="0" />
+ <sample sid="6" class="game.prop.Prop" name="二品陨铁" salePrice="20" sortId="1002"  maxNums="255" materialId="11018" quality="1" isCombin="11" isRecover="1" isUse="0" />
+ <sample sid="7" class="game.prop.Prop" name="二品沉木" salePrice="20" sortId="1002"  maxNums="255" materialId="11019" quality="1" isCombin="12" isRecover="1" isUse="0" />
+ <sample sid="8" class="game.prop.Prop" name="二品丝绸" salePrice="20" sortId="1002"  maxNums="255" materialId="11020" quality="1" isCombin="13" isRecover="1" isUse="0" />
+ <sample sid="9" class="game.prop.Prop" name="二品金玉" salePrice="20" sortId="1002"  maxNums="255" materialId="11021" quality="1" isCombin="14" isRecover="1" isUse="0" />
+ <sample sid="10" class="game.prop.Prop" name="二品良驹" salePrice="20" sortId="1002"  maxNums="255" quality="1" isCombin="15" isRecover="1" isUse="0" />
+ <sample sid="11" class="game.prop.Prop" name="三品陨铁" salePrice="30" sortId="1003"  maxNums="255" materialId="11022" quality="2" isCombin="16" isRecover="1" isUse="0" />
+ <sample sid="12" class="game.prop.Prop" name="三品沉木" salePrice="30" sortId="1003"  maxNums="255" materialId="11023" quality="2" isCombin="17" isRecover="1" isUse="0" />
+ <sample sid="13" class="game.prop.Prop" name="三品丝绸" salePrice="30" sortId="1003"  maxNums="255" materialId="11024" quality="2" isCombin="18" isRecover="1" isUse="0" />
+ <sample sid="14" class="game.prop.Prop" name="三品金玉" salePrice="30" sortId="1003"  maxNums="255" materialId="11025" quality="2" isCombin="19" isRecover="1" isUse="0" />
+ <sample sid="15" class="game.prop.Prop" name="三品良驹" salePrice="30" sortId="1003"  maxNums="255" quality="2" isCombin="20" isRecover="1" isUse="0" />
+ <sample sid="16" class="game.prop.Prop" name="四品陨铁" salePrice="40" sortId="1004"  maxNums="255" materialId="11026" quality="3" isCombin="21" isRecover="1" isUse="0" />
+ <sample sid="17" class="game.prop.Prop" name="四品沉木" salePrice="40" sortId="1004"  maxNums="255" materialId="11027" quality="3" isCombin="22" isRecover="1" isUse="0" />
+ <sample sid="18" class="game.prop.Prop" name="四品丝绸" salePrice="40" sortId="1004"  maxNums="255" materialId="11028" quality="3" isCombin="23" isRecover="1" isUse="0" />
+ <sample sid="19" class="game.prop.Prop" name="四品金玉" salePrice="40" sortId="1004"  maxNums="255" materialId="11029" quality="3" isCombin="24" isRecover="1" isUse="0" />
+ <sample sid="20" class="game.prop.Prop" name="四品良驹" salePrice="40" sortId="1004"  maxNums="255" quality="3" isCombin="25" isRecover="1" isUse="0" />
+ <sample sid="21" class="game.prop.Prop" name="五品陨铁" salePrice="50" sortId="1005"  maxNums="255" materialId="11030" quality="4" isRecover="1" isUse="0" />
+ <sample sid="22" class="game.prop.Prop" name="五品沉木" salePrice="50" sortId="1005"  maxNums="255" materialId="11031" quality="4" isRecover="1" isUse="0" />
+ <sample sid="23" class="game.prop.Prop" name="五品丝绸" salePrice="50" sortId="1005"  maxNums="255" materialId="11032" quality="4" isRecover="1" isUse="0" />
+ <sample sid="24" class="game.prop.Prop" name="五品金玉" salePrice="50" sortId="1005"  maxNums="255" materialId="11033" quality="4" isRecover="1" isUse="0" />
+ <sample sid="25" class="game.prop.Prop" name="五品良驹" salePrice="50" sortId="1005"  maxNums="255" quality="4" isRecover="1" isUse="0" />
+ <sample sid="26" class="game.prop.MarchOrder" name="行军令" salePrice="50" sortId="30"  maxNums="255" />
+ <sample sid="27" class="game.prop.ProvokeTeamCard" name="叫阵卡" salePrice="50" sortId="30"  maxNums="255" />
+ <sample sid="28" class="game.prop.Prop" name="神器碎片" salePrice="50" sortId="31"  maxNums="255" quality="4" isRecover="1" isUse="0" />
+ <sample sid="29" class="game.prop.Prop" name="天机宝石碎片" salePrice="50" sortId="31"  maxNums="255" quality="1" isRecover="1" isUse="0" />
+ <sample sid="30" class="game.prop.Prop" name="虎威宝石碎片" salePrice="50" sortId="31"  maxNums="255" quality="2" isRecover="1" isUse="0" />
+ <sample sid="31" class="game.prop.Prop" name="破阵宝石碎片" salePrice="50" sortId="31"  maxNums="255" quality="2" isRecover="1" isUse="0" />
+ <sample sid="32" class="game.prop.Prop" name="乾坤宝石碎片" salePrice="50" sortId="31"  maxNums="255" quality="3" isRecover="1" isUse="0" />
+ <sample sid="46" class="game.prop.Prop" name="百炼钢" salePrice="50" sortId="1006"  maxNums="255" quality="5" isRecover="1" isUse="0" />
+ <sample sid="47" class="game.prop.Prop" name="罗刹套装图纸" salePrice="50" sortId="1006"  maxNums="255" materialId="11017" quality="4" isRecover="1" isUse="0" />
+ <sample sid="48" class="game.prop.Prop" name="宝石精华" salePrice="50" sortId="1006"  maxNums="255" quality="4" isRecover="1" isUse="0" />
+ <sample sid="500" class="game.prop.LuckProp" name="竹叶青" salePrice="1" sortId="900"  maxNums="255" quality="0" addCrit="20" luck="5" />
+ <sample sid="501" class="game.prop.LuckProp" name="状元红" salePrice="1" sortId="900"  maxNums="255" quality="1" addCrit="20" luck="10" />
+ <sample sid="502" class="game.prop.LuckProp" name="帝王丝绸" salePrice="1" sortId="900"  maxNums="255" quality="2" addCrit="20" luck="25" />
+ <sample sid="503" class="game.prop.LuckProp" name="夜光杯" salePrice="1" sortId="900"  maxNums="255" quality="3" addCrit="20" luck="50" />
+ <sample sid="510" class="game.prop.SoulProp" name="将魂·人王" salePrice="1" sortId="10000"  maxNums="1" attType="1" attValue="1" />
+ <sample sid="511" class="game.prop.SoulProp" name="将魂·知天" salePrice="1" sortId="10000"  maxNums="1" attType="1" attValue="1" />
+ <sample sid="512" class="game.prop.SoulProp" name="将魂·英杰" salePrice="1" sortId="10000"  maxNums="1" attType="1" attValue="1" />
+ <sample sid="513" class="game.prop.SoulProp" name="将魂·仁德" salePrice="1" sortId="10000"  maxNums="1" attType="1" attValue="1" />
+ <sample sid="514" class="game.prop.SoulProp" name="将魂·枭雄" salePrice="1" sortId="10000"  maxNums="1" attType="1" attValue="1" />
+ <sample sid="540" class="game.prop.Prop" name="武力技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="541" class="game.prop.Prop" name="智力技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="542" class="game.prop.Prop" name="统帅技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="543" class="game.prop.Prop" name="攻击技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="544" class="game.prop.Prop" name="体力技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="545" class="game.prop.Prop" name="带兵技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="546" class="game.prop.Prop" name="速度技能书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="547" class="game.prop.Prop" name="暴击强化书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="548" class="game.prop.Prop" name="韧性强化书" salePrice="1" sortId="10000"  maxNums="255" />
+ <sample sid="800" class="game.prop.Prop" name="药" salePrice="1" sortId="10000"  maxNums="1" />
+ <sample sid="801" class="game.prop.Prop" name="钱币" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="802" class="game.prop.Prop" name="经验" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="803" class="game.prop.Prop" name="铁锭" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="804" class="game.prop.Prop" name="木材" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="805" class="game.prop.Prop" name="粮食" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="806" class="game.prop.Prop" name="英雄令" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="807" class="game.prop.Prop" name="劳役" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="808" class="game.prop.Prop" name="文化" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="809" class="game.prop.Prop" name="军械" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="810" class="game.prop.Prop" name="训练" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="811" class="game.prop.Prop" name="元宝" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="812" class="game.prop.Prop" name="征募令" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="813" class="game.prop.Prop" name="功勋" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="814" class="game.prop.Prop" name="声望" salePrice="1" sortId="10000"  maxNums="-1" />
+ <sample sid="1000" class="game.equipment.Equipment" name="新兵长刀" salePrice="1" sortId="9"  maxNums="1" location="4" materialId="10200" quality="0" suitId="0" militaryId="0" leadSol="2" attack="35" />
+ <sample sid="1001" class="game.equipment.Equipment" name="新兵皮甲" salePrice="2" sortId="9"  maxNums="1" location="2" materialId="10201" quality="0" suitId="0" militaryId="0" leadSol="2" attack="35" />
+ <sample sid="1002" class="game.equipment.Equipment" name="新兵木盔" salePrice="3" sortId="9"  maxNums="1" location="0" materialId="10202" quality="0" suitId="0" militaryId="0" leadSol="2" attack="35" />
+ <sample sid="1003" class="game.equipment.Equipment" name="新兵草鞋" salePrice="4" sortId="9"  maxNums="1" location="7" materialId="10203" quality="0" suitId="0" militaryId="0" power="35" leadSol="2" />
+ <sample sid="1004" class="game.equipment.Equipment" name="新兵长裤" salePrice="5" sortId="9"  maxNums="1" location="6" materialId="10204" quality="0" suitId="0" militaryId="0" power="35" leadSol="2" />
+ <sample sid="1005" class="game.equipment.Equipment" name="新兵腰带" salePrice="6" sortId="9"  maxNums="1" location="1" materialId="10205" quality="0" suitId="0" militaryId="0" power="35" leadSol="2" />
+ <sample sid="1006" class="game.equipment.Equipment" name="新兵披风" salePrice="7" sortId="9"  maxNums="1" location="3" materialId="10206" quality="0" suitId="0" militaryId="0" leadSol="4" />
+ <sample sid="1007" class="game.equipment.Equipment" name="新兵指环" salePrice="8" sortId="9"  maxNums="1" location="5" materialId="10207" quality="0" suitId="0" militaryId="0" leadSol="4" />
+ <sample sid="1008" class="game.equipment.HorseEquipment" name="黄种马" salePrice="9" sortId="9"  maxNums="1" location="8" quality="0" suitId="0" militaryId="0" power="10" leadSol="100" attack="10" lead="10" force="10" wisdom="10" />
+ <sample sid="1009" class="game.equipment.Equipment" name="武卒长刀" salePrice="10" sortId="8"  maxNums="1" location="4" materialId="10209" quality="1" suitId="1" militaryId="0" leadSol="3" attack="70" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1010" class="game.equipment.Equipment" name="武卒皮甲" salePrice="11" sortId="8"  maxNums="1" location="2" materialId="10210" quality="1" suitId="1" militaryId="0" leadSol="3" attack="70" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1011" class="game.equipment.Equipment" name="武卒头盔" salePrice="12" sortId="8"  maxNums="1" location="0" materialId="10211" quality="1" suitId="1" militaryId="0" leadSol="3" attack="70" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1012" class="game.equipment.Equipment" name="武卒长靴" salePrice="13" sortId="8"  maxNums="1" location="7" materialId="10212" quality="1" suitId="1" militaryId="0" power="70" leadSol="3" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1013" class="game.equipment.Equipment" name="武卒长裤" salePrice="14" sortId="8"  maxNums="1" location="6" materialId="10213" quality="1" suitId="1" militaryId="0" power="70" leadSol="3" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1014" class="game.equipment.Equipment" name="武卒腰带" salePrice="15" sortId="8"  maxNums="1" location="1" materialId="10214" quality="1" suitId="1" militaryId="0" power="70" leadSol="3" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1015" class="game.equipment.Equipment" name="武卒披风" salePrice="16" sortId="8"  maxNums="1" location="3" materialId="10215" quality="1" suitId="1" militaryId="0" leadSol="6" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1016" class="game.equipment.Equipment" name="武卒挂坠" salePrice="17" sortId="8"  maxNums="1" location="5" materialId="10216" quality="1" suitId="1" militaryId="0" leadSol="6" polishedMaterial="12001" skillMaxNum="1" skillSid="1" />
+ <sample sid="1017" class="game.equipment.HorseEquipment" name="花鬃马" salePrice="18" sortId="8"  maxNums="1" location="8" quality="1" suitId="0" militaryId="0" power="10" leadSol="100" attack="10" lead="10" force="10" wisdom="10" />
+ <sample sid="1018" class="game.equipment.Equipment" name="精兵长剑" salePrice="19" sortId="7"  maxNums="1" location="4" needNobilityLevel="10" materialId="10218" makeMaterialId="10018" quality="2" suitId="2" militaryId="0" leadSol="5" attack="120" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1019" class="game.equipment.Equipment" name="精兵皮甲" salePrice="20" sortId="7"  maxNums="1" location="2" needNobilityLevel="10" materialId="10219" makeMaterialId="10019" quality="2" suitId="2" militaryId="0" leadSol="5" attack="120" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1020" class="game.equipment.Equipment" name="精兵头盔" salePrice="21" sortId="7"  maxNums="1" location="0" needNobilityLevel="10" materialId="10220" makeMaterialId="10020" quality="2" suitId="2" militaryId="0" leadSol="5" attack="120" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1021" class="game.equipment.Equipment" name="精兵长靴" salePrice="22" sortId="7"  maxNums="1" location="7" needNobilityLevel="10" materialId="10221" makeMaterialId="10021" quality="2" suitId="2" militaryId="0" power="120" leadSol="5" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1022" class="game.equipment.Equipment" name="精兵长裤" salePrice="23" sortId="7"  maxNums="1" location="6" needNobilityLevel="10" materialId="10222" makeMaterialId="10022" quality="2" suitId="2" militaryId="0" power="120" leadSol="5" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1023" class="game.equipment.Equipment" name="精兵腰带" salePrice="24" sortId="7"  maxNums="1" location="1" needNobilityLevel="10" materialId="10223" makeMaterialId="10023" quality="2" suitId="2" militaryId="0" power="120" leadSol="5" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1024" class="game.equipment.Equipment" name="精兵披风" salePrice="25" sortId="7"  maxNums="1" location="3" needNobilityLevel="10" materialId="10224" makeMaterialId="10024" quality="2" suitId="2" militaryId="0" leadSol="10" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1025" class="game.equipment.Equipment" name="精兵挂饰" salePrice="26" sortId="7"  maxNums="1" location="5" needNobilityLevel="10" materialId="10225" makeMaterialId="10025" quality="2" suitId="2" militaryId="0" leadSol="10" polishedMaterial="12002" skillMaxNum="2" skillSid="2" />
+ <sample sid="1026" class="game.equipment.HorseEquipment" name="疾云" salePrice="27" sortId="7"  maxNums="1" location="8" quality="2" suitId="0" militaryId="0" power="10" leadSol="100" attack="10" lead="10" force="10" wisdom="10" />
+ <sample sid="1027" class="game.equipment.Equipment" name="都尉大刀" salePrice="28" sortId="6"  maxNums="1" location="4" needNobilityLevel="20" materialId="10227" makeMaterialId="10027" quality="3" suitId="3" militaryId="0" leadSol="6" attack="200" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1028" class="game.equipment.Equipment" name="都尉铠甲" salePrice="29" sortId="6"  maxNums="1" location="2" needNobilityLevel="20" materialId="10228" makeMaterialId="10028" quality="3" suitId="3" militaryId="0" leadSol="6" attack="200" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1029" class="game.equipment.Equipment" name="都尉头盔" salePrice="30" sortId="6"  maxNums="1" location="0" needNobilityLevel="20" materialId="10229" makeMaterialId="10029" quality="3" suitId="3" militaryId="0" leadSol="6" attack="200" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1030" class="game.equipment.Equipment" name="都尉长靴" salePrice="31" sortId="6"  maxNums="1" location="7" needNobilityLevel="20" materialId="10230" makeMaterialId="10030" quality="3" suitId="3" militaryId="0" power="200" leadSol="6" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1031" class="game.equipment.Equipment" name="都尉长裤" salePrice="32" sortId="6"  maxNums="1" location="6" needNobilityLevel="20" materialId="10231" makeMaterialId="10031" quality="3" suitId="3" militaryId="0" power="200" leadSol="6" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1032" class="game.equipment.Equipment" name="都尉腰带" salePrice="33" sortId="6"  maxNums="1" location="1" needNobilityLevel="20" materialId="10232" makeMaterialId="10032" quality="3" suitId="3" militaryId="0" power="200" leadSol="6" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1033" class="game.equipment.Equipment" name="都尉披风" salePrice="34" sortId="6"  maxNums="1" location="3" needNobilityLevel="20" materialId="10233" makeMaterialId="10033" quality="3" suitId="3" militaryId="0" leadSol="12" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1034" class="game.equipment.Equipment" name="都尉挂饰" salePrice="35" sortId="6"  maxNums="1" location="5" needNobilityLevel="20" materialId="10234" makeMaterialId="10034" quality="3" suitId="3" militaryId="0" leadSol="12" polishedMaterial="12003" skillMaxNum="4" skillSid="3" />
+ <sample sid="1035" class="game.equipment.HorseEquipment" name="白鹤" salePrice="36" sortId="6"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" power="50" leadSol="500" attack="50" lead="50" force="50" wisdom="50" />
+ <sample sid="1036" class="game.equipment.Equipment" name="先锋偃月刀" salePrice="37" sortId="5"  maxNums="1" location="4" needNobilityLevel="30" materialId="10236" makeMaterialId="10036" quality="3" suitId="4" militaryId="0" leadSol="8" attack="300" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1037" class="game.equipment.Equipment" name="先锋鱼鳞铠" salePrice="38" sortId="5"  maxNums="1" location="2" needNobilityLevel="30" materialId="10237" makeMaterialId="10037" quality="3" suitId="4" militaryId="0" leadSol="8" attack="300" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1038" class="game.equipment.Equipment" name="先锋云纹盔" salePrice="39" sortId="5"  maxNums="1" location="0" needNobilityLevel="30" materialId="10238" makeMaterialId="10038" quality="3" suitId="4" militaryId="0" leadSol="8" attack="300" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1039" class="game.equipment.Equipment" name="先锋踏水靴" salePrice="40" sortId="5"  maxNums="1" location="7" needNobilityLevel="30" materialId="10239" makeMaterialId="10039" quality="3" suitId="4" militaryId="0" power="300" leadSol="8" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1040" class="game.equipment.Equipment" name="先锋虎皮裙" salePrice="41" sortId="5"  maxNums="1" location="6" needNobilityLevel="30" materialId="10240" makeMaterialId="10040" quality="3" suitId="4" militaryId="0" power="300" leadSol="8" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1041" class="game.equipment.Equipment" name="先锋兽头带" salePrice="42" sortId="5"  maxNums="1" location="1" needNobilityLevel="30" materialId="10241" makeMaterialId="10041" quality="3" suitId="4" militaryId="0" power="300" leadSol="8" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1042" class="game.equipment.Equipment" name="先锋红玉巾" salePrice="43" sortId="5"  maxNums="1" location="3" needNobilityLevel="30" materialId="10242" makeMaterialId="10042" quality="3" suitId="4" militaryId="0" leadSol="15" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1043" class="game.equipment.Equipment" name="先锋黄石佩" salePrice="44" sortId="5"  maxNums="1" location="5" needNobilityLevel="30" materialId="10243" makeMaterialId="10043" quality="3" suitId="4" militaryId="0" leadSol="15" polishedMaterial="12004" skillMaxNum="4" skillSid="3" />
+ <sample sid="1044" class="game.equipment.HorseEquipment" name="闪电" salePrice="45" sortId="5"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" power="200" leadSol="300" attack="200" lead="20" force="20" wisdom="20" />
+ <sample sid="1045" class="game.equipment.Equipment" name="征讨将军雁翎刀" salePrice="46" sortId="4"  maxNums="1" location="4" needNobilityLevel="40" materialId="10245" makeMaterialId="10045" quality="3" suitId="5" militaryId="0" leadSol="10" attack="400" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1046" class="game.equipment.Equipment" name="征讨将军烂银铠" salePrice="47" sortId="4"  maxNums="1" location="2" needNobilityLevel="40" materialId="10246" makeMaterialId="10046" quality="3" suitId="5" militaryId="0" leadSol="10" attack="400" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1047" class="game.equipment.Equipment" name="征讨将军凤翅鍪" salePrice="48" sortId="4"  maxNums="1" location="0" needNobilityLevel="40" materialId="10247" makeMaterialId="10047" quality="3" suitId="5" militaryId="0" leadSol="10" attack="400" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1048" class="game.equipment.Equipment" name="征讨将军云头靴" salePrice="49" sortId="4"  maxNums="1" location="7" needNobilityLevel="40" materialId="10248" makeMaterialId="10048" quality="3" suitId="5" militaryId="0" power="400" leadSol="10" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1049" class="game.equipment.Equipment" name="征讨将军缇骑裤" salePrice="50" sortId="4"  maxNums="1" location="6" needNobilityLevel="40" materialId="10249" makeMaterialId="10049" quality="3" suitId="5" militaryId="0" power="400" leadSol="10" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1050" class="game.equipment.Equipment" name="征讨将军红绛带" salePrice="51" sortId="4"  maxNums="1" location="1" needNobilityLevel="40" materialId="10250" makeMaterialId="10050" quality="3" suitId="5" militaryId="0" power="400" leadSol="10" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1051" class="game.equipment.Equipment" name="征讨将军玉琮巾" salePrice="52" sortId="4"  maxNums="1" location="3" needNobilityLevel="40" materialId="10251" makeMaterialId="10051" quality="3" suitId="5" militaryId="0" leadSol="20" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1052" class="game.equipment.Equipment" name="征讨将军紫晶坠" salePrice="53" sortId="4"  maxNums="1" location="5" needNobilityLevel="40" materialId="10252" makeMaterialId="10052" quality="3" suitId="5" militaryId="0" leadSol="20" polishedMaterial="12005" skillMaxNum="4" skillSid="3" />
+ <sample sid="1053" class="game.equipment.HorseEquipment" name="奔雷" salePrice="54" sortId="4"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" power="300" leadSol="300" attack="300" lead="30" force="30" wisdom="30" />
+ <sample sid="1054" class="game.equipment.Equipment" name="五官中郎将青釭剑" salePrice="55" sortId="3"  maxNums="1" location="4" needNobilityLevel="50" materialId="10254" makeMaterialId="10054" quality="3" suitId="6" militaryId="0" leadSol="12" attack="500" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1055" class="game.equipment.Equipment" name="五官中郎将细鳞甲" salePrice="56" sortId="3"  maxNums="1" location="2" needNobilityLevel="50" materialId="10255" makeMaterialId="10055" quality="3" suitId="6" militaryId="0" leadSol="12" attack="500" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1056" class="game.equipment.Equipment" name="五官中郎将青铜盔" salePrice="57" sortId="3"  maxNums="1" location="0" needNobilityLevel="50" materialId="10256" makeMaterialId="10056" quality="3" suitId="6" militaryId="0" leadSol="12" attack="500" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1057" class="game.equipment.Equipment" name="五官中郎将乌皮靴" salePrice="58" sortId="3"  maxNums="1" location="7" needNobilityLevel="50" materialId="10257" makeMaterialId="10057" quality="3" suitId="6" militaryId="0" power="500" leadSol="12" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1058" class="game.equipment.Equipment" name="五官中郎将绢帛褶" salePrice="59" sortId="3"  maxNums="1" location="6" needNobilityLevel="50" materialId="10258" makeMaterialId="10058" quality="3" suitId="6" militaryId="0" power="500" leadSol="12" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1059" class="game.equipment.Equipment" name="五官中郎将玉珑带" salePrice="60" sortId="3"  maxNums="1" location="1" needNobilityLevel="50" materialId="10259" makeMaterialId="10059" quality="3" suitId="6" militaryId="0" power="500" leadSol="12" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1060" class="game.equipment.Equipment" name="五官中郎将虎皮巾" salePrice="61" sortId="3"  maxNums="1" location="3" needNobilityLevel="50" materialId="10260" makeMaterialId="10060" quality="3" suitId="6" militaryId="0" leadSol="25" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1061" class="game.equipment.Equipment" name="五官中郎将青玉璜" salePrice="62" sortId="3"  maxNums="1" location="5" needNobilityLevel="50" materialId="10261" makeMaterialId="10061" quality="3" suitId="6" militaryId="0" leadSol="25" polishedMaterial="12006" skillMaxNum="4" skillSid="4" />
+ <sample sid="1062" class="game.equipment.Equipment" name="紫骍" salePrice="63" sortId="3"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" power="10" leadSol="10" />
+ <sample sid="1063" class="game.equipment.Equipment" name="御史中丞龙鳞刀" salePrice="64" sortId="2"  maxNums="1" location="4" needNobilityLevel="60" materialId="10263" makeMaterialId="10063" quality="4" suitId="7" militaryId="0" leadSol="15" attack="650" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1064" class="game.equipment.Equipment" name="御史中丞襟皮甲" salePrice="65" sortId="2"  maxNums="1" location="2" needNobilityLevel="60" materialId="10264" makeMaterialId="10064" quality="4" suitId="7" militaryId="0" leadSol="15" attack="650" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1065" class="game.equipment.Equipment" name="御史中丞黑铁盔" salePrice="66" sortId="2"  maxNums="1" location="0" needNobilityLevel="60" materialId="10265" makeMaterialId="10065" quality="4" suitId="7" militaryId="0" leadSol="15" attack="650" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1066" class="game.equipment.Equipment" name="御史中丞青丝履" salePrice="67" sortId="2"  maxNums="1" location="7" needNobilityLevel="60" materialId="10266" makeMaterialId="10066" quality="4" suitId="7" militaryId="0" power="650" leadSol="15" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1067" class="game.equipment.Equipment" name="御史中丞护腿甲" salePrice="68" sortId="2"  maxNums="1" location="6" needNobilityLevel="60" materialId="10267" makeMaterialId="10067" quality="4" suitId="7" militaryId="0" power="650" leadSol="15" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1068" class="game.equipment.Equipment" name="御史中丞六瑞带" salePrice="69" sortId="2"  maxNums="1" location="1" needNobilityLevel="60" materialId="10268" makeMaterialId="10068" quality="4" suitId="7" militaryId="0" power="650" leadSol="15" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1069" class="game.equipment.Equipment" name="御史中丞苍璧巾" salePrice="70" sortId="2"  maxNums="1" location="3" needNobilityLevel="60" materialId="10269" makeMaterialId="10069" quality="4" suitId="7" militaryId="0" leadSol="30" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1070" class="game.equipment.Equipment" name="御史中丞谷纹环" salePrice="71" sortId="2"  maxNums="1" location="5" needNobilityLevel="60" materialId="10270" makeMaterialId="10070" quality="4" suitId="7" militaryId="0" leadSol="30" polishedMaterial="12007" skillMaxNum="4" skillSid="4" />
+ <sample sid="1071" class="game.equipment.Equipment" name="玉龙" salePrice="72" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="10" leadSol="10" />
+ <sample sid="1072" class="game.equipment.Equipment" name="执金吾古锭刀" salePrice="64" sortId="1"  maxNums="1" location="4" needNobilityLevel="70" materialId="10272" makeMaterialId="10072" quality="4" suitId="8" militaryId="0" leadSol="200" attack="800" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1073" class="game.equipment.Equipment" name="执金吾金丝铠" salePrice="65" sortId="1"  maxNums="1" location="2" needNobilityLevel="70" materialId="10273" makeMaterialId="10073" quality="4" suitId="8" militaryId="0" leadSol="200" attack="800" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1074" class="game.equipment.Equipment" name="执金吾帻筩盔" salePrice="66" sortId="1"  maxNums="1" location="0" needNobilityLevel="70" materialId="10274" makeMaterialId="10074" quality="4" suitId="8" militaryId="0" leadSol="200" attack="800" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1075" class="game.equipment.Equipment" name="执金吾疾风靴" salePrice="67" sortId="1"  maxNums="1" location="7" needNobilityLevel="70" materialId="10275" makeMaterialId="10075" quality="4" suitId="8" militaryId="0" power="800" leadSol="200" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1076" class="game.equipment.Equipment" name="执金吾云龙裙" salePrice="68" sortId="1"  maxNums="1" location="6" needNobilityLevel="70" materialId="10276" makeMaterialId="10076" quality="4" suitId="8" militaryId="0" power="800" leadSol="200" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1077" class="game.equipment.Equipment" name="执金吾金玉带" salePrice="69" sortId="1"  maxNums="1" location="1" needNobilityLevel="70" materialId="10277" makeMaterialId="10077" quality="4" suitId="8" militaryId="0" power="800" leadSol="200" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1078" class="game.equipment.Equipment" name="执金吾玉璋巾" salePrice="70" sortId="1"  maxNums="1" location="3" needNobilityLevel="70" materialId="10278" makeMaterialId="10078" quality="4" suitId="8" militaryId="0" leadSol="200" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1079" class="game.equipment.Equipment" name="执金吾琥形佩" salePrice="71" sortId="1"  maxNums="1" location="5" needNobilityLevel="70" materialId="10279" makeMaterialId="10079" quality="4" suitId="8" militaryId="0" leadSol="200" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="1080" class="game.equipment.HorseEquipment" name="西域马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="1" suitId="0" militaryId="0" leadSol="500" lead="100" force="100" wisdom="100" />
+ <sample sid="1081" class="game.equipment.HorseEquipment" name="铁骑马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="2" suitId="0" militaryId="0" leadSol="1000" lead="200" force="200" wisdom="200" />
+ <sample sid="1082" class="game.equipment.HorseEquipment" name="白龙马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" leadSol="2000" lead="300" force="300" wisdom="300" />
+ <sample sid="1083" class="game.equipment.HorseEquipment" name="汗血" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" leadSol="3000" lead="400" force="400" wisdom="400" />
+ <sample sid="1084" class="game.equipment.HorseEquipment" name="追风" salePrice="100" sortId="2"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" power="200" leadSol="2000" attack="200" lead="200" force="200" wisdom="200" />
+ <sample sid="1085" class="game.equipment.HorseEquipment" name="逐月" salePrice="100" sortId="2"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" power="200" leadSol="2000" attack="200" lead="200" force="200" wisdom="200" />
+ <sample sid="1086" class="game.equipment.HorseEquipment" name="爪黄飞电" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1087" class="game.equipment.HorseEquipment" name="的卢" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1088" class="game.equipment.HorseEquipment" name="乌骓" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1089" class="game.equipment.HorseEquipment" name="赤兔" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1090" class="game.equipment.HorseEquipment" name="爪黄飞电2" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1091" class="game.equipment.HorseEquipment" name="的卢2" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1092" class="game.equipment.HorseEquipment" name="乌骓2" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1093" class="game.equipment.HorseEquipment" name="赤兔2" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1094" class="game.equipment.HorseEquipment" name="爪黄飞电3" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="1095" class="game.equipment.HorseEquipment" name="全体加成" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" power="300" leadSol="3000" attack="300" lead="300" force="300" wisdom="300" />
+ <sample sid="2000" class="game.equipment.Gem" name="一级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="100" type="2" quality="1" isCombin="2001" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,1,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2012,2024</ints>
+     </field>
+ </sample>
+ <sample sid="2001" class="game.equipment.Gem" name="二级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="200" type="2" quality="1" isCombin="2002" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,2,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2013,2025</ints>
+     </field>
+ </sample>
+ <sample sid="2002" class="game.equipment.Gem" name="三级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="300" type="2" quality="1" isCombin="2003" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,3,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2014,2026</ints>
+     </field>
+ </sample>
+ <sample sid="2003" class="game.equipment.Gem" name="四级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="400" type="2" quality="1" isCombin="2004" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,4,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2015,2027</ints>
+     </field>
+ </sample>
+ <sample sid="2004" class="game.equipment.Gem" name="五级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="500" type="2" quality="1" isCombin="2005" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,5,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2016,2028</ints>
+     </field>
+ </sample>
+ <sample sid="2005" class="game.equipment.Gem" name="六级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="600" type="2" quality="1" isCombin="2006" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,6,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2017,2029</ints>
+     </field>
+ </sample>
+ <sample sid="2006" class="game.equipment.Gem" name="七级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="700" type="2" quality="1" isCombin="2007" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,7,0,0,0,0,0,0,0,350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2018,2030</ints>
+     </field>
+ </sample>
+ <sample sid="2007" class="game.equipment.Gem" name="八级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="800" type="2" quality="1" isCombin="2008" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,8,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2019,2031</ints>
+     </field>
+ </sample>
+ <sample sid="2008" class="game.equipment.Gem" name="九级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="900" type="2" quality="1" isCombin="2009" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,9,0,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2020,2032</ints>
+     </field>
+ </sample>
+ <sample sid="2009" class="game.equipment.Gem" name="十级天机石·锋锐" salePrice="1" sortId="100"  maxNums="255" moneyType="3" moneyNums="1000" type="2" materialId="11000" quality="1" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,10,0,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2021,2033</ints>
+     </field>
+ </sample>
+ <sample sid="2012" class="game.equipment.Gem" name="一级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="100" type="2" quality="1" isCombin="2013" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,1,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2000,2024</ints>
+     </field>
+ </sample>
+ <sample sid="2013" class="game.equipment.Gem" name="二级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="200" type="2" quality="1" isCombin="2014" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,2,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2001,2025</ints>
+     </field>
+ </sample>
+ <sample sid="2014" class="game.equipment.Gem" name="三级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="300" type="2" quality="1" isCombin="2015" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,3,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2002,2026</ints>
+     </field>
+ </sample>
+ <sample sid="2015" class="game.equipment.Gem" name="四级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="400" type="2" quality="1" isCombin="2016" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,4,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2003,2027</ints>
+     </field>
+ </sample>
+ <sample sid="2016" class="game.equipment.Gem" name="五级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="500" type="2" quality="1" isCombin="2017" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,5,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2004,2028</ints>
+     </field>
+ </sample>
+ <sample sid="2017" class="game.equipment.Gem" name="六级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="600" type="2" quality="1" isCombin="2018" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,6,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2005,2029</ints>
+     </field>
+ </sample>
+ <sample sid="2018" class="game.equipment.Gem" name="七级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="700" type="2" quality="1" isCombin="2019" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,7,0,0,0,0,0,0,350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2006,2030</ints>
+     </field>
+ </sample>
+ <sample sid="2019" class="game.equipment.Gem" name="八级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="800" type="2" quality="1" isCombin="2020" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,8,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2007,2031</ints>
+     </field>
+ </sample>
+ <sample sid="2020" class="game.equipment.Gem" name="九级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="900" type="2" quality="1" isCombin="2021" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,9,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2008,2032</ints>
+     </field>
+ </sample>
+ <sample sid="2021" class="game.equipment.Gem" name="十级天机石·厚重" salePrice="1" sortId="101"  maxNums="255" moneyType="3" moneyNums="1000" type="2" materialId="11001" quality="1" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,10,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2009,2033</ints>
+     </field>
+ </sample>
+ <sample sid="2024" class="game.equipment.Gem" name="一级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="100" type="2" quality="1" isCombin="2025" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,1,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2000,2012</ints>
+     </field>
+ </sample>
+ <sample sid="2025" class="game.equipment.Gem" name="二级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="200" type="2" quality="1" isCombin="2026" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,2,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2001,2013</ints>
+     </field>
+ </sample>
+ <sample sid="2026" class="game.equipment.Gem" name="三级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="300" type="2" quality="1" isCombin="2027" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,3,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2002,2014</ints>
+     </field>
+ </sample>
+ <sample sid="2027" class="game.equipment.Gem" name="四级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="400" type="2" quality="1" isCombin="2028" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,4,0,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2003,2015</ints>
+     </field>
+ </sample>
+ <sample sid="2028" class="game.equipment.Gem" name="五级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="500" type="2" quality="1" isCombin="2029" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,5,0,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2004,2016</ints>
+     </field>
+ </sample>
+ <sample sid="2029" class="game.equipment.Gem" name="六级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="600" type="2" quality="1" isCombin="2030" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,6,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2005,2017</ints>
+     </field>
+ </sample>
+ <sample sid="2030" class="game.equipment.Gem" name="七级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="700" type="2" quality="1" isCombin="2031" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,7,0,0,0,0,0,0,0,0,350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2006,2018</ints>
+     </field>
+ </sample>
+ <sample sid="2031" class="game.equipment.Gem" name="八级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="800" type="2" quality="1" isCombin="2032" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,8,0,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2007,2019</ints>
+     </field>
+ </sample>
+ <sample sid="2032" class="game.equipment.Gem" name="九级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="900" type="2" quality="1" isCombin="2033" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,9,0,0,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2008,2020</ints>
+     </field>
+ </sample>
+ <sample sid="2033" class="game.equipment.Gem" name="十级天机石·金刚" salePrice="1" sortId="102"  maxNums="255" moneyType="3" moneyNums="1000" type="2" materialId="11002" quality="1" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,10,0,0,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2009,2021</ints>
+     </field>
+ </sample>
+ <sample sid="2036" class="game.equipment.Gem" name="一级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="100" type="0" quality="1" isCombin="2037" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,1,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2048,2060</ints>
+     </field>
+ </sample>
+ <sample sid="2037" class="game.equipment.Gem" name="二级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="200" type="0" quality="1" isCombin="2038" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,2,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2049,2061</ints>
+     </field>
+ </sample>
+ <sample sid="2038" class="game.equipment.Gem" name="三级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="300" type="0" quality="1" isCombin="2039" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,3,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2050,2062</ints>
+     </field>
+ </sample>
+ <sample sid="2039" class="game.equipment.Gem" name="四级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="400" type="0" quality="1" isCombin="2040" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,4,0,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2051,2063</ints>
+     </field>
+ </sample>
+ <sample sid="2040" class="game.equipment.Gem" name="五级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="500" type="0" quality="1" isCombin="2041" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,5,0,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2052,2064</ints>
+     </field>
+ </sample>
+ <sample sid="2041" class="game.equipment.Gem" name="六级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="600" type="0" quality="1" isCombin="2042" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,6,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2053,2065</ints>
+     </field>
+ </sample>
+ <sample sid="2042" class="game.equipment.Gem" name="七级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="700" type="0" quality="1" isCombin="2043" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,7,0,0,0,0,0,0,0,0,350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2054,2066</ints>
+     </field>
+ </sample>
+ <sample sid="2043" class="game.equipment.Gem" name="八级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="800" type="0" quality="1" isCombin="2044" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,8,0,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2055,2067</ints>
+     </field>
+ </sample>
+ <sample sid="2044" class="game.equipment.Gem" name="九级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="900" type="0" quality="1" isCombin="2045" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,9,0,0,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2056,2068</ints>
+     </field>
+ </sample>
+ <sample sid="2045" class="game.equipment.Gem" name="十级虎威石·翻天" salePrice="1" sortId="103"  maxNums="255" moneyType="3" moneyNums="1000" type="0" materialId="11003" quality="1" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,10,0,0,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2057,2069</ints>
+     </field>
+ </sample>
+ <sample sid="2048" class="game.equipment.Gem" name="一级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="100" type="0" quality="1" isCombin="2049" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,1,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2036,2060</ints>
+     </field>
+ </sample>
+ <sample sid="2049" class="game.equipment.Gem" name="二级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="200" type="0" quality="1" isCombin="2050" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,2,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2037,2061</ints>
+     </field>
+ </sample>
+ <sample sid="2050" class="game.equipment.Gem" name="三级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="300" type="0" quality="1" isCombin="2051" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,3,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2038,2062</ints>
+     </field>
+ </sample>
+ <sample sid="2051" class="game.equipment.Gem" name="四级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="400" type="0" quality="1" isCombin="2052" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,4,0,0,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2039,2063</ints>
+     </field>
+ </sample>
+ <sample sid="2052" class="game.equipment.Gem" name="五级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="500" type="0" quality="1" isCombin="2053" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,5,0,0,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2040,2064</ints>
+     </field>
+ </sample>
+ <sample sid="2053" class="game.equipment.Gem" name="六级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="600" type="0" quality="1" isCombin="2054" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,6,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2041,2065</ints>
+     </field>
+ </sample>
+ <sample sid="2054" class="game.equipment.Gem" name="七级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="700" type="0" quality="1" isCombin="2055" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,7,0,0,0,0,0,0,0,0,0,350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2042,2066</ints>
+     </field>
+ </sample>
+ <sample sid="2055" class="game.equipment.Gem" name="八级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="800" type="0" quality="1" isCombin="2056" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,8,0,0,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2043,2067</ints>
+     </field>
+ </sample>
+ <sample sid="2056" class="game.equipment.Gem" name="九级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="900" type="0" quality="1" isCombin="2057" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,9,0,0,0,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2044,2068</ints>
+     </field>
+ </sample>
+ <sample sid="2057" class="game.equipment.Gem" name="十级虎威石·开山" salePrice="1" sortId="104"  maxNums="255" moneyType="3" moneyNums="1000" type="0" materialId="11004" quality="1" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,10,0,0,0,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2045,2069</ints>
+     </field>
+ </sample>
+ <sample sid="2060" class="game.equipment.Gem" name="一级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="100" type="0" quality="1" isCombin="2061" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,1,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2036,2048</ints>
+     </field>
+ </sample>
+ <sample sid="2061" class="game.equipment.Gem" name="二级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="200" type="0" quality="1" isCombin="2062" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,2,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2037,2049</ints>
+     </field>
+ </sample>
+ <sample sid="2062" class="game.equipment.Gem" name="三级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="300" type="0" quality="1" isCombin="2063" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,3,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2038,2050</ints>
+     </field>
+ </sample>
+ <sample sid="2063" class="game.equipment.Gem" name="四级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="400" type="0" quality="1" isCombin="2064" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,4,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2039,2051</ints>
+     </field>
+ </sample>
+ <sample sid="2064" class="game.equipment.Gem" name="五级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="500" type="0" quality="1" isCombin="2065" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,5,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2040,2052</ints>
+     </field>
+ </sample>
+ <sample sid="2065" class="game.equipment.Gem" name="六级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="600" type="0" quality="1" isCombin="2066" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,6,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2041,2053</ints>
+     </field>
+ </sample>
+ <sample sid="2066" class="game.equipment.Gem" name="七级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="700" type="0" quality="1" isCombin="2067" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,7,0,0,0,0,0,0,0,350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2042,2054</ints>
+     </field>
+ </sample>
+ <sample sid="2067" class="game.equipment.Gem" name="八级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="800" type="0" quality="1" isCombin="2068" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,8,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2043,2055</ints>
+     </field>
+ </sample>
+ <sample sid="2068" class="game.equipment.Gem" name="九级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="900" type="0" quality="1" isCombin="2069" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,9,0,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2044,2056</ints>
+     </field>
+ </sample>
+ <sample sid="2069" class="game.equipment.Gem" name="十级虎威石·镇海" salePrice="1" sortId="105"  maxNums="255" moneyType="3" moneyNums="1000" type="0" materialId="11005" quality="1" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,10,0,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2045,2057</ints>
+     </field>
+ </sample>
+ <sample sid="2072" class="game.equipment.Gem" name="一级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="100" type="1" quality="2" isCombin="2073" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2084,2096</ints>
+     </field>
+ </sample>
+ <sample sid="2073" class="game.equipment.Gem" name="二级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="200" type="1" quality="2" isCombin="2074" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,10,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2085,2097</ints>
+     </field>
+ </sample>
+ <sample sid="2074" class="game.equipment.Gem" name="三级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="300" type="1" quality="2" isCombin="2075" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,15,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2086,2098</ints>
+     </field>
+ </sample>
+ <sample sid="2075" class="game.equipment.Gem" name="四级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="400" type="1" quality="2" isCombin="2076" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,20,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2087,2099</ints>
+     </field>
+ </sample>
+ <sample sid="2076" class="game.equipment.Gem" name="五级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="500" type="1" quality="2" isCombin="2077" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,25,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2088,2100</ints>
+     </field>
+ </sample>
+ <sample sid="2077" class="game.equipment.Gem" name="六级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="600" type="1" quality="2" isCombin="2078" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,30,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2089,2101</ints>
+     </field>
+ </sample>
+ <sample sid="2078" class="game.equipment.Gem" name="七级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="700" type="1" quality="2" isCombin="2079" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,35,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2090,2102</ints>
+     </field>
+ </sample>
+ <sample sid="2079" class="game.equipment.Gem" name="八级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="800" type="1" quality="2" isCombin="2080" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,40,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2091,2103</ints>
+     </field>
+ </sample>
+ <sample sid="2080" class="game.equipment.Gem" name="九级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="900" type="1" quality="2" isCombin="2081" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,45,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2092,2104</ints>
+     </field>
+ </sample>
+ <sample sid="2081" class="game.equipment.Gem" name="十级破阵石·七星" salePrice="1" sortId="106"  maxNums="255" moneyType="3" moneyNums="1000" type="1" materialId="11006" quality="2" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,50,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2093,2105</ints>
+     </field>
+ </sample>
+ <sample sid="2084" class="game.equipment.Gem" name="一级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="100" type="1" quality="2" isCombin="2085" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2072,2096</ints>
+     </field>
+ </sample>
+ <sample sid="2085" class="game.equipment.Gem" name="二级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="200" type="1" quality="2" isCombin="2086" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2073,2097</ints>
+     </field>
+ </sample>
+ <sample sid="2086" class="game.equipment.Gem" name="三级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="300" type="1" quality="2" isCombin="2087" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2074,2098</ints>
+     </field>
+ </sample>
+ <sample sid="2087" class="game.equipment.Gem" name="四级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="400" type="1" quality="2" isCombin="2088" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,20,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2075,2099</ints>
+     </field>
+ </sample>
+ <sample sid="2088" class="game.equipment.Gem" name="五级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="500" type="1" quality="2" isCombin="2089" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,25,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2076,2100</ints>
+     </field>
+ </sample>
+ <sample sid="2089" class="game.equipment.Gem" name="六级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="600" type="1" quality="2" isCombin="2090" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2077,2101</ints>
+     </field>
+ </sample>
+ <sample sid="2090" class="game.equipment.Gem" name="七级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="700" type="1" quality="2" isCombin="2091" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,35,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2078,2102</ints>
+     </field>
+ </sample>
+ <sample sid="2091" class="game.equipment.Gem" name="八级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="800" type="1" quality="2" isCombin="2092" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,40,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2079,2103</ints>
+     </field>
+ </sample>
+ <sample sid="2092" class="game.equipment.Gem" name="九级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="900" type="1" quality="2" isCombin="2093" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,45,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2080,2104</ints>
+     </field>
+ </sample>
+ <sample sid="2093" class="game.equipment.Gem" name="十级破阵石·六合" salePrice="1" sortId="107"  maxNums="255" moneyType="3" moneyNums="1000" type="1" materialId="11007" quality="2" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,50,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2081,2105</ints>
+     </field>
+ </sample>
+ <sample sid="2096" class="game.equipment.Gem" name="一级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="100" type="1" quality="2" isCombin="2097" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2072,2084</ints>
+     </field>
+ </sample>
+ <sample sid="2097" class="game.equipment.Gem" name="二级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="200" type="1" quality="2" isCombin="2098" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2073,2085</ints>
+     </field>
+ </sample>
+ <sample sid="2098" class="game.equipment.Gem" name="三级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="300" type="1" quality="2" isCombin="2099" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2074,2086</ints>
+     </field>
+ </sample>
+ <sample sid="2099" class="game.equipment.Gem" name="四级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="400" type="1" quality="2" isCombin="2100" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,20,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2075,2087</ints>
+     </field>
+ </sample>
+ <sample sid="2100" class="game.equipment.Gem" name="五级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="500" type="1" quality="2" isCombin="2101" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,25,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2076,2088</ints>
+     </field>
+ </sample>
+ <sample sid="2101" class="game.equipment.Gem" name="六级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="600" type="1" quality="2" isCombin="2102" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,30,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2077,2089</ints>
+     </field>
+ </sample>
+ <sample sid="2102" class="game.equipment.Gem" name="七级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="700" type="1" quality="2" isCombin="2103" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,35,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2078,2090</ints>
+     </field>
+ </sample>
+ <sample sid="2103" class="game.equipment.Gem" name="八级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="800" type="1" quality="2" isCombin="2104" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,40,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2079,2091</ints>
+     </field>
+ </sample>
+ <sample sid="2104" class="game.equipment.Gem" name="九级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="900" type="1" quality="2" isCombin="2105" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,45,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2080,2092</ints>
+     </field>
+ </sample>
+ <sample sid="2105" class="game.equipment.Gem" name="十级破阵石·八荒" salePrice="1" sortId="108"  maxNums="255" moneyType="3" moneyNums="1000" type="1" materialId="11008" quality="2" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,50,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2081,2093</ints>
+     </field>
+ </sample>
+ <sample sid="2108" class="game.equipment.Gem" name="一级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="100" type="3" quality="3" isCombin="2109" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,9,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2120,2132</ints>
+     </field>
+ </sample>
+ <sample sid="2109" class="game.equipment.Gem" name="二级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="200" type="3" quality="3" isCombin="2110" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,18,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2121,2133</ints>
+     </field>
+ </sample>
+ <sample sid="2110" class="game.equipment.Gem" name="三级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="300" type="3" quality="3" isCombin="2111" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,27,0,0,0,0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2122,2134</ints>
+     </field>
+ </sample>
+ <sample sid="2111" class="game.equipment.Gem" name="四级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="400" type="3" quality="3" isCombin="2112" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,36,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2123,2135</ints>
+     </field>
+ </sample>
+ <sample sid="2112" class="game.equipment.Gem" name="五级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="500" type="3" quality="3" isCombin="2113" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,45,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2124,2136</ints>
+     </field>
+ </sample>
+ <sample sid="2113" class="game.equipment.Gem" name="六级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="600" type="3" quality="3" isCombin="2114" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,54,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2125,2137</ints>
+     </field>
+ </sample>
+ <sample sid="2114" class="game.equipment.Gem" name="七级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="700" type="3" quality="3" isCombin="2115" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,63,0,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2126,2138</ints>
+     </field>
+ </sample>
+ <sample sid="2115" class="game.equipment.Gem" name="八级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="800" type="3" quality="3" isCombin="2116" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,72,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2127,2139</ints>
+     </field>
+ </sample>
+ <sample sid="2116" class="game.equipment.Gem" name="九级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="900" type="3" quality="3" isCombin="2117" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,81,0,0,0,0,0,0,0,0,135,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2128,2140</ints>
+     </field>
+ </sample>
+ <sample sid="2117" class="game.equipment.Gem" name="十级乾坤石·破军" salePrice="1" sortId="109"  maxNums="255" moneyType="3" moneyNums="1000" type="3" materialId="11009" quality="3" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,90,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2129,2141</ints>
+     </field>
+ </sample>
+ <sample sid="2120" class="game.equipment.Gem" name="一级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="100" type="3" quality="3" isCombin="2121" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,9,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2108,2132</ints>
+     </field>
+ </sample>
+ <sample sid="2121" class="game.equipment.Gem" name="二级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="200" type="3" quality="3" isCombin="2122" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,18,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2109,2133</ints>
+     </field>
+ </sample>
+ <sample sid="2122" class="game.equipment.Gem" name="三级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="300" type="3" quality="3" isCombin="2123" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,27,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2110,2134</ints>
+     </field>
+ </sample>
+ <sample sid="2123" class="game.equipment.Gem" name="四级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="400" type="3" quality="3" isCombin="2124" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,36,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2111,2135</ints>
+     </field>
+ </sample>
+ <sample sid="2124" class="game.equipment.Gem" name="五级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="500" type="3" quality="3" isCombin="2125" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,45,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2112,2136</ints>
+     </field>
+ </sample>
+ <sample sid="2125" class="game.equipment.Gem" name="六级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="600" type="3" quality="3" isCombin="2126" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,54,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2113,2137</ints>
+     </field>
+ </sample>
+ <sample sid="2126" class="game.equipment.Gem" name="七级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="700" type="3" quality="3" isCombin="2127" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,63,0,0,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2114,2138</ints>
+     </field>
+ </sample>
+ <sample sid="2127" class="game.equipment.Gem" name="八级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="800" type="3" quality="3" isCombin="2128" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,72,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2115,2139</ints>
+     </field>
+ </sample>
+ <sample sid="2128" class="game.equipment.Gem" name="九级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="900" type="3" quality="3" isCombin="2129" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,81,0,0,0,0,0,0,0,0,0,135,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2116,2140</ints>
+     </field>
+ </sample>
+ <sample sid="2129" class="game.equipment.Gem" name="十级乾坤石·七杀" salePrice="1" sortId="110"  maxNums="255" moneyType="3" moneyNums="1000" type="3" materialId="11010" quality="3" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,90,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2117,2141</ints>
+     </field>
+ </sample>
+ <sample sid="2132" class="game.equipment.Gem" name="一级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="100" type="3" quality="3" isCombin="2133" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,9,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2108,2120</ints>
+     </field>
+ </sample>
+ <sample sid="2133" class="game.equipment.Gem" name="二级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="200" type="3" quality="3" isCombin="2134" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,18,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2109,2121</ints>
+     </field>
+ </sample>
+ <sample sid="2134" class="game.equipment.Gem" name="三级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="300" type="3" quality="3" isCombin="2135" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,27,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2110,2122</ints>
+     </field>
+ </sample>
+ <sample sid="2135" class="game.equipment.Gem" name="四级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="400" type="3" quality="3" isCombin="2136" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,36,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2111,2123</ints>
+     </field>
+ </sample>
+ <sample sid="2136" class="game.equipment.Gem" name="五级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="500" type="3" quality="3" isCombin="2137" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,45,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2112,2124</ints>
+     </field>
+ </sample>
+ <sample sid="2137" class="game.equipment.Gem" name="六级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="600" type="3" quality="3" isCombin="2138" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,54,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2113,2125</ints>
+     </field>
+ </sample>
+ <sample sid="2138" class="game.equipment.Gem" name="七级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="700" type="3" quality="3" isCombin="2139" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,63,0,0,0,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2114,2126</ints>
+     </field>
+ </sample>
+ <sample sid="2139" class="game.equipment.Gem" name="八级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="800" type="3" quality="3" isCombin="2140" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,72,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2115,2127</ints>
+     </field>
+ </sample>
+ <sample sid="2140" class="game.equipment.Gem" name="九级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="900" type="3" quality="3" isCombin="2141" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,81,0,0,0,0,0,0,0,0,0,0,135,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2116,2128</ints>
+     </field>
+ </sample>
+ <sample sid="2141" class="game.equipment.Gem" name="十级乾坤石·紫薇" salePrice="1" sortId="111"  maxNums="255" moneyType="3" moneyNums="1000" type="3" materialId="11011" quality="3" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,90,0,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ <field name="changesids" declared="1">
+     <ints>2117,2129</ints>
+     </field>
+ </sample>
+ <sample sid="2200" class="game.equipment.Gem" name="一级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="60" type="2" makeMaterialId="13000" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,600,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2201" class="game.equipment.Gem" name="二级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="70" type="2" makeMaterialId="13001" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,700,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2202" class="game.equipment.Gem" name="三级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="80" type="2" makeMaterialId="13002" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,800,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2203" class="game.equipment.Gem" name="四级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="90" type="2" makeMaterialId="13003" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,900,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2204" class="game.equipment.Gem" name="五级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="100" type="2" makeMaterialId="13004" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1100,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2205" class="game.equipment.Gem" name="六级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="110" type="2" makeMaterialId="13005" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1300,900,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2206" class="game.equipment.Gem" name="七级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="120" type="2" makeMaterialId="13006" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1500,1100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2207" class="game.equipment.Gem" name="八级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="130" type="2" makeMaterialId="13007" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1800,1400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2208" class="game.equipment.Gem" name="九级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="140" type="2" makeMaterialId="13008" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,2100,1700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2209" class="game.equipment.Gem" name="十级精炼天机石" salePrice="1" sortId="112"  maxNums="255" needNobilityLevel="150" type="2" makeMaterialId="13009" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,2400,2000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2250" class="game.equipment.Gem" name="一级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="60" type="0" makeMaterialId="13010" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,200,600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2251" class="game.equipment.Gem" name="二级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="70" type="0" makeMaterialId="13011" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,300,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2252" class="game.equipment.Gem" name="三级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="80" type="0" makeMaterialId="13012" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,400,800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2253" class="game.equipment.Gem" name="四级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="90" type="0" makeMaterialId="13013" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,500,900,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2254" class="game.equipment.Gem" name="五级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="100" type="0" makeMaterialId="13014" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,700,1100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2255" class="game.equipment.Gem" name="六级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="110" type="0" makeMaterialId="13015" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,900,1300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2256" class="game.equipment.Gem" name="七级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="120" type="0" makeMaterialId="13016" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1100,1500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2257" class="game.equipment.Gem" name="八级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="130" type="0" makeMaterialId="13017" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1400,1800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2258" class="game.equipment.Gem" name="九级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="140" type="0" makeMaterialId="13018" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,1700,2100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2259" class="game.equipment.Gem" name="十级精炼虎威石" salePrice="1" sortId="113"  maxNums="255" needNobilityLevel="150" type="0" makeMaterialId="13019" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,2000,2400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2300" class="game.equipment.Gem" name="一级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="60" type="1" makeMaterialId="13020" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,50,50,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2301" class="game.equipment.Gem" name="二级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="70" type="1" makeMaterialId="13021" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,55,55,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2302" class="game.equipment.Gem" name="三级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="80" type="1" makeMaterialId="13022" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,60,60,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2303" class="game.equipment.Gem" name="四级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="90" type="1" makeMaterialId="13023" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,65,65,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2304" class="game.equipment.Gem" name="五级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="100" type="1" makeMaterialId="13024" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2305" class="game.equipment.Gem" name="六级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="110" type="1" makeMaterialId="13025" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,85,85,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2306" class="game.equipment.Gem" name="七级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="120" type="1" makeMaterialId="13026" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,95,95,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2307" class="game.equipment.Gem" name="八级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="130" type="1" makeMaterialId="13027" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,110,110,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2308" class="game.equipment.Gem" name="九级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="140" type="1" makeMaterialId="13028" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,125,125,125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2309" class="game.equipment.Gem" name="十级精炼破阵石" salePrice="1" sortId="114"  maxNums="255" needNobilityLevel="150" type="1" makeMaterialId="13029" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,140,140,140,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2350" class="game.equipment.Gem" name="一级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="60" type="3" makeMaterialId="13030" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2351" class="game.equipment.Gem" name="二级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="70" type="3" makeMaterialId="13031" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2352" class="game.equipment.Gem" name="三级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="80" type="3" makeMaterialId="13032" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2353" class="game.equipment.Gem" name="四级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="90" type="3" makeMaterialId="13033" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2354" class="game.equipment.Gem" name="五级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="100" type="3" makeMaterialId="13034" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2355" class="game.equipment.Gem" name="六级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="110" type="3" makeMaterialId="13035" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,850,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2356" class="game.equipment.Gem" name="七级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="120" type="3" makeMaterialId="13036" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2357" class="game.equipment.Gem" name="八级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="130" type="3" makeMaterialId="13037" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,1200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2358" class="game.equipment.Gem" name="九级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="140" type="3" makeMaterialId="13038" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,1400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2359" class="game.equipment.Gem" name="十级精炼乾坤石" salePrice="1" sortId="115"  maxNums="255" needNobilityLevel="150" type="3" makeMaterialId="13039" quality="4" isRecover="1" isUse="1" >
+ <field name="atts" declared="1">
+     <floats>0,0,0,0,0,0,0,0,0,0,0,0,1650,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</floats>
+     </field>
+ </sample>
+ <sample sid="2500" class="game.equipment.Equipment" name="罗刹长剑" salePrice="64" sortId="1"  maxNums="1" location="4" needNobilityLevel="80" makeMaterialId="10080" quality="4" suitId="9" militaryId="0" leadSol="400" attack="1000" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2501" class="game.equipment.Equipment" name="罗刹胸铠" salePrice="65" sortId="1"  maxNums="1" location="2" needNobilityLevel="80" makeMaterialId="10081" quality="4" suitId="9" militaryId="0" leadSol="400" attack="1000" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2502" class="game.equipment.Equipment" name="罗刹头盔" salePrice="66" sortId="1"  maxNums="1" location="0" needNobilityLevel="80" makeMaterialId="10082" quality="4" suitId="9" militaryId="0" leadSol="400" attack="1000" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2503" class="game.equipment.Equipment" name="罗刹战靴" salePrice="67" sortId="1"  maxNums="1" location="7" needNobilityLevel="80" makeMaterialId="10083" quality="4" suitId="9" militaryId="0" power="1000" leadSol="400" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2504" class="game.equipment.Equipment" name="罗刹腿铠" salePrice="68" sortId="1"  maxNums="1" location="6" needNobilityLevel="80" makeMaterialId="10084" quality="4" suitId="9" militaryId="0" power="1000" leadSol="400" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2505" class="game.equipment.Equipment" name="罗刹腰带" salePrice="69" sortId="1"  maxNums="1" location="1" needNobilityLevel="80" makeMaterialId="10085" quality="4" suitId="9" militaryId="0" power="1000" leadSol="400" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2506" class="game.equipment.Equipment" name="罗刹披风" salePrice="70" sortId="1"  maxNums="1" location="3" needNobilityLevel="80" makeMaterialId="10086" quality="4" suitId="9" militaryId="0" leadSol="400" lead="30" force="30" wisdom="30" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2507" class="game.equipment.Equipment" name="罗刹挂坠" salePrice="71" sortId="1"  maxNums="1" location="5" needNobilityLevel="80" makeMaterialId="10087" quality="4" suitId="9" militaryId="0" leadSol="400" lead="30" force="30" wisdom="30" polishedMaterial="12008" skillMaxNum="4" skillSid="4" /> 
+ <sample sid="2508" class="game.equipment.Equipment" name="魔王·长剑" salePrice="72" sortId="1"  maxNums="1" location="4" needNobilityLevel="85" makeMaterialId="10080" quality="4" suitId="10" militaryId="0" leadSol="600" attack="1500" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2509" class="game.equipment.Equipment" name="魔王·胸铠" salePrice="73" sortId="1"  maxNums="1" location="2" needNobilityLevel="85" makeMaterialId="10081" quality="4" suitId="10" militaryId="0" leadSol="600" attack="1500" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2510" class="game.equipment.Equipment" name="魔王·头盔" salePrice="74" sortId="1"  maxNums="1" location="0" needNobilityLevel="85" makeMaterialId="10082" quality="4" suitId="10" militaryId="0" leadSol="600" attack="1500" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2511" class="game.equipment.Equipment" name="魔王·战靴" salePrice="75" sortId="1"  maxNums="1" location="7" needNobilityLevel="85" makeMaterialId="10083" quality="4" suitId="10" militaryId="0" power="1500" leadSol="600" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2512" class="game.equipment.Equipment" name="魔王·腿铠" salePrice="76" sortId="1"  maxNums="1" location="6" needNobilityLevel="85" makeMaterialId="10084" quality="4" suitId="10" militaryId="0" power="1500" leadSol="600" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2513" class="game.equipment.Equipment" name="魔王·腰带" salePrice="77" sortId="1"  maxNums="1" location="1" needNobilityLevel="85" makeMaterialId="10085" quality="4" suitId="10" militaryId="0" power="1500" leadSol="600" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2514" class="game.equipment.Equipment" name="魔王·披风" salePrice="78" sortId="1"  maxNums="1" location="3" needNobilityLevel="85" makeMaterialId="10086" quality="4" suitId="10" militaryId="0" leadSol="600" lead="60" force="60" wisdom="60" polishedMaterial="12008" skillMaxNum="4" skillSid="4" />
+ <sample sid="2515" class="game.equipment.Equipment" name="魔王·挂坠" salePrice="79" sortId="1"  maxNums="1" location="5" needNobilityLevel="85" makeMaterialId="10087" quality="4" suitId="10" militaryId="0" leadSol="600" lead="60" force="60" wisdom="60" polishedMaterial="12008" skillMaxNum="4" skillSid="4" /> 
+ <sample sid="2516" class="game.equipment.HorseEquipment" name="地狱马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" leadSol="6000" lead="650" force="650" wisdom="650" />
+ <sample sid="3000" class="game.prop.GiftPackage" name="白色装备箱" salePrice="1" sortId="200"  maxNums="255" quality="0" awardSid="6100" isUse="1" />
+ <sample sid="3001" class="game.prop.GiftPackage" name="白色材料包" salePrice="1" sortId="200"  maxNums="255" quality="0" awardSid="6101" isUse="1" />
+ <sample sid="3002" class="game.prop.GiftPackage" name="绿色装备箱" salePrice="1" sortId="200"  maxNums="255" quality="1" awardSid="6102" isUse="1" />
+ <sample sid="3003" class="game.prop.GiftPackage" name="绿色材料包" salePrice="1" sortId="200"  maxNums="255" quality="1" awardSid="6103" isUse="1" />
+ <sample sid="3004" class="game.prop.GiftPackage" name="蓝色装备箱" salePrice="1" sortId="200"  maxNums="255" quality="2" awardSid="6104" isUse="1" />
+ <sample sid="3005" class="game.prop.GiftPackage" name="蓝色材料包" salePrice="1" sortId="200"  maxNums="255" quality="2" awardSid="6105" isUse="1" />
+ <sample sid="3006" class="game.prop.GiftPackage" name="紫色装备箱" salePrice="1" sortId="200"  maxNums="255" quality="3" awardSid="6106" isUse="1" />
+ <sample sid="3007" class="game.prop.GiftPackage" name="紫色材料包" salePrice="1" sortId="200"  maxNums="255" quality="3" awardSid="6107" isUse="1" />
+ <sample sid="3008" class="game.prop.GiftPackage" name="橙色装备箱" salePrice="1" sortId="200"  maxNums="255" quality="4" awardSid="6108" isUse="1" />
+ <sample sid="3009" class="game.prop.GiftPackage" name="橙色材料箱" salePrice="1" sortId="200"  maxNums="255" quality="4" awardSid="6109" isUse="1" />
+ <sample sid="3100" class="game.prop.GiftPackage" name="一级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="1" awardSid="6200" isUse="1" />
+ <sample sid="3101" class="game.prop.GiftPackage" name="二级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="1" awardSid="6201" isUse="1" />
+ <sample sid="3102" class="game.prop.GiftPackage" name="三级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="2" awardSid="6202" isUse="1" />
+ <sample sid="3103" class="game.prop.GiftPackage" name="四级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="2" awardSid="6203" isUse="1" />
+ <sample sid="3104" class="game.prop.GiftPackage" name="五级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="3" awardSid="6204" isUse="1" />
+ <sample sid="3105" class="game.prop.GiftPackage" name="六级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="3" awardSid="6205" isUse="1" />
+ <sample sid="3106" class="game.prop.GiftPackage" name="七级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="4" awardSid="6206" isUse="1" />
+ <sample sid="3107" class="game.prop.GiftPackage" name="八级宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="4" awardSid="6207" isUse="1" />
+ <sample sid="3108" class="game.prop.GiftPackage" name="珍品宝石箱" salePrice="1" sortId="201"  maxNums="200" quality="4" awardSid="6208" isUse="1" />
+ <sample sid="3109" class="game.prop.GiftPackage" name="都尉宝箱" salePrice="1" sortId="203"  maxNums="255" quality="3" awardSid="6110" isUse="1" />
+ <sample sid="3110" class="game.prop.GiftPackage" name="先锋宝箱" salePrice="1" sortId="203"  maxNums="255" quality="3" awardSid="6111" isUse="1" />
+ <sample sid="3111" class="game.prop.GiftPackage" name="征讨将军宝箱" salePrice="1" sortId="203"  maxNums="255" quality="3" awardSid="6112" isUse="1" />
+ <sample sid="3112" class="game.prop.GiftPackage" name="五官中郎将宝箱" salePrice="1" sortId="203"  maxNums="255" quality="3" awardSid="6113" isUse="1" />
+ <sample sid="3113" class="game.prop.GiftPackage" name="御史中丞宝箱" salePrice="1" sortId="203"  maxNums="255" quality="4" awardSid="6114" isUse="1" />
+ <sample sid="3114" class="game.prop.GiftPackage" name="执金吾宝箱" salePrice="1" sortId="203"  maxNums="255" quality="4" awardSid="6115" isUse="1" />
+ <sample sid="3115" class="game.prop.GiftPackage" name="甄姬武将卡" salePrice="1" sortId="204"  maxNums="255" quality="3" awardSid="6116" isUse="1" />
+ <sample sid="3116" class="game.prop.GiftPackage" name="吕布武将卡" salePrice="1" sortId="204"  maxNums="255" quality="4" awardSid="6117" isUse="1" />
+ <sample sid="3117" class="game.prop.GiftPackage" name="貂蝉武将卡" salePrice="1" sortId="204"  maxNums="255" quality="4" awardSid="6118" isUse="1" />
+ <sample sid="3118" class="game.prop.GiftPackage" name="南华武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6119" isUse="1" />
+ <sample sid="3119" class="game.prop.GiftPackage" name="左慈武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6120" isUse="1" />
+ <sample sid="3120" class="game.prop.GiftPackage" name="于吉武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6121" isUse="1" />
+ <sample sid="3121" class="game.prop.GiftPackage" name="武卒套装箱" salePrice="1" sortId="204"  maxNums="255" quality="1" awardSid="6122" isUse="1" />
+ <sample sid="3122" class="game.prop.GiftPackage" name="精兵套装箱" salePrice="1" sortId="204"  maxNums="255" quality="2" awardSid="6123" isUse="1" />
+ <sample sid="3123" class="game.prop.GiftPackage" name="都尉套装箱" salePrice="1" sortId="204"  maxNums="255" quality="3" awardSid="6124" isUse="1" />
+ <sample sid="3124" class="game.prop.GiftPackage" name="先锋套装箱" salePrice="1" sortId="204"  maxNums="255" quality="3" awardSid="6125" isUse="1" />
+ <sample sid="3125" class="game.prop.GiftPackage" name="祝融武将卡" salePrice="1" sortId="204"  maxNums="255" quality="3" awardSid="6126" isUse="1" />
+ <sample sid="3126" class="game.prop.GiftPackage" name="孙策武将卡" salePrice="1" sortId="204"  maxNums="255" quality="3" awardSid="6127" isUse="1" />
+ <sample sid="3127" class="game.prop.GiftPackage" name="五官中郎将套装箱" salePrice="1" sortId="204"  maxNums="255" quality="3" awardSid="6128" isUse="1" />
+ <sample sid="3128" class="game.prop.GiftPackage" name="罗刹套装箱" salePrice="1" sortId="203"  maxNums="255" quality="5" awardSid="6633" isUse="1" />
+ <sample sid="3129" class="game.prop.GiftPackage" name="典韦武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6634" isUse="1" />
+ <sample sid="3130" class="game.prop.GiftPackage" name="赵云武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6635" isUse="1" />
+ <sample sid="3131" class="game.prop.GiftPackage" name="孙权武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6636" isUse="1" />
+ <sample sid="3132" class="game.prop.GiftPackage" name="新服豪礼" salePrice="1" sortId="302"  maxNums="200" quality="5" awardSid="6637" isUse="1" />
+ <sample sid="3133" class="game.prop.GiftPackage" name="七级精炼礼包" salePrice="1" sortId="200"  maxNums="200" quality="5" awardSid="6638" />
+ <sample sid="3134" class="game.prop.GiftPackage" name="九级精炼礼包" salePrice="1" sortId="200"  maxNums="200" quality="5" awardSid="6639" />
+ <sample sid="3135" class="game.prop.GiftPackage" name="充值综合包" salePrice="1" sortId="200"  maxNums="200" quality="5" awardSid="6640" />
+ <sample sid="3136" class="game.prop.GiftPackage" name="魔王·吕布武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6641" isUse="1" />
+ <sample sid="3137" class="game.prop.GiftPackage" name="魔王·关羽武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6642" isUse="1" />
+ <sample sid="3138" class="game.prop.GiftPackage" name="魔王·貂蝉武将卡" salePrice="1" sortId="204"  maxNums="255" quality="5" awardSid="6643" isUse="1" />
+ <sample sid="3139" class="game.prop.GiftPackage" name="魔王套装箱" salePrice="1" sortId="203"  maxNums="255" quality="5" awardSid="6644" isUse="1" />
+ <sample sid="3140" class="game.prop.GiftPackage" name="五级精炼礼包" salePrice="1" sortId="200"  maxNums="200" quality="5" awardSid="6645" />
+ <sample sid="3141" class="game.prop.GiftPackage" name="地狱马礼包" salePrice="1" sortId="200"  maxNums="200" quality="5" awardSid="6646" />
+ <sample sid="3200" class="game.prop.GiftPackage" name="一品沉木宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6301" />
+ <sample sid="3201" class="game.prop.GiftPackage" name="三品沉木宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6302" />
+ <sample sid="3202" class="game.prop.GiftPackage" name="一品陨铁宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6303" />
+ <sample sid="3203" class="game.prop.GiftPackage" name="三品陨铁宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6304" />
+ <sample sid="3204" class="game.prop.GiftPackage" name="一品丝绸宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6305" />
+ <sample sid="3205" class="game.prop.GiftPackage" name="三品丝绸宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6306" />
+ <sample sid="3206" class="game.prop.GiftPackage" name="一品金玉宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6307" />
+ <sample sid="3207" class="game.prop.GiftPackage" name="三品金玉宝盒" salePrice="1" sortId="200"  maxNums="200" quality="1" awardSid="6308" />
+ <sample sid="3301" class="game.prop.GiftPackage" name="天机宝石箱" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6401" />
+ <sample sid="3302" class="game.prop.GiftPackage" name="虎威宝石箱" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6402" />
+ <sample sid="3303" class="game.prop.GiftPackage" name="破阵宝石箱" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6403" />
+ <sample sid="3304" class="game.prop.GiftPackage" name="乾坤宝石箱" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6404" />
+ <sample sid="3305" class="game.prop.GiftPackage" name="神器碎片宝盒" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6405" />
+ <sample sid="3306" class="game.prop.GiftPackage" name="荣誉宝箱" salePrice="1" sortId="205"  maxNums="200" quality="4" awardSid="6500" />
+ <sample sid="3307" class="game.prop.GiftPackage" name="行军令包" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6501" />
+ <sample sid="3308" class="game.prop.GiftPackage" name="叫阵卡包" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6502" />
+ <sample sid="3309" class="game.prop.GiftPackage" name="竹叶青礼包" salePrice="1" sortId="205"  maxNums="200" quality="1" awardSid="6503" />
+ <sample sid="3310" class="game.prop.GiftPackage" name="状元红礼包" salePrice="1" sortId="205"  maxNums="200" quality="2" awardSid="6504" />
+ <sample sid="3311" class="game.prop.GiftPackage" name="帝王丝绸礼包" salePrice="1" sortId="205"  maxNums="200" quality="3" awardSid="6505" />
+ <sample sid="3312" class="game.prop.GiftPackage" name="夜光杯礼包" salePrice="1" sortId="205"  maxNums="200" quality="4" awardSid="6506" />
+ <sample sid="3313" class="game.prop.GiftPackage" name="帝王贡品箱" salePrice="1" sortId="206"  maxNums="200" quality="4" awardSid="6507" />
+ <sample sid="3314" class="game.prop.GiftPackage" name="亲王贡品箱" salePrice="1" sortId="206"  maxNums="200" quality="3" awardSid="6508" />
+ <sample sid="3315" class="game.prop.GiftPackage" name="王侯贡品箱" salePrice="1" sortId="206"  maxNums="200" quality="3" awardSid="6509" />
+ <sample sid="3316" class="game.prop.GiftPackage" name="英雄贡品箱" salePrice="1" sortId="206"  maxNums="200" quality="3" awardSid="6510" />
+ <sample sid="3317" class="game.prop.GiftPackage" name="群雄贡品箱" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6511" />
+ <sample sid="3318" class="game.prop.GiftPackage" name="豪杰贡品箱" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6512" />
+ <sample sid="3401" class="game.prop.GiftPackage" name="黄巾余党第1名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6600" />
+ <sample sid="3402" class="game.prop.GiftPackage" name="黄巾余党第2-3名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6601" />
+ <sample sid="3403" class="game.prop.GiftPackage" name="黄巾余党第4-5名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6602" />
+ <sample sid="3410" class="game.prop.GiftPackage" name="黄巾余党第6-10名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6603" />
+ <sample sid="3411" class="game.prop.GiftPackage" name="黄巾余党第11-20名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6604" />
+ <sample sid="3412" class="game.prop.GiftPackage" name="黄巾余党第21-30名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6605" />
+ <sample sid="3413" class="game.prop.GiftPackage" name="黄巾余党第31-50名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6606" />
+ <sample sid="3414" class="game.prop.GiftPackage" name="黄巾余党第51-100名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6607" />
+ <sample sid="3415" class="game.prop.GiftPackage" name="黄巾余党第101-500名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6608" />
+ <sample sid="3416" class="game.prop.GiftPackage" name="备用" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="6614" />
+ <sample sid="3501" class="game.prop.GiftPackage" name="朝贡第1名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9004" />
+ <sample sid="3502" class="game.prop.GiftPackage" name="朝贡第2名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9005" />
+ <sample sid="3503" class="game.prop.GiftPackage" name="朝贡第3名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9006" />
+ <sample sid="3504" class="game.prop.GiftPackage" name="朝贡前10名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9007" />
+ <sample sid="3505" class="game.prop.GiftPackage" name="朝贡10名后奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9008" />
+ <sample sid="3506" class="game.prop.GiftPackage" name="朝贡胜利奖" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9009" />
+ <sample sid="3507" class="game.prop.GiftPackage" name="朝贡参与奖" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9003" />
+ <sample sid="3508" class="game.prop.GiftPackage" name="迎天子第1名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9010" />
+ <sample sid="3509" class="game.prop.GiftPackage" name="迎天子第2名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9011" />
+ <sample sid="3510" class="game.prop.GiftPackage" name="迎天子第3名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9012" />
+ <sample sid="3511" class="game.prop.GiftPackage" name="迎天子前10名奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9013" />
+ <sample sid="3512" class="game.prop.GiftPackage" name="迎天子每日奖励" salePrice="1" sortId="206"  maxNums="200" quality="2" awardSid="9042" />
+ <sample sid="5000" class="game.prop.ExpProp" name="初级经验卷轴" salePrice="1" sortId="300"  maxNums="200" quality="0" exp="5000" isUse="1" />
+ <sample sid="5001" class="game.prop.ExpProp" name="中级经验卷轴" salePrice="1" sortId="300"  maxNums="200" quality="1" exp="20000" isUse="1" />
+ <sample sid="5002" class="game.prop.ExpProp" name="高级经验卷轴" salePrice="1" sortId="300"  maxNums="200" quality="2" exp="50000" isUse="1" />
+ <sample sid="5003" class="game.prop.ExpProp" name="超级经验卷轴" salePrice="1" sortId="300"  maxNums="200" quality="3" exp="200000" isUse="1" />
+ <sample sid="5100" class="game.prop.GiftPackage" name="白色战场宝箱" salePrice="1" sortId="301"  maxNums="200" quality="0" awardSid="6000" isUse="1" />
+ <sample sid="5101" class="game.prop.GiftPackage" name="绿色战场宝箱" salePrice="1" sortId="301"  maxNums="200" quality="1" awardSid="6001" isUse="1" />
+ <sample sid="5102" class="game.prop.GiftPackage" name="蓝色战场宝箱" salePrice="1" sortId="301"  maxNums="200" quality="2" awardSid="6002" isUse="1" />
+ <sample sid="5103" class="game.prop.GiftPackage" name="紫色战场宝箱" salePrice="1" sortId="301"  maxNums="200" quality="3" awardSid="6003" isUse="1" />
+ <sample sid="5104" class="game.prop.GiftPackage" name="橙色战场宝箱" salePrice="1" sortId="301"  maxNums="200" quality="4" awardSid="6004" isUse="1" />
+ <sample sid="5105" class="game.prop.GiftPackage" name="VIP1礼包" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6005" isUse="1" />
+ <sample sid="5106" class="game.prop.GiftPackage" name="VIP2礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6006" isUse="1" />
+ <sample sid="5107" class="game.prop.GiftPackage" name="VIP3礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6007" isUse="1" />
+ <sample sid="5108" class="game.prop.GiftPackage" name="VIP4礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6008" isUse="1" />
+ <sample sid="5109" class="game.prop.GiftPackage" name="VIP5礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6009" isUse="1" />
+ <sample sid="5110" class="game.prop.GiftPackage" name="VIP6礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6010" isUse="1" />
+ <sample sid="5111" class="game.prop.GiftPackage" name="VIP7礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6011" isUse="1" />
+ <sample sid="5112" class="game.prop.GiftPackage" name="VIP8礼包" salePrice="1" sortId="302"  maxNums="200" quality="4" awardSid="6012" isUse="1" />
+ <sample sid="5113" class="game.prop.GiftPackage" name="VIP9礼包" salePrice="1" sortId="302"  maxNums="200" quality="4" awardSid="6013" isUse="1" />
+ <sample sid="5114" class="game.prop.GiftPackage" name="VIP10礼包" salePrice="1" sortId="302"  maxNums="200" quality="4" awardSid="6014" isUse="1" />
+ <sample sid="5115" class="game.prop.GiftPackage" name="VIP11礼包" salePrice="1" sortId="302"  maxNums="200" quality="5" awardSid="6015" isUse="1" />
+ <sample sid="5116" class="game.prop.GiftPackage" name="VIP12礼包" salePrice="1" sortId="302"  maxNums="200" quality="5" awardSid="6016" isUse="1" />
+ <sample sid="5117" class="game.prop.GiftPackage" name="VIP资源包" salePrice="1" sortId="303"  maxNums="200" quality="1" awardSid="6017" isUse="1" />
+ <sample sid="5118" class="game.prop.GiftPackage" name="5分钟登陆礼包" salePrice="1" sortId="303"  maxNums="200" quality="1" awardSid="6018" isUse="1" />
+ <sample sid="5119" class="game.prop.GiftPackage" name="10分钟登陆礼包" salePrice="1" sortId="303"  maxNums="200" quality="1" awardSid="6019" isUse="1" />
+ <sample sid="5120" class="game.prop.GiftPackage" name="20分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6020" isUse="1" />
+ <sample sid="5121" class="game.prop.GiftPackage" name="30分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6021" isUse="1" />
+ <sample sid="5122" class="game.prop.GiftPackage" name="60分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6022" isUse="1" />
+ <sample sid="5123" class="game.prop.GiftPackage" name="90分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6023" isUse="1" />
+ <sample sid="5124" class="game.prop.GiftPackage" name="120分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6024" isUse="1" />
+ <sample sid="5130" class="game.prop.GiftPackage" name="180分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6030" isUse="1" />
+ <sample sid="5131" class="game.prop.GiftPackage" name="240分钟登陆礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6031" isUse="1" />
+ <sample sid="5125" class="game.prop.GiftPackage" name="木材资源包（小）" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6025" isUse="1" />
+ <sample sid="5126" class="game.prop.GiftPackage" name="钱币资源包（小）" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6026" isUse="1" />
+ <sample sid="5127" class="game.prop.GiftPackage" name="粮食资源包（小）" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6027" isUse="1" />
+ <sample sid="5128" class="game.prop.GiftPackage" name="铁锭资源包（小）" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6028" isUse="1" />
+ <sample sid="5132" class="game.prop.GiftPackage" name="初级经验卷轴（捆）" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6032" isUse="1" />
+ <sample sid="5133" class="game.prop.GiftPackage" name="功勋令牌" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6033" isUse="1" />
+ <sample sid="5129" class="game.prop.GiftPackage" name="首冲礼包（极品）" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6029" isUse="1" />
+ <sample sid="6000" class="game.prop.GiftPackage" name="征募令宝箱" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20000" isUse="1" />
+ <sample sid="6001" class="game.prop.GiftPackage" name="基础资源宝箱" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20001" isUse="1" />
+ <sample sid="6002" class="game.prop.GiftPackage" name="人力资源宝箱" salePrice="10" sortId="304"  maxNums="200" quality="4" awardSid="20002" isUse="1" />
+ <sample sid="6003" class="game.prop.GiftPackage" name="累计充值20礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20003" isUse="1" />
+ <sample sid="6004" class="game.prop.GiftPackage" name="累计充值50礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20004" isUse="1" />
+ <sample sid="6005" class="game.prop.GiftPackage" name="累计充值100礼包" salePrice="10" sortId="304"  maxNums="200" quality="4" awardSid="20005" isUse="1" />
+ <sample sid="6006" class="game.prop.GiftPackage" name="累计充值300礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20006" isUse="1" />
+ <sample sid="6007" class="game.prop.GiftPackage" name="累计充值600礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20007" isUse="1" />
+ <sample sid="6008" class="game.prop.GiftPackage" name="累计充值1000礼包" salePrice="10" sortId="304"  maxNums="200" quality="4" awardSid="20008" isUse="1" />
+ <sample sid="6009" class="game.prop.GiftPackage" name="累计充值2000礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20009" isUse="1" />
+ <sample sid="6010" class="game.prop.GiftPackage" name="累计充值5000礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20010" isUse="1" />
+ <sample sid="6011" class="game.prop.GiftPackage" name="单笔充值100礼包" salePrice="10" sortId="304"  maxNums="200" quality="4" awardSid="20011" isUse="1" />
+ <sample sid="6012" class="game.prop.GiftPackage" name="单笔充值500礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20012" isUse="1" />
+ <sample sid="6013" class="game.prop.GiftPackage" name="单笔充值1000礼包" salePrice="10" sortId="304"  maxNums="200" quality="4" awardSid="20013" isUse="1" />
+ <sample sid="6014" class="game.prop.GiftPackage" name="单笔充值3000礼包" salePrice="10" sortId="303"  maxNums="200" quality="4" awardSid="20014" isUse="1" />
+ <sample sid="7000" class="game.prop.SoldierCard" name="轻步兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="1" soldierSid="22" soldierNum="1000" isUse="1" />
+ <sample sid="7001" class="game.prop.SoldierCard" name="轻骑兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="1" soldierSid="23" soldierNum="1000" isUse="1" />
+ <sample sid="7002" class="game.prop.SoldierCard" name="轻弓兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="1" soldierSid="4" soldierNum="1000" isUse="1" />
+ <sample sid="7003" class="game.prop.SoldierCard" name="青州精卒虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="6" soldierNum="1000" isUse="1" />
+ <sample sid="7004" class="game.prop.SoldierCard" name="无当飞军虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="7" soldierNum="1000" isUse="1" />
+ <sample sid="7005" class="game.prop.SoldierCard" name="丹阳虎贲虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="3" soldierNum="1000" isUse="1" />
+ <sample sid="7006" class="game.prop.SoldierCard" name="虎卫军士虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="8" soldierNum="1000" isUse="1" />
+ <sample sid="7007" class="game.prop.SoldierCard" name="虎豹突骑虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="9" soldierNum="1000" isUse="1" />
+ <sample sid="7008" class="game.prop.SoldierCard" name="元戒弩兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="10" soldierNum="1000" isUse="1" />
+ <sample sid="7009" class="game.prop.SoldierCard" name="白耳精兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="1" soldierNum="1000" isUse="1" />
+ <sample sid="7010" class="game.prop.SoldierCard" name="大戟悍士虎符" salePrice="10" sortId="304"  maxNums="200" quality="2" soldierSid="2" soldierNum="1000" isUse="1" />
+ <sample sid="7011" class="game.prop.SoldierCard" name="先登死士虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="11" soldierNum="1000" isUse="1" />
+ <sample sid="7012" class="game.prop.SoldierCard" name="飞熊骠骑虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="12" soldierNum="1000" isUse="1" />
+ <sample sid="7013" class="game.prop.SoldierCard" name="山越弓手虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="16" soldierNum="1000" isUse="1" />
+ <sample sid="7014" class="game.prop.SoldierCard" name="白马义从虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="13" soldierNum="1000" isUse="1" />
+ <sample sid="7015" class="game.prop.SoldierCard" name="南蛮象兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="17" soldierNum="1000" isUse="1" />
+ <sample sid="7016" class="game.prop.SoldierCard" name="陷阵重步虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="20" soldierNum="1000" isUse="1" />
+ <sample sid="7017" class="game.prop.SoldierCard" name="锦帆悍卒虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="15" soldierNum="1000" isUse="1" />
+ <sample sid="7018" class="game.prop.SoldierCard" name="并州狼骑虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="14" soldierNum="1000" isUse="1" />
+ <sample sid="7019" class="game.prop.SoldierCard" name="西凉铁骑虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="18" soldierNum="1000" isUse="1" />
+ <sample sid="7020" class="game.prop.SoldierCard" name="藤甲蛮兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="19" soldierNum="1000" isUse="1" />
+ <sample sid="7021" class="game.prop.SoldierCard" name="虎贲甲士虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="5" soldierNum="1000" isUse="1" />
+ <sample sid="7022" class="game.prop.SoldierCard" name="解烦弩兵虎符" salePrice="10" sortId="304"  maxNums="200" quality="3" soldierSid="21" soldierNum="1000" isUse="1" />
+ <sample sid="8000" class="game.prop.GiftPackage" name="小袋粮食" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7000" isUse="1" />
+ <sample sid="8001" class="game.prop.GiftPackage" name="大袋粮食" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7001" isUse="1" />
+ <sample sid="8002" class="game.prop.GiftPackage" name="粮食资源包（小）" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7002" isUse="1" />
+ <sample sid="8003" class="game.prop.GiftPackage" name="粮食资源包（中）" salePrice="10" sortId="206"  maxNums="200" quality="2" awardSid="7003" isUse="1" />
+ <sample sid="8004" class="game.prop.GiftPackage" name="粮食资源包（大）" salePrice="10" sortId="206"  maxNums="200" quality="3" awardSid="7004" isUse="1" />
+ <sample sid="8005" class="game.prop.GiftPackage" name="小袋钱币" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7005" isUse="1" />
+ <sample sid="8006" class="game.prop.GiftPackage" name="大袋钱币" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7006" isUse="1" />
+ <sample sid="8007" class="game.prop.GiftPackage" name="钱币资源包（小）" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7007" isUse="1" />
+ <sample sid="8008" class="game.prop.GiftPackage" name="钱币资源包（中）" salePrice="10" sortId="206"  maxNums="200" quality="2" awardSid="7008" isUse="1" />
+ <sample sid="8009" class="game.prop.GiftPackage" name="钱币资源包（大）" salePrice="10" sortId="206"  maxNums="200" quality="3" awardSid="7009" isUse="1" />
+ <sample sid="8010" class="game.prop.GiftPackage" name="小袋铁锭" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7010" isUse="1" />
+ <sample sid="8011" class="game.prop.GiftPackage" name="大袋铁锭" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7011" isUse="1" />
+ <sample sid="8012" class="game.prop.GiftPackage" name="铁锭资源包（小）" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7012" isUse="1" />
+ <sample sid="8013" class="game.prop.GiftPackage" name="铁锭资源包（中）" salePrice="10" sortId="206"  maxNums="200" quality="2" awardSid="7013" isUse="1" />
+ <sample sid="8014" class="game.prop.GiftPackage" name="铁锭资源包（大）" salePrice="10" sortId="206"  maxNums="200" quality="3" awardSid="7014" isUse="1" />
+ <sample sid="8015" class="game.prop.GiftPackage" name="小袋木材" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7015" isUse="1" />
+ <sample sid="8016" class="game.prop.GiftPackage" name="大袋木材" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7016" isUse="1" />
+ <sample sid="8017" class="game.prop.GiftPackage" name="木材资源包（小）" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7017" isUse="1" />
+ <sample sid="8018" class="game.prop.GiftPackage" name="木材资源包（中）" salePrice="10" sortId="206"  maxNums="200" quality="2" awardSid="7018" isUse="1" />
+ <sample sid="8019" class="game.prop.GiftPackage" name="木材资源包（大）" salePrice="10" sortId="206"  maxNums="200" quality="3" awardSid="7019" isUse="1" />
+ <sample sid="8020" class="game.prop.GiftPackage" name="小资源包" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7020" isUse="1" />
+ <sample sid="8021" class="game.prop.GiftPackage" name="大资源包" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7021" isUse="1" />
+ <sample sid="8022" class="game.prop.GiftPackage" name="超级资源包" salePrice="10" sortId="206"  maxNums="200" quality="1" awardSid="7022" isUse="1" />
+ <sample sid="8023" class="game.prop.GiftPackage" name="军械卡（小）" salePrice="10" sortId="207"  maxNums="200" quality="2" awardSid="7023" isUse="1" />
+ <sample sid="8024" class="game.prop.GiftPackage" name="军械卡（大）" salePrice="10" sortId="207"  maxNums="200" quality="3" awardSid="7024" isUse="1" />
+ <sample sid="8025" class="game.prop.GiftPackage" name="训练卡（小）" salePrice="10" sortId="207"  maxNums="200" quality="1" awardSid="7025" isUse="1" />
+ <sample sid="8026" class="game.prop.GiftPackage" name="训练卡（大）" salePrice="10" sortId="207"  maxNums="200" quality="2" awardSid="7026" isUse="1" />
+ <sample sid="8027" class="game.prop.GiftPackage" name="文化卡（小）" salePrice="10" sortId="207"  maxNums="200" quality="1" awardSid="7027" isUse="1" />
+ <sample sid="8028" class="game.prop.GiftPackage" name="文化卡（大）" salePrice="10" sortId="207"  maxNums="200" quality="2" awardSid="7028" isUse="1" />
+ <sample sid="8029" class="game.prop.GiftPackage" name="劳役卡（小）" salePrice="10" sortId="207"  maxNums="200" quality="1" awardSid="7029" isUse="1" />
+ <sample sid="8030" class="game.prop.GiftPackage" name="劳役卡（大）" salePrice="10" sortId="207"  maxNums="200" quality="2" awardSid="7030" isUse="1" />
+ <sample sid="8031" class="game.prop.GiftPackage" name="征募令（小）" salePrice="10" sortId="207"  maxNums="200" quality="1" awardSid="7031" isUse="1" />
+ <sample sid="8032" class="game.prop.GiftPackage" name="征募令（中）" salePrice="10" sortId="207"  maxNums="200" quality="2" awardSid="7032" isUse="1" />
+ <sample sid="8033" class="game.prop.GiftPackage" name="征募令（大）" salePrice="10" sortId="207"  maxNums="200" quality="3" awardSid="7033" isUse="1" />
+ <sample sid="8034" class="game.prop.GiftPackage" name="功勋令牌" salePrice="10" sortId="207"  maxNums="200" quality="3" awardSid="7034" isUse="1" />
+ <sample sid="8035" class="game.prop.GiftPackage" name="功勋令牌（大）" salePrice="10" sortId="207"  maxNums="200" quality="3" awardSid="7035" isUse="1" />
+ <sample sid="8036" class="game.prop.GiftPackage" name="至尊资源包" salePrice="10" sortId="207"  maxNums="200" quality="4" awardSid="7036" isUse="1" />
+ <sample sid="20000" class="game.prop.LocalGift" name="可变礼包" salePrice="10" sortId="207"  maxNums="1" quality="1" isUse="1" icon="baoxiang" />
+ <sample sid="60000" class="game.prop.FightScoreGiftPackage" name="默认档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8001:40,8007:60" awardNum="1" />
+ <sample sid="60001" class="game.prop.FightScoreGiftPackage" name="第2档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8001:20,8007:40,8012:20,8015:20" awardNum="1" />
+ <sample sid="60002" class="game.prop.FightScoreGiftPackage" name="第3档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8002:15,8008:30,8012:15,8015:15,8004:15,8018:10" awardNum="1" />
+ <sample sid="60003" class="game.prop.FightScoreGiftPackage" name="第4档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8000:5,8002:15,8008:25,8013:15,8016:15,8004:15,8018:10" awardNum="1" />
+ <sample sid="60004" class="game.prop.FightScoreGiftPackage" name="第5档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8000:5,8002:15,8008:20,8013:15,8016:15,8005:10,8018:10,8010:10" awardNum="1" />
+ <sample sid="60005" class="game.prop.FightScoreGiftPackage" name="第6档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8000:5,8002:15,8008:20,8013:15,8016:15,8005:10,8019:10,8010:10" awardNum="1" />
+ <sample sid="60006" class="game.prop.FightScoreGiftPackage" name="第7档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" randomAwardSid="8000:5,8003:15,8006:10,8009:20,8011:10,8014:10,8017:20,8019:10" awardNum="1" />
+ <sample sid="60007" class="game.prop.FightScoreGiftPackage" name="第8档每日功勋榜奖励" salePrice="10" sortId="10000"  maxNums="200" quality="1" isUse="1" awardNum="1" />
+ <sample sid="33" class="game.prop.Prop" name="先锋套装打造图纸" salePrice="30" sortId="1006"  maxNums="255" materialId="11012" quality="3" isUse="0" />
+ <sample sid="34" class="game.prop.Prop" name="征讨套装打造图纸" salePrice="30" sortId="1007"  maxNums="255" materialId="11013" quality="3" isUse="0" />
+ <sample sid="35" class="game.prop.Prop" name="中郎将套装打造图纸" salePrice="30" sortId="1008"  maxNums="255" materialId="11014" quality="3" isUse="0" />
+ <sample sid="36" class="game.prop.Prop" name="执金吾套装打造图纸" salePrice="30" sortId="1009"  maxNums="255" materialId="11016" quality="4" isUse="0" />
+ <sample sid="37" class="game.prop.Prop" name="御史中丞套装打造图纸" salePrice="30" sortId="1010"  maxNums="255" materialId="11015" quality="4" isUse="0" />
+ <sample sid="38" class="game.prop.GiftPackage" name="虎符礼包" salePrice="1" sortId="1011"  maxNums="255" quality="2" awardSid="9020" isUse="1" />
+ <sample sid="39" class="game.prop.GiftPackage" name="征讨图纸套装包" salePrice="1" sortId="1012"  maxNums="255" quality="2" awardSid="9021" isUse="1" />
+ <sample sid="40" class="game.prop.GiftPackage" name="宝石优惠礼包" salePrice="1" sortId="1013"  maxNums="255" quality="2" awardSid="9022" isUse="1" />
+ <sample sid="41" class="game.prop.GiftPackage" name="资源大礼包" salePrice="1" sortId="1014"  maxNums="255" quality="2" awardSid="9023" isUse="1" />
+ <sample sid="42" class="game.prop.GiftPackage" name="行军叫阵英雄包" salePrice="1" sortId="1015"  maxNums="255" quality="2" awardSid="9024" isUse="1" />
+ <sample sid="43" class="game.prop.GiftPackage" name="攻城掠地补给包" salePrice="1" sortId="1016"  maxNums="255" quality="2" awardSid="9025" isUse="1" />
+ <sample sid="44" class="game.prop.GiftPackage" name="奇珍异宝箱" salePrice="1" sortId="1017"  maxNums="255" quality="2" awardSid="9026" isUse="1" />
+ <sample sid="45" class="game.prop.GiftPackage" name="国家援军包" salePrice="1" sortId="1018"  maxNums="255" quality="2" awardSid="9027" isUse="1" />
+ <sample sid="9000" class="game.equipment.HorseEquipment" name="骏马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="2" suitId="0" militaryId="0" />
+ <sample sid="9001" class="game.equipment.HorseEquipment" name="大宛马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" />
+ <sample sid="9002" class="game.equipment.HorseEquipment" name="西域马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" />
+ <sample sid="9003" class="game.equipment.HorseEquipment" name="铁骑马" salePrice="100" sortId="2"  maxNums="1" location="8" quality="3" suitId="0" militaryId="0" />
+ <sample sid="9004" class="game.equipment.HorseEquipment" name="追风" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="200" leadSol="200" attack="200" lead="20" force="20" wisdom="20" />
+ <sample sid="9005" class="game.equipment.HorseEquipment" name="逐月" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" power="300" leadSol="300" attack="300" lead="30" force="30" wisdom="30" />
+ <sample sid="9006" class="game.equipment.HorseEquipment" name="奔雷" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" />
+ <sample sid="9007" class="game.equipment.HorseEquipment" name="疾电" salePrice="100" sortId="2"  maxNums="1" location="8" quality="4" suitId="0" militaryId="0" />
+ <sample sid="9008" class="game.equipment.HorseEquipment" name="绝影" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" />
+ <sample sid="9009" class="game.equipment.HorseEquipment" name="的卢" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" />
+ <sample sid="9010" class="game.equipment.HorseEquipment" name="赤兔" salePrice="100" sortId="2"  maxNums="1" location="8" quality="5" suitId="0" militaryId="0" />
+ <sample sid="5500" class="game.prop.GiftPackage" name="VIP1每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="1" awardSid="6617" isUse="1" />
+ <sample sid="5501" class="game.prop.GiftPackage" name="VIP2每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6618" isUse="1" />
+ <sample sid="5502" class="game.prop.GiftPackage" name="VIP3每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6619" isUse="1" />
+ <sample sid="5503" class="game.prop.GiftPackage" name="VIP4每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="2" awardSid="6620" isUse="1" />
+ <sample sid="5504" class="game.prop.GiftPackage" name="VIP5每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6621" isUse="1" />
+ <sample sid="5505" class="game.prop.GiftPackage" name="VIP6每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6622" isUse="1" />
+ <sample sid="5506" class="game.prop.GiftPackage" name="VIP7每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6623" isUse="1" />
+ <sample sid="5507" class="game.prop.GiftPackage" name="VIP8每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="4" awardSid="6624" isUse="1" />
+ <sample sid="5508" class="game.prop.GiftPackage" name="VIP9每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="4" awardSid="6625" isUse="1" />
+ <sample sid="5509" class="game.prop.GiftPackage" name="VIP10每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="4" awardSid="6626" isUse="1" />
+ <sample sid="5510" class="game.prop.GiftPackage" name="VIP11每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="5" awardSid="6627" isUse="1" />
+ <sample sid="5511" class="game.prop.GiftPackage" name="VIP12每日礼包" salePrice="1" sortId="302"  maxNums="200" quality="5" awardSid="6628" isUse="1" />
+ <sample sid="5512" class="game.prop.GiftPackage" name="爵位大礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6629" isUse="1" />
+ <sample sid="5513" class="game.prop.GiftPackage" name="武将大礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6630" isUse="1" />
+ <sample sid="5514" class="game.prop.GiftPackage" name="vip超值大礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6631" isUse="1" />
+ <sample sid="5515" class="game.prop.GiftPackage" name="战力大礼包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="6632" isUse="1" />
+ <sample sid="5516" class="game.prop.GiftPackage" name="50个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9079" isUse="1" />
+ <sample sid="5517" class="game.prop.GiftPackage" name="100个初级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9080" isUse="1" />
+ <sample sid="5518" class="game.prop.GiftPackage" name="20个英雄令" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9081" isUse="1" />
+ <sample sid="5519" class="game.prop.GiftPackage" name="2个铁锭资源包（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9082" isUse="1" />
+ <sample sid="5520" class="game.prop.GiftPackage" name="50个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9083" isUse="1" />
+ <sample sid="5521" class="game.prop.GiftPackage" name="100个初级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9084" isUse="1" />
+ <sample sid="5522" class="game.prop.GiftPackage" name="50个功勋令牌" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9085" isUse="1" />
+ <sample sid="5523" class="game.prop.GiftPackage" name="20个蓝色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9086" isUse="1" />
+ <sample sid="5524" class="game.prop.GiftPackage" name="100个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9087" isUse="1" />
+ <sample sid="5525" class="game.prop.GiftPackage" name="8个先锋套装打造图纸" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9088" isUse="1" />
+ <sample sid="5526" class="game.prop.GiftPackage" name="100个功勋令牌" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9089" isUse="1" />
+ <sample sid="5527" class="game.prop.GiftPackage" name="40个英雄令" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9090" isUse="1" />
+ <sample sid="5528" class="game.prop.GiftPackage" name="200个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9091" isUse="1" />
+ <sample sid="5529" class="game.prop.GiftPackage" name="50个中级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9092" isUse="1" />
+ <sample sid="5530" class="game.prop.GiftPackage" name="1个五级天机石·锋锐" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9093" isUse="1" />
+ <sample sid="5531" class="game.prop.GiftPackage" name="1个五级虎威石.翻天" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9094" isUse="1" />
+ <sample sid="5532" class="game.prop.GiftPackage" name="50个绿色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9095" isUse="1" />
+ <sample sid="5533" class="game.prop.GiftPackage" name="60个英雄令" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9096" isUse="1" />
+ <sample sid="5534" class="game.prop.GiftPackage" name="1个五级破阵石.七星" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9097" isUse="1" />
+ <sample sid="5535" class="game.prop.GiftPackage" name="5个征募令（中）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9098" isUse="1" />
+ <sample sid="5536" class="game.prop.GiftPackage" name="100个绿色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9099" isUse="1" />
+ <sample sid="5537" class="game.prop.GiftPackage" name="1个五级乾坤石.紫薇" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9100" isUse="1" />
+ <sample sid="5538" class="game.prop.GiftPackage" name="5个铁锭资源包（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9101" isUse="1" />
+ <sample sid="5539" class="game.prop.GiftPackage" name="100个中级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9102" isUse="1" />
+ <sample sid="5540" class="game.prop.GiftPackage" name="150个绿色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9103" isUse="1" />
+ <sample sid="5541" class="game.prop.GiftPackage" name="15个功勋令牌（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9104" isUse="1" />
+ <sample sid="5542" class="game.prop.GiftPackage" name="10个征募令（中）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9105" isUse="1" />
+ <sample sid="5543" class="game.prop.GiftPackage" name="1个七级宝石箱" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9106" isUse="1" />
+ <sample sid="5544" class="game.prop.GiftPackage" name="1个八级天机石.锐锋" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9107" isUse="1" />
+ <sample sid="5545" class="game.prop.GiftPackage" name="1个八级破阵石.七星" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9108" isUse="1" />
+ <sample sid="5546" class="game.prop.GiftPackage" name="4个御史套装打造图纸" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9109" isUse="1" />
+ <sample sid="5547" class="game.prop.GiftPackage" name="5个至尊资源包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9110" isUse="1" />
+ <sample sid="5548" class="game.prop.GiftPackage" name="1个八级虎威石.镇海" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9111" isUse="1" />
+ <sample sid="5549" class="game.prop.GiftPackage" name="1个八级乾坤石.紫薇" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9112" isUse="1" />
+ <sample sid="5550" class="game.prop.GiftPackage" name="4个御史套装打造图纸" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9113" isUse="1" />
+ <sample sid="5551" class="game.prop.GiftPackage" name="100个高级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9114" isUse="1" />
+ <sample sid="5552" class="game.prop.GiftPackage" name="1个十级乾坤石.紫薇" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9115" isUse="1" />
+ <sample sid="5553" class="game.prop.GiftPackage" name="1个十级破阵石.七星" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9116" isUse="1" />
+ <sample sid="5554" class="game.prop.GiftPackage" name="20个征募令（中）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9117" isUse="1" />
+ <sample sid="5555" class="game.prop.GiftPackage" name="25个功勋令牌（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9118" isUse="1" />
+ <sample sid="5556" class="game.prop.GiftPackage" name="30个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9119" isUse="1" />
+ <sample sid="5557" class="game.prop.GiftPackage" name="50个初级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9120" isUse="1" />
+ <sample sid="5558" class="game.prop.GiftPackage" name="10个英雄令" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9121" isUse="1" />
+ <sample sid="5559" class="game.prop.GiftPackage" name="2个铁锭资源包（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9122" isUse="1" />
+ <sample sid="5560" class="game.prop.GiftPackage" name="50个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9123" isUse="1" />
+ <sample sid="5561" class="game.prop.GiftPackage" name="100个初级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9124" isUse="1" />
+ <sample sid="5562" class="game.prop.GiftPackage" name="20个功勋令牌" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9125" isUse="1" />
+ <sample sid="5563" class="game.prop.GiftPackage" name="20个蓝色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9126" isUse="1" />
+ <sample sid="5564" class="game.prop.GiftPackage" name="50个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9127" isUse="1" />
+ <sample sid="5565" class="game.prop.GiftPackage" name="50个功勋令牌" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9128" isUse="1" />
+ <sample sid="5566" class="game.prop.GiftPackage" name="2个铁锭资源包（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9129" isUse="1" />
+ <sample sid="5567" class="game.prop.GiftPackage" name="20个英雄令" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9130" isUse="1" />
+ <sample sid="5568" class="game.prop.GiftPackage" name="100个白色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9131" isUse="1" />
+ <sample sid="5569" class="game.prop.GiftPackage" name="30个中级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9132" isUse="1" />
+ <sample sid="5570" class="game.prop.GiftPackage" name="1个五级天机石·锋锐" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9133" isUse="1" />
+ <sample sid="5571" class="game.prop.GiftPackage" name="2个铁定资源包（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9134" isUse="1" />
+ <sample sid="5572" class="game.prop.GiftPackage" name="30个绿色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9135" isUse="1" />
+ <sample sid="5573" class="game.prop.GiftPackage" name="30个英雄令" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9136" isUse="1" />
+ <sample sid="5574" class="game.prop.GiftPackage" name="1个五级虎威石.翻天" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9137" isUse="1" />
+ <sample sid="5575" class="game.prop.GiftPackage" name="2个征募令（中）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9138" isUse="1" />
+ <sample sid="5576" class="game.prop.GiftPackage" name="50个绿色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9139" isUse="1" />
+ <sample sid="5577" class="game.prop.GiftPackage" name="3个铁锭资源包（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9140" isUse="1" />
+ <sample sid="5578" class="game.prop.GiftPackage" name="50个中级经验卷轴" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9141" isUse="1" />
+ <sample sid="5579" class="game.prop.GiftPackage" name="1个五级破阵石.七星" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9142" isUse="1" />
+ <sample sid="5580" class="game.prop.GiftPackage" name="100个绿色材料包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9143" isUse="1" />
+ <sample sid="5581" class="game.prop.GiftPackage" name="50个功勋令牌" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9144" isUse="1" />
+ <sample sid="5582" class="game.prop.GiftPackage" name="5个征募令（中）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9145" isUse="1" />
+ <sample sid="5583" class="game.prop.GiftPackage" name="1个五级宝石箱" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9146" isUse="1" />
+ <sample sid="5584" class="game.prop.GiftPackage" name="1个七级宝石箱" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9147" isUse="1" />
+ <sample sid="5585" class="game.prop.GiftPackage" name="1个七级宝石箱" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9148" isUse="1" />
+ <sample sid="5586" class="game.prop.GiftPackage" name="1个七级宝石箱" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9149" isUse="1" />
+ <sample sid="5587" class="game.prop.GiftPackage" name="3个至尊资源包" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9150" isUse="1" />
+ <sample sid="5588" class="game.prop.GiftPackage" name="1个七级乾坤石.破军" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9151" isUse="1" />
+ <sample sid="5589" class="game.prop.GiftPackage" name="1个七级破阵石.六合" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9152" isUse="1" />
+ <sample sid="5590" class="game.prop.GiftPackage" name="10个征募令（中）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9153" isUse="1" />
+ <sample sid="5591" class="game.prop.GiftPackage" name="10个功勋令牌（大）" salePrice="1" sortId="302"  maxNums="200" quality="3" awardSid="9154" isUse="1" />
+ </objects>

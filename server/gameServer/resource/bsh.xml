@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	
+<script language="BeanShell">
+<!-- 
+//脚本内容
+import zmyth.net.Session;
+import game.role.Player;
+import game.prop.Prop;
+import game.fight.*;
+		
+public void echo()
+{
+	Session session=manager.getSessionMap().get(String.valueOf(281483566645299l));
+	if(session!=null)
+	{
+		Player player=(Player)session.getSource();
+		System.out.println("name="+player.getName()+",adult="+player.getAdult());
+	}
+}
+echo();
+-->
+</script>
+</objects>

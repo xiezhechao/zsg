@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ahdg_game_log" default="project_svn_release">
+	<property file="build.cfg" />
+	<property name="server_zip_name" value="${basedir}/lib/zsg_log.zip" />
+	<condition property="isWindows">
+		<os family="windows" />
+	</condition>
+	<condition property="isUnix">
+		<os family="unix" />
+	</condition>
+	<target name="project_release">
+		<antcall target="server_compile" />
+		<antcall target="server_zip" />
+	</target>
+	<target name="project_svn_release">
+		<delete dir="${basedir}" excludes="log/,build.xml,deploy_config.xml,build.cfg,svn.bat,svn.sh,build.linux.xml,init.bat,ant.bat" includeemptydirs="true" />
+		<mkdir dir="${checkout_url}" />
+		<antcall target="project_checkout_linux" />
+		<antcall target="project_checkout_windows" />
+		<copy todir="${basedir}">
+			<fileset dir="${checkout_url}">
+				<include name="src/" />
+				<include name="resource/" />
+				<include name="excel/" />
+				<include name="log/" />
+				<include name="init/" />
+				<include name="lib/" />
+				<include name="db_init/" />
+				<include name="db_update/" />
+				<include name="initTemplate/" />
+				<include name="deploy_tools.jar" />
+				<exclude name="**/*.svn" />
+			</fileset>
+		</copy>
+		<antcall target="server_compile" />
+		<antcall target="server_zip" />
+		<delete dir="${basedir}/src" />
+		<delete dir="${checkout_url}" />
+	</target>
+	<target name="project_checkout_linux" if="isUnix">
+		<exec executable="/bin/bash" failonerror="true" output="ant.server.log">
+			<arg line="-c 'svn co --no-auth-cache ${svn_url}/${update_version}/logServer ${checkout_url} --username ${svn_user} --password ${svn_password}'" />
+		</exec>
+	</target>
+	<target name="project_checkout_windows" if="isWindows">
+		<exec executable="cmd" failonerror="true" output="ant.server.log">
+			<arg line="/c svn co ${svn_url}/${update_version}/logServer ${checkout_url} --username ${svn_user} --password ${svn_password}" />
+		</exec>
+	</target>
+	<target name="server_compile">
+		<javac srcdir="${basedir}/src" destdir="${basedir}/src" target="1.6" encoding="utf-8" optimize="true" failonerror="on" includeantruntime="on" debug="true">
+			<compilerarg value="-Xlint:unchecked" />
+			<classpath>
+				<fileset dir="${basedir}/lib">
+					<include name="**/*.zip" />
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+	<target name="server_zip">
+		<zip basedir="${basedir}/src/" destfile="${server_zip_name}" excludes="**/*.java">
+		</zip>
+	</target>
+</project>

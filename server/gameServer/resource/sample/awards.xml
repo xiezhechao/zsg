@@ -1,0 +1,895 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <objects>
+  <field class="game.award.Award" name="factory" id="awardSampleFactory" />
+  <method ref="awardSampleFactory" name="init">
+  <ref id="context" />
+  </method>
+  <!--
+  class:类名 game.award.Award奖励
+  food:粮食值
+  randomFood:随机粮食值
+  wood:木材值
+  randomWood:随机木材值 randomFood="1,2,4"会随机从里面抽取一个数值出来 也可以这样配 randomFood="100:1,200:1,300:1"后面一个数值是几率
+  money:铜币值
+  randomMoney:随机铜币值
+  iron:铁锭值
+  randomIron：随机铁锭值
+  exp:经验值
+  randomExp：随机经验值
+  pep:劳役值 
+  randomPep:随机劳役值
+  tech:文化值 
+  randomTech:随机文化值
+  equip:军械值 
+  randomEquip:随机军械值
+  train:训练值 
+  randomTrain:随机训练值
+  propSids:物品propSids="3005:5,3006:3,3007"同时掉落5个3005,3个3006,1个3007 
+  randomPropSids:随机物品 
+  gold:元宝 
+  randomGold：随机元宝
+  ginger:英雄令 
+  randomGinger:随机英雄令
+ fightScore:功勋 randomFightScore:随机功勋
+ 11  recruit:募兵令randomRecruit:随机募兵令 
+  prestige声望
+-->
+<sample sid="1" class="game.award.Award" propSids="8007:1" randomPropSids="1000|1:25,0|0:75"></sample>
+ <sample sid="2" class="game.award.Award" propSids="8017:1" randomPropSids="1001|1:25,0|0:75"></sample>
+ <sample sid="3" class="game.award.Award" propSids="8007:1" randomPropSids="1002|1:25,0|0:75"></sample>
+ <sample sid="4" class="game.award.Award" propSids="8017:1" randomPropSids="1003|1:25,0|0:75"></sample>
+ <sample sid="5" class="game.award.Award" propSids="8007:1" randomPropSids="1004|1:25,0|0:75"></sample>
+ <sample sid="6" class="game.award.Award" propSids="8017:1" randomPropSids="1005|1:25,0|0:75"></sample>
+ <sample sid="7" class="game.award.Award" propSids="8007:1" randomPropSids="1006|1:25,0|0:75"></sample>
+ <sample sid="8" class="game.award.Award" propSids="8017:1" randomPropSids="1007|1:25,0|0:75"></sample>
+ <sample sid="9" class="game.award.Award" propSids="8007:1,8017:1" randomPropSids="3000|1:25,0|0:75"></sample>
+ <sample sid="11" class="game.award.Award" propSids="8007:1" randomPropSids="1009|1:25,0|0:75"></sample>
+ <sample sid="12" class="game.award.Award" propSids="8017:1" randomPropSids="1010|1:25,0|0:75"></sample>
+ <sample sid="13" class="game.award.Award" propSids="8007:1" randomPropSids="1011|1:25,0|0:75"></sample>
+ <sample sid="14" class="game.award.Award" propSids="8017:1" randomPropSids="1012|1:25,0|0:75"></sample>
+ <sample sid="15" class="game.award.Award" propSids="8007:1" randomPropSids="1013|1:25,0|0:75"></sample>
+ <sample sid="16" class="game.award.Award" propSids="8017:1" randomPropSids="1014|1:25,0|0:75"></sample>
+ <sample sid="17" class="game.award.Award" propSids="8007:1" randomPropSids="1015|1:25,0|0:75"></sample>
+ <sample sid="18" class="game.award.Award" propSids="8017:1" randomPropSids="1016|1:25,0|0:75"></sample>
+ <sample sid="19" class="game.award.Award" propSids="8007:1,8017:1" randomPropSids="3002|1:25,0|0:75"></sample>
+ <sample sid="21" class="game.award.Award" propSids="1:1" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="22" class="game.award.Award" propSids="2:1" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="23" class="game.award.Award" propSids="3:1" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="24" class="game.award.Award" propSids="4:1" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="25" class="game.award.Award" propSids="1:2" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="26" class="game.award.Award" propSids="2:2" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="27" class="game.award.Award" propSids="3:2" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="28" class="game.award.Award" propSids="4:2" randomPropSids="5000|2:25,0|0:75"></sample>
+ <sample sid="29" class="game.award.Award" propSids="8020:1,5000:10" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="31" class="game.award.Award" propSids="6:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="32" class="game.award.Award" propSids="7:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="33" class="game.award.Award" propSids="8:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="34" class="game.award.Award" propSids="9:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="35" class="game.award.Award" propSids="6:1,1:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="36" class="game.award.Award" propSids="7:1,2:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="37" class="game.award.Award" propSids="8:1,3:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="38" class="game.award.Award" propSids="9:1,4:1" randomPropSids="5000|3:25,0|0:75"></sample>
+ <sample sid="39" class="game.award.Award" propSids="8020:3,5000:15" randomPropSids="5000|4:25,0|0:75"></sample>
+ <sample sid="41" class="game.award.Award" propSids="6:2" randomPropSids="33|1:1,0|0:99"></sample>
+ <sample sid="42" class="game.award.Award" propSids="7:2" randomPropSids="33|1:1,0|0:99"></sample>
+ <sample sid="43" class="game.award.Award" propSids="8:2" randomPropSids="33|1:2,0|0:98"></sample>
+ <sample sid="44" class="game.award.Award" propSids="9:2" randomPropSids="33|1:2,0|0:98"></sample>
+ <sample sid="45" class="game.award.Award" propSids="6:2,1:2" randomPropSids="33|1:3,0|0:97"></sample>
+ <sample sid="46" class="game.award.Award" propSids="7:2,2:2" randomPropSids="33|1:3,0|0:97"></sample>
+ <sample sid="47" class="game.award.Award" propSids="8:2,3:2" randomPropSids="33|1:4,0|0:96"></sample>
+ <sample sid="48" class="game.award.Award" propSids="9:2,4:2" randomPropSids="33|1:4,0|0:96"></sample>
+ <sample sid="49" class="game.award.Award" propSids="8012:1,5001:10" randomPropSids="33|1:5,0|0:95"></sample>
+ <sample sid="51" class="game.award.Award" propSids="6:2,1:3" randomPropSids="33|1:5,0|0:95"></sample>
+ <sample sid="52" class="game.award.Award" propSids="7:2,2:3" randomPropSids="33|1:6,0|0:94"></sample>
+ <sample sid="53" class="game.award.Award" propSids="8:2,3:3" randomPropSids="33|1:6,0|0:94"></sample>
+ <sample sid="54" class="game.award.Award" propSids="9:2,4:3" randomPropSids="33|1:7,0|0:93"></sample>
+ <sample sid="55" class="game.award.Award" propSids="11:1,1:1" randomPropSids="33|1:7,0|0:93"></sample>
+ <sample sid="56" class="game.award.Award" propSids="12:1,2:1" randomPropSids="33|1:8,0|0:92"></sample>
+ <sample sid="57" class="game.award.Award" propSids="13:1,3:1" randomPropSids="33|1:8,0|0:92"></sample>
+ <sample sid="58" class="game.award.Award" propSids="14:1,4:1" randomPropSids="33|1:9,0|0:91"></sample>
+ <sample sid="59" class="game.award.Award" propSids="8012:3,5001:15" randomPropSids="33|1:9,0|0:91"></sample>
+ <sample sid="61" class="game.award.Award" propSids="11:1,1:3" randomPropSids="34|1:1,0|0:99"></sample>
+ <sample sid="62" class="game.award.Award" propSids="12:1,2:3" randomPropSids="34|1:1,0|0:99"></sample>
+ <sample sid="63" class="game.award.Award" propSids="13:1,3:3" randomPropSids="34|1:2,0|0:98"></sample>
+ <sample sid="64" class="game.award.Award" propSids="14:1,4:3" randomPropSids="34|1:2,0|0:98"></sample>
+ <sample sid="65" class="game.award.Award" propSids="11:1,1:4" randomPropSids="34|1:3,0|0:97"></sample>
+ <sample sid="66" class="game.award.Award" propSids="12:1,2:4" randomPropSids="34|1:3,0|0:97"></sample>
+ <sample sid="67" class="game.award.Award" propSids="13:1,3:4" randomPropSids="34|1:4,0|0:96"></sample>
+ <sample sid="68" class="game.award.Award" propSids="14:1,4:4" randomPropSids="34|1:4,0|0:96"></sample>
+ <sample sid="69" class="game.award.Award" propSids="8012:5,5001:20" randomPropSids="34|1:5,0|0:95"></sample>
+ <sample sid="71" class="game.award.Award" propSids="11:2,1:3" randomPropSids="34|1:5,0|0:95"></sample>
+ <sample sid="72" class="game.award.Award" propSids="12:2,2:3" randomPropSids="34|1:6,0|0:94"></sample>
+ <sample sid="73" class="game.award.Award" propSids="13:2,3:3" randomPropSids="34|1:6,0|0:94"></sample>
+ <sample sid="74" class="game.award.Award" propSids="14:2,4:3" randomPropSids="34|1:7,0|0:93"></sample>
+ <sample sid="75" class="game.award.Award" propSids="11:2,6:2" randomPropSids="34|1:7,0|0:93"></sample>
+ <sample sid="76" class="game.award.Award" propSids="12:2,7:2" randomPropSids="34|1:8,0|0:92"></sample>
+ <sample sid="77" class="game.award.Award" propSids="13:2,8:2" randomPropSids="34|1:8,0|0:92"></sample>
+ <sample sid="78" class="game.award.Award" propSids="14:2,9:2" randomPropSids="34|1:9,0|0:91"></sample>
+ <sample sid="79" class="game.award.Award" propSids="8013:2,5001:30" randomPropSids="34|1:9,0|0:91"></sample>
+ <sample sid="81" class="game.award.Award" propSids="11:3,6:3" randomPropSids="35|1:1,0|0:99"></sample>
+ <sample sid="82" class="game.award.Award" propSids="12:3,7:3" randomPropSids="35|1:2,0|0:98"></sample>
+ <sample sid="83" class="game.award.Award" propSids="13:3,8:3" randomPropSids="35|1:3,0|0:97"></sample>
+ <sample sid="84" class="game.award.Award" propSids="14:3,9:3" randomPropSids="35|1:4,0|0:96"></sample>
+ <sample sid="85" class="game.award.Award" propSids="11:3,6:4" randomPropSids="35|1:5,0|0:95"></sample>
+ <sample sid="86" class="game.award.Award" propSids="12:3,7:4" randomPropSids="35|1:6,0|0:94"></sample>
+ <sample sid="87" class="game.award.Award" propSids="13:3,8:4" randomPropSids="35|1:7,0|0:93"></sample>
+ <sample sid="88" class="game.award.Award" propSids="14:3,9:4" randomPropSids="35|1:8,0|0:92"></sample>
+ <sample sid="89" class="game.award.Award" propSids="8013:3,5002:10" randomPropSids="35|1:9,0|0:91"></sample>
+ <sample sid="91" class="game.award.Award" propSids="11:4,3001:2" randomPropSids="37|1:1,0|0:99"></sample>
+ <sample sid="92" class="game.award.Award" propSids="12:4,3001:2" randomPropSids="37|1:2,0|0:98"></sample>
+ <sample sid="93" class="game.award.Award" propSids="13:4,3001:2" randomPropSids="37|1:3,0|0:97"></sample>
+ <sample sid="94" class="game.award.Award" propSids="14:4,3001:2" randomPropSids="37|1:4,0|0:96"></sample>
+ <sample sid="95" class="game.award.Award" propSids="3005:1,3001:3" randomPropSids="37|1:5,0|0:95"></sample>
+ <sample sid="96" class="game.award.Award" propSids="3005:1,3001:3" randomPropSids="37|1:6,0|0:94"></sample>
+ <sample sid="97" class="game.award.Award" propSids="3005:1,3001:3" randomPropSids="37|1:7,0|0:93"></sample>
+ <sample sid="98" class="game.award.Award" propSids="3005:1,3001:3" randomPropSids="37|1:8,0|0:92"></sample>
+ <sample sid="99" class="game.award.Award" propSids="3005:2,3001:4" randomPropSids="37|1:9,0|0:91"></sample>
+ <sample sid="1002" class="game.award.Award" gold="500" propSids="5000:5" ></sample>
+ <sample sid="1004" class="game.award.Award" gold="500" propSids="5000:10" ></sample>
+ <sample sid="1005" class="game.award.Award" gold="500" propSids="5000:15" ></sample>
+ <sample sid="1006" class="game.award.Award" gold="500" propSids="5000:20" ></sample>
+ <sample sid="1007" class="game.award.Award" gold="500" propSids="5001:5" ></sample>
+ <sample sid="1008" class="game.award.Award" gold="1000" propSids="5001:10" ></sample>
+ <sample sid="1009" class="game.award.Award" gold="1000" propSids="5001:15" ></sample>
+ <sample sid="1010" class="game.award.Award" gold="1000" propSids="5001:20" ></sample>
+ <sample sid="1011" class="game.award.Award" gold="1000" propSids="5002:10" ></sample>
+ <sample sid="1012" class="game.award.Award" gold="1000" propSids="5002:15" ></sample>
+ <sample sid="2000" class="game.award.Award" food="100" money="100" iron="100" ></sample>
+ <sample sid="3001" class="game.award.Award" food="10000" ></sample>
+ <sample sid="3002" class="game.award.Award" pep="1000" ></sample>
+ <sample sid="3003" class="game.award.Award" money="10000" ></sample>
+ <sample sid="3004" class="game.award.Award" tech="1000" ></sample>
+ <sample sid="3005" class="game.award.Award" iron="10000" ></sample>
+ <sample sid="3006" class="game.award.Award" equip="1000" ></sample>
+ <sample sid="3007" class="game.award.Award" wood="10000" ></sample>
+ <sample sid="3008" class="game.award.Award" train="1000" ></sample>
+ <sample sid="3009" class="game.award.Award" pep="2000" ></sample>
+ <sample sid="3010" class="game.award.Award" money="20000" ></sample>
+ <sample sid="3011" class="game.award.Award" tech="2000" ></sample>
+ <sample sid="3012" class="game.award.Award" iron="20000" ></sample>
+ <sample sid="3013" class="game.award.Award" equip="2000" ></sample>
+ <sample sid="3014" class="game.award.Award" wood="20000" ></sample>
+ <sample sid="3015" class="game.award.Award" train="2000" ></sample>
+ <sample sid="3016" class="game.award.Award" food="10000" ></sample>
+ <sample sid="3017" class="game.award.Award" pep="1000" ></sample>
+ <sample sid="3018" class="game.award.Award" money="10000" ></sample>
+ <sample sid="3019" class="game.award.Award" tech="1000" ></sample>
+ <sample sid="3020" class="game.award.Award" iron="10000" ></sample>
+ <sample sid="3021" class="game.award.Award" equip="1000" ></sample>
+ <sample sid="3022" class="game.award.Award" wood="10000" ></sample>
+ <sample sid="3023" class="game.award.Award" food="20000" ></sample>
+ <sample sid="3024" class="game.award.Award" pep="2000" ></sample>
+ <sample sid="3025" class="game.award.Award" money="20000" ></sample>
+ <sample sid="3026" class="game.award.Award" tech="2000" ></sample>
+ <sample sid="3027" class="game.award.Award" iron="20000" ></sample>
+ <sample sid="3028" class="game.award.Award" equip="2000" ></sample>
+ <sample sid="3029" class="game.award.Award" wood="20000" ></sample>
+ <sample sid="3030" class="game.award.Award" train="2000" ></sample>
+ <sample sid="3031" class="game.award.Award" food="10000" ></sample>
+ <sample sid="3032" class="game.award.Award" pep="1000" ></sample>
+ <sample sid="3033" class="game.award.Award" money="10000" ></sample>
+ <sample sid="3034" class="game.award.Award" tech="1000" ></sample>
+ <sample sid="3035" class="game.award.Award" iron="10000" ></sample>
+ <sample sid="3036" class="game.award.Award" equip="1000" ></sample>
+ <sample sid="3037" class="game.award.Award" wood="10000" ></sample>
+ <sample sid="3038" class="game.award.Award" train="1000" ></sample>
+ <sample sid="3039" class="game.award.Award" money="20000" ></sample>
+ <sample sid="3040" class="game.award.Award" tech="2000" ></sample>
+ <sample sid="6000" class="game.award.Award"  randomPropSids="5000|2:80,8002|1:20" gold="100" ></sample>
+ <sample sid="6001" class="game.award.Award"  randomPropSids="5000|5:80,8002|3:20" gold="200" ></sample>
+ <sample sid="6002" class="game.award.Award"  randomPropSids="5001|2:80,8003|2:20" gold="300" ></sample>
+ <sample sid="6003" class="game.award.Award"  randomPropSids="5001|5:80,8003|4:20" gold="400" ></sample>
+ <sample sid="6004" class="game.award.Award"  randomPropSids="5002|1:80,8004|1:20" gold="500"></sample>
+ <sample sid="6005" class="game.award.Award" money="100000" iron="20000" wood="100000" ></sample>
+ <sample sid="6006" class="game.award.Award" ginger="10" propSids="8034:5,7003:10" ></sample>
+ <sample sid="6007" class="game.award.Award" propSids="503:10,2002:3,2038:3" ></sample>
+ <sample sid="6008" class="game.award.Award" propSids="8034:10,7005:10,7004:10" ></sample>
+ <sample sid="6009" class="game.award.Award" propSids="503:15,1045:1,1046:1" ></sample>
+ <sample sid="6010" class="game.award.Award" propSids="8034:15,1047:1,1048:1" ></sample>
+ <sample sid="6011" class="game.award.Award" ginger="30" propSids="503:20,2074:3" ></sample>
+ <sample sid="6012" class="game.award.Award" propSids="8034:20,3005:100,3007:40" ></sample>
+ <sample sid="6013" class="game.award.Award" propSids="503:25,2111:2,7013:10" ></sample>
+ <sample sid="6014" class="game.award.Award" ginger="50" propSids="8034:25,2076:1" ></sample>
+ <sample sid="6015" class="game.award.Award" propSids="503:30,2005:1,2041:1" ></sample>
+ <sample sid="6016" class="game.award.Award" propSids="8034:30,2138:1,7009:20" ></sample>
+ <sample sid="6017" class="game.award.Award"  ></sample>
+ <sample sid="6018" class="game.award.Award" gold="10" propSids="8020:2,5533:2,5000:99,5001:99" ></sample>
+ <sample sid="6019" class="game.award.Award" ginger="10" propSids="1:5,2:5,3:5,4:5" ></sample>
+ <sample sid="6020" class="game.award.Award" propSids="3121:1,3003:5" ></sample>
+ <sample sid="6021" class="game.award.Award" propSids="7003:1,7004:1,7005:1" ></sample>
+ <sample sid="6022" class="game.award.Award" gold="15" propSids="26:50,27:50" ></sample>
+ <sample sid="6023" class="game.award.Award" ginger="10" propSids="8022:1" ></sample>
+ <sample sid="6024" class="game.award.Award" propSids="1028:1,1029:1,1030:1" ></sample>
+ <sample sid="6030" class="game.award.Award" gold="20" propSids="8034:2,503:5" ></sample>
+ <sample sid="6031" class="game.award.Award" propSids="33:4,3100:5" ></sample>
+ <sample sid="6025" class="game.award.Award" wood="2000" ></sample>
+ <sample sid="6026" class="game.award.Award" money="10000" ></sample>
+ <sample sid="6027" class="game.award.Award" food="10000" ></sample>
+ <sample sid="6028" class="game.award.Award" iron="2000" ></sample>
+ <sample sid="6032" class="game.award.Award" propSids="5000:5" ></sample>
+ <sample sid="6033" class="game.award.Award" fightScore="1000" ></sample>
+ <sample sid="6029" class="game.award.Award" propSids="3115:1,3124:1,8022:3,27:100" randomPropSids="26|100:100"></sample>
+ <sample sid="6100" class="game.award.Award"  randomPropSids="1000:125,1001:125,1002:125,1003:125,1004:125,1005:125,1006:125,1007:125"></sample>
+ <sample sid="6101" class="game.award.Award" propSids="1:1,2:1,3:1,4:1" ></sample>
+ <sample sid="6102" class="game.award.Award"  randomPropSids="1009:125,1010:125,1011:125,1012:125,1013:125,1014:125,1015:125,1016:125"></sample>
+ <sample sid="6103" class="game.award.Award" propSids="6:1,7:1,8:1,9:1" ></sample>
+ <sample sid="6104" class="game.award.Award"  randomPropSids="1018:125,1019:125,1020:125,1021:125,1022:125,1023:125,1024:125,1025:125"></sample>
+ <sample sid="6105" class="game.award.Award" propSids="11:1,12:1,13:1,14:1" ></sample>
+ <sample sid="6106" class="game.award.Award"  randomPropSids="1027:125,1028:125,1029:125,1030:125,1031:125,1032:125,1033:125,1034:125"></sample>
+ <sample sid="6107" class="game.award.Award" propSids="16:1,17:1,18:1,19:1" ></sample>
+ <sample sid="6108" class="game.award.Award"  randomPropSids="1063:125,1064:125,1065:125,1066:125,1067:125,1068:125,1069:125,1070:125"></sample>
+ <sample sid="6109" class="game.award.Award" propSids="21:1,22:1,23:1,24:1" ></sample>
+ <sample sid="6110" class="game.award.Award"  randomPropSids="1027:125,1028:125,1029:125,1030:125,1031:125,1032:125,1033:125,1034:125"></sample>
+ <sample sid="6111" class="game.award.Award"  randomPropSids="1036:125,1037:125,1038:125,1039:125,1040:125,1041:125,1042:125,1043:125"></sample>
+ <sample sid="6112" class="game.award.Award"  randomPropSids="1045:125,1046:125,1047:125,1048:125,1049:125,1050:125,1051:125,1052:125"></sample>
+ <sample sid="6113" class="game.award.Award"  randomPropSids="1054:125,1055:125,1056:125,1057:125,1058:125,1059:125,1060:125,1061:125"></sample>
+ <sample sid="6114" class="game.award.Award"  randomPropSids="1063:125,1064:125,1065:125,1066:125,1067:125,1068:125,1069:125,1070:125"></sample>
+ <sample sid="6115" class="game.award.Award"  propSids="1072:1,1073:1,1074:1,1075:1,1076:1"randomPropSids="1077|1:100#1078|1:100#1079|1:100"></sample>
+ <sample sid="6116" class="game.award.Award" militarySids="124:1" ></sample>
+ <sample sid="6117" class="game.award.Award" militarySids="44:1" ></sample>
+ <sample sid="6118" class="game.award.Award" militarySids="28:1" ></sample>
+ <sample sid="6119" class="game.award.Award" militarySids="53:1" ></sample>
+ <sample sid="6120" class="game.award.Award" militarySids="51:1" ></sample>
+ <sample sid="6121" class="game.award.Award" militarySids="52:1" ></sample>
+ <sample sid="6122" class="game.award.Award" propSids="1009:1,1010:1,1011:1,1012:1,1013:1" randomPropSids="1014|1:100#1015|1:100#1016|1:100"></sample>
+ <sample sid="6123" class="game.award.Award" propSids="1018:1,1019:1,1020:1,1021:1,1022:1" randomPropSids="1023|1:100#1024|1:100#1025|1:100"></sample>
+ <sample sid="6124" class="game.award.Award" propSids="1027:1,1028:1,1029:1,1030:1,1031:1" randomPropSids="1032|1:100#1033|1:100#1034|1:100"></sample>
+ <sample sid="6125" class="game.award.Award" propSids="1036:1,1037:1,1038:1,1039:1,1040:1" randomPropSids="1041|1:100#1042|1:100#1043|1:100"></sample>
+ <sample sid="6126" class="game.award.Award" militarySids="17:1" ></sample>
+ <sample sid="6127" class="game.award.Award" militarySids="18:1" ></sample>
+ <sample sid="6128" class="game.award.Award" propSids="1054:1,1055:1,1056:1,1057:1,1058:1" randomPropSids="1059|1:100#1060|1:100#1061|1:100"></sample>
+ <sample sid="6200" class="game.award.Award"  randomPropSids="2000:111,2012:111,2024:111,2036:111,2048:111,2060:111,2072:111,2084:111,2096:111"></sample>
+ <sample sid="6201" class="game.award.Award"  randomPropSids="2001:111,2013:111,2025:111,2037:111,2049:111,2061:111,2073:111,2085:111,2097:111"></sample>
+ <sample sid="6202" class="game.award.Award"  randomPropSids="2002:111,2014:111,2026:111,2038:111,2050:111,2062:111,2074:111,2086:111,2098:111"></sample>
+ <sample sid="6203" class="game.award.Award"  randomPropSids="2003:111,2015:111,2027:111,2039:111,2051:111,2063:111,2075:111,2087:111,2099:111"></sample>
+ <sample sid="6204" class="game.award.Award"  randomPropSids="2004:111,2016:111,2028:111,2040:111,2052:111,2064:111,2076:111,2088:111,2100:111"></sample>
+ <sample sid="6205" class="game.award.Award"  randomPropSids="2005:111,2017:111,2029:111,2041:111,2053:111,2065:111,2077:111,2089:111,2101:111"></sample>
+ <sample sid="6206" class="game.award.Award"  randomPropSids="2006:111,2018:111,2030:111,2042:111,2054:111,2066:111,2078:111,2090:111,2102:111"></sample>
+ <sample sid="6207" class="game.award.Award"  randomPropSids="2007:111,2019:111,2031:111,2043:111,2055:111,2067:111,2079:111,2091:111,2103:111"></sample>
+ <sample sid="6208" class="game.award.Award"  randomPropSids="2108:333,2120:333,2132:333"></sample>
+ <sample sid="6301" class="game.award.Award" propSids="2:10" ></sample>
+ <sample sid="6302" class="game.award.Award" propSids="12:10" ></sample>
+ <sample sid="6303" class="game.award.Award" propSids="1:10" ></sample>
+ <sample sid="6304" class="game.award.Award" propSids="11:10" ></sample>
+ <sample sid="6305" class="game.award.Award" propSids="3:10" ></sample>
+ <sample sid="6306" class="game.award.Award" propSids="13:10" ></sample>
+ <sample sid="6307" class="game.award.Award" propSids="4:10" ></sample>
+ <sample sid="6308" class="game.award.Award" propSids="14:10" ></sample>
+ <sample sid="6401" class="game.award.Award" propSids="29:30" ></sample>
+ <sample sid="6402" class="game.award.Award" propSids="30:30" ></sample>
+ <sample sid="6403" class="game.award.Award" propSids="31:30" ></sample>
+ <sample sid="6404" class="game.award.Award" propSids="32:30" ></sample>
+ <sample sid="6405" class="game.award.Award" propSids="28:10" ></sample>
+ <sample sid="6500" class="game.award.Award" money="1000" ></sample>
+ <sample sid="6501" class="game.award.Award" propSids="26:30" ></sample>
+ <sample sid="6502" class="game.award.Award" propSids="27:30" ></sample>
+ <sample sid="6503" class="game.award.Award" propSids="500:20" ></sample>
+ <sample sid="6504" class="game.award.Award" propSids="501:20" ></sample>
+ <sample sid="6505" class="game.award.Award" propSids="502:20" ></sample>
+ <sample sid="6506" class="game.award.Award" propSids="503:20" ></sample>
+ <sample sid="6507" class="game.award.Award" propSids="5002:10,8034:10" ></sample>
+ <sample sid="6508" class="game.award.Award" propSids="5002:7,8034:9" ></sample>
+ <sample sid="6509" class="game.award.Award" propSids="5002:5,8034:8" ></sample>
+ <sample sid="6510" class="game.award.Award" propSids="5002:3,8034:7" ></sample>
+ <sample sid="6511" class="game.award.Award" propSids="5001:20,8034:6" ></sample>
+ <sample sid="6512" class="game.award.Award" propSids="5001:15,8034:5" ></sample>
+ <sample sid="6513" class="game.award.Award" propSids="5001:10,8034:4" ></sample>
+ <sample sid="6514" class="game.award.Award" propSids="5000:20,8034:3" ></sample>
+ <sample sid="6515" class="game.award.Award" propSids="5000:10,8034:2" ></sample>
+ <sample sid="6600" class="game.award.Award" fightScore="2000" prestige="2000" propSids="5002:2" ></sample>
+ <sample sid="6601" class="game.award.Award" fightScore="1500" prestige="1500" propSids="5002:1" ></sample>
+ <sample sid="6602" class="game.award.Award" fightScore="1000" prestige="1000" propSids="5002:1" ></sample>
+ <sample sid="6603" class="game.award.Award" fightScore="500" prestige="500" propSids="5002:1" ></sample>
+ <sample sid="6604" class="game.award.Award" fightScore="400" prestige="400" propSids="5001:5" ></sample>
+ <sample sid="6605" class="game.award.Award" fightScore="300" prestige="300" propSids="5001:4" ></sample>
+ <sample sid="6606" class="game.award.Award" fightScore="200" prestige="200" propSids="5001:3" ></sample>
+ <sample sid="6607" class="game.award.Award" fightScore="150" prestige="150" propSids="5000:2" ></sample>
+ <sample sid="6608" class="game.award.Award" fightScore="100" prestige="100" propSids="5000:1" ></sample>
+ <sample sid="6616" class="game.award.Award"  ></sample>
+ <sample sid="6617" class="game.award.Award" money="30000" propSids="5001:5" ></sample>
+ <sample sid="6618" class="game.award.Award" money="45000" propSids="5001:10" ></sample>
+ <sample sid="6619" class="game.award.Award" money="60000" propSids="5001:15" ></sample>
+ <sample sid="6620" class="game.award.Award" money="75000" propSids="5001:20" ></sample>
+ <sample sid="6621" class="game.award.Award" money="90000" propSids="5001:25" ></sample>
+ <sample sid="6622" class="game.award.Award" money="105000" propSids="5002:5" ></sample>
+ <sample sid="6623" class="game.award.Award" money="120000" propSids="5002:10" ></sample>
+ <sample sid="6624" class="game.award.Award" money="135000" propSids="5002:15" ></sample>
+ <sample sid="6625" class="game.award.Award" money="150000" propSids="5002:20" ></sample>
+ <sample sid="6626" class="game.award.Award" money="165000" propSids="5002:25" ></sample>
+ <sample sid="6627" class="game.award.Award" money="180000" propSids="5003:5" ></sample>
+ <sample sid="6628" class="game.award.Award" money="195000" propSids="5003:10" ></sample>
+ <sample sid="6629" class="game.award.Award" propSids="8035:10,8014:5" ></sample>
+ <sample sid="6630" class="game.award.Award" propSids="8035:10,5002:50" ></sample>
+ <sample sid="6631" class="game.award.Award" propSids="8035:10,37:4,3107:1" ></sample>
+ <sample sid="6632" class="game.award.Award" propSids="5002:100,2138:1,3001:200" ></sample>
+ <sample sid="6633" class="game.award.Award"  propSids="2500:1,2501:1,2502:1,2503:1,2504:1"randomPropSids="2505|1:100#2506|1:100#2507|1:100"></sample>
+ <sample sid="6634" class="game.award.Award" militarySids="35:1" ></sample>
+ <sample sid="6635" class="game.award.Award" militarySids="36:1" ></sample>
+ <sample sid="6636" class="game.award.Award" militarySids="37:1" ></sample>
+ <sample sid="6637" class="game.award.Award" food="9999999" money="9999999" iron="9999999" wood="9999999" fightScore="10000" gold="10000" propSids="5116:1" ></sample>
+ <sample sid="6638" class="game.award.Award" propSids="2206:1,2256:1,2306:1,2356:1" ></sample>
+ <sample sid="6639" class="game.award.Award" propSids="2208:1,2258:1,2308:1,2358:1" ></sample> 
+ <sample sid="6640" class="game.award.Award" prestige="10000" fightScore="10000" propSids="5567:1" ></sample> 
+ <sample sid="6641" class="game.award.Award" militarySids="54:1" ></sample>
+ <sample sid="6642" class="game.award.Award" militarySids="55:1" ></sample>
+ <sample sid="6643" class="game.award.Award" militarySids="56:1" ></sample>
+ <sample sid="6644" class="game.award.Award"  propSids="2508:1,2509:1,2510:1,2511:1,2512:1"randomPropSids="2513|1:100#2514|1:100#2515|1:100"></sample>
+ <sample sid="6645" class="game.award.Award" propSids="2204:1,2254:1,2304:1,2354:1" ></sample> 
+ <sample sid="6646" class="game.award.Award" propSids="2516:1" ></sample> 
+ <sample sid="20000" class="game.award.Award" recruit="5000" ></sample>
+ <sample sid="20001" class="game.award.Award" food="10000000" money="10000000" iron="10000000" wood="10000000" ></sample>
+ <sample sid="20002" class="game.award.Award" pep="100000" tech="100000" equip="100000" train="100000" ></sample>
+ <sample sid="20003" class="game.award.Award" ginger="20" propSids="8014:1,3100:3" ></sample>
+ <sample sid="20004" class="game.award.Award" ginger="20" propSids="5000:30,3102:1" ></sample>
+ <sample sid="20005" class="game.award.Award" propSids="8034:50,5000:100" ></sample>
+ <sample sid="20006" class="game.award.Award" propSids="3104:2" ></sample>
+ <sample sid="20007" class="game.award.Award" propSids="3003:50" ></sample>
+ <sample sid="20008" class="game.award.Award" propSids="3106:1" ></sample>
+ <sample sid="20009" class="game.award.Award" propSids="5002:50" ></sample>
+ <sample sid="20010" class="game.award.Award" propSids="37:1,2091:1" ></sample>
+ <sample sid="20011" class="game.award.Award" propSids="3001:40,5000:50" ></sample>
+ <sample sid="20012" class="game.award.Award" propSids="3001:60,5000:100" ></sample>
+ <sample sid="20013" class="game.award.Award" propSids="3001:80,5001:50,8032:5" ></sample>
+ <sample sid="20014" class="game.award.Award" propSids="3001:100,5001:100,8032:10" ></sample>
+ <sample sid="65534" class="game.award.Award"  ></sample>
+ <sample sid="10000" class="game.award.Award" fightScore="50" wood="30000" ></sample>
+ <sample sid="10001" class="game.award.Award" fightScore="100" money="10000" ></sample>
+ <sample sid="10002" class="game.award.Award" fightScore="300" money="10000" ></sample>
+ <sample sid="10003" class="game.award.Award" fightScore="500" money="10000" soldierSids="22:1000" ></sample>
+ <sample sid="10004" class="game.award.Award" money="10000" ></sample>
+ <sample sid="10005" class="game.award.Award" fightScore="700" ></sample>
+ <sample sid="10006" class="game.award.Award" fightScore="1000" ></sample>
+ <sample sid="10007" class="game.award.Award" propSids="1000:1,1001:1" ></sample>
+ <sample sid="10008" class="game.award.Award" propSids="1002:1,1004:1" ></sample>
+ <sample sid="10009" class="game.award.Award" propSids="1003:1,1005:1" ></sample>
+ <sample sid="10010" class="game.award.Award" propSids="1006:1,1007:1" ></sample>
+ <sample sid="10011" class="game.award.Award" soldierSids="4:5000" ></sample>
+ <sample sid="10012" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10013" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10014" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10015" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10016" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10017" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10018" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10019" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10020" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10021" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10022" class="game.award.Award" money="5000" iron="1000" wood="1000" ></sample>
+ <sample sid="10023" class="game.award.Award" food="10000" money="10000" iron="10000" wood="10000" ></sample>
+ <sample sid="10024" class="game.award.Award" fightScore="2000" food="10000" money="10000" iron="10000" wood="10000" ></sample>
+ <sample sid="7000" class="game.award.Award" food="5000" ></sample>
+ <sample sid="7001" class="game.award.Award" food="20000" ></sample>
+ <sample sid="7002" class="game.award.Award" food="10000" ></sample>
+ <sample sid="7003" class="game.award.Award" food="20000" ></sample>
+ <sample sid="7004" class="game.award.Award" food="200000" ></sample>
+ <sample sid="7005" class="game.award.Award" money="5000" ></sample>
+ <sample sid="7006" class="game.award.Award" money="20000" ></sample>
+ <sample sid="7007" class="game.award.Award" money="10000" ></sample>
+ <sample sid="7008" class="game.award.Award" money="20000" ></sample>
+ <sample sid="7009" class="game.award.Award" money="200000" ></sample>
+ <sample sid="7010" class="game.award.Award" iron="5000" ></sample>
+ <sample sid="7011" class="game.award.Award" iron="20000" ></sample>
+ <sample sid="7012" class="game.award.Award" iron="2000" ></sample>
+ <sample sid="7013" class="game.award.Award" iron="5000" ></sample>
+ <sample sid="7014" class="game.award.Award" iron="10000" ></sample>
+ <sample sid="7015" class="game.award.Award" wood="5000" ></sample>
+ <sample sid="7016" class="game.award.Award" wood="20000" ></sample>
+ <sample sid="7017" class="game.award.Award" wood="2000" ></sample>
+ <sample sid="7018" class="game.award.Award" wood="20000" ></sample>
+ <sample sid="7019" class="game.award.Award" wood="200000" ></sample>
+ <sample sid="7020" class="game.award.Award" food="10000" money="10000" wood="10000" ></sample>
+ <sample sid="7021" class="game.award.Award" food="50000" money="50000" wood="50000" ></sample>
+ <sample sid="7022" class="game.award.Award" food="200000" money="200000" wood="200000" ></sample>
+ <sample sid="7023" class="game.award.Award" equip="5000" ></sample>
+ <sample sid="7024" class="game.award.Award" equip="20000" ></sample>
+ <sample sid="7025" class="game.award.Award" train="5000" ></sample>
+ <sample sid="7026" class="game.award.Award" train="20000" ></sample>
+ <sample sid="7027" class="game.award.Award" tech="5000" ></sample>
+ <sample sid="7028" class="game.award.Award" tech="10000" ></sample>
+ <sample sid="7029" class="game.award.Award" pep="5000" ></sample>
+ <sample sid="7030" class="game.award.Award" pep="10000" ></sample>
+ <sample sid="7031" class="game.award.Award" recruit="100" ></sample>
+ <sample sid="7032" class="game.award.Award" recruit="1000" ></sample>
+ <sample sid="7033" class="game.award.Award" recruit="10000" ></sample>
+ <sample sid="7034" class="game.award.Award" fightScore="2000" ></sample>
+ <sample sid="7035" class="game.award.Award" fightScore="20000" ></sample>
+ <sample sid="7036" class="game.award.Award" recruit="2000" money="100000" iron="50000" ></sample>
+ <sample sid="11000" class="game.award.Award" food="10000" money="2000" wood="2000" ></sample>
+ <sample sid="11001" class="game.award.Award" fightScore="30000" money="2000" wood="2000" ></sample>
+ <sample sid="11002" class="game.award.Award" food="10000" money="2000" wood="2000" ></sample>
+ <sample sid="11003" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11004" class="game.award.Award" money="2000" wood="10000" ></sample>
+ <sample sid="11005" class="game.award.Award" fightScore="3000" money="2000" wood="2000" ></sample>
+ <sample sid="11006" class="game.award.Award" food="10000" money="2000" wood="2000" ></sample>
+ <sample sid="11007" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11008" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11009" class="game.award.Award" money="2000" wood="10000" ></sample>
+ <sample sid="11010" class="game.award.Award" fightScore="3000" money="2000" wood="2000" ></sample>
+ <sample sid="11011" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11012" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11013" class="game.award.Award" money="2000" wood="10000" ></sample>
+ <sample sid="11014" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11015" class="game.award.Award" fightScore="5000" money="2000" wood="2000" ></sample>
+ <sample sid="11016" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11017" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11018" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11019" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11020" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11021" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11022" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11023" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11024" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11025" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11026" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11027" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11028" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11029" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11030" class="game.award.Award" money="2000" wood="10000" ></sample>
+ <sample sid="11031" class="game.award.Award" fightScore="11000" money="2000" wood="2000" ></sample>
+ <sample sid="11032" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11033" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11034" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11035" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11036" class="game.award.Award" money="2000" wood="10000" propSids="1007:1" ></sample>
+ <sample sid="11037" class="game.award.Award" fightScore="20000" money="2000" wood="2000" ></sample>
+ <sample sid="11038" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11039" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11040" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11041" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11042" class="game.award.Award" money="2000" wood="2000" propSids="1000:1" ></sample>
+ <sample sid="11043" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11044" class="game.award.Award" money="2000" wood="2000" propSids="5000:20" ></sample>
+ <sample sid="11045" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11046" class="game.award.Award" money="2000" wood="2000" propSids="1001:1" ></sample>
+ <sample sid="11047" class="game.award.Award" money="2000" wood="2000" propSids="5000:20" ></sample>
+ <sample sid="11048" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11049" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11050" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11051" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11052" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11053" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11054" class="game.award.Award" fightScore="40000" money="2000" wood="2000" ></sample>
+ <sample sid="11055" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11056" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11057" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11058" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11059" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11060" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11061" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11062" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11063" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11064" class="game.award.Award" food="10000" money="2000" wood="2000" ></sample>
+ <sample sid="11065" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11066" class="game.award.Award" money="2000" wood="2000" propSids="5000:20" ></sample>
+ <sample sid="11067" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11068" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11069" class="game.award.Award" fightScore="40000" money="2000" wood="2000" ></sample>
+ <sample sid="11070" class="game.award.Award" money="2000" wood="2000" propSids="1009:1,1010:1,1011:1,1012:1" ></sample>
+ <sample sid="11071" class="game.award.Award" food="10000" money="2000" wood="2000" propSids="1013:1,1014:1,1015:1,1016:1" ></sample>
+ <sample sid="11072" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11073" class="game.award.Award" money="2000" wood="2000" propSids="5000:20" ></sample>
+ <sample sid="11074" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11075" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11076" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11077" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11078" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11079" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11080" class="game.award.Award" fightScore="40000" money="2000" wood="2000" ></sample>
+ <sample sid="11081" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11082" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11083" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11084" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11085" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11086" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11087" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11088" class="game.award.Award" money="2000" wood="2000" propSids="5000:20" ></sample>
+ <sample sid="11089" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11090" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11091" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11092" class="game.award.Award" fightScore="20000" money="2000" wood="2000" ></sample>
+ <sample sid="11093" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11094" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11095" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11096" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11097" class="game.award.Award" fightScore="20000" money="2000" wood="2000" ></sample>
+ <sample sid="11098" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11099" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11100" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11101" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11102" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11103" class="game.award.Award" fightScore="20000" money="2000" wood="2000" ></sample>
+ <sample sid="11104" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11105" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11106" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11107" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11108" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11109" class="game.award.Award" fightScore="100000" money="2000" wood="2000" ></sample>
+ <sample sid="11110" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11111" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11112" class="game.award.Award" money="2000" wood="2000" propSids="1:5" ></sample>
+ <sample sid="11113" class="game.award.Award" fightScore="100000" money="2000" wood="2000" ></sample>
+ <sample sid="11114" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11115" class="game.award.Award" money="2000" wood="2000" propSids="1:5" ></sample>
+ <sample sid="11116" class="game.award.Award" money="2000" wood="2000" propSids="2:5" ></sample>
+ <sample sid="11117" class="game.award.Award" money="2000" wood="2000" propSids="3:5" ></sample>
+ <sample sid="11118" class="game.award.Award" fightScore="36000" money="2000" wood="2000" ></sample>
+ <sample sid="11119" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11120" class="game.award.Award" fightScore="100000" money="2000" wood="2000" ></sample>
+ <sample sid="11121" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11122" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11123" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11124" class="game.award.Award" money="2000" wood="2000" propSids="5000:150" ></sample>
+ <sample sid="11125" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11126" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11127" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11128" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11129" class="game.award.Award" fightScore="100000" money="2000" wood="2000" ></sample>
+ <sample sid="11130" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11131" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11132" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11133" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11134" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11135" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11136" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11137" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="11138" class="game.award.Award" money="2000" wood="2000" ></sample>
+ <sample sid="12000" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12001" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12002" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12003" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12004" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12005" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12006" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12007" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12008" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12009" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12010" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12011" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12012" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12013" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12014" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12015" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12016" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12017" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12018" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12019" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12020" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12021" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12022" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12023" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12024" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12025" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12026" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12027" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12028" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12029" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12030" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12031" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12032" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12033" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12034" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12035" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12036" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12037" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12038" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12039" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12040" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12041" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12042" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12043" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12044" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12045" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12046" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12047" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12048" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12049" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12050" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12051" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12052" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12053" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12054" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12055" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12056" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12057" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12058" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12059" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12060" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12061" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12062" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12063" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12064" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12065" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12066" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12067" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12068" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12069" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12070" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12071" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12072" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12073" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12074" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12075" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12076" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12077" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12078" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12079" class="game.award.Award" fightScore="10000" money="1000" iron="200" ></sample>
+ <sample sid="12080" class="game.award.Award"  ></sample>
+ <sample sid="12081" class="game.award.Award"  ></sample>
+ <sample sid="12082" class="game.award.Award"  ></sample>
+ <sample sid="12083" class="game.award.Award"  ></sample>
+ <sample sid="12084" class="game.award.Award"  ></sample>
+ <sample sid="12085" class="game.award.Award"  ></sample>
+ <sample sid="12086" class="game.award.Award"  ></sample>
+ <sample sid="12087" class="game.award.Award"  ></sample>
+ <sample sid="12088" class="game.award.Award"  ></sample>
+ <sample sid="12089" class="game.award.Award"  ></sample>
+ <sample sid="12090" class="game.award.Award"  ></sample>
+ <sample sid="12091" class="game.award.Award"  ></sample>
+ <sample sid="12092" class="game.award.Award"  ></sample>
+ <sample sid="12093" class="game.award.Award"  ></sample>
+ <sample sid="12094" class="game.award.Award"  ></sample>
+ <sample sid="12095" class="game.award.Award"  ></sample>
+ <sample sid="12096" class="game.award.Award"  ></sample>
+ <sample sid="12097" class="game.award.Award"  ></sample>
+ <sample sid="12098" class="game.award.Award"  ></sample>
+ <sample sid="12099" class="game.award.Award"  ></sample>
+ <sample sid="12100" class="game.award.Award"  ></sample>
+ <sample sid="12101" class="game.award.Award"  ></sample>
+ <sample sid="12102" class="game.award.Award"  ></sample>
+ <sample sid="12103" class="game.award.Award"  ></sample>
+ <sample sid="12104" class="game.award.Award"  ></sample>
+ <sample sid="12105" class="game.award.Award"  ></sample>
+ <sample sid="12106" class="game.award.Award"  ></sample>
+ <sample sid="12107" class="game.award.Award"  ></sample>
+ <sample sid="12108" class="game.award.Award"  ></sample>
+ <sample sid="12109" class="game.award.Award"  ></sample>
+ <sample sid="12110" class="game.award.Award"  ></sample>
+ <sample sid="12111" class="game.award.Award"  ></sample>
+ <sample sid="12112" class="game.award.Award"  ></sample>
+ <sample sid="12113" class="game.award.Award"  ></sample>
+ <sample sid="12114" class="game.award.Award"  ></sample>
+ <sample sid="12115" class="game.award.Award"  ></sample>
+ <sample sid="12116" class="game.award.Award"  ></sample>
+ <sample sid="12117" class="game.award.Award"  ></sample>
+ <sample sid="12118" class="game.award.Award"  ></sample>
+ <sample sid="12119" class="game.award.Award"  ></sample>
+ <sample sid="12120" class="game.award.Award"  ></sample>
+ <sample sid="12121" class="game.award.Award"  ></sample>
+ <sample sid="12122" class="game.award.Award"  ></sample>
+ <sample sid="12123" class="game.award.Award"  ></sample>
+ <sample sid="12124" class="game.award.Award"  ></sample>
+ <sample sid="12125" class="game.award.Award"  ></sample>
+ <sample sid="12126" class="game.award.Award"  ></sample>
+ <sample sid="12127" class="game.award.Award"  ></sample>
+ <sample sid="12128" class="game.award.Award"  ></sample>
+ <sample sid="12129" class="game.award.Award"  ></sample>
+ <sample sid="12130" class="game.award.Award"  ></sample>
+ <sample sid="12131" class="game.award.Award"  ></sample>
+ <sample sid="12132" class="game.award.Award"  ></sample>
+ <sample sid="12133" class="game.award.Award"  ></sample>
+ <sample sid="12134" class="game.award.Award"  ></sample>
+ <sample sid="12135" class="game.award.Award"  ></sample>
+ <sample sid="12136" class="game.award.Award"  ></sample>
+ <sample sid="12137" class="game.award.Award"  ></sample>
+ <sample sid="12138" class="game.award.Award"  ></sample>
+ <sample sid="12139" class="game.award.Award"  ></sample>
+ <sample sid="12140" class="game.award.Award"  ></sample>
+ <sample sid="12141" class="game.award.Award"  ></sample>
+ <sample sid="12142" class="game.award.Award"  ></sample>
+ <sample sid="12143" class="game.award.Award"  ></sample>
+ <sample sid="12144" class="game.award.Award"  ></sample>
+ <sample sid="12145" class="game.award.Award"  ></sample>
+ <sample sid="12146" class="game.award.Award"  ></sample>
+ <sample sid="12147" class="game.award.Award"  ></sample>
+ <sample sid="12148" class="game.award.Award"  ></sample>
+ <sample sid="12149" class="game.award.Award"  ></sample>
+ <sample sid="12150" class="game.award.Award"  ></sample>
+ <sample sid="12151" class="game.award.Award"  ></sample>
+ <sample sid="12152" class="game.award.Award"  ></sample>
+ <sample sid="12153" class="game.award.Award"  ></sample>
+ <sample sid="12154" class="game.award.Award"  ></sample>
+ <sample sid="12155" class="game.award.Award"  ></sample>
+ <sample sid="12156" class="game.award.Award"  ></sample>
+ <sample sid="12157" class="game.award.Award"  ></sample>
+ <sample sid="12158" class="game.award.Award"  ></sample>
+ <sample sid="12159" class="game.award.Award"  ></sample>
+ <sample sid="12160" class="game.award.Award"  ></sample>
+ <sample sid="12161" class="game.award.Award"  ></sample>
+ <sample sid="12162" class="game.award.Award" ginger="1" ></sample>
+ <sample sid="12163" class="game.award.Award" ginger="1" ></sample>
+ <sample sid="12164" class="game.award.Award" ginger="1" ></sample>
+ <sample sid="12165" class="game.award.Award"  ></sample>
+ <sample sid="12166" class="game.award.Award"  ></sample>
+ <sample sid="12167" class="game.award.Award"  ></sample>
+ <sample sid="12168" class="game.award.Award"  ></sample>
+ <sample sid="12169" class="game.award.Award"  ></sample>
+ <sample sid="12170" class="game.award.Award"  ></sample>
+ <sample sid="12171" class="game.award.Award"  ></sample>
+ <sample sid="12172" class="game.award.Award"  ></sample>
+ <sample sid="12173" class="game.award.Award"  ></sample>
+ <sample sid="12174" class="game.award.Award"  ></sample>
+ <sample sid="12175" class="game.award.Award"  ></sample>
+ <sample sid="12176" class="game.award.Award"  ></sample>
+ <sample sid="12177" class="game.award.Award"  ></sample>
+ <sample sid="12178" class="game.award.Award"  ></sample>
+ <sample sid="12179" class="game.award.Award"  ></sample>
+ <sample sid="12180" class="game.award.Award"  ></sample>
+ <sample sid="12181" class="game.award.Award"  ></sample>
+ <sample sid="12182" class="game.award.Award"  ></sample>
+ <sample sid="12183" class="game.award.Award"  ></sample>
+ <sample sid="8000" class="game.award.Award" ginger="2" ></sample>
+ <sample sid="8001" class="game.award.Award" food="20000" ></sample>
+ <sample sid="8002" class="game.award.Award" food="40000" ></sample>
+ <sample sid="8003" class="game.award.Award" food="80000" ></sample>
+ <sample sid="8004" class="game.award.Award" iron="5000" ></sample>
+ <sample sid="8005" class="game.award.Award" iron="10000" ></sample>
+ <sample sid="8006" class="game.award.Award" iron="20000" ></sample>
+ <sample sid="8007" class="game.award.Award" money="20000" ></sample>
+ <sample sid="8008" class="game.award.Award" money="40000" ></sample>
+ <sample sid="8009" class="game.award.Award" money="80000" ></sample>
+ <sample sid="8010" class="game.award.Award" recruit="100" ></sample>
+ <sample sid="8011" class="game.award.Award" recruit="200" ></sample>
+ <sample sid="8012" class="game.award.Award" propSids="5000:10" ></sample>
+ <sample sid="8013" class="game.award.Award" propSids="5001:5" ></sample>
+ <sample sid="8014" class="game.award.Award" propSids="5002:2" ></sample>
+ <sample sid="8015" class="game.award.Award" propSids="3001:15" ></sample>
+ <sample sid="8016" class="game.award.Award" propSids="3003:10" ></sample>
+ <sample sid="8017" class="game.award.Award" propSids="3005:5" ></sample>
+ <sample sid="8018" class="game.award.Award" propSids="27:10" ></sample>
+ <sample sid="8019" class="game.award.Award" propSids="27:20" ></sample>
+ <sample sid="9000" class="game.award.Award" fightScore="5000" prestige="5000" propSids="3001:200" ></sample>
+ <sample sid="9001" class="game.award.Award" fightScore="3500" prestige="3500" propSids="3001:160" ></sample>
+ <sample sid="9002" class="game.award.Award" fightScore="2500" prestige="2500" propSids="3001:120" ></sample>
+ <sample sid="9003" class="game.award.Award" fightScore="1500" prestige="1500" propSids="3001:100" ></sample>
+ <sample sid="9004" class="game.award.Award" fightScore="1000" prestige="1000" propSids="3001:80" ></sample>
+ <sample sid="9005" class="game.award.Award" fightScore="800" prestige="800" propSids="3001:60" ></sample>
+ <sample sid="9006" class="game.award.Award" fightScore="600" prestige="600" propSids="3001:50" ></sample>
+ <sample sid="9007" class="game.award.Award" fightScore="400" prestige="400" propSids="3001:40" ></sample>
+ <sample sid="9008" class="game.award.Award" fightScore="200" prestige="200" propSids="3001:30" ></sample>
+ <sample sid="9009" class="game.award.Award" fightScore="1000" prestige="1000" ></sample>
+ <sample sid="9010" class="game.award.Award" propSids="503:30,3108:30" ></sample>
+ <sample sid="9011" class="game.award.Award" propSids="503:20,3108:20" ></sample>
+ <sample sid="9012" class="game.award.Award" propSids="503:10,3108:10" ></sample>
+ <sample sid="9013" class="game.award.Award" propSids="503:5,3108:5" ></sample>
+ <sample sid="9014" class="game.award.Award" fightScore="5000" propSids="503:5,3108:2,3100:10" ></sample>
+ <sample sid="9015" class="game.award.Award" prestige="50" ></sample>
+ <sample sid="9016" class="game.award.Award" prestige="50" ></sample>
+ <sample sid="9017" class="game.award.Award" fightScore="2000" ></sample>
+ <sample sid="9018" class="game.award.Award" fightScore="50000" propSids="5002:20,8022:1" ></sample>
+ <sample sid="9019" class="game.award.Award" fightScore="50000" ></sample>
+ <sample sid="9020" class="game.award.Award" propSids="7003:1,7004:1,7005:1" ></sample>
+ <sample sid="9021" class="game.award.Award" propSids="34:8" ></sample>
+ <sample sid="9022" class="game.award.Award" propSids="3108:100" ></sample>
+ <sample sid="9023" class="game.award.Award" propSids="8022:10" ></sample>
+ <sample sid="9024" class="game.award.Award" propSids="26:5,27:5" ></sample>
+ <sample sid="9025" class="game.award.Award" propSids="8004:2,8014:1" ></sample>
+ <sample sid="9026" class="game.award.Award" propSids="3108:1,503:3" ></sample>
+ <sample sid="9027" class="game.award.Award" propSids="7003:5,7004:5,7005:5" ></sample>
+ <sample sid="9028" class="game.award.Award" food="5000" wood="5000" ></sample>
+ <sample sid="9029" class="game.award.Award" food="10000" wood="10000" ></sample>
+ <sample sid="9030" class="game.award.Award" food="15000" wood="20000" ></sample>
+ <sample sid="9031" class="game.award.Award" food="20000" wood="40000" ></sample>
+ <sample sid="9032" class="game.award.Award" food="40000" wood="80000" ></sample>
+ <sample sid="9033" class="game.award.Award" prestige="5000" propSids="5002:10,3103:2" ></sample>
+ <sample sid="9034" class="game.award.Award" prestige="3500" propSids="5002:7,3102:4" ></sample>
+ <sample sid="9035" class="game.award.Award" prestige="2500" propSids="5002:5,3102:3" ></sample>
+ <sample sid="9036" class="game.award.Award" prestige="1500" propSids="5002:3,3102:2" ></sample>
+ <sample sid="9037" class="game.award.Award" prestige="1000" propSids="5001:20,3101:4" ></sample>
+ <sample sid="9038" class="game.award.Award" prestige="800" propSids="5001:15,3101:3" ></sample>
+ <sample sid="9039" class="game.award.Award" prestige="600" propSids="5001:10,3101:2" ></sample>
+ <sample sid="9040" class="game.award.Award" prestige="400" propSids="5000:20,3100:4" ></sample>
+ <sample sid="9041" class="game.award.Award" prestige="200" propSids="5000:10,3100:3" ></sample>
+ <sample sid="9042" class="game.award.Award" propSids="5002:10,503:5" ></sample>
+ <sample sid="9043" class="game.award.Award" iron="10000" ginger="20" gold="100" propSids="8034:10" ></sample>
+ <sample sid="9044" class="game.award.Award" ginger="10" propSids="3123:1,3005:10,3001:30" ></sample>
+ <sample sid="9045" class="game.award.Award" prestige="2000" propSids="5002:10,5001:30,5000:50" ></sample>
+ <sample sid="9046" class="game.award.Award" ginger="10" gold="100" propSids="8034:20,7009:5" ></sample>
+ <sample sid="9047" class="game.award.Award" propSids="8003:10,8008:10,8013:10,8018:10" ></sample>
+ <sample sid="9048" class="game.award.Award" propSids="3100:30,2110:1,2074:1" ></sample>
+ <sample sid="9049" class="game.award.Award" prestige="3000" gold="100" propSids="3125:1,5002:20" ></sample>
+ <sample sid="9050" class="game.award.Award" propSids="35:8,8033:5" ></sample>
+ <sample sid="9051" class="game.award.Award" propSids="35:4,8033:3" ></sample>
+ <sample sid="9052" class="game.award.Award" propSids="35:2,8033:2" ></sample>
+ <sample sid="9053" class="game.award.Award" ginger="5" propSids="1027:1" ></sample>
+ <sample sid="9054" class="game.award.Award" ginger="10" propSids="3001:20" ></sample>
+ <sample sid="9055" class="game.award.Award" ginger="15" propSids="5001:20" ></sample>
+ <sample sid="9056" class="game.award.Award" ginger="20" propSids="3005:10,2004:1" ></sample>
+ <sample sid="9057" class="game.award.Award" propSids="2137:1,3105:3" ></sample>
+ <sample sid="9058" class="game.award.Award" propSids="2136:2,3105:3" ></sample>
+ <sample sid="9059" class="game.award.Award" propSids="2136:1,3105:3" ></sample>
+ <sample sid="9060" class="game.award.Award" propSids="3104:1,8014:2" ></sample>
+ <sample sid="9061" class="game.award.Award" propSids="3104:2,8014:3" ></sample>
+ <sample sid="9062" class="game.award.Award" propSids="3105:1,8014:4" ></sample>
+ <sample sid="9063" class="game.award.Award" propSids="3105:2,8014:5" ></sample>
+ <sample sid="9064" class="game.award.Award" prestige="50000" propSids="9005:1" ></sample>
+ <sample sid="9065" class="game.award.Award" prestige="46000" propSids="9004:1" ></sample>
+ <sample sid="9066" class="game.award.Award" prestige="40000" propSids="9004:1" ></sample>
+ <sample sid="9067" class="game.award.Award" prestige="10000" propSids="7009:2" ></sample>
+ <sample sid="9068" class="game.award.Award" prestige="20000" propSids="7009:2" ></sample>
+ <sample sid="9069" class="game.award.Award" prestige="30000" propSids="7009:2" ></sample>
+ <sample sid="9070" class="game.award.Award" prestige="40000" propSids="7009:2" ></sample>
+ <sample sid="9071" class="game.award.Award" fightScore="20000" propSids="8014:2" ></sample>
+ <sample sid="9072" class="game.award.Award" fightScore="30000" propSids="3003:20" ></sample>
+ <sample sid="9073" class="game.award.Award" fightScore="40000" propSids="3003:40" ></sample>
+ <sample sid="9074" class="game.award.Award" fightScore="50000" propSids="5001:50" ></sample>
+ <sample sid="9075" class="game.award.Award" fightScore="60000" propSids="3126:1" ></sample>
+ <sample sid="9076" class="game.award.Award" fightScore="70000" propSids="5001:100" ></sample>
+ <sample sid="9077" class="game.award.Award" fightScore="80000" propSids="3105:1" ></sample>
+ <sample sid="9078" class="game.award.Award" fightScore="90000" propSids="3105:2" ></sample>
+ <sample sid="9079" class="game.award.Award" propSids="3001:50" ></sample>
+ <sample sid="9080" class="game.award.Award" propSids="5000:100" ></sample>
+ <sample sid="9081" class="game.award.Award" ginger="20" ></sample>
+ <sample sid="9082" class="game.award.Award" propSids="8014:2" ></sample>
+ <sample sid="9083" class="game.award.Award" propSids="3001:50" ></sample>
+ <sample sid="9084" class="game.award.Award" propSids="5000:100" ></sample>
+ <sample sid="9085" class="game.award.Award" propSids="8034:50" ></sample>
+ <sample sid="9086" class="game.award.Award" propSids="3005:20" ></sample>
+ <sample sid="9087" class="game.award.Award" propSids="3001:100" ></sample>
+ <sample sid="9088" class="game.award.Award" propSids="33:8" ></sample>
+ <sample sid="9089" class="game.award.Award" propSids="8034:100" ></sample>
+ <sample sid="9090" class="game.award.Award" ginger="40" ></sample>
+ <sample sid="9091" class="game.award.Award" propSids="3001:200" ></sample>
+ <sample sid="9092" class="game.award.Award" propSids="5001:50" ></sample>
+ <sample sid="9093" class="game.award.Award" propSids="2004:1" ></sample>
+ <sample sid="9094" class="game.award.Award" propSids="2040:1" ></sample>
+ <sample sid="9095" class="game.award.Award" propSids="3003:50" ></sample>
+ <sample sid="9096" class="game.award.Award" ginger="60" ></sample>
+ <sample sid="9097" class="game.award.Award" propSids="2076:1" ></sample>
+ <sample sid="9098" class="game.award.Award" propSids="8032:5" ></sample>
+ <sample sid="9099" class="game.award.Award" propSids="3003:100" ></sample>
+ <sample sid="9100" class="game.award.Award" propSids="2136:1" ></sample>
+ <sample sid="9101" class="game.award.Award" propSids="8014:5" ></sample>
+ <sample sid="9102" class="game.award.Award" propSids="5001:100" ></sample>
+ <sample sid="9103" class="game.award.Award" propSids="3003:150" ></sample>
+ <sample sid="9104" class="game.award.Award" propSids="8035:15" ></sample>
+ <sample sid="9105" class="game.award.Award" propSids="8032:10" ></sample>
+ <sample sid="9106" class="game.award.Award" propSids="3106:1" ></sample>
+ <sample sid="9107" class="game.award.Award" propSids="2007:1" ></sample>
+ <sample sid="9108" class="game.award.Award" propSids="2079:1" ></sample>
+ <sample sid="9109" class="game.award.Award" propSids="37:4" ></sample>
+ <sample sid="9110" class="game.award.Award" propSids="8036:5" ></sample>
+ <sample sid="9111" class="game.award.Award" propSids="2067:1" ></sample>
+ <sample sid="9112" class="game.award.Award" propSids="2139:1" ></sample>
+ <sample sid="9113" class="game.award.Award" propSids="37:4" ></sample>
+ <sample sid="9114" class="game.award.Award" propSids="5002:100" ></sample>
+ <sample sid="9115" class="game.award.Award" propSids="2141:1" ></sample>
+ <sample sid="9116" class="game.award.Award" propSids="2081:1" ></sample>
+ <sample sid="9117" class="game.award.Award" propSids="8032:20" ></sample>
+ <sample sid="9118" class="game.award.Award" propSids="8035:25" ></sample>
+ <sample sid="9119" class="game.award.Award" propSids="3001:30" ></sample>
+ <sample sid="9120" class="game.award.Award" propSids="5000:50" ></sample>
+ <sample sid="9121" class="game.award.Award" ginger="10" ></sample>
+ <sample sid="9122" class="game.award.Award" propSids="8014:2" ></sample>
+ <sample sid="9123" class="game.award.Award" propSids="3001:50" ></sample>
+ <sample sid="9124" class="game.award.Award" propSids="5000:100" ></sample>
+ <sample sid="9125" class="game.award.Award" propSids="8034:20" ></sample>
+ <sample sid="9126" class="game.award.Award" propSids="3005:20" ></sample>
+ <sample sid="9127" class="game.award.Award" propSids="3001:50" ></sample>
+ <sample sid="9128" class="game.award.Award" propSids="8034:50" ></sample>
+ <sample sid="9129" class="game.award.Award" propSids="8014:2" ></sample>
+ <sample sid="9130" class="game.award.Award" ginger="20" ></sample>
+ <sample sid="9131" class="game.award.Award" propSids="3001:100" ></sample>
+ <sample sid="9132" class="game.award.Award" propSids="5001:30" ></sample>
+ <sample sid="9133" class="game.award.Award" propSids="2004:1" ></sample>
+ <sample sid="9134" class="game.award.Award" propSids="8014:2" ></sample>
+ <sample sid="9135" class="game.award.Award" propSids="3003:30" ></sample>
+ <sample sid="9136" class="game.award.Award" ginger="30" ></sample>
+ <sample sid="9137" class="game.award.Award" propSids="2040:1" ></sample>
+ <sample sid="9138" class="game.award.Award" propSids="8032:2" ></sample>
+ <sample sid="9139" class="game.award.Award" propSids="3003:50" ></sample>
+ <sample sid="9140" class="game.award.Award" propSids="8014:3" ></sample>
+ <sample sid="9141" class="game.award.Award" propSids="5001:50" ></sample>
+ <sample sid="9142" class="game.award.Award" propSids="2076:1" ></sample>
+ <sample sid="9143" class="game.award.Award" propSids="3003:100" ></sample>
+ <sample sid="9144" class="game.award.Award" propSids="8034:50" ></sample>
+ <sample sid="9145" class="game.award.Award" propSids="8032:5" ></sample>
+ <sample sid="9146" class="game.award.Award" propSids="3104:1" ></sample>
+ <sample sid="9147" class="game.award.Award" propSids="3106:1" ></sample>
+ <sample sid="9148" class="game.award.Award" propSids="3106:1" ></sample>
+ <sample sid="9149" class="game.award.Award" propSids="3106:1" ></sample>
+ <sample sid="9150" class="game.award.Award" propSids="8036:3" ></sample>
+ <sample sid="9151" class="game.award.Award" propSids="2114:1" ></sample>
+ <sample sid="9152" class="game.award.Award" propSids="2090:1" ></sample>
+ <sample sid="9153" class="game.award.Award" propSids="8032:10" ></sample>
+ <sample sid="9154" class="game.award.Award" propSids="8035:10" ></sample>
+ </objects>

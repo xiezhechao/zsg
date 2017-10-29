@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<sample className="game.window.countryTask.KillCountryTask" sid="1" name="击杀任务" objectValue="5000" awardSid="9017" loseAwardSid="0" timeOut="1800" type="1"></sample>
+	<sample className="game.window.countryTask.AttackCityCountryTask" sid="2" name="个人攻城任务" objectValue="0" awardSid="9017" loseAwardSid="0" timeOut="1800" type="2"></sample>
+	<sample className="game.window.countryTask.DefenseCityCountryTask" sid="3" name="个人守城任务" objectValue="0" awardSid="9017" loseAwardSid="0" timeOut="1800" type="3"></sample>
+	<sample className="game.window.countryTask.AttackCityCountryTask" sid="4" name="国家攻城任务" objectValue="0" awardSid="9018" loseAwardSid="9019" timeOut="3600" type="2"></sample>
+	<sample className="game.window.countryTask.DefenseCityCountryTask" sid="5" name="国家守城任务" objectValue="0" awardSid="9018" loseAwardSid="9019" timeOut="3600" type="3"></sample>
+</objects>
